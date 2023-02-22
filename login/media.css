@@ -1,0 +1,73 @@
+@media screen and (max-width: 989px) {
+    .background .loginData {
+        width: 785px;
+    }
+}
+@media screen and (max-width: 859px) {
+    .background .loginData {
+        width: 700px;
+    }
+    .background .login .policeData {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 759px) {
+    .background .loginData {
+        width: 590px;
+    }
+    .background .login .policeData {
+        width: 530px;
+    }
+}
+@media screen and (max-width: 639px) {
+    .background .loginData {
+        width: 465px;
+    }
+    .background .login .data {
+        width: 240px;
+    }
+    .background .login .logo {
+        width: 200px;
+        margin-left: 40px;
+    }
+    .background .login .data h2 {
+        text-align: center;
+        padding-right: 55px;
+    }
+    .background .login .data input {
+        width: 185px;
+    }
+    .background .login .data button {
+        margin: 0 19px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .background .loginData {
+        width: 400px;
+    }
+    .background .login .policeData {
+        width: 520px;
+    }
+    .background .login .data h2 {
+        font-size: 25px;
+        padding-right: 75px;
+    }
+    .background .login .data input {
+        width: 165px;
+    }
+    .background .login .data input::placeholder {
+        font-size: 12px;
+    }
+    .background .login .data button {
+        width: 130px;
+        margin: 0 15px;
+    }
+    .background .login .logo {
+        width: 180px;
+        margin-left: 65px;
+    }
+    .background .Police p {
+        font-size: 14px;
+    }
+
+}
