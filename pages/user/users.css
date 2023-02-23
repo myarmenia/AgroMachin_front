@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .new_user {
   width: 100%;
   min-height: 630px;
@@ -24,9 +31,13 @@
   padding-right: 20%;
 }
 .new_user .user_form .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 35px;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-top: 18px;
 }
 .new_user .user_form .flex input,
@@ -60,8 +71,12 @@ select {
 }
 .new_user .user_form .buttons {
   width: 256px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   float: right;
   margin-top: 35px;
 }
@@ -93,6 +108,8 @@ select {
   height: 20px;
   position: relative;
   vertical-align: middle;
+  -webkit-transition: background 0.25s;
+  -o-transition: background 0.25s;
   transition: background 0.25s;
 }
 .toggle-switch:before,
@@ -103,17 +120,21 @@ select {
   display: block;
   background: #4a77ba;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
   width: 20px;
   height: 20px;
   position: absolute;
   top: 0px;
   left: 0px;
+  -webkit-transition: left 0.25s;
+  -o-transition: left 0.25s;
   transition: left 0.25s;
 }
 .toggle:hover .toggle-switch:before {
   background: #4a77ba;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 .toggle-checkbox:checked + .toggle-switch {
   background: #7098d5;

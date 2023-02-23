@@ -5,21 +5,32 @@
 .title-link {
   width: 100%;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 5px;
 }
 .title-link2 {
   width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 5px;
 }
 .title-linkChild {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
   height: 30px;
   gap: 5px;
+}
+.title-linkChild > div {
+  font: menu;
 }
 .link-direction {
   font-weight: 400;
@@ -43,8 +54,14 @@
   width: 100%;
   height: 60px;
   padding: 0 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-bottom: 1px solid #dadada;
 }
@@ -114,7 +131,7 @@ td {
   cursor: pointer;
 }
 .tableChild {
-  height: calc(100% - 60px);
+  max-height: calc(100vh - 280px);
   overflow: auto;
   position: relative;
 }
@@ -164,6 +181,8 @@ td {
   height: 12px;
   position: relative;
   vertical-align: middle;
+  -webkit-transition: background 0.25s;
+  -o-transition: background 0.25s;
   transition: background 0.25s;
 }
 .toggle-switch:before,
@@ -174,16 +193,20 @@ td {
   display: block;
   background: #4a77ba;
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
   width: 12px;
   height: 12px;
   position: absolute;
   top: 0px;
   left: 0px;
+  -webkit-transition: left 0.25s;
+  -o-transition: left 0.25s;
   transition: left 0.25s;
 }
 .toggle:hover .toggle-switch:before {
   background: #4a77ba;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 .toggle-checkbox:checked + .toggle-switch {

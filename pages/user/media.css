@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media screen and (max-width: 1099px) {
   .new_user .user_form .status {
     width: 58%;
@@ -23,7 +30,9 @@
     padding: 0 20px;
   }
   .new_user .user_form .flex {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (max-width: 669px) {

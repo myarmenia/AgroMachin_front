@@ -6,6 +6,7 @@
 /* -------------------------------- */
 /* Forms */
 /* -------------------------------- */
+
 .main-input {
   background: #ffffff;
   border: 1px solid #dadada;
@@ -82,6 +83,7 @@
   height: 100%;
   padding: 10px 0 150px 0;
   overflow: auto;
+  border-top: 1px solid #fff;
 }
 .sidebar.close .nav-links {
   overflow: visible;
@@ -148,7 +150,7 @@
   pointer-events: none;
 }
 .sidebar .nav-links li .sub-menu {
-  padding: 6px 6px 14px 50px;
+  padding: 6px 6px 14px 70px;
   margin-top: -10px;
   background: #343957;
   /* display: none; */

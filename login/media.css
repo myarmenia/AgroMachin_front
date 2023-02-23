@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media screen and (max-width: 989px) {
     .background .loginData {
         width: 785px;
@@ -54,6 +61,18 @@
     }
     .background .login .data input {
         width: 165px;
+    }
+    .background .login .data input::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+    .background .login .data input::-moz-placeholder {
+        font-size: 12px;
+    }
+    .background .login .data input:-ms-input-placeholder {
+        font-size: 12px;
+    }
+    .background .login .data input::-ms-input-placeholder {
+        font-size: 12px;
     }
     .background .login .data input::placeholder {
         font-size: 12px;

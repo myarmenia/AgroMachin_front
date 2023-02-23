@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/index.css " />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="./users.css" />
+    <link rel="stylesheet" href="./media.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <div id="app">
@@ -71,12 +71,14 @@
               </a>
               <i class="bx bxs-chevron-down arrow"></i>
             </div>
-            <ul class="sub-menu">
-              <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
-              <li><a href="#">Հաշվառման վայրեր</a></li>
-              <li><a href="#">Հաշվառման հայտ</a></li>
-              <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
-            </ul>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
+                <li><a href="#">Հաշվառման վայրեր</a></li>
+                <li><a href="#">Հաշվառման հայտ</a></li>
+                <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="#">
@@ -103,21 +105,25 @@
               </a>
               <i class="bx bxs-chevron-down arrow"></i>
             </div>
-            <ul class="sub-menu">
-              <li><a class="link_name" href="#">Վարման իրավունքի Խմբեր</a></li>
-              <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
-              <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
-              <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
-              <li>
-                <a href="#"
-                  >Վարման իրավունքի կարգի փոփոխություն,փոխանակում և կրկնօրինակի
-                  տրամադրում</a
-                >
-              </li>
-              <li>
-                <a href="#">Վարման իրավունքի փաստաթղթեր</a>
-              </li>
-            </ul>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li>
+                  <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
+                </li>
+                <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
+                <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
+                <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
+                <li>
+                  <a href="#"
+                    >Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
+                    կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Վարման իրավունքի փաստաթղթեր</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <div class="iocn-link">
@@ -130,14 +136,16 @@
               </a>
               <i class="bx bxs-chevron-down arrow"></i>
             </div>
-            <ul class="sub-menu">
-              <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
-              <li>
-                <a href="#"
-                  >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
-                >
-              </li>
-            </ul>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
+                <li>
+                  <a href="#"
+                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="#">
@@ -222,7 +230,7 @@
             <div class="app">
               <div class="new_user">
                 <div class="create_user">
-                  <h3>Փոփոխել օգտատիրոջ տվյալները</h3>
+                  <h3>Ստեղծել նոր օգտատեր</h3>
                 </div>
                 <form action="" class="user_form">
                   <div class="place flex">
@@ -298,6 +306,6 @@
         <!-- right section end-->
       </main>
     </div>
-    <script src="../sideBar/menu.js"></script>
+    <script src="../../js/index.js"></script>
   </body>
 </html>

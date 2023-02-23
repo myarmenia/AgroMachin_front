@@ -1,11 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .background {
   width: 100%;
   height: 100vh;
+  background: -o-linear-gradient(315deg, #6c7afe 0 30%, #b796ff 50% 100%);
   background: linear-gradient(135deg, #6c7afe 0 30%, #b796ff 50% 100%);
   padding: 20px;
 }
@@ -15,10 +24,19 @@
 }
 .background .Police,
 .background .loginData {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .background .Police {
   height: 100%;
@@ -32,12 +50,18 @@
   padding: 55px;
 }
 .background .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .background .login .policeData {
   width: 690px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .background .login .logo {
   width: 205px;
@@ -49,16 +73,29 @@
   border-right: 1px solid #cbcbcb;
 }
 .background .login .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 330px;
 }
 .background .login .data #form_log_in {
   height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .background .login .data h2 {
   font-family: Segoe UI;
