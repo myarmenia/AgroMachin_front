@@ -42,14 +42,15 @@
   color: #5f6368;
   width: 100%;
   height: 60px;
-  padding: 0 10px;
+  padding: 0 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #dadada;
 }
 .addPage {
   width: 143px;
-  height: 28px;
+  height: 30px;
   background: #7098d5;
   border-radius: 8px;
   font-weight: 400;
