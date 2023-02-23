@@ -52,7 +52,7 @@
 }
 .sidebar .logo-details {
   height: 60px;
-  width: 60px;
+  width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +103,7 @@
 }
 .sidebar .nav-links li img {
   height: 20px;
-  min-width: 60px;
+  min-width: 70px;
   text-align: center;
   line-height: 50px;
   color: #fff;
@@ -132,7 +132,7 @@
   display: flex;
   align-items: center;
   min-width: 60px;
-  height: 50px;
+  height: 53px;
   text-decoration: none;
 }
 .sidebar .nav-links li a .link_name {
@@ -147,7 +147,7 @@
   pointer-events: none;
 }
 .sidebar .nav-links li .sub-menu {
-  padding: 6px 6px 14px 30px;
+  padding: 6px 6px 14px 50px;
   margin-top: -10px;
   background: #343957;
   /* display: none; */
