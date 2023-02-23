@@ -8,11 +8,17 @@
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  min-height: 200px;
 }
 .new_vehicle {
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  height: fit-content;
+  display: none;
+}
+.new_vehicle_show {
+  display: block;
 }
 .vehicleType_table_container tr > td:nth-child(2) {
   width: 100%;
@@ -29,6 +35,13 @@
 }
 
 .vehicleType_table_head {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+}
+.vehicleType_table_head > div {
   display: flex;
   align-items: center;
   gap: 30px;
