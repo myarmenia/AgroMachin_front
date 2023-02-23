@@ -1,13 +1,10 @@
 let arrow = document.querySelectorAll(".arrow");
+let iocn_link = document.getElementsByClassName("iocn-link");
 for (var i = 0; i < arrow.length; i++) {
-  arrow[i].addEventListener("click", (e) => {
-    // let arrowParent = e.target.parentElement.parentElement;
-    // arrowParent.classList.toggle("showMenu");
-
-    console.log(111);
-    e.target.parentElement.classList.toggle("active-accordion");
-    var panel = e.target.parentElement.nextElementSibling;
-    console.log(e.target.parentElement.nextElementSibling);
+  iocn_link[i].addEventListener("click", function (e) {
+    this.classList.toggle("active-accordion");
+    console.log(this);
+    var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
@@ -17,7 +14,9 @@ for (var i = 0; i < arrow.length; i++) {
 }
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
+const header = document.getElementsByTagName("header")[0];
 
 sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("close");
+  header.classList.toggle("header-active");
 });

@@ -403,3 +403,21 @@ header {
     width: 90%;
   }
 }
+/* ----------------------------------------- */
+/* styles for javascript */
+/* ----------------------------------------- */
+.header-blocking-div {
+  height: 80px;
+}
+.main-header {
+  background-color: white;
+  left: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+  z-index: 100;
+}
+.header-active {
+  left: 290px;
+}
