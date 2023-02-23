@@ -316,11 +316,11 @@ header {
   z-index: 3;
   box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
   transition: all 0.5s ease;
   background-color: #bdbdc75c;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   padding: 50px 50px 40px;
 }
 .right-sectionChild {
