@@ -3,13 +3,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* -------------------------------- */
+/* Forms */
+/* -------------------------------- */
+.main-input {
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  padding: 8px 13px;
+  min-width: 180px;
+  font-size: 12px;
+  letter-spacing: -0.019em;
+  color: #575757;
+  width: 100%;
+  outline: none;
+}
+.main-input-search-box {
+  position: relative;
+}
+.main-input-search-box > img {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 10px;
+}
+.main-input::placeholder {
+  font-size: 12px;
+  letter-spacing: -0.019em;
+  color: #575757;
+}
+/* ================================ */
+/* ================================ */
+/* ================================ */
 
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: 260px;
+  width: 290px;
+  padding: 20px 20px 20px 0;
   background: #343957;
   z-index: 100;
   transition: all 0.5s ease;
@@ -87,6 +120,14 @@
 .arrow {
   margin: 0 auto;
 }
+/* ---------- Menu panel ---------- */
+.menu-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+/* ================================ */
+
 .sidebar .nav-links li a {
   display: flex;
   align-items: center;
@@ -109,7 +150,7 @@
   padding: 6px 6px 14px 30px;
   margin-top: -10px;
   background: #343957;
-  display: none;
+  /* display: none; */
 }
 .sidebar .nav-links li.showMenu .sub-menu {
   display: block;
@@ -222,8 +263,8 @@
   background-color: #fff;
   z-index: 3;
   box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
-  left: 260px;
-  width: calc(100% - 260px);
+  left: 290px;
+  width: calc(100% - 290px);
   transition: all 0.5s ease;
 }
 .sidebar.close ~ .home-section {
