@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="../../css/index.css " />
     <link rel="stylesheet" href="../../pages/table.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./vehicleType.css" />
   </head>
   <body>
     <div id="app">
@@ -199,6 +202,7 @@
         </ul>
       </div>
       <!-- sidebar end -->
+
       <main class="home-section">
         <!-- header start -->
         <header>
@@ -230,97 +234,72 @@
               <div class="title-linkChild">
                 <a href="#" class="link-direction">Գլխավոր</a>
                 <div>></div>
-                <a href="./page.html" class="link-direction">Օգտատերեր</a>
+                <a href="./page.html" class="link-direction"
+                  >Տրանսպորտային միջոցի տեսակ</a
+                >
               </div>
             </div>
-
-            <div class="tableContainer">
-              <div class="table-title">
-                <div class="page">Օգտատերեր</div>
-                <button class="addPage" id="addPage">+ Նոր օգտատեր</button>
+            <div class="vehicleType_main_container">
+              <div class="tableContainer">
+                <div class="table-title">
+                  <div class="vehicleType_table_head">
+                    <span> Տրանսպորտային միջոցի տեսակ</span>
+                    <div class="main-input-search-box">
+                      <input placeholder="Որոնել" class="main-input" />
+                      <img src="../../assets/table/inp-search.svg" alt="" />
+                    </div>
+                  </div>
+                  <!-- <button class="addPage" id="addPage">+ Նոր օգտատեր</button> -->
+                </div>
+                <div class="vehicleType_table_container">
+                  <table>
+                    <thead>
+                      <tr class="vehicleType_thead">
+                        <td>№</td>
+                        <td>Անուն</td>
+                        <td>Ջնջել</td>
+                        <td>Փոփոխել</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td>Lorem ipsum dolor sit amet.</td>
+                        <td>
+                          <div>
+                            <img src="../../assets/table/Trash.svg" alt="" />
+                          </div>
+                        </td>
+                        <td>
+                          <div>
+                            <img src="../../assets/table/pen.svg" alt="" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-              <div class="tableChild">
-                <table>
-                  <tr class="firstLine">
-                    <td>№</td>
-                    <td>Անուն</td>
-                    <td>Ազգանուն</td>
-                    <td>Հայրանուն</td>
-                    <td>Էլ․ հասցե</td>
-                    <td>Դեր</td>
-                    <td>Հաշվառման վայր</td>
-                    <td>Լեզու</td>
-                    <td>Կարգավիճակ</td>
-                    <td>Փոփոխել</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Լիլիթ</td>
-                    <td>Մահտեսյան</td>
-                    <td>Մկրտիչի</td>
-                    <td>lilit.mahtesyan@gmail.com</td>
-                    <td>Ադմինիստրատոր</td>
-                    <td>Կոտայքի մարզ</td>
-                    <td>Հայերեն</td>
-                    <td>
-                      <label class="toggle">
-                        <input class="toggle-checkbox" type="checkbox" />
-                        <div class="toggle-switch"></div>
-                      </label>
-                    </td>
 
-                    <td>
-                      <img src="../../assets/table/pen.svg" class="pen" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Լիլիթ</td>
-                    <td>Մահտեսյան</td>
-                    <td>Մկրտիչի</td>
-                    <td>lilit.mahtesyan@gmail.com</td>
-                    <td>Ադմինիստրատոր</td>
-                    <td>Կոտայքի մարզ</td>
-                    <td>Հայերեն</td>
-                    <td>
-                      <label class="toggle">
-                        <input class="toggle-checkbox" type="checkbox" />
-                        <div class="toggle-switch"></div>
-                      </label>
-                    </td>
-
-                    <td>
-                      <img src="../../assets/table/pen.svg" class="pen" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>Լիլիթ</td>
-                    <td>Մահտեսյան</td>
-                    <td>Մկրտիչի</td>
-                    <td>lilit.mahtesyan@gmail.com</td>
-                    <td>Ադմինիստրատոր</td>
-                    <td>Կոտայքի մարզ</td>
-                    <td>Հայերեն</td>
-                    <td>
-                      <label class="toggle">
-                        <input class="toggle-checkbox" type="checkbox" />
-                        <div class="toggle-switch"></div>
-                      </label>
-                    </td>
-
-                    <td>
-                      <img src="../../assets/table/pen.svg" class="pen" />
-                    </td>
-                  </tr>
-                </table>
+              <div class="new_vehicle">
+                <div class="table-title">
+                  <div class="page">Ստեղծել տրանսպորտային միջոցի տեսակ</div>
+                </div>
+                <form class="new_vehicle_content">
+                  <label for="car">Անուն*</label>
+                  <div class="new_vehicle_input-box">
+                    <input id="car" placeholder="Տրակտոր" class="main-input" />
+                    <button class="addPage">Պահպանել</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </section>
         <!-- right section end-->
       </main>
+
+      <script src="../sideBar/menu.js"></script>
     </div>
-    <script src="menu.js"></script>
   </body>
 </html>
