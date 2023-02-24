@@ -24,9 +24,9 @@ sidebarBtn.addEventListener("click", () => {
 // ------------------------------------------------------------------
 // Modal toggling
 // ------------------------------------------------------------------
+
 const modal_container = document.querySelector(".modal-container");
 function showModal(name) {
-  console.log("show");
   const modal = document.querySelector(name);
 
   document.body.classList.add("scroll-disabled");
@@ -39,14 +39,8 @@ function showModal(name) {
     modal_container.classList.add("modal-open");
     modal.classList.add("modal-open");
   }, 1);
-
-  // if (modal.offsetTop + 1000 < 20) {
-  //   modal.classList.add("modal-open-sm");
-  // } else {
-  // }
 }
 function hideModal() {
-  console.log("hide");
   const modals = document.getElementsByClassName("modal");
   for (let i = 0; i < modals.length; i++) {
     const modal = modals[i];
