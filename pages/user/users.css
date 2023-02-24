@@ -23,7 +23,7 @@
   font-family: Segoe UI;
   font-size: 14px;
   font-weight: 600;
-  color: #5F6368;
+  color: #5f6368;
 }
 .new_user .user_form {
   width: 100%;
@@ -36,8 +36,8 @@
   display: flex;
   gap: 35px;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin-top: 18px;
 }
 .new_user .user_form .flex input,
@@ -48,7 +48,7 @@
   outline: none;
   padding-left: 5px;
   border-radius: 8px;
-  border: 1px solid #DADADA;
+  border: 1px solid #dadada;
 }
 select {
   -webkit-appearance: none;
@@ -75,8 +75,8 @@ select {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   float: right;
   margin-top: 35px;
 }
@@ -121,7 +121,7 @@ select {
   background: #4a77ba;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
   width: 20px;
   height: 20px;
   position: absolute;
@@ -134,7 +134,7 @@ select {
 .toggle:hover .toggle-switch:before {
   background: #4a77ba;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 .toggle-checkbox:checked + .toggle-switch {
   background: #7098d5;
