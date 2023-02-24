@@ -434,7 +434,9 @@
                 Դուք ցանկանո՞ւմ եք ապակտիվացնել օգտատիրոջը
               </p>
               <div class="modal-confirm-buttons">
-                <button class="btn-transparent">Չեղարկել</button>
+                <button class="btn-transparent" id="modal-deny-btn">
+                  Չեղարկել
+                </button>
                 <button class="addPage">Հաստատել</button>
               </div>
             </div>
@@ -447,6 +449,9 @@
       document.querySelectorAll(".toggle").forEach((el) => {
         el.addEventListener("click", () => showModal("#confirm-modal"));
       });
+      document
+        .getElementById("modal-deny-btn")
+        .addEventListener("click", hideModal);
     </script>
   </body>
 </html>
