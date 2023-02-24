@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/index.css " />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
     <link rel="stylesheet" href="../../css/table.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -321,7 +322,32 @@
         </section>
         <!-- right section end-->
       </main>
+
+      <div class="modal-container">
+        <div class="modal" id="confirm-modal">
+          <div class="modal-head">
+            <h3 class="modal-title">Կարգավիճակի փոփոխություն</h3>
+            <div class="close">&#x2715;</div>
+          </div>
+          <div class="modal-content">
+            <div class="modal-confirm-box">
+              <p class="modal-confirm-box-title">
+                Դուք ցանկանո՞ւմ եք ապակտիվացնել օգտատիրոջը
+              </p>
+              <div class="modal-confirm-buttons">
+                <button class="btn-transparent">Չեղարկել</button>
+                <button class="addPage">Հաստատել</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="../../js/index.js"></script>
+    <script>
+      document
+        .getElementById("addPage")
+        .addEventListener("click", () => showModal("#confirm-modal"));
+    </script>
   </body>
 </html>

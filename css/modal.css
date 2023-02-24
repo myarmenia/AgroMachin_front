@@ -1,0 +1,91 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+  background: #00000059;
+  overflow-y: auto;
+
+  transition: 0.3s;
+  opacity: 0;
+
+  display: none;
+}
+.modal {
+  z-index: 99999999;
+  width: 80%;
+  max-width: 402.17px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: 0.3s;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  /* display: none; */
+}
+
+.modal-head {
+  padding: 16px 15px 14px 27px;
+  border-bottom: 1px solid #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.modal-title {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--gray);
+}
+.modal .close {
+  width: 15px;
+  height: 15px;
+  scale: 1.6;
+  font: menu;
+  cursor: pointer;
+  color: #575757;
+}
+.modal-content {
+  margin: 0 auto;
+  max-width: 330px;
+  padding: 32px 24px 24px;
+}
+.modal-confirm-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22.5px;
+}
+.modal-confirm-box-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: var(--gray);
+}
+.modal-confirm-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+/* Styles when modal is active  ----------------------------- */
+.scroll-disabled {
+  height: 100vh;
+  overflow: hidden;
+}
+.modal-open {
+  opacity: 1;
+}
+.modal-close {
+  opacity: 0;
+}
+/* ================================================================== */

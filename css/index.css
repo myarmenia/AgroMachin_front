@@ -3,10 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* -------------------------------- */
+/* Variables */
+/* -------------------------------- */
+:root {
+  --gray: #5f6368;
+  --light-blue: #7098d5;
+}
+/* ================================ */
+/* ================================ */
+/* ================================ */
+
 /* -------------------------------- */
 /* Forms */
 /* -------------------------------- */
-
 .main-input {
   background: #ffffff;
   border: 1px solid #dadada;
@@ -33,6 +44,24 @@
   font-size: 12px;
   letter-spacing: -0.019em;
   color: #575757;
+}
+/* ================================ */
+/* ================================ */
+/* ================================ */
+
+/* -------------------------------- */
+/* Buttons */
+/* -------------------------------- */
+.btn-transparent {
+  background: #ffffff;
+  border: 1px solid var(--light-blue);
+  border-radius: 8px;
+  min-width: 115px;
+  color: var(--light-blue);
+  padding: 6px 25px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
 }
 /* ================================ */
 /* ================================ */
@@ -365,7 +394,7 @@ header {
   transition: all 0.5s ease;
   background-color: #bdbdc75c;
   min-height: calc(100vh - 80px);
-  padding: 50px 50px 40px;
+  padding: 50px 15px 40px 27px;
 }
 .right-sectionChild {
   width: 100%;
