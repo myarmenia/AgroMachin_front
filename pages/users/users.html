@@ -444,9 +444,9 @@
     </div>
     <script src="../../js/index.js"></script>
     <script>
-      document
-        .getElementById("addPage")
-        .addEventListener("click", () => showModal("#confirm-modal"));
+      document.querySelectorAll(".toggle").forEach((el) => {
+        el.addEventListener("click", () => showModal("#confirm-modal"));
+      });
     </script>
   </body>
 </html>
