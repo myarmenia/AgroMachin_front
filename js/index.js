@@ -1,4 +1,3 @@
-
 // active link
 
 // active link
@@ -11,7 +10,6 @@ for (var i = 0; i < arrow.length; i++) {
     this.classList.toggle("active-accordion");
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
-      this.classList.remove("active-accordion");
     } else {
       panel.style.maxHeight = panel.scrollHeight + 1 + "px";
     }
@@ -31,6 +29,35 @@ sidebarBtn.addEventListener("click", () => {
   header.classList.toggle("header-active");
 });
 
+// dropdown
+
+let dropBtn = document.querySelectorAll(".dropbtn");
+let myDropdown = document.querySelectorAll(".myDropdown");
+let option = document.querySelectorAll(".option");
+let title = "";
+
+for (let i = 0; i < dropBtn.length; i++) {
+  dropBtn[i].addEventListener("click", function (e) {
+    title = dropBtn[i].children[0];
+
+    myDropdown[i].classList.toggle("show");
+  });
+}
+for (var k = 0; k < option.length; k++) {
+  option[k].addEventListener("click", function (e) {
+    title.innerHTML = this.innerHTML;
+    this.parentElement.classList.remove("show");
+  });
+}
+// for (var k = 0; k < option.length; k++) {
+//   option[k].addEventListener("click", function (e) {
+//     const dropTitle = document.querySelectorAll("#drop-title");
+//     // console.log(this.innerHTML);
+//     console.log(dropTitle.innerHTML);
+//     dropTitle.innerHTML = this.innerHTML;
+//   });
+// }
+// dropdown
 // ------------------------------------------------------------------
 // Modal toggling
 // ------------------------------------------------------------------
