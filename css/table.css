@@ -55,7 +55,8 @@
 } */
 
 .dropdown-content {
-  display: none;
+  height: 0;
+  opacity: 0;
   position: absolute;
   width: 140.51px;
   background: #ffffff;
@@ -64,6 +65,7 @@
   border-radius: 8px;
   z-index: 20;
   margin-top: 6px;
+  transition: all 0.2s ease-in-out;
 }
 
 .dropdown-content div {
@@ -85,7 +87,8 @@
 }
 
 .show {
-  display: block;
+  opacity: 1;
+  height: fit-content;
 }
 .closeDropDown {
   display: none !important;
