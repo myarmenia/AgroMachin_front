@@ -39,24 +39,17 @@ let title = "";
 for (let i = 0; i < dropBtn.length; i++) {
   dropBtn[i].addEventListener("click", function (e) {
     title = dropBtn[i].children[0];
-
     myDropdown[i].classList.toggle("show");
   });
 }
 for (var k = 0; k < option.length; k++) {
   option[k].addEventListener("click", function (e) {
     title.innerHTML = this.innerHTML;
+
     this.parentElement.classList.remove("show");
   });
 }
-// for (var k = 0; k < option.length; k++) {
-//   option[k].addEventListener("click", function (e) {
-//     const dropTitle = document.querySelectorAll("#drop-title");
-//     // console.log(this.innerHTML);
-//     console.log(dropTitle.innerHTML);
-//     dropTitle.innerHTML = this.innerHTML;
-//   });
-// }
+
 // dropdown
 // ------------------------------------------------------------------
 // Modal toggling
