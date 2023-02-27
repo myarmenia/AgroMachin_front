@@ -3,13 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  box-sizing: border-box;
+
+/* -------------------------------- */
+/* Variables */
+/* -------------------------------- */
+:root {
+  --gray: #5f6368;
+  --light-blue: #7098d5;
 }
+/* ================================ */
+/* ================================ */
+/* ================================ */
+
 /* -------------------------------- */
 /* Forms */
 /* -------------------------------- */
-
 .main-input {
   background: #ffffff;
   border: 1px solid #dadada;
@@ -41,26 +49,45 @@ body{
 /* ================================ */
 /* ================================ */
 
+/* -------------------------------- */
+/* Buttons */
+/* -------------------------------- */
+.btn-transparent {
+  background: #ffffff;
+  border: 1px solid var(--light-blue);
+  border-radius: 8px;
+  min-width: 115px;
+  color: var(--light-blue);
+  padding: 6px 25px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+/* ================================ */
+/* ================================ */
+/* ================================ */
+
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 290px;
-  padding: 20px 20px 20px 0;
+  padding: 10px 20px 20px 0;
   background: #343957;
   z-index: 100;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease-in-out;
 }
 .sidebar.close {
   width: 78px;
 }
 .sidebar .logo-details {
-  height: 60px;
+  height: 68px;
   width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10px;
 }
 .sidebar .logo-details i {
   font-size: 30px;
@@ -74,7 +101,7 @@ body{
   font-size: 22px;
   color: #fff;
   font-weight: 600;
-  transition: 0.5s ease;
+  transition: 0.4s ease-in;
   transition-delay: 0.1s;
 }
 .sidebar.close .logo-details .logo_name {
@@ -97,7 +124,7 @@ body{
 .sidebar .nav-links li {
   position: relative;
   list-style: none;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .sidebar .nav-links li .iocn-link {
@@ -110,12 +137,7 @@ body{
 .sidebar .nav-links li img {
   height: 20px;
   min-width: 70px;
-  text-align: center;
-  line-height: 50px;
-  color: #fff;
-  font-size: 20px;
   cursor: pointer;
-  transition: all 0.5s ease;
 }
 .sidebar .nav-links li.showMenu i.arrow {
   transform: rotate(-180deg);
@@ -130,7 +152,7 @@ body{
 .menu-panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-in-out;
 }
 /* ================================ */
 
@@ -140,14 +162,20 @@ body{
   min-width: 60px;
   height: 53px;
   text-decoration: none;
+  color: white;
 }
-.sidebar .nav-links li a .link_name {
+
+a:focus .link_name {
+  color: #7098d5 !important;
+}
+a:focus .sidebar .nav-links li a .link_name {
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   color: #ffffff;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in;
 }
+
 .sidebar.close .nav-links li a .link_name {
   opacity: 0;
   pointer-events: none;
@@ -168,7 +196,7 @@ body{
   /* white-space: nowrap; */
   word-break: break-word;
   opacity: 0.6;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease-in;
 }
 .sidebar .nav-links li .sub-menu a:hover {
   opacity: 1;
@@ -183,15 +211,16 @@ body{
   opacity: 0;
   display: block;
   pointer-events: none;
-  transition: all 0.5s ease;
 }
 .sidebar.close .nav-links li:hover .sub-menu {
   top: 0;
   opacity: 1;
   pointer-events: auto;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease-in;
   width: max-content;
   max-width: 260px;
+
+  margin-left: 10px;
 }
 .sidebar .nav-links li .sub-menu .link_name {
   display: none;
@@ -211,10 +240,10 @@ body{
   opacity: 0;
   pointer-events: none;
 }
-.sidebar .nav-links li:hover .sub-menu.blank {
+/* .sidebar .nav-links li:hover .sub-menu.blank {
   top: 50%;
   transform: translateY(-50%);
-}
+} */
 .sidebar .profile-details {
   position: fixed;
   bottom: 0;
@@ -224,7 +253,7 @@ body{
   justify-content: space-between;
   background: #593bdb;
   padding: 12px 0;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease-in;
 }
 .sidebar.close .profile-details {
   background: none;
@@ -243,7 +272,7 @@ body{
   border-radius: 16px;
   margin: 0 14px 0 12px;
   background: #593bdb;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease-in;
 }
 .sidebar.close .profile-details img {
   padding: 10px;
@@ -271,7 +300,7 @@ body{
   box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
   left: 290px;
   width: calc(100% - 290px);
-  transition: all 0.5s ease;
+  transition: all 0.4s ease-in;
 }
 .sidebar.close ~ .home-section {
   left: 78px;
@@ -284,7 +313,7 @@ body{
 }
 .home-section .home-content2 {
   height: 80px;
-  width: 80px;
+  width: 200px;
   gap: 15px;
   display: flex;
   align-items: center;
@@ -390,11 +419,10 @@ header {
   box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
   display: flex;
   justify-content: space-between;
-
-  transition: all 0.5s ease;
+  transition: all 0.4s ease-in;
   background-color: #bdbdc75c;
   min-height: calc(100vh - 80px);
-  padding: 50px 50px 40px;
+  padding: 50px 15px 40px 27px;
 }
 .right-sectionChild {
   width: 100%;
@@ -446,7 +474,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  transition: 0.5s;
+  transition: 0.4s;
   z-index: 100;
 }
 .header-active {
