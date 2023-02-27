@@ -339,6 +339,32 @@ header {
   display: flex;
   justify-content: space-between;
 }
+.error{
+  color: red;
+}
+.correct{
+  color: chartreuse;
+}
+.validation_container{
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255,255,255,.8);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.validation_section{
+  width: 100%;
+  padding: 10px;
+  list-style-type: none;
+}
+.validation_section li{
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.validation_section li:last-child{
+  margin-bottom: 0;
+}
 /* .nav .search-icon {
   color: #fff;
   font-size: 20px;
@@ -392,7 +418,6 @@ header {
   z-index: 3;
   box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
   display: flex;
-
   justify-content: space-between;
   transition: all 0.4s ease-in;
   background-color: #bdbdc75c;
