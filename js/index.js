@@ -10,10 +10,11 @@ for (var i = 0; i < arrow.length; i++) {
     let panel = this.nextElementSibling;
 
     this.classList.toggle("active-accordion");
+    
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + 1 + "px";
+      panel.style.maxHeight = panel.scrollHeight + 50 + "px";
     }
   });
 }
