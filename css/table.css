@@ -100,6 +100,7 @@
   border-radius: 8px;
   padding: 8px 13px;
   min-width: 180px;
+  box-sizing: border-box;
 
   font-size: 12px;
   letter-spacing: -0.019em;
@@ -198,10 +199,9 @@
   -ms-flex-align: center;
   align-items: center;
   border-bottom: 1px solid #dadada;
+  box-sizing: border-box;
 }
-.page {
-  width: 40%;
-}
+
 .addPage {
   width: 143px;
   height: 30px;
@@ -303,7 +303,7 @@ td {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 
 .toggle-switch {
