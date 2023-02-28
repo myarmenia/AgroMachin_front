@@ -302,6 +302,8 @@ td {
 .toggle {
   cursor: pointer;
   display: inline-block;
+  position: relative;
+  z-index: 100;
 }
 
 .toggle-switch {
