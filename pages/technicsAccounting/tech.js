@@ -64,8 +64,6 @@ function createImage(arr) {
     const img = document.createElement("img");
     img.alt = "#";
     img.classList.add("imgaes");
-    // img.width = 100%;
-    // img.height = "100%";
     img.src = URL.createObjectURL(arr[i]);
     container.append(img);
 
@@ -83,7 +81,6 @@ file.addEventListener("change", (e) => {
   // image2.src = URL.createObjectURL(e.target.files[0]);
   // inp2.style.display = "none";
 });
-
 
 function getData(form) {
   const formData = new FormData(form);
