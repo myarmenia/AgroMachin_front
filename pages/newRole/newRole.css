@@ -71,7 +71,7 @@
     left: 0;
     bottom: 0;
   }
-  .new_role .role_form .buttons button {
+  .new_role .role_form .buttons input {
     width: 100px;
     height: 30px;
     border-radius: 7px;
@@ -80,7 +80,7 @@
     color: #7098d5;
     cursor: pointer;
   }
-  .new_role .role_form .buttons button:hover {
+  .new_role .role_form .buttons input:hover {
     background: #7098d5;
     color: #fff;
   }
@@ -89,6 +89,7 @@
     height: 220px;
     background: #fff;
     border-radius: 10px;
+    position: relative;
   }
   .tool .add_tool {
     width: 100%;
@@ -101,7 +102,7 @@
     font-weight: 600;
     color: #5f6368;
   }
-  .tool .new_tool label {
+.tool .new_tool label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,11 +110,12 @@
     font-size: 14px;
     font-weight: 600;
     color: #343957;
+    margin-top: 20px;
   }
-  .tool .new_tool .tool_name input {
+  .tool .new_tool label input {
     width: 40%;
     height: 40px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     border: 1px solid #DADADA;
     outline: none;
     padding-left: 10px;
@@ -123,9 +125,13 @@
     height: 30px;
     background: #fff;
     border: 1px solid #7098d5;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     cursor: pointer;
     color: #7098d5;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-30%);
   }
   .tool .new_tool .submit:hover {
     background: #7098d5;
