@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/index.css " >
-    <link rel="stylesheet" href="./users.css" >
-    <link rel="stylesheet" href="./media.css" >
+    <link rel="stylesheet" href="../../font/font.css" >
+    <link rel="stylesheet" href="../../css/index.css" >
+
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="media.css" >
+   
     <link rel="stylesheet" href="createNewNote.css" >
+    
   </head>
   <body>
     <div id="app">
@@ -227,8 +228,18 @@
         </header>
         <!-- header end -->
         <!-- right section start-->
+        
         <section class="right-section">
           <div class="right-sectionChild">
+            <div class="validation_container">
+              <ul class="validation_section">
+                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p> </li>
+                <li class="correct"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
+                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
+                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
+                <li class="correct"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
+              </ul>
+            </div>
             <div class="app">
               <div class="new_note">
                 <div class="create_note">
@@ -284,14 +295,23 @@
                         <select name="" id=""></select>
                     </label>
                     <label for="" class="other_notes label">Այլ նշումներ <textarea name="" id=""></textarea></label>
-                    <label for="" class="subscript label"> Ստորագրություն <input id="subscript" type="file">
+                    <div class="subscript_img">
+                      <img src="../../assets/table/Trash.svg" alt="delete" class="delete">
+                      <img id="output" width="100%" height="100%" src="" alt="#">
+                    </div>
+                    <label for="" style="cursor:pointer" class="subscript label"> Ստորագրություն <input type="file"  accept="image/*" name="image" id="subscript"  style="display: none;">
                         <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z" fill="#7098D5"/>
                             <path d="M0.849609 0.59668H13.0195" stroke="#7098D5"/>
                             </svg>
                             Ներբեռնել
+                            <!-- <img id="output" style="display: none;" width="200" /> -->
                         <input/></label>
-                    <label for="" class="documents label">Փաստաթղթեր* <input id="file" type="file">
+                        <div class="documents_img">
+                          <img src="../../assets/table/Trash.svg" alt="delete" class="delete2">
+                          <img id="output2" width="100%" height="100%" src="" alt="#">
+                        </div>
+                    <label for="" style="cursor:pointer" class="documents label">Փաստաթղթեր* <input type="file"  accept="image/*" name="image1" id="file" style="display: none;">
                         <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z" fill="#7098D5"/>
                             <path d="M0.849609 0.59668H13.0195" stroke="#7098D5"/>

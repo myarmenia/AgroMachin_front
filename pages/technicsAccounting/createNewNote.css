@@ -86,20 +86,39 @@
 }
 .new_note .note_form .right_form .subscript,
 .new_note .note_form .right_form .documents {
-    justify-content: center;
+  justify-content: center;
 }
 .new_note .note_form .right_form .subscript input::-webkit-file-upload-button {
-  visibility: hidden;
+  display: none;
 }
 .new_note .note_form .right_form .subscript input,
 .new_note .note_form .right_form .documents input {
-    border: none;
+  border: none;
     display: none;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.new_note .note_form .right_form .subscript_img,
+.new_note .note_form .right_form .documents_img {
+  width: 100px;
+  height: 100px;
+  display: none;
+  position: relative;
+  margin-left: calc(100%/1.9);
+}
+.new_note .note_form .right_form .subscript_img #output,
+.new_note .note_form .right_form .documents_img #output2 {
+  object-fit: contain;
+}
+.delete,
+.delete2 {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  cursor: pointer;
 }
 .new_note .note_form .buttons {
   width: 47%;

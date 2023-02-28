@@ -1,25 +1,20 @@
-
 // active link
 
 // active link
 
 let arrow = document.querySelectorAll(".arrow");
 let iocn_link = document.getElementsByClassName("iocn-link");
+let activeAccordion = document.getElementsByClassName("active-accordion");
 for (var i = 0; i < arrow.length; i++) {
   iocn_link[i].addEventListener("click", function (e) {
-    var panel = this.nextElementSibling;
+    let panel = this.nextElementSibling;
+
     this.classList.toggle("active-accordion");
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
-      this.classList.remove("active-accordion");
     } else {
       panel.style.maxHeight = panel.scrollHeight + 1 + "px";
     }
-
-    // for (const link of iocn_link) {
-    //   const panel = link.nextElementSibling;
-    //   panel.style.maxHeight = null;
-    // }
   });
 }
 let sidebar = document.querySelector(".sidebar");
@@ -31,6 +26,32 @@ sidebarBtn.addEventListener("click", () => {
   header.classList.toggle("header-active");
 });
 
+// dropdown
+
+let dropBtn = document.querySelectorAll(".dropbtn");
+let myDropdown = document.querySelectorAll(".myDropdown");
+let option = document.querySelectorAll(".option");
+let title = "";
+const activ = document.getElementsByClassName("show");
+for (let i = 0; i < dropBtn.length; i++) {
+  dropBtn[i].addEventListener("click", function (e) {
+    for (let m = 0; m < activ.length; m++) {
+      activ[m].classList.toggle("show");
+    }
+    title = dropBtn[i].children[0];
+    myDropdown[i].classList.toggle("show");
+  });
+}
+
+for (var k = 0; k < option.length; k++) {
+  option[k].addEventListener("click", function (e) {
+    title.innerHTML = this.innerHTML;
+
+    this.parentElement.classList.remove("show");
+  });
+}
+
+// dropdown
 // ------------------------------------------------------------------
 // Modal toggling
 // ------------------------------------------------------------------

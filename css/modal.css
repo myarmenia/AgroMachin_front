@@ -7,10 +7,8 @@
   z-index: 99999999;
   background: #00000059;
   overflow-y: auto;
-
   transition: 0.3s;
   opacity: 0;
-
   display: none;
 }
 .modal {
