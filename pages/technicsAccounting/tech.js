@@ -21,13 +21,15 @@ subscript.addEventListener("change", (e) => {
 deleteImg.addEventListener("click", function () {
   subscriptImg.style.display = "none";
   inp1.style.display = "flex";
+  const dt = new DataTransfer();
+  subscript.files = dt.files;
 });
 
 inp2.onclick = function () {
   file.click();
 };
-
-function deleteImage(i) {
+console.log(delete_icon);
+function deleteImage() {
   const index = +this.attributes["data-number"].value;
   const dt = new DataTransfer();
   const { files } = file;
@@ -37,10 +39,8 @@ function deleteImage(i) {
       dt.items.add(file);
     }
   }
-
   file.files = dt.files;
   this.parentElement.remove();
-
   document.querySelectorAll(".delete_icon").forEach((el, b) => {
     el.setAttribute("data-number", b);
   });
@@ -61,6 +61,8 @@ function createImage(arr) {
     const img = document.createElement("img");
     img.alt = "#";
     img.classList.add("imgaes");
+    // img.width = 100%;
+    // img.height = "100%";
     img.src = URL.createObjectURL(arr[i]);
     container.append(img);
 
@@ -78,10 +80,7 @@ file.addEventListener("change", (e) => {
   // image2.src = URL.createObjectURL(e.target.files[0]);
   // inp2.style.display = "none";
 });
-// deleteImg2.addEventListener("click", function () {
-//   documentsImg.style.display = "none";
-//   inp2.style.display = "flex";
-// });
+
 
 function getData(form) {
   const formData = new FormData(form);
