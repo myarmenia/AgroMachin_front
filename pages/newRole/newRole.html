@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../font/font.css" >
     <link rel="stylesheet" href="../../css/index.css" >
-
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     >
-   
-    <link rel="stylesheet" href="createNewNote.css" >
-    
+    <link rel="stylesheet" href="newRole.css">
   </head>
   <body>
     <div id="app">
@@ -231,99 +228,40 @@
         
         <section class="right-section">
           <div class="right-sectionChild">
-            <div class="validation_container">
-              <ul class="validation_section">
-                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p> </li>
-                <li class="correct"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-                <li class="correct"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-              </ul>
-            </div>
             <div class="app">
-              <div class="new_note">
-                <div class="create_note">
-                  <h3>Ստեղծել նոր գրառում</h3>
+              <div class="new_role">
+                <div class="create_role">
+                  <h3>Ստեղծել նոր դեր</h3>
                 </div>
-                <form action="" id="form" class="note_form">
-                  <div class="left_form">
-                    <label for="" class="furniture_code label">Գույքի ծածկագիրը/կոդը/*<input type="text" placeholder=""></label>
-                    <label for="" class="deal_password label">Գործարքի ծածկագիրը*<input type="text" placeholder=""></label>
-                    <label for="" class="mark label">Մակնիշը*<input type="text" placeholder=""></label>
-                    <label for="" class="model label">Մոդել*<input type="text" placeholder=""></label>
-                    <label for="" class="year label">Տարեթիվը* <input type="number"></label>
-                    <label for="" class="vin_code label">VIN-կոդը* <input type="text"></label>
-                    <label for="" class="engine_number label">Շարժիչի համարը* <input type="text"></label>
-                    <label for="" class="engine_powerDW label">Շարժիչի հզորությունը(Ձ Ու)* <input type="number"></label>
-                    <label for="" class="engine_powerKW label">Շարժիչի հզորությունը (կՎտ)* <input type="number"></label>
-                    <label for="" class="engine_type label">Շարժիչի տեսակ <input type="text"></label>
-                    <label for="" class="fuel_type label">Վառելիքի տեսակ* <input type="text"></label>
-                    <label for="" class="mass label">Առանց բեռնվ. <input type="number"></label>
-                    <label for="" class="max_mass label">Առավ․ զանգված <input type="number"></label>
-                    <label for="" class="TM_type label">ՏՄ տեսակ* <input type="text"></label>
-                    <label for="" class="seats_number label">Նստատեղերի քանակը <input type="number"></label>
-                    <label for="" class="transit_number label">Տրանզիտ / Ժմնկ համարանիշ <input type="text"></label>
-                  </div>
-                  <div class="right_form">
-                    <label for="" class="phone label">Հեռախոսահամար*<input type="number" placeholder="+374 ...."></label>
-                    <label for="" class="name label">Անուն*<input type="text" placeholder=""></label>
-                    <label for="" class="surname label">Ազգանուն*<input type="text" placeholder=""></label>
-                    <label for="" class="fatherland label">Հայրանուն*<input type="text" placeholder=""></label>
-                    <label for="" class="citizenship label">Քաղաքացիություն* <input type="number"></label>
-                    <label for="" class="hvhh label">ՍՔՀ/ՀՎՀՀ* <input type="text"></label>
-                    <label for="" class="passport label">Անձնագրի տվյալները* <input type="text"></label>
-                    <label for="" class="place label">Հաշվառման վայրը* 
-                        <select name="" id="">
-                            <option value="">Երևան</option>
-                            <option value="">Լոռու մարզ</option>
-                            <option value="">Տավուշի մարզ</option>
-                            <option value="">Արագածոտնի մարզ</option>
-                            <option value="">Արարատի մարզ</option>
-                            <option value="">Գեղարքունիքի մարզ</option>
-                            <option value="">Վայոց Ձորի մարզ</option>
-                            <option value="">Կոտայքի մարզ</option>
-                            <option value="">Արմավիրի մարզ</option>
-                            <option value="">Սյունիքի մարզ</option>
-                            <option value="">Շիրակի մարզ</option>
-                        </select>
-                    </label>
-                    <label for="" class="address label">Հասցե* <input type="text"></label>
-                    <label for="" class="request label">Հաշվառման հայտ* 
-                        <select name="" id=""></select>
-                    </label>
-                    <label for="" class="device_type label">Սարքինության տեսակ* 
-                        <select name="" id=""></select>
-                    </label>
-                    <label for="" class="other_notes label">Այլ նշումներ <textarea name="" id=""></textarea></label>
-                    <div class="subscript_img">
-                      <img src="../../assets/table/Trash.svg" alt="delete" class="delete">
-                      <img id="output" width="100%" height="100%" src="" alt="#">
-                    </div>
-                    <label for="" style="cursor:pointer" class="subscript label"> Ստորագրություն <input type="file"  accept="image/*" name="image" id="subscript"  style="display: none;">
-                        <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z" fill="#7098D5"/>
-                            <path d="M0.849609 0.59668H13.0195" stroke="#7098D5"/>
-                            </svg>
-                            Ներբեռնել
-                        <input/></label>
-                        <div class="documents_img">
-                          <img src="../../assets/table/Trash.svg" alt="delete" class="delete2">
-                          <img id="output2" width="100%" height="100%" src="" alt="#">
+                <form action="" id="form" class="role_form">
+                    <div class="role_block">
+                        <input type="text" class="role_input" placeholder="Դեր">
+                        <div class="input_checkbox">
+                            <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                            <label for=""><input type="checkbox"> Օգտատիրոջ փոփոխում</label>
+                            <label for=""><input type="checkbox"> Օգտատիրոջ ջնջում</label>
+                            <label for=""><input type="checkbox"> Դեր</label>
                         </div>
-                    <label for="" style="cursor:pointer" class="documents label">Փաստաթղթեր* <input type="file" multiple="multiple" accept="image/*" name="image1" id="file" style="display: none;">
-                        <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z" fill="#7098D5"/>
-                            <path d="M0.849609 0.59668H13.0195" stroke="#7098D5"/>
-                            </svg>
-                            Ներբեռնել
-                        <input/></label>
-                    <div class="buttons">
-                        <button class="button1" onclick="formReset()">Չեղարկել</button>
-                        <button class="button2" type="submit">Պահպանել</button>
+                        <div class="buttons">
+                            <button class="button1" onclick="formReset()">Չեղարկել</button>
+                            <button class="button2" type="submit">Պահպանել</button>
+                        </div>
                     </div>
-                  </div>
                 </form>
               </div>
+            </div>
+          </div>
+          <div class="tool">
+            <div class="new_tool">
+                <div class="add_tool">
+                    <h3>Ավելացնել նոր գործիք</h3>
+                </div>
+                    <h4></h4>
+                <div class="tool_name">
+                 <input type="text" placeholder="Օգտատիրոջ հեռացում">
+                  
+                  <input type="submit" class="submit" value="Պահպանել">
+                </div>
             </div>
           </div>
         </section>
@@ -331,6 +269,5 @@
       </main>
     </div>
     <script src="../../js/index.js"></script>
-    <script src="tech.js"></script>
   </body>
 </html>

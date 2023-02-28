@@ -7,6 +7,7 @@ const documentsImg = document.getElementsByClassName('documents_img')[0]
 const deleteImg = document.getElementsByClassName('delete')[0];
 const deleteImg2 = document.getElementsByClassName('delete2')[0];
 const form =document.getElementById("form")
+
 inp1.onclick = function() {
     subscript.click()
 }
@@ -42,7 +43,15 @@ function getData(form) {
     console.log(Object.fromEntries(formData));
   }
   
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    getData(e.target);
-  });
+//   form.addEventListener("submit", function (e) {
+//     e.preventDefault();
+//     getData(e.target);
+//   });
+form.addEventListener("submit",(e)=>{
+    e.preventDefault(),
+    getData(e.target)
+})
+
+function  formReset(){
+    form.reset()
+}
