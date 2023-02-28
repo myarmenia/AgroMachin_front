@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Segoe UI';
-  src: url('SegoeUI.eot');
-  src: local('Segoe UI'), local('SegoeUI'),
-      url('../font/SegoeUI.eot?#iefix') format('embedded-opentype'),
-      url('../font/SegoeUI.woff2') format('woff2'),
-      url('../font/SegoeUI.woff') format('woff'),
-      url('../font/SegoeUI.ttf') format('truetype');
+  font-family: "Segoe UI";
+  src: url("SegoeUI.eot");
+  src: local("Segoe UI"), local("SegoeUI"),
+    url("../font/SegoeUI.eot?#iefix") format("embedded-opentype"),
+    url("../font/SegoeUI.woff2") format("woff2"),
+    url("../font/SegoeUI.woff") format("woff"),
+    url("../font/SegoeUI.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
 }
 
 /* -------------------------------- */
@@ -37,7 +37,7 @@
   border-radius: 8px;
   padding: 8px 13px;
   min-width: 180px;
-  font-size: 12px; 
+  font-size: 12px;
   letter-spacing: -0.019em;
   color: #575757;
   width: 100%;
@@ -75,6 +75,19 @@
   font-size: 14px;
   letter-spacing: 0.01em;
   cursor: pointer;
+}
+.main-btn {
+  width: fit-content;
+  min-width: 143px;
+  background: var(--light-blue);
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5.5px 16px;
 }
 /* ================================ */
 /* ================================ */
@@ -352,30 +365,30 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.error{
+.error {
   color: red;
 }
-.correct{
+.correct {
   color: chartreuse;
 }
-.validation_container{
+.validation_container {
   width: 100%;
   padding: 10px;
-  background-color: rgba(255,255,255,.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.validation_section{
+.validation_section {
   width: 100%;
   padding: 10px;
   list-style-type: none;
 }
-.validation_section li{
+.validation_section li {
   margin-bottom: 8px;
   font-weight: 400;
   font-size: 14px;
 }
-.validation_section li:last-child{
+.validation_section li:last-child {
   margin-bottom: 0;
 }
 /* .nav .search-icon {
@@ -487,7 +500,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  transition: 0.4s;
+  transition: 0.4s ease-in;
   z-index: 100;
 }
 .header-active {
