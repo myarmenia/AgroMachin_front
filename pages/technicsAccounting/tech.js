@@ -28,29 +28,22 @@ inp2.onclick = function () {
 };
 
 function deleteImage(i) {
-  const index = i;
+  const index = +this.attributes["data-number"].value;
   const dt = new DataTransfer();
   const { files } = file;
-  let test = [];
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
     if (index !== i) {
-      test = [file, ...test];
-    } // here you exclude the file. thus removing it.
+      dt.items.add(file);
+    }
   }
-  test.forEach((elem) => {
-    dt.items.add(elem);
-  });
-  file.files = dt.files; // Assign the updates list
-  console.log(file.files, "test");
 
-  // images = images.filter((el, i) => i !== index);
-  // imgContainer.innerHTML = "";
-  // createImage(images);
-  // this.parentElement.remove();
-  // for (let i = 0; i < delete_icon.length; i++) {
-  //   delete_icon[i].setAttribute("data-number", i);
-  // }
+  file.files = dt.files;
+  this.parentElement.remove();
+
+  document.querySelectorAll(".delete_icon").forEach((el, b) => {
+    el.setAttribute("data-number", b);
+  });
 }
 
 function createImage(arr) {
@@ -63,13 +56,11 @@ function createImage(arr) {
     icon.src = "../../assets/table/Trash.svg";
     icon.alt = "Dellet";
     icon.setAttribute("data-number", i);
-    icon.addEventListener("click", deleteImage(i));
+    icon.addEventListener("click", deleteImage);
     container.append(icon);
     const img = document.createElement("img");
     img.alt = "#";
     img.classList.add("imgaes");
-    // img.width = 100%;
-    // img.height = "100%";
     img.src = URL.createObjectURL(arr[i]);
     container.append(img);
 
