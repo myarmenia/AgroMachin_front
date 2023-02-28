@@ -66,8 +66,8 @@ function showModal(name) {
   modal.style.display = "block";
 
   setTimeout(() => {
-    modal.classList.remove("modal-close");
-    modal_container.classList.remove("modal-close");
+    // modal.classList.remove("modal-close");
+    // modal_container.classList.remove("modal-close");
     modal_container.classList.add("modal-open");
     modal.classList.add("modal-open");
   }, 1);
@@ -80,8 +80,8 @@ function hideModal() {
     modal.classList.remove("modal-open", "modal-open-sm");
     modal_container.classList.remove("modal-open");
 
-    modal_container.classList.add("modal-close");
-    modal.classList.add("modal-close");
+    // modal_container.classList.add("modal-close");
+    // modal.classList.add("modal-close");
     setTimeout(() => {
       modal_container.style.display = "none";
       modal.style.display = "none";

@@ -9,15 +9,18 @@ const form = document.getElementById("form");
 const imgContainer = document.getElementById("documents_img_container");
 const delete_icon = document.querySelectorAll(".delete_icon");
 let images = [];
+
 inp1.onclick = function () {
   subscript.click();
 };
+
 subscript.addEventListener("change", (e) => {
   let image = document.getElementById("output");
   subscriptImg.style.display = "flex";
   image.src = URL.createObjectURL(e.target.files[0]);
   inp1.style.display = "none";
 });
+
 deleteImg.addEventListener("click", function () {
   subscriptImg.style.display = "none";
   inp1.style.display = "flex";
@@ -27,7 +30,7 @@ inp2.onclick = function () {
   file.click();
 };
 
-function deleteImage(i) {
+function deleteImage() {
   const index = +this.attributes["data-number"].value;
   const dt = new DataTransfer();
   const { files } = file;
@@ -37,10 +40,8 @@ function deleteImage(i) {
       dt.items.add(file);
     }
   }
-
   file.files = dt.files;
   this.parentElement.remove();
-
   document.querySelectorAll(".delete_icon").forEach((el, b) => {
     el.setAttribute("data-number", b);
   });
@@ -85,7 +86,6 @@ file.addEventListener("change", (e) => {
 
 function getData(form) {
   const formData = new FormData(form);
-  // console.log(formData.getAll("img"));
   console.log(formData.getAll("inp2"));
 }
 
