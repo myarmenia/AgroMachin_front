@@ -118,7 +118,6 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100px;
   height: 100px;
   position: relative;
-  margin-left: calc(100% / 1.9);
 }
 .new_note .note_form .right_form .subscript_img #output,
 .new_note .note_form .right_form .documents_img #output2 {
@@ -126,7 +125,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .delete {
   position: absolute;
-  top: 6px;
+  top: 0;
   right: 0;
   cursor: pointer;
 }
@@ -161,4 +160,5 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  margin-left: calc(100% - 71%);
 }
