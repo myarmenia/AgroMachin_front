@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../css/index.css " />
-    <link rel="stylesheet" href="../../css/table.css" />
+    <link rel="stylesheet" href="../../font/font.css" >
+    <link rel="stylesheet" href="../../css/index.css" >
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./vehicleType.css" />
+    >
+    <link rel="stylesheet" href="newRole.css">
   </head>
   <body>
     <div id="app">
@@ -27,6 +25,7 @@
                 src="../../assets/sidebarIcon/user.svg"
                 class="bx bx-grid-alt"
               />
+
               <span class="link_name">Օգտատերեր</span>
             </a>
             <ul class="sub-menu blank">
@@ -201,7 +200,6 @@
         </ul>
       </div>
       <!-- sidebar end -->
-
       <main class="home-section">
         <!-- header start -->
         <header>
@@ -227,91 +225,47 @@
         </header>
         <!-- header end -->
         <!-- right section start-->
+        
         <section class="right-section">
           <div class="right-sectionChild">
-            <div class="title-link2 vehicleType_crumbs_container">
-              <div>
-                <div class="title-linkChild vehicleType_crumbs_box1">
-                  <a href="#" class="link-direction">Գլխավոր</a>
-                  <div>></div>
-                  <a href="./page.html" class="link-direction"
-                    >Տրանսպորտային միջոցի տեսակ</a
-                  >
+            <div class="app">
+              <div class="new_role">
+                <div class="create_role">
+                  <h3>Ստեղծել նոր դեր</h3>
                 </div>
-                <button class="main-btn" id="new_record">
-                  Ստեղծել գրառում
-                </button>
-              </div>
-            </div>
-            <div class="vehicleType_main_container">
-              <div class="tableContainer">
-                <div class="table-title">
-                  <div class="vehicleType_table_head">
-                    <span> Տրանսպորտային միջոցի տեսակ</span>
-                    <div>
-                      <div class="main-input-search-box">
-                        <input placeholder="Որոնել" class="main-input" />
-                        <img src="../../assets/table/inp-search.svg" alt="" />
-                      </div>
-                      <!-- <button class="addPage" id="new_record">
-                        Ստեղծել գրառում
-                      </button> -->
+                <form action="" id="form" class="role_form">
+                    <div class="role_block">
+                        <input type="text" class="role_input" placeholder="Դեր">
+                        <div class="input_checkbox">
+                            <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                            <label for=""><input type="checkbox"> Օգտատիրոջ փոփոխում</label>
+                            <label for=""><input type="checkbox"> Օգտատիրոջ ջնջում</label>
+                            <label for=""><input type="checkbox"> Դեր</label>
+                        </div>
+                        <div class="buttons">
+                            <input class="button1" type="submit" value="Չեղարկել" >
+                            <input class="button2" type="submit" value="Պահպանել">
+                        </div>
                     </div>
-                  </div>
-                  <!-- <button class="addPage" id="addPage">+ Նոր օգտատեր</button> -->
-                </div>
-                <div class="vehicleType_table_container">
-                  <table>
-                    <thead>
-                      <tr class="vehicleType_thead">
-                        <td>№</td>
-                        <td>Անուն</td>
-                        <td>Ջնջել</td>
-                        <td>Փոփոխել</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td></td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>
-                          <div>
-                            <img src="../../assets/table/Trash.svg" alt="" />
-                          </div>
-                        </td>
-                        <td>
-                          <div>
-                            <img src="../../assets/table/pen.svg" alt="" />
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div class="new_vehicle">
-                <div class="table-title">
-                  <div class="table-title-text">
-                    Ստեղծել տրանսպորտային միջոցի տեսակ
-                  </div>
-                </div>
-                <form class="new_vehicle_content">
-                  <div class="new_vehicle_fieldset">
-                    <label for="car">Անուն*</label>
-                    <input id="car" placeholder="Տրակտոր" class="main-input" />
-                  </div>
-                  <button class="addPage">Պահպանել</button>
                 </form>
               </div>
+            </div>
+          </div>
+          <div class="tool">
+            <div class="new_tool">
+                <div class="add_tool">
+                    <h3>Ավելացնել նոր գործիք</h3>
+                </div>
+                  <label for="">Գործիքի անունը* <input type="text" placeholder="Օգտատիրոջ հեռացում"></label>
+                  <div class="tool_name">
+                    <input type="submit" class="submit" value="Պահպանել">
+                  </div>
             </div>
           </div>
         </section>
         <!-- right section end-->
       </main>
-
-      <script src="../../js/index.js"></script>
-      <script src="./vehicleType.js"></script>
     </div>
+    <script src="../../js/index.js"></script>
   </body>
 </html>

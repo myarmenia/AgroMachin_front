@@ -1,20 +1,23 @@
 @font-face {
-  font-family: 'Segoe UI';
-  src: url('SegoeUI.eot');
-  src: local('Segoe UI'), local('SegoeUI'),
-      url('../font/SegoeUI.eot?#iefix') format('embedded-opentype'),
-      url('../font/SegoeUI.woff2') format('woff2'),
-      url('../font/SegoeUI.woff') format('woff'),
-      url('../font/SegoeUI.ttf') format('truetype');
+  font-family: "Segoe UI";
+  src: url("SegoeUI.eot");
+  src: local("Segoe UI"), local("SegoeUI"),
+    url("../font/SegoeUI.eot?#iefix") format("embedded-opentype"),
+    url("../font/SegoeUI.woff2") format("woff2"),
+    url("../font/SegoeUI.woff") format("woff"),
+    url("../font/SegoeUI.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  font-family: "Segoe UI";
+  /* font-family: 'Segoe UI'; */
 }
 
 /* -------------------------------- */
@@ -76,6 +79,19 @@
   letter-spacing: 0.01em;
   cursor: pointer;
 }
+.main-btn {
+  width: fit-content;
+  min-width: 143px;
+  background: var(--light-blue);
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5.5px 16px;
+}
 /* ================================ */
 /* ================================ */
 /* ================================ */
@@ -89,7 +105,7 @@
   padding: 10px 20px 20px 0;
   background: #343957;
   z-index: 100;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-out;
 }
 .sidebar.close {
   width: 78px;
@@ -431,6 +447,7 @@ header {
   box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   transition: all 0.4s ease-in;
   background-color: #bdbdc75c;
   min-height: calc(100vh - 80px);
@@ -486,9 +503,90 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  transition: 0.4s;
+  transition: 0.4s ease-out;
   z-index: 100;
 }
 .header-active {
   left: 290px;
 }
+
+/* ------------------------------------ */
+/* Pagination */
+/* ------------------------------------ */
+.pagination {
+  display: flex;
+  text-align: center;
+  margin: 22px auto;
+  user-select: none;
+  justify-content: center;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+.page-item a {
+  text-decoration: none;
+}
+.pagination div {
+  display: inline-block;
+  border-right: none;
+}
+.pagination div a {
+  font-size: 13px;
+  line-height: 30px;
+  color: var(--gray);
+}
+.pagination div:hover {
+  background-color: var(--light-blue);
+}
+.pagination div:hover a {
+  color: white;
+}
+.previous-page,
+.next-page {
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  background: #ffffff;
+  border: 0.544888px solid #dadada;
+  border-radius: 3px 0px 0px 3px;
+
+  width: 48.26px;
+  height: 30px;
+}
+.previous-page span,
+.next-page span {
+  transform: scale(1) translateY(-1px);
+  display: inline-block;
+  color: #dadada;
+}
+.previous-page a,
+.next-page a {
+  font-size: 20px !important;
+}
+.previous-page {
+  border-right: none;
+  margin-right: -4px;
+}
+.next-page {
+  background: #ffffff;
+  border: 0.544888px solid #dadada !important;
+  border-radius: 0px 3px 3px 0px;
+}
+.current-page,
+.dots {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 0.544888px solid #dadada;
+}
+.page-active {
+  background: var(--light-blue);
+}
+.page-active a {
+  color: white !important;
+}
+/* .disable { */
+/* background: #ccc; */
+/* } */
+/* ============================================================================= */
+/* ============================================================================= */
+/* ============================================================================= */

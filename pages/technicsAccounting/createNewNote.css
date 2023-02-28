@@ -94,29 +94,38 @@
 .new_note .note_form .right_form .subscript input,
 .new_note .note_form .right_form .documents input {
   border: none;
-    display: none;
+  display: none;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.new_note .note_form .right_form .subscript_img,
-.new_note .note_form .right_form .documents_img {
+.new_note .note_form .right_form .subscript_img {
   width: 100px;
   height: 100px;
   display: none;
   position: relative;
-  margin-left: calc(100%/1.9);
+  margin-left: calc(100% / 1.9);
+}
+.imgaes {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.new_note .note_form .right_form .documents_img {
+  width: 100px;
+  height: 100px;
+  position: relative;
 }
 .new_note .note_form .right_form .subscript_img #output,
 .new_note .note_form .right_form .documents_img #output2 {
   object-fit: contain;
 }
-.delete,
-.delete2 {
+.delete {
   position: absolute;
-  top: 6px;
+  top: 0;
   right: 0;
   cursor: pointer;
 }
@@ -127,6 +136,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  gap:8px;
   justify-content: space-between;
   margin-top: 40px;
   position: relative;
@@ -144,4 +154,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .new_note .note_form .buttons button:hover {
   background: #7098d5;
   color: #fff;
+}
+.documents_img_container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-left: calc(100% - 71%);
 }
