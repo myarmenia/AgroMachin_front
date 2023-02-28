@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
 }
 
 /* -------------------------------- */
@@ -37,7 +37,7 @@
   border-radius: 8px;
   padding: 8px 13px;
   min-width: 180px;
-  font-size: 12px; 
+  font-size: 12px;
   letter-spacing: -0.019em;
   color: #575757;
   width: 100%;
@@ -206,8 +206,7 @@ a:focus .sidebar .nav-links li a .link_name {
   color: #fff;
   font-size: 14px;
   padding: 12px 0;
-  /* white-space: nowrap; */
-  word-break: break-word;
+
   opacity: 0.6;
   transition: all 0.4s ease-in;
 }
@@ -352,30 +351,30 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.error{
+.error {
   color: red;
 }
-.correct{
+.correct {
   color: chartreuse;
 }
-.validation_container{
+.validation_container {
   width: 100%;
   padding: 10px;
-  background-color: rgba(255,255,255,.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.validation_section{
+.validation_section {
   width: 100%;
   padding: 10px;
   list-style-type: none;
 }
-.validation_section li{
+.validation_section li {
   margin-bottom: 8px;
   font-weight: 400;
   font-size: 14px;
 }
-.validation_section li:last-child{
+.validation_section li:last-child {
   margin-bottom: 0;
 }
 /* .nav .search-icon {
