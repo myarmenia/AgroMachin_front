@@ -32,15 +32,15 @@ sidebarBtn.addEventListener("click", () => {
 let dropBtn = document.querySelectorAll(".dropbtn");
 let myDropdown = document.querySelectorAll(".myDropdown");
 let option = document.querySelectorAll(".option");
-let title = "";
+let title;
 const activ = document.getElementsByClassName("show");
 for (let i = 0; i < dropBtn.length; i++) {
   dropBtn[i].addEventListener("click", function (e) {
     for (let m = 0; m < activ.length; m++) {
       activ[m].classList.toggle("show");
     }
-    title = dropBtn[i].children[0];
     myDropdown[i].classList.toggle("show");
+    title = dropBtn[i].children[0];
   });
 }
 
