@@ -8,6 +8,7 @@ const deleteImg = document.getElementsByClassName("delete")[0];
 const form = document.getElementById("form");
 const imgContainer = document.getElementById("documents_img_container");
 const delete_icon = document.querySelectorAll(".delete_icon");
+const fileName= document.getElementById("file_name")
 let images = [];
 
 inp1.onclick = function () {
@@ -17,8 +18,11 @@ inp1.onclick = function () {
 subscript.addEventListener("change", (e) => {
   let image = document.getElementById("output");
   subscriptImg.style.display = "flex";
-  image.src = URL.createObjectURL(e.target.files[0]);
+  console.log(e.target.files[0]);
+  fileName.innerHTML=e.target.files[0].name
+  // image.src = URL.createObjectURL(e.target.files[0]);
   inp1.style.display = "none";
+
 });
 
 deleteImg.addEventListener("click", function () {
@@ -77,9 +81,7 @@ file.addEventListener("change", (e) => {
   images = [...e.target.files];
   createImage(images);
 
-  // documentsImg.style.display = "flex";
-  // image2.src = URL.createObjectURL(e.target.files[0]);
-  // inp2.style.display = "none";
+
 });
 
 function getData(form) {
