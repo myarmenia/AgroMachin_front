@@ -4,27 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../css/index.css " />
-    <link rel="stylesheet" href="../../css/table.css" />
+    <title>vehicle_types - type</title>
+    <link rel="stylesheet" href="../../../css/index.css " />
+    <link rel="stylesheet" href="../../../css/table.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./vehicleType.css" />
+    <link rel="stylesheet" href="./type.css" />
   </head>
   <body>
     <div id="app">
       <!-- sidebar start -->
       <div class="sidebar close">
         <div class="logo-details">
-          <img src="../../assets/sidebarIcon/logo.svg" />
+          <img src="../../../assets/sidebarIcon/logo.svg" />
         </div>
         <ul class="nav-links">
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/user.svg"
+                src="../../../assets/sidebarIcon/user.svg"
                 class="bx bx-grid-alt"
               />
 
@@ -37,7 +37,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/role.svg"
+                src="../../../assets/sidebarIcon/role.svg"
                 class="bx bx-grid-alt"
               />
 
@@ -50,7 +50,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/car.svg"
+                src="../../../assets/sidebarIcon/car.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
@@ -64,7 +64,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/techtype.svg"
+                src="../../../assets/sidebarIcon/techtype.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
@@ -79,7 +79,7 @@
             <div class="iocn-link">
               <a href="#">
                 <img
-                  src="../../assets/sidebarIcon/4img.svg"
+                  src="../../../assets/sidebarIcon/4img.svg"
                   class="bx bx-grid-alt"
                 />
                 <span class="link_name">Տեխնիկայի հաշվառում</span>
@@ -98,7 +98,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/5img.svg"
+                src="../../../assets/sidebarIcon/5img.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
@@ -113,7 +113,7 @@
             <div class="iocn-link">
               <a href="#">
                 <img
-                  src="../../assets/sidebarIcon/6img.svg"
+                  src="../../../assets/sidebarIcon/6img.svg"
                   class="bx bx-grid-alt"
                 />
                 <span class="link_name">Վարման իրավունքի Խմբեր</span>
@@ -144,7 +144,7 @@
             <div class="iocn-link">
               <a href="#">
                 <img
-                  src="../../assets/sidebarIcon/7img.svg"
+                  src="../../../assets/sidebarIcon/7img.svg"
                   class="bx bx-grid-alt"
                 />
                 <span class="link_name">Տրված համարանիշներ</span>
@@ -165,7 +165,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/8img.svg"
+                src="../../../assets/sidebarIcon/8img.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Բառարան</span>
@@ -178,7 +178,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/9img.svg"
+                src="../../../assets/sidebarIcon/9img.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Լեզուներ</span>
@@ -190,7 +190,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/10img.svg"
+                src="../../../assets/sidebarIcon/10img.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Հաշվետվություններ</span>
@@ -199,19 +199,6 @@
               <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
             </ul>
           </li>
-
-          <!-- <li>
-          <div class="profile-details">
-            <div class="profile-content">
-              <img src="image/profile.jpg" alt="profileImg">
-            </div>
-            <div class="name-job">
-              <div class="profile_name">anun azganun</div>
-              <div class="job">Profession</div>
-            </div>
-            <i class="bx bx-log-out"></i>
-          </div>
-        </li> -->
         </ul>
       </div>
       <!-- sidebar end -->
@@ -221,7 +208,7 @@
         <header class="main-header">
           <div class="home-content">
             <img
-              src="../../assets/sideBarIcon/menuIcon.svg"
+              src="../../../assets/sideBarIcon/menuIcon.svg"
               class="bx bx-menu"
             />
           </div>
@@ -283,7 +270,7 @@
               </div>
             </div>
             <img
-              src="../../assets/sideBarIcon/headerUser.svg"
+              src="../../../assets/sideBarIcon/headerUser.svg"
               class="bx bxs-user"
             />
           </div>
@@ -301,9 +288,20 @@
                     >Տրանսպորտային միջոցի տեսակ</a
                   >
                 </div>
-                <button class="main-btn" id="new_record">
-                  Ստեղծել գրառում
-                </button>
+                <div class="vehicle_types">
+                  <button
+                    class="main-btn main-btn-gray main-btn-darkgray"
+                    id="new_record"
+                  >
+                    Ստեղծել ՏՄ տեսակ
+                  </button>
+                  <button class="main-btn main-btn-gray">
+                    Ստեղծել ՏՄ մակնիշ
+                  </button>
+                  <button class="main-btn main-btn-gray">
+                    Ստեղծել ՏՄ մոդել
+                  </button>
+                </div>
               </div>
             </div>
             <div class="vehicleType_main_container">
@@ -314,7 +312,10 @@
                     <div>
                       <div class="main-input-search-box">
                         <input placeholder="Որոնել" class="main-input" />
-                        <img src="../../assets/table/inp-search.svg" alt="" />
+                        <img
+                          src="../../../assets/table/inp-search.svg"
+                          alt=""
+                        />
                       </div>
                       <!-- <button class="addPage" id="new_record">
                         Ստեղծել գրառում
@@ -338,13 +339,13 @@
                         <td></td>
                         <td>Lorem ipsum dolor sit amet.</td>
                         <td>
-                          <div>
-                            <img src="../../assets/table/Trash.svg" alt="" />
+                          <div class="img-center">
+                            <img src="../../../assets/table/Trash.svg" alt="" />
                           </div>
                         </td>
                         <td>
-                          <div>
-                            <img src="../../assets/table/pen.svg" alt="" />
+                          <div class="img-center">
+                            <img src="../../../assets/table/pen.svg" alt="" />
                           </div>
                         </td>
                       </tr>
@@ -373,8 +374,8 @@
         <!-- right section end-->
       </main>
 
-      <script src="../../js/index.js"></script>
-      <script src="./vehicleType.js"></script>
+      <script src="../../../js/index.js"></script>
+      <script src="./type.js"></script>
     </div>
   </body>
 </html>
