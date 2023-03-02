@@ -477,13 +477,11 @@
       </div>
     </div>
     <script src="../../js/index.js"></script>
+    <script src="../../js/modal.js"></script>
     <script>
       document.querySelectorAll(".toggle").forEach((el) => {
         el.addEventListener("click", () => showModal("#confirm-modal"));
       });
-      document
-        .getElementById("modal-deny-btn")
-        .addEventListener("click", hideModal);
     </script>
   </body>
 </html>
