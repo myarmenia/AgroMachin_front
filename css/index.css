@@ -187,6 +187,10 @@
 /* ================================ */
 /* ================================ */
 
+.active-sidebar-item {
+  color: var(--light-blue);
+}
+
 .sidebar {
   position: fixed;
   top: 0;
