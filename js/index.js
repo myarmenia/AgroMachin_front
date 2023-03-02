@@ -10,7 +10,7 @@ for (var i = 0; i < arrow.length; i++) {
     let panel = this.nextElementSibling;
 
     this.classList.toggle("active-accordion");
-    
+
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
@@ -56,7 +56,6 @@ for (var k = 0; k < option.length; k++) {
 // ------------------------------------------------------------------
 // Modal toggling
 // ------------------------------------------------------------------
-
 const modal_container = document.querySelector(".modal-container");
 function showModal(name) {
   const modal = document.querySelector(name);
@@ -92,6 +91,9 @@ function hideModal() {
 document.querySelectorAll(".modal .close").forEach((el) => {
   el.addEventListener("click", hideModal);
 });
+document.getElementById("modal-deny-btn").addEventListener("click", hideModal);
+document.getElementById("modal-accept-btn").addEventListener("click", hideModal);
+
 window.addEventListener("click", (e) => {
   if (e.target == modal_container) {
     hideModal();

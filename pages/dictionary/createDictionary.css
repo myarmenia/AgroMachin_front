@@ -1,0 +1,53 @@
+.tableContainer {
+  border-radius: 10px 10px 0 0;
+}
+.dictionarySelect,
+.dictionaryDropdown {
+  width: auto;
+}
+.createKey {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 50px 30px;
+}
+.createKeyChild {
+  width: 400px;
+  height: auto;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #343957;
+  max-width: 100px;
+}
+form input {
+  width: 256px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  outline: none;
+  padding: 0 10px;
+}
+form div {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  height: 50px;
+  margin-top: 10px;
+  align-items: center;
+}
+form div:first-child {
+  height: 80px;
+  border-bottom: 1px solid #dadada;
+}
+form div:nth-child(2) {
+  margin-top: 30px;
+}
+.main-btn {
+  width: 127px;
+}
