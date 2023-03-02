@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/index.css " />
-    <link rel="stylesheet" href="./users.css" />
-    <link rel="stylesheet" href="./media.css" />
+    <link rel="stylesheet" href="../../font/font.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="createNewLanguage.css" />
   </head>
   <body>
     <div id="app">
@@ -289,89 +288,49 @@
         </header>
         <!-- header end -->
         <!-- right section start-->
+
         <section class="right-section">
           <div class="right-sectionChild">
             <div class="title-link2 vehicleType_crumbs_container">
-              <div>
-                <div class="title-linkChild vehicleType_crumbs_box1">
-                  <a href="#" class="link-direction">Գլխավոր</a>
-                  <div>></div>
-                  <a href="./page.html" class="link-direction">Օգտատերեր</a>
-                  <div>></div>
-                  <a href="./page.html" class="link-direction">Փոփոխել օգտատիրոջ տվյալները</a>
+                <div>
+                  <div class="title-linkChild vehicleType_crumbs_box1">
+                    <a href="#" class="link-direction">Գլխավոր</a>
+                    <div>></div>
+                    <a href="./page.html" class="link-direction">Լեզուներ</a>
+                    <div>></div>
+                    <a href="./page.html" class="link-direction">Փոփոխել լեզուն</a>
+                  </div>
                 </div>
               </div>
-            </div>
             <div class="app">
-              <div class="new_user">
-                <div class="create_user">
-                  <h3>Փոփոխել օգտատիրոջ տվյալները</h3>
+              <div class="new_language">
+                <div class="create_language">
+                  <h3>Փոփոխել լեզու</h3>
                 </div>
-                <form action="" class="user_form">
-                  <div class="place flex">
-                    <p>Հաշվառման վայր</p>
-                    <select name="" class="select" id="">
-                      <option value="">Երևան</option>
-                      <option value="">Շիրակի մարզ</option>
-                      <option value="">Լոռու մարզ</option>
-                      <option value="">Տավուշի մարզ</option>
-                      <option value="">Արագածոտնի մարզ</option>
-                      <option value="">Արարատի մարզ</option>
-                      <option value="">Գեղարքունիքի մարզ</option>
-                      <option value="">Վայոց Ձորի մարզ</option>
-                      <option value="">Կոտայքի մարզ</option>
-                      <option value="">Արմավիրի մարզ</option>
-                      <option value="">Սյունիքի մարզ</option>
-                    </select>
-                  </div>
-                  <div class="name flex">
-                    <p>Անուն*</p>
-                    <input type="text" placeholder="Անուն" />
-                  </div>
-                  <div class="surname flex">
-                    <p>Ազգանուն*</p>
-                    <input type="text" placeholder="Ազգանուն" />
-                  </div>
-                  <div class="fatherland flex">
-                    <p>Հայրանուն*</p>
-                    <input type="text" placeholder="Հայրանուն" />
-                  </div>
-                  <div class="email flex">
-                    <p>Էլ. հասցե*</p>
-                    <input type="email" />
-                  </div>
-                  <div class="password flex">
-                    <p>Գաղտնաբառ*</p>
-                    <input type="password" />
-                  </div>
-                  <div class="confirm_password flex">
-                    <p>Գաղտնաբառի հաստատում*</p>
-                    <input type="password" />
-                  </div>
-                  <div class="role flex">
-                    <p>Դեր*</p>
-                    <select name="" id="">
-                      <option value="">Օգտատեր</option>
-                    </select>
-                  </div>
-                  <div class="language flex">
-                    <p>Լեզու*</p>
-                    <select name="" id="">
-                      <option value="">Հայերեն</option>
-                      <option value="">Ռուսերեն</option>
-                      <option value="">Անգլերեն</option>
-                    </select>
-                  </div>
-                  <div class="status flex">
-                    <p>Կարգավիճակ*</p>
-                    <label class="toggle">
-                      <input class="toggle-checkbox" type="checkbox" />
-                      <div class="toggle-switch"></div>
-                    </label>
-                  </div>
-                  <div class="buttons">
-                    <button class="button1">Չեղարկել</button>
-                    <button class="button2">Պահպանել</button>
+                <form action="" id="form" class="language_form">
+                  <div class="language_block">
+                    <div class="selectLanguage">
+                        <label for="" class="language">Լեզու*
+                            <div class="select">
+                                <select id="standard-select">
+                                  <option value="">Ընտրել լեզուն</option>
+                                  <option value="">Հայերեն</option>
+                                  <option value="">Русский</option>
+                                  <option value="">English</option>
+                                </select>
+                              </div>
+                        </label>
+                        <label for="" class="sections">Բաժիններ <input type="text" placeholder="Նոր բաժին"></label>
+                    </div>
+                    <div class="input_checkbox">
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                    </div>
+                    <div class="buttons">
+                      <input class="button2" type="submit" value="Պահպանել">
+                    </div>
                   </div>
                 </form>
               </div>

@@ -1,5 +1,11 @@
+.right-section {
+  flex-direction: row;
+}
 .right-sectionChild {
   width: 56%;
+}
+.title-linkChild {
+  width: 100%;
 }
 .app {
   background: #fff;
@@ -90,6 +96,7 @@
   background: #fff;
   border-radius: 10px;
   position: relative;
+  margin-top: 40px;
 }
 .tool .add_tool {
   width: 100%;
