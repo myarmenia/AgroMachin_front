@@ -1,193 +1,173 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../font/font.css" />
-    <link rel="stylesheet" href="../../css/index.css" />
 
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../font/font.css" />
+	<link rel="stylesheet" href="../../css/index.css" />
 
-    <link rel="stylesheet" href="createNewNote.css" />
-  </head>
-  <body>
-    <div id="app">
-      <!-- sidebar start -->
-      <div class="sidebar close">
-        <div class="logo-details">
-          <img src="../../assets/sidebarIcon/logo.svg" />
-        </div>
-        <ul class="nav-links">
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/user.svg"
-                class="bx bx-grid-alt"
-              />
+	<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="tabs.css" />
+	<link rel="stylesheet" href="createNewNote.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
 
-              <span class="link_name">Օգտատերեր</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Օգտատերեր </a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/car.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տրանսպորտային միջոցի տեսակ </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/techtype.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տեխնիկայի սարքինության տեսակ</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <img
-                  src="../../assets/sidebarIcon/4img.svg"
-                  class="bx bx-grid-alt"
-                />
-                <span class="link_name">Տեխնիկայի հաշվառում</span>
-              </a>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <div class="menu-panel">
-              <ul class="sub-menu">
-                <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
-                <li><a href="#">Հաշվառման վայրեր</a></li>
-                <li><a href="#">Հաշվառման հայտ</a></li>
-                <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/5img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <img
-                  src="../../assets/sidebarIcon/6img.svg"
-                  class="bx bx-grid-alt"
-                />
-                <span class="link_name">Վարման իրավունքի Խմբեր</span>
-              </a>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <div class="menu-panel">
-              <ul class="sub-menu">
-                <li>
-                  <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
-                </li>
-                <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
-                <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
-                <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
-                <li>
-                  <a href="#"
-                    >Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
-                    կրկնօրինակի տրամադրում</a
-                  >
-                </li>
-                <li>
-                  <a href="#">Վարման իրավունքի փաստաթղթեր</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <img
-                  src="../../assets/sidebarIcon/7img.svg"
-                  class="bx bx-grid-alt"
-                />
-                <span class="link_name">Տրված համարանիշներ</span>
-              </a>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <div class="menu-panel">
-              <ul class="sub-menu">
-                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
-                <li>
-                  <a href="#"
-                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/8img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Բառարան</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Բառարան</a></li>
-            </ul>
-          </li>
+<body>
+	<div id="app">
+		<!-- sidebar start -->
+		<div class="sidebar close">
+			<div class="logo-details">
+				<img src="../../assets/sidebarIcon/logo.svg" />
+			</div>
+			<ul class="nav-links">
+				<li>
+					<a href="#">
+						<img src="../../assets/sidebarIcon/user.svg" class="bx bx-grid-alt" />
 
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/9img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Լեզուներ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Լեզուներ</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/10img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Հաշվետվություններ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
-            </ul>
-          </li>
+						<span class="link_name">Օգտատերեր</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li><a class="link_name" href="#">Օգտատերեր </a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<img src="../../assets/sidebarIcon/car.svg" class="bx bx-grid-alt" />
+						<span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li>
+							<a class="link_name" href="#">Տրանսպորտային միջոցի տեսակ
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<img src="../../assets/sidebarIcon/techtype.svg" class="bx bx-grid-alt" />
+						<span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li>
+							<a class="link_name" href="#">Տեխնիկայի սարքինության տեսակ</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<img src="../../assets/sidebarIcon/4img.svg" class="bx bx-grid-alt" />
+							<span class="link_name">Տեխնիկայի հաշվառում</span>
+						</a>
+						<i class="bx bxs-chevron-down arrow"></i>
+					</div>
+					<div class="menu-panel">
+						<ul class="sub-menu">
+							<li>
+								<a class="link_name" href="#">Տեխնիկայի հաշվառում</a>
+							</li>
+							<li><a href="#">Հաշվառման վայրեր</a></li>
+							<li><a href="#">Հաշվառման հայտ</a></li>
+							<li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<img src="../../assets/sidebarIcon/5img.svg" class="bx bx-grid-alt" />
+						<span class="link_name">Տեխնիկայի սահմանափակումներ</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li>
+							<a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<img src="../../assets/sidebarIcon/6img.svg" class="bx bx-grid-alt" />
+							<span class="link_name">Վարման իրավունքի Խմբեր</span>
+						</a>
+						<i class="bx bxs-chevron-down arrow"></i>
+					</div>
+					<div class="menu-panel">
+						<ul class="sub-menu">
+							<li>
+								<a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
+							</li>
+							<li>
+								<a href="#">Վարման իրավունքի Խմբերի դասակարգում</a>
+							</li>
+							<li>
+								<a href="#">Վարման իրավունքի վկայականի տրամադրում</a>
+							</li>
+							<li><a href="#">Վարման իրավունքի հարցաշար</a></li>
+							<li>
+								<a href="#">Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
+									կրկնօրինակի տրամադրում</a>
+							</li>
+							<li>
+								<a href="#">Վարման իրավունքի փաստաթղթեր</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<img src="../../assets/sidebarIcon/7img.svg" class="bx bx-grid-alt" />
+							<span class="link_name">Տրված համարանիշներ</span>
+						</a>
+						<i class="bx bxs-chevron-down arrow"></i>
+					</div>
+					<div class="menu-panel">
+						<ul class="sub-menu">
+							<li>
+								<a class="link_name" href="#">Տրված համարանիշներ</a>
+							</li>
+							<li>
+								<a href="#">Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի
+									տրամադրում</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<img src="../../assets/sidebarIcon/8img.svg" class="bx bx-grid-alt" />
+						<span class="link_name">Բառարան</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li><a class="link_name" href="#">Բառարան</a></li>
+					</ul>
+				</li>
 
-          <!-- <li>
+				<li>
+					<a href="#">
+						<img src="../../assets/sidebarIcon/9img.svg" class="bx bx-grid-alt" />
+						<span class="link_name">Լեզուներ</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li><a class="link_name" href="#">Լեզուներ</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<img src="../../assets/sidebarIcon/10img.svg" class="bx bx-grid-alt" />
+						<span class="link_name">Հաշվետվություններ</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li>
+							<a class="link_name" href="#">Հաշվետվություններ</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- <li>
           <div class="profile-details">
             <div class="profile-content">
               <img src="image/profile.jpg" alt="profileImg">
@@ -199,246 +179,264 @@
             <i class="bx bx-log-out"></i>
           </div>
         </li> -->
-        </ul>
-      </div>
-      <!-- sidebar end -->
-      <main class="home-section">
-        <!-- header start -->
-        <header>
-          <div class="home-content">
-            <img
-              src="../../assets/sideBarIcon/menuIcon.svg"
-              class="bx bx-menu"
-            />
-            <!-- <i class="bx bx-menu"></i> -->
+			</ul>
+		</div>
+		<!-- sidebar end -->
+		<main class="home-section">
+			<!-- header start -->
+			<header>
+				<div class="home-content">
+					<img src="../../assets/sideBarIcon/menuIcon.svg" class="bx bx-menu" />
+					<!-- <i class="bx bx-menu"></i> -->
 
-            <!-- <div class="search-box">
+					<!-- <div class="search-box">
             <i class="bx bx-search-alt-2 search-icon" id="searchIcon"></i>
 
             <input type="search" placeholder="Search here..." />
           </div> -->
-          </div>
-          <div class="home-content2">
-            <img
-              src="../../assets/sideBarIcon/headerUser.svg"
-              class="bx bxs-user"
-            />
-          </div>
-        </header>
-        <!-- header end -->
-        <!-- right section start-->
+				</div>
+				<div class="home-content2">
+					<img src="../../assets/sideBarIcon/headerUser.svg" class="bx bxs-user" />
+				</div>
+			</header>
+			<!-- header end -->
+			<!-- right section start-->
 
-        <section class="right-section">
-          <div class="right-sectionChild">
-            <div class="validation_container">
-              <ul class="validation_section">
-                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-                <li class="correct"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-                <li class="error"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-                <li class="correct"><p>Գույքի ծածկագիրը/կոդը/*</p></li>
-              </ul>
-            </div>
-            <div class="app">
-              <div class="new_note">
-                <div class="create_note">
-                  <h3>Ստեղծել նոր գրառում</h3>
+			<section class="right-section">
+				<div class="right-sectionChild">
+					<div class="tabs_container">
+						<ul class="tabs_coulm">
+							<li class="tab_item">
+								<h2 class="tabs_text tabs_activ" data-count="0">
+									ՏՄ տվյալներ
+								</h2>
+								<span>></span>
+							</li>
+							<li class="tab_item">
+								<h2 class="tabs_text" data-count="1">հայտատու</h2>
+								<span>></span>
+							</li>
+							<li class="tab_item">
+								<h2 class="tabs_text" data-count="2">
+									Այլ լիազորված անձ
+								</h2>
+								<span>></span>
+							</li>
+							<li class="tab_item">
+								<h2 class="tabs_text" data-count="3">Սեփականատեր</h2>
+								<span>></span>
+							</li>
+							<li class="tab_item">
+								<h2 class="tabs_text" data-count="4">
+									Ստորագրություն
+								</h2>
+								<span>></span>
+							</li>
+							<li class="tab_item">
+								<h2 class="tabs_text" data-count="5">Կից նյութեր</h2>
+								<span>></span>
+							</li>
+							<li class="tab_item">
+								<h2 class="tabs_text" data-count="6">հանձնել</h2>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="validation_container">
+							<ul class="validation_section">
+								<li class="error">
+									<p>Գույքի ծածկագիրը/կոդը/*</p>
+								</li>
+								<li class="correct">
+									<p>Գույքի ծածկագիրը/կոդը/*</p>
+								</li>
+								<li class="error">
+									<p>Գույքի ծածկագիրը/կոդը/*</p>
+								</li>
+								<li class="error">
+									<p>Գույքի ծածկագիրը/կոդը/*</p>
+								</li>
+								<li class="correct">
+									<p>Գույքի ծածկագիրը/կոդը/*</p>
+								</li>
+							</ul>
+						</div> -->
+					<form>
+						<div class="app app_activ" style="display: block" data-activ_tab="0">
+							<div class="new_note">
+								<div class="create_note">
+									<h3>ՏՄ տվյալներ</h3>
+								</div>
+								<div class="coustm_input">
+									<div class="label_container">
+										<h3 class="lable">name</h3>
+									</div>
+									<div class="stroke"></div>
+									<div class="input_container" >
+										<input type="text" name="test" class="input">
+									</div>
+								</div>
+								<div class="coustm_input">
+									<div class="label_container">
+										<h3 class="lable">name</h3>
+									</div>
+									<div class="stroke"></div>
+									<div class="input_container" >
+										<input type="text" name="test" class="input">
+									</div>
+								</div>
+
+							</div>
+						</div>
+				</div>
+				<div class="app app_activ" style="display: none" data-activ_tab="1">
+					<div class="new_note">
+						<div class="create_note">
+							<h3>հայտատու</h3>
+						</div>
+					</div>
+				</div>
+				<div class="app app_activ" style="display: none" data-activ_tab="2">
+					<div class="new_note">
+						<div class="create_note">
+							<h3>Այլ լիազորված անձ</h3>
+						</div>
+					</div>
+				</div>
+				<div class="app app_activ" style="display: none" data-activ_tab="3">
+					<div class="new_note">
+						<div class="create_note">
+							<h3>Սեփականատեր</h3>
+						</div>
+					</div>
+				</div>
+				<div class="app app_activ" style="display: none" data-activ_tab="4">
+					<div class="new_note">
+						<div class="create_note">
+							<h3>Ստորագրություն</h3>
+						</div>
+					</div>
+				</div>
+				<div class="app app_activ" style="display: none" data-activ_tab="5">
+					<div class="new_note">
+						<div class="create_note">
+							<h3>Կից նյութեր</h3>
+						</div>
+					</div>
+				</div>
+				<div class="app app_activ" style="display: none" data-activ_tab="6">
+					<div class="new_note">
+						<div class="create_note">
+							<h3>հանձնել</h3>
+						</div>
+					</div>
+				</div>
+				</form>
+				<!-- <div class="app">
+							<div class="new_note">
+								<div class="create_note">
+									<h3>Ստեղծել նոր գրառում</h3>
+								</div> -->
+
+				<!-- <form action="" class="note_form" id="form">
+                <div class="left_form">
+                  <label for="" class="furniture_code label">Գույքի ծածկագիրը/կոդը/*<input type="text"
+                      placeholder="" /></label>
+                  <label for="" class="deal_password label">Գործարքի ծածկագիրը*<input type="text"
+                      placeholder="" /></label>
+                  <label for="" class="mark label">Մակնիշը*<input type="text" placeholder="" /></label>
+                  <label for="" class="model label">Մոդել*<input type="text" placeholder="" /></label>
+                  <label for="" class="year label">Տարեթիվը* <input type="number" /></label>
+                  <label for="" class="vin_code label">VIN-կոդը* <input type="text" /></label>
+                  <label for="" class="engine_number label">Շարժիչի համարը* <input type="text" /></label>
+                  <label for="" class="engine_powerDW label">Շարժիչի հզորությունը(Ձ Ու)* <input type="number" /></label>
+                  <label for="" class="engine_powerKW label">Շարժիչի հզորությունը (կՎտ)* <input type="number" /></label>
+                  <label for="" class="engine_type label">Շարժիչի տեսակ <input type="text" /></label>
+                  <label for="" class="fuel_type label">Վառելիքի տեսակ* <input type="text" /></label>
+                  <label for="" class="mass label">Առանց բեռնվ. <input type="number" /></label>
+                  <label for="" class="max_mass label">Առավ․ զանգված <input type="number" /></label>
+                  <label for="" class="TM_type label">ՏՄ տեսակ* <input type="text" /></label>
+                  <label for="" class="seats_number label">Նստատեղերի քանակը <input type="number" /></label>
+                  <label for="" class="transit_number label">Տրանզիտ / Ժմնկ համարանիշ <input type="text" /></label>
                 </div>
-                <form action="" class="note_form" id="form">
-                  <div class="left_form">
-                    <label for="" class="furniture_code label"
-                      >Գույքի ծածկագիրը/կոդը/*<input type="text" placeholder=""
-                    /></label>
-                    <label for="" class="deal_password label"
-                      >Գործարքի ծածկագիրը*<input type="text" placeholder=""
-                    /></label>
-                    <label for="" class="mark label"
-                      >Մակնիշը*<input type="text" placeholder=""
-                    /></label>
-                    <label for="" class="model label"
-                      >Մոդել*<input type="text" placeholder=""
-                    /></label>
-                    <label for="" class="year label"
-                      >Տարեթիվը* <input type="number"
-                    /></label>
-                    <label for="" class="vin_code label"
-                      >VIN-կոդը* <input type="text"
-                    /></label>
-                    <label for="" class="engine_number label"
-                      >Շարժիչի համարը* <input type="text"
-                    /></label>
-                    <label for="" class="engine_powerDW label"
-                      >Շարժիչի հզորությունը(Ձ Ու)* <input type="number"
-                    /></label>
-                    <label for="" class="engine_powerKW label"
-                      >Շարժիչի հզորությունը (կՎտ)* <input type="number"
-                    /></label>
-                    <label for="" class="engine_type label"
-                      >Շարժիչի տեսակ <input type="text"
-                    /></label>
-                    <label for="" class="fuel_type label"
-                      >Վառելիքի տեսակ* <input type="text"
-                    /></label>
-                    <label for="" class="mass label"
-                      >Առանց բեռնվ. <input type="number"
-                    /></label>
-                    <label for="" class="max_mass label"
-                      >Առավ․ զանգված <input type="number"
-                    /></label>
-                    <label for="" class="TM_type label"
-                      >ՏՄ տեսակ* <input type="text"
-                    /></label>
-                    <label for="" class="seats_number label"
-                      >Նստատեղերի քանակը <input type="number"
-                    /></label>
-                    <label for="" class="transit_number label"
-                      >Տրանզիտ / Ժմնկ համարանիշ <input type="text"
-                    /></label>
-                  </div>
-                  <div class="right_form">
-                    <label for="" class="phone label"
-                      >Հեռախոսահամար*<input
-                        type="number"
-                        placeholder="+374 ...."
-                    /></label>
-                    <label for="" class="name label"
-                      >Անուն*<input type="text" placeholder=""
-                    /></label>
-                    <label for="" class="surname label"
-                      >Ազգանուն*<input type="text" placeholder=""
-                    /></label>
-                    <label for="" class="fatherland label"
-                      >Հայրանուն*<input type="text" placeholder=""
-                    /></label>
-                    <label for="" class="citizenship label"
-                      >Քաղաքացիություն* <input type="number"
-                    /></label>
-                    <label for="" class="hvhh label"
-                      >ՍՔՀ/ՀՎՀՀ* <input type="text"
-                    /></label>
-                    <label for="" class="passport label"
-                      >Անձնագրի տվյալները* <input type="text"
-                    /></label>
-                    <label for="" class="place label"
-                      >Հաշվառման վայրը*
-                      <select name="" id="">
-                        <option value="">Երևան</option>
-                        <option value="">Լոռու մարզ</option>
-                        <option value="">Տավուշի մարզ</option>
-                        <option value="">Արագածոտնի մարզ</option>
-                        <option value="">Արարատի մարզ</option>
-                        <option value="">Գեղարքունիքի մարզ</option>
-                        <option value="">Վայոց Ձորի մարզ</option>
-                        <option value="">Կոտայքի մարզ</option>
-                        <option value="">Արմավիրի մարզ</option>
-                        <option value="">Սյունիքի մարզ</option>
-                        <option value="">Շիրակի մարզ</option>
-                      </select>
-                    </label>
-                    <label for="" class="address label"
-                      >Հասցե* <input type="text"
-                    /></label>
-                    <label for="" class="request label"
-                      >Հաշվառման հայտ*
-                      <select name="" id=""></select>
-                    </label>
-                    <label for="" class="device_type label"
-                      >Սարքինության տեսակ*
-                      <select name="" id=""></select>
-                    </label>
-                    <label for="" class="other_notes label"
-                      >Այլ նշումներ <textarea name="" id=""></textarea>
-                    </label>
-                    <div class="subscript_img">
-                      <img
-                        src="../../assets/table/Trash.svg"
-                        alt="delete"
-                        class="delete"
-                      />
-                      <img
-                        id="output"
-                        width="100%"
-                        height="100%"
-                        src=""
-                        alt="#"
-                      />
+                <div class="right_form">
+                  <label for="" class="phone label">Հեռախոսահամար*<input type="number"
+                      placeholder="+374 ...." /></label>
+                  <label for="" class="name label">Անուն*<input type="text" placeholder="" /></label>
+                  <label for="" class="surname label">Ազգանուն*<input type="text" placeholder="" /></label>
+                  <label for="" class="fatherland label">Հայրանուն*<input type="text" placeholder="" /></label>
+                  <label for="" class="citizenship label">Քաղաքացիություն* <input type="number" /></label>
+                  <label for="" class="hvhh label">ՍՔՀ/ՀՎՀՀ* <input type="text" /></label>
+                  <label for="" class="passport label">Անձնագրի տվյալները* <input type="text" /></label>
+                  <label for="" class="place label">Հաշվառման վայրը*
+                    <select name="" id="">
+                      <option value="">Երևան</option>
+                      <option value="">Լոռու մարզ</option>
+                      <option value="">Տավուշի մարզ</option>
+                      <option value="">Արագածոտնի մարզ</option>
+                      <option value="">Արարատի մարզ</option>
+                      <option value="">Գեղարքունիքի մարզ</option>
+                      <option value="">Վայոց Ձորի մարզ</option>
+                      <option value="">Կոտայքի մարզ</option>
+                      <option value="">Արմավիրի մարզ</option>
+                      <option value="">Սյունիքի մարզ</option>
+                      <option value="">Շիրակի մարզ</option>
+                    </select>
+                  </label>
+                  <label for="" class="address label">Հասցե* <input type="text" /></label>
+                  <label for="" class="request label">Հաշվառման հայտ*
+                    <select name="" id=""></select>
+                  </label>
+                  <label for="" class="device_type label">Սարքինության տեսակ*
+                    <select name="" id=""></select>
+                  </label>
+                  <label for="" class="other_notes label">Այլ նշումներ <textarea name="" id=""></textarea>
+                  </label>
+                  <div class="subscript_img">
+                    <div class="img_container">
+                      <img src="../../assets/delet.svg" alt="delete" class="delete" />
+                      <img id="output" width="100%" height="100%" src="../../assets/PDF.png" alt="#" />
                     </div>
-                    <label
-                      for=""
-                      style="cursor: pointer"
-                      class="subscript label"
-                    >
-                      Ստորագրություն
-                      <input
-                        type="file"
-                        name="inp1"
-                        accept="image/*"
-                        name="image"
-                        id="subscript"
-                        style="display: none" />
-                      <svg
-                        width="14"
-                        height="11"
-                        viewBox="0 0 14 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z"
-                          fill="#7098D5"
-                        />
-                        <path d="M0.849609 0.59668H13.0195" stroke="#7098D5" />
-                      </svg>
-                      Ներբեռնել
-                      <!-- <img id="output" style="display: none;" width="200" /> -->
-                      <input
-                    /></label>
-                    <div
-                      id="documents_img_container"
-                      class="documents_img_container"
-                    ></div>
-                    <label
-                      for=""
-                      style="cursor: pointer"
-                      class="documents label"
-                      >Փաստաթղթեր*
-                      <input
-                        type="file"
-                        name="inp2"
-                        accept="image/*"
-                        id="file"
-                        multiple
-                        style="display: none" />
-                      <svg
-                        width="14"
-                        height="11"
-                        viewBox="0 0 14 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z"
-                          fill="#7098D5"
-                        />
-                        <path d="M0.849609 0.59668H13.0195" stroke="#7098D5" />
-                      </svg>
-                      Ներբեռնել
-                      <input
-                    /></label>
-                    <div class="buttons">
-                      <button class="button1">Չեղարկել</button>
-                      <button class="button2">Պահպանել</button>
-                    </div>
+                    <span id="file_name"></span>
                   </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- right section end-->
-      </main>
-    </div>
-    <script src="../../js/index.js"></script>
-    <script src="tech.js"></script>
-  </body>
+                  <label for="" style="cursor: pointer" class="subscript label">
+                    Ստորագրություն
+                    <input type="file" name="inp1" accept="image/*" name="image" id="subscript" style="display: none" />
+                    <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z"
+                        fill="#7098D5" />
+                      <path d="M0.849609 0.59668H13.0195" stroke="#7098D5" />
+                    </svg>
+                    Ներբեռնել
+                    <!-- <img id="output" style="display: none;" width="200" /> -->
+				<!-- <input /></label>
+                  <div id="documents_img_container" class="documents_img_container"></div>
+                  <label for="" style="cursor: pointer" class="documents label">Փաստաթղթեր*
+                    <input type="file" name="inp2" accept="image/*" id="file" multiple style="display: none" />
+                    <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28812 0.621788C7.09286 0.426526 6.77628 0.426526 6.58102 0.621788L3.39904 3.80377C3.20377 3.99903 3.20377 4.31561 3.39904 4.51088C3.5943 4.70614 3.91088 4.70614 4.10614 4.51088L6.93457 1.68245L9.763 4.51088C9.95826 4.70614 10.2748 4.70614 10.4701 4.51088C10.6654 4.31561 10.6654 3.99903 10.4701 3.80377L7.28812 0.621788ZM6.43457 0.975342L6.43457 10.9443L7.43457 10.9443L7.43457 0.975342L6.43457 0.975342Z"
+                        fill="#7098D5" />
+                      <path d="M0.849609 0.59668H13.0195" stroke="#7098D5" />
+                    </svg>
+                    Ներբեռնել
+                    <input /></label>
+                  <div class="buttons">
+                    <button class="button1">Չեղարկել</button>
+                    <button class="button2">Պահպանել</button>
+                  </div> -->
+				<!-- </div>
+              </form>  -->
+				<!-- </div>
+						</div>
+					</div> -->
+			</section>
+			<!-- right section end-->
+		</main>
+	</div>
+	<script src="../../js/index.js"></script>
+	<script src="tech.js"></script>
+	<script src="techjquery.js"></script>
+</body>
+
 </html>
