@@ -16,6 +16,7 @@
   <body>
     <div id="app">
       <!-- sidebar start -->
+      <!-- sidebar start -->
       <div class="sidebar close">
         <div class="logo-details">
           <img src="../../assets/sidebarIcon/logo.svg" />
@@ -27,10 +28,24 @@
                 src="../../assets/sidebarIcon/user.svg"
                 class="bx bx-grid-alt"
               />
+
               <span class="link_name">Օգտատերեր</span>
             </a>
             <ul class="sub-menu blank">
               <li><a class="link_name" href="#">Օգտատերեր </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/role.svg"
+                class="bx bx-grid-alt"
+              />
+
+              <span class="link_name">Դեր</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Դեր </a></li>
             </ul>
           </li>
           <li>
@@ -201,24 +216,73 @@
         </ul>
       </div>
       <!-- sidebar end -->
-
       <main class="home-section">
         <!-- header start -->
-        <header>
+        <div class="header-blocking-div"></div>
+        <header class="main-header">
           <div class="home-content">
             <img
               src="../../assets/sideBarIcon/menuIcon.svg"
               class="bx bx-menu"
             />
-            <!-- <i class="bx bx-menu"></i> -->
-
-            <!-- <div class="search-box">
-            <i class="bx bx-search-alt-2 search-icon" id="searchIcon"></i>
-
-            <input type="search" placeholder="Search here..." />
-          </div> -->
           </div>
           <div class="home-content2">
+            <div class="navbar">
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <div id="drop-title">Հայերեն</div>
+                  <svg
+                    width="19"
+                    height="18"
+                    viewBox="0 0 19 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.89551 12.8555H15.3582"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.61816 2.47644V4.11523"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.24805 4.11523H10.9883"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div class="dropdown-content myDropdown">
+                  <div class="option">Անգլերեն</div>
+                  <div class="option">Հայերեն</div>
+                  <div class="option">Ռուսերեն</div>
+                </div>
+              </div>
+            </div>
             <img
               src="../../assets/sideBarIcon/headerUser.svg"
               class="bx bxs-user"
@@ -243,10 +307,11 @@
                   >
                 </div>
                 <button class="main-btn" id="new_record">
-                  Ստեղծել գրառում
+                  Ստեղծել հաշվառման վայր
                 </button>
               </div>
             </div>
+
             <div class="vehicleType_main_container">
               <div class="tableContainer">
                 <div class="table-title">
@@ -270,6 +335,7 @@
                       <tr class="vehicleType_thead">
                         <td>№</td>
                         <td>Անուն</td>
+                        <td>Կարգավիճակ</td>
                         <td>Ջնջել</td>
                         <td>Փոփոխել</td>
                       </tr>
@@ -280,12 +346,24 @@
                         <td>Lorem ipsum dolor sit amet.</td>
                         <td>
                           <div>
+                            <label class="toggle">
+                              <input class="toggle-checkbox" type="checkbox" />
+                              <div class="toggle-switch"></div>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div>
                             <img src="../../assets/table/Trash.svg" alt="" />
                           </div>
                         </td>
                         <td>
                           <div>
-                            <img src="../../assets/table/pen.svg" alt="" />
+                            <img
+                              src="../../assets/table/pen.svg"
+                              alt=""
+                              id="change_record"
+                            />
                           </div>
                         </td>
                       </tr>
@@ -302,13 +380,90 @@
                 </div>
                 <form class="new_vehicle_content">
                   <div class="new_vehicle_fieldset">
-                    <label for="car">Անուն*</label>
-                    <input id="car" placeholder="Տրակտոր" class="main-input" />
+                    <div>
+                      <div class="field_title">Անուն*</div>
+                      <input
+                        id="car"
+                        placeholder="Տրակտոր"
+                        class="main-input"
+                      />
+                    </div>
+                    <div>
+                      <div class="field_title">Կարգավիճակ*</div>
+                      <label class="toggle2">
+                        <input class="toggle2-checkbox" type="checkbox" />
+                        <div class="toggle2-switch"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <button class="addPage">Պահպանել</button>
+                </form>
+              </div>
+              <div class="new_vehicle2">
+                <div class="table-title">
+                  <div class="table-title-text">Փոփոխել հաշվառման վայրը</div>
+                </div>
+                <form class="new_vehicle_content">
+                  <div class="new_vehicle_fieldset">
+                    <div>
+                      <div class="field_title">Անուն*</div>
+                      <input
+                        id="car"
+                        placeholder="Տրակտոր"
+                        class="main-input"
+                      />
+                    </div>
+                    <div>
+                      <div class="field_title">Կարգավիճակ*</div>
+                      <label class="toggle2">
+                        <input class="toggle2-checkbox" type="checkbox" />
+                        <div class="toggle2-switch"></div>
+                      </label>
+                    </div>
                   </div>
                   <button class="addPage">Պահպանել</button>
                 </form>
               </div>
             </div>
+            <!-- ------------------------------------------------------- -->
+            <!-- Pagination -->
+            <!-- ------------------------------------------------------- -->
+            <div class="pagination">
+              <div class="page-item previous-page">
+                <a class="page-link" href="javascript:void(0)"
+                  ><span>‹‹</span></a
+                >
+              </div>
+              <div class="page-item current-page">
+                <a class="page-link" href="javascript:void(0)">1</a>
+              </div>
+              <div class="page-item dots">
+                <a class="page-link" href="javascript:void(0)">...</a>
+              </div>
+              <div class="page-item current-page">
+                <a class="page-link" href="javascript:void(0)">5</a>
+              </div>
+              <div class="page-item current-page page-active">
+                <a class="page-link" href="javascript:void(0)">6</a>
+              </div>
+              <div class="page-item current-page">
+                <a class="page-link" href="javascript:void(0)">7</a>
+              </div>
+              <div class="page-item dots">
+                <a class="page-link" href="javascript:void(0)">...</a>
+              </div>
+              <div class="page-item current-page">
+                <a class="page-link" href="javascript:void(0)">13</a>
+              </div>
+              <div class="page-item next-page">
+                <a class="page-link" href="javascript:void(0)"
+                  ><span>››</span></a
+                >
+              </div>
+            </div>
+            <!-- ======================================================= -->
+            <!-- ======================================================= -->
+            <!-- ======================================================= -->
           </div>
         </section>
         <!-- right section end-->
