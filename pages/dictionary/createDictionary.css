@@ -3,7 +3,7 @@
 }
 .dictionarySelect,
 .dictionaryDropdown {
-  width: auto;
+  width: 200px;
 }
 .createKey {
   width: 100%;
@@ -22,7 +22,8 @@ form label {
   font-size: 14px;
   line-height: 19px;
   color: #343957;
-  max-width: 100px;
+  width: 100px;
+  text-align: end;
 }
 form input {
   width: 256px;
