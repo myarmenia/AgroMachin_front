@@ -18,7 +18,6 @@
   padding: 16px 0 0 25px;
 }
 .new_note .create_note h3 {
-  font-family: Segoe UI;
   font-size: 14px;
   font-weight: 600;
   color: #5f6368;
@@ -44,7 +43,6 @@
   gap: 25px;
   align-items: baseline;
   font-size: 14px;
-  font-family: Segoe UI;
   color: #343957;
   font-weight: 600;
 }
@@ -102,9 +100,12 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 .new_note .note_form .right_form .subscript_img {
-  width: 100px;
-  height: 100px;
+  /* width: 86px;
+  height: 86px; */
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   margin-left: calc(100% / 1.9);
 }
@@ -158,7 +159,13 @@ input[type="number"]::-webkit-inner-spin-button {
 .documents_img_container {
   display: flex;
   align-items: center;
+  /* flex-direction: column; */
   gap: 8px;
   flex-wrap: wrap;
   margin-left: calc(100% - 71%);
 }
+.img_container{
+  width: 40px;
+  height: 40px;
+}
+
