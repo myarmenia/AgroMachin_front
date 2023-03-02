@@ -91,8 +91,10 @@ function hideModal() {
 document.querySelectorAll(".modal .close").forEach((el) => {
   el.addEventListener("click", hideModal);
 });
-document.getElementById("modal-deny-btn").addEventListener("click", hideModal);
-document.getElementById("modal-accept-btn").addEventListener("click", hideModal);
+// document.getElementById("modal-deny-btn").addEventListener("click", hideModal);
+// document
+//   .getElementById("modal-accept-btn")
+//   .addEventListener("click", hideModal);
 
 window.addEventListener("click", (e) => {
   if (e.target == modal_container) {
@@ -101,3 +103,22 @@ window.addEventListener("click", (e) => {
 });
 
 // ==================================================================
+// menu activ
+const pages_link = document.querySelectorAll(".nav-links > li");
+const menuIconImg = document.querySelectorAll(".bx-grid-alt"); //img
+const link_name = document.querySelectorAll("a .link_name"); //span
+const chevron = document.querySelectorAll(".bx"); //span
+pages_link.forEach((el, i) => {
+  el.addEventListener("click", function () {
+    menuIconImg.forEach((elem, index) => {
+      if (elem.src.includes("(active).svg")) {
+        link_name[index].classList.remove("link-active");
+        elem.src = menuIconImg[index].src.replace("(active).svg", ".svg");
+        chevron[index].style.color = "#fff";
+      }
+    });
+    menuIconImg[i].src = menuIconImg[i].src.replace(".svg", "(active).svg");
+    link_name[i].classList.toggle("link-active");
+  });
+});
+// menu activ
