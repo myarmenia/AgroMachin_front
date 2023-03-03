@@ -13,3 +13,10 @@ function articleChangeToggle() {
 }
 new_record_btn.addEventListener("click", articleToggle);
 change_record_btn.addEventListener("click", articleChangeToggle);
+
+document.querySelectorAll(".toggle").forEach((el) => {
+  el.addEventListener("click", function () {
+    console.log(this);
+    showModal("#confirm-modal");
+  });
+});
