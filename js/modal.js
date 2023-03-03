@@ -33,6 +33,11 @@ function hideModal() {
     }, 300);
   }
 }
+window.addEventListener("click", (e) => {
+  if (e.target == modal_container) {
+    hideModal();
+  }
+});
 document.querySelectorAll(".modal .close").forEach((el) => {
   el.addEventListener("click", hideModal);
 });
@@ -41,9 +46,4 @@ document
   .getElementById("modal-accept-btn")
   .addEventListener("click", hideModal);
 
-window.addEventListener("click", (e) => {
-  if (e.target == modal_container) {
-    hideModal();
-  }
-});
 // ==================================================================

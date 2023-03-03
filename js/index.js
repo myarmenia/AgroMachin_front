@@ -54,8 +54,8 @@ for (var k = 0; k < option.length; k++) {
   });
 }
 
-// dropdown
 
+// dropdown
 // menu activ
 const pages_link = document.querySelectorAll(".nav-links > li");
 const menuIconImg = document.querySelectorAll(".bx-grid-alt"); //img
@@ -75,16 +75,6 @@ pages_link.forEach((el, i) => {
   });
 });
 // menu activ
-// document.querySelectorAll(".modal .close").forEach((el) => {
-//   el.addEventListener("click", hideModal);
-// });
-// window.addEventListener("click", (e) => {
-//   if (e.target == modal_container) {
-//     hideModal();
-//   }
-// });
-
-// ==================================================================
 
 //cousm input
 // focused
