@@ -54,6 +54,8 @@ for (var k = 0; k < option.length; k++) {
   });
 }
 
+
+// dropdown
 // menu activ
 const pages_link = document.querySelectorAll(".nav-links > li");
 const menuIconImg = document.querySelectorAll(".bx-grid-alt"); //img
@@ -73,7 +75,6 @@ pages_link.forEach((el, i) => {
   });
 });
 // menu activ
-
 
 //cousm input
 // focused
