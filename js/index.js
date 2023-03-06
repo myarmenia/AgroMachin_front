@@ -55,7 +55,6 @@ for (var k = 0; k < option.length; k++) {
   });
 }
 
-
 // dropdown
 // menu activ
 const pages_link = document.querySelectorAll(".nav-links > li");
@@ -75,6 +74,7 @@ pages_link.forEach((el, i) => {
     link_name[i].classList.toggle("link-active");
   });
 });
+
 // menu activ
 
 //cousm input
@@ -120,3 +120,11 @@ for (let i = 0; i < input.length; i++) {
     }
   });
 }
+// sign out
+const signOutBtn = document.getElementsByClassName("signOutBtn")[0];
+const userSignOutContainer = document.getElementsByClassName("userSignOut")[0];
+signOutBtn.addEventListener("click", () => {
+  console.log(userSignOutContainer);
+  userSignOutContainer.classList.toggle("active");
+});
+// sign out
