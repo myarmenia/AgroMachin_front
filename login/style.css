@@ -13,15 +13,85 @@
 }
 .background {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: -o-linear-gradient(315deg, #6c7afe 0 30%, #b796ff 50% 100%);
   background: linear-gradient(135deg, #6c7afe 0 30%, #b796ff 50% 100%);
   padding: 20px;
 }
-.background select {
-  float: right;
-  outline: none;
+.language {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
+/* //dropdown */
+.navbar {
+  overflow: hidden;
+  width: 140.51px;
+  height: 27.76px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+}
+.dropdown {
+  overflow: hidden;
+  height: 100%;
+}
+.dropdown .dropbtn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 3px 12px;
+  color: #575757;
+  height: 100%;
+}
+.dropdown-content {
+  height: 0;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  width: 140.51px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 20;
+  margin-top: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown-content div {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  cursor: pointer;
+  color: #575757;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-content div:hover {
+  background-color: #ddd;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.show {
+  opacity: 1;
+  height: fit-content;
+  display: block;
+}
+.closeDropDown {
+  display: none !important;
+}
+/* dropdown */
 .background .Police,
 .background .loginData {
   display: -webkit-box;
@@ -115,4 +185,19 @@
   margin: 0 auto;
   color: #fff;
   cursor: pointer;
+}
+.background p {
+  margin-top: calc(100% - 95%);
+}
+.border_error {
+  border: 2px solid #f00;
+}
+.error {
+  margin-bottom: 20px;
+  color: #f00;
+  font-size: 12px;
+  font-family: SegoeUI;
+}
+.newpassword_error {
+  display: none;
 }

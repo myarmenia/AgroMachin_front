@@ -8,7 +8,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.error_message {
+  margin-top: 8px;
+  color: #f00;
+  font-size: 10px;
+  font-family: SegoeUI;
+}
+.error_border {
+  border: 1px solid #f00 !important;
+}
 /* -------------------------------- */
 /* Variables */
 /* -------------------------------- */

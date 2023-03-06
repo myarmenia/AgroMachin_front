@@ -9,7 +9,7 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="newRole.css" />
+    <link rel="stylesheet" href="createNewLanguage.css" />
   </head>
   <body>
     <div id="app">
@@ -289,59 +289,50 @@
         <!-- header end -->
         <!-- right section start-->
 
-        <section class="right-section new-roleSection">
+        <section class="right-section">
           <div class="right-sectionChild">
-            <div class="title-link2">
-              <div class="title-linkChild">
-                <a href="#" class="link-direction">Գլխավոր</a>
-                <div>></div>
-                <a href="./page.html" class="link-direction"> Օգտատերեր </a>
-                <div>></div>
-                <a href="" class="link-direction"> Փոփոխել դերի տվյալները</a>
-              </div>
-            </div>
-            <div class="app">
-              <div class="new_role">
-                <div class="create_role">
-                  <h3>Ստեղծել նոր դեր</h3>
+            <div class="title-link2 vehicleType_crumbs_container">
+                <div>
+                  <div class="title-linkChild vehicleType_crumbs_box1">
+                    <a href="#" class="link-direction">Գլխավոր</a>
+                    <div>></div>
+                    <a href="./page.html" class="link-direction">Լեզուներ</a>
+                    <div>></div>
+                    <a href="./page.html" class="link-direction">Փոփոխել լեզուն</a>
+                  </div>
                 </div>
-                <form action="" id="form" class="role_form">
-                  <div class="role_block">
-                    <input type="text" class="role_input" placeholder="Դեր"/>
-                    <h3 class="choose_tool">Ընտրել համապատասխան գործիքներ</h3>
-                    <hr>
+              </div>
+            <div class="app">
+              <div class="new_language">
+                <div class="create_language">
+                  <h3>Փոփոխել լեզու</h3>
+                </div>
+                <form action="" id="form" class="language_form">
+                  <div class="language_block">
+                    <div class="selectLanguage">
+                        <label for="" class="language">Լեզու*
+                            <div class="select">
+                                <select id="standard-select">
+                                  <option value="">Ընտրել լեզուն</option>
+                                  <option value="">Հայերեն</option>
+                                  <option value="">Русский</option>
+                                  <option value="">English</option>
+                                </select>
+                              </div>
+                        </label>
+                        <label for="" class="sections">Բաժիններ <input type="text" placeholder="Նոր բաժին"></label>
+                    </div>
                     <div class="input_checkbox">
-                      <label for=""
-                        ><input type="checkbox" /> Օգտատիրոջ ավելացում</label
-                      >
-                      <label for=""
-                        ><input type="checkbox" /> Օգտատիրոջ փոփոխում</label
-                      >
-                      <label for=""
-                        ><input type="checkbox" /> Օգտատիրոջ ջնջում</label
-                      >
-                      <label for=""><input type="checkbox" /> Դեր</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
                     </div>
                     <div class="buttons">
-                      <input class="button1" type="submit" value="Չեղարկել" />
-                      <input class="button2" type="submit" value="Պահպանել" />
+                      <input class="button2" type="submit" value="Պահպանել">
                     </div>
                   </div>
                 </form>
-              </div>
-            </div>
-          </div>
-          <div class="tool">
-            <div class="new_tool">
-              <div class="add_tool">
-                <h3>Ավելացնել նոր գործիք</h3>
-              </div>
-              <label for=""
-                >Գործիքի անունը*
-                <input type="text" placeholder="Օգտատիրոջ հեռացում"
-              /></label>
-              <div class="tool_name">
-                <input type="submit" class="submit" value="Պահպանել" />
               </div>
             </div>
           </div>
