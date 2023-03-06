@@ -10,11 +10,13 @@
 }
 a {
   text-decoration: none;
-  color: none;
+  color: #000;
 }
-
 .deskTable {
-  border-radius: 10px;
+  border-radius: 15px;
+}
+.firstLine {
+  background: none;
 }
 .desk-links {
   display: flex;
@@ -42,17 +44,13 @@ a {
   text-align: center;
   color: #343957;
 }
-/*  */
-
 /* Form Effect 1 Design */
-
 .controlGroup {
   min-width: 200px;
   min-height: 40px;
   position: relative;
   color: white;
 }
-
 .controlGroup.textArea {
   margin: 10px 0 0 0;
   width: 98.5%;
@@ -85,7 +83,7 @@ a {
 .form1Wrap .controlGroup textarea {
   border: none;
   height: 0;
-  border-top: 1px solid black;
+  border-top: 1px solid #9f9f9f;
   bottom: 0;
 }
 .form1Wrap .controlGroup input,
@@ -94,8 +92,9 @@ a {
 .form1Wrap .controlGroup textarea:active,
 .form1Wrap .controlGroup input:focus,
 .form1Wrap .controlGroup textarea:focus {
-  background: rgba(0, 0, 0, 0.4);
+  background: white;
   outline: none;
+  border-radius: 5px;
 }
 
 .form1Wrap .textArea textarea {
@@ -113,6 +112,7 @@ a {
   bottom: -11px;
   padding: 20px;
   outline: none;
+  border: none;
 }
 
 .form1Wrap .controlGroup.focus textarea {
