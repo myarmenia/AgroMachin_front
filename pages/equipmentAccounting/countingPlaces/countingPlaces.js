@@ -12,6 +12,14 @@ function articleChangeToggle() {
   new_vehicle2.classList.toggle("new_vehicle_show2");
 }
 new_record_btn.addEventListener("click", articleToggle);
+change_record_btn.addEventListener("click", articleChangeToggle);
+
+document.querySelectorAll(".toggle").forEach((el) => {
+  el.addEventListener("click", function () {
+    console.log(this);
+    showModal("#confirm-modal");
+  });
+});
 for (i = 0; i < change_record_btn.length; i++) {
   change_record_btn[i].addEventListener("click", articleChangeToggle);
 }
