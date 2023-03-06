@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>countingPlaces</title>
     <link rel="stylesheet" href="../../css/index.css " />
-    <link rel="stylesheet" href="../../css/table.css" />
+    <link rel="stylesheet" href="./users.css" />
+    <link rel="stylesheet" href="./media.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./countingPlaces.css" />
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <div id="app">
-      <!-- sidebar start -->
       <!-- sidebar start -->
       <div class="sidebar close">
         <div class="logo-details">
@@ -298,179 +296,92 @@
                 <div class="title-linkChild vehicleType_crumbs_box1">
                   <a href="#" class="link-direction">Գլխավոր</a>
                   <div>></div>
-                  <a href="./page.html" class="link-direction"
-                    >Տեխնիկայի հաշվառում
-                  </a>
+                  <a href="./page.html" class="link-direction">Օգտատերեր</a>
                   <div>></div>
-                  <a href="./page.html" class="link-direction"
-                    >Հաշվառման վայրեր</a
-                  >
+                  <a href="./page.html" class="link-direction">Փոփոխել օգտատիրոջ տվյալները</a>
                 </div>
-                <button class="main-btn" id="new_record">
-                  Ստեղծել հաշվառման վայր
-                </button>
               </div>
             </div>
-
-            <div class="vehicleType_main_container">
-              <div class="tableContainer">
-                <div class="table-title">
-                  <div class="vehicleType_table_head">
-                    <span>Հաշվառման վայրեր</span>
-                    <div>
-                      <div class="main-input-search-box">
-                        <input placeholder="Որոնել" class="main-input" />
-                        <img src="../../assets/table/inp-search.svg" alt="" />
-                      </div>
-                      <!-- <button class="addPage" id="new_record">
-                        Ստեղծել գրառում
-                      </button> -->
-                    </div>
-                  </div>
-                  <!-- <button class="addPage" id="addPage">+ Նոր օգտատեր</button> -->
+            <div class="app">
+              <div class="new_user">
+                <div class="create_user">
+                  <h3>Փոփոխել օգտատիրոջ տվյալները</h3>
                 </div>
-                <div class="vehicleType_table_container">
-                  <table>
-                    <thead>
-                      <tr class="vehicleType_thead">
-                        <td>№</td>
-                        <td>Անուն</td>
-                        <td>Կարգավիճակ</td>
-                        <td>Ջնջել</td>
-                        <td>Փոփոխել</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td></td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>
-                          <div>
-                            <label class="toggle">
-                              <input class="toggle-checkbox" type="checkbox" />
-                              <div class="toggle-switch"></div>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <div>
-                            <img src="../../assets/table/Trash.svg" alt="" />
-                          </div>
-                        </td>
-                        <td>
-                          <div>
-                            <img
-                              src="../../assets/table/pen.svg"
-                              alt=""
-                              id="change_record"
-                            />
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div class="new_vehicle">
-                <div class="table-title">
-                  <div class="table-title-text">
-                    Ստեղծել տրանսպորտային միջոցի տեսակ
+                <form action="" class="user_form">
+                  <div class="place flex">
+                    <p>Հաշվառման վայր</p>
+                    <select name="" class="select" id="">
+                      <option value="">Երևան</option>
+                      <option value="">Շիրակի մարզ</option>
+                      <option value="">Լոռու մարզ</option>
+                      <option value="">Տավուշի մարզ</option>
+                      <option value="">Արագածոտնի մարզ</option>
+                      <option value="">Արարատի մարզ</option>
+                      <option value="">Գեղարքունիքի մարզ</option>
+                      <option value="">Վայոց Ձորի մարզ</option>
+                      <option value="">Կոտայքի մարզ</option>
+                      <option value="">Արմավիրի մարզ</option>
+                      <option value="">Սյունիքի մարզ</option>
+                    </select>
                   </div>
-                </div>
-                <form class="new_vehicle_content">
-                  <div class="new_vehicle_fieldset">
-                    <div>
-                      <div class="field_title">Անուն*</div>
-                      <input
-                        id="car"
-                        placeholder="Տրակտոր"
-                        class="main-input"
-                      />
-                    </div>
-                    <div>
-                      <div class="field_title">Կարգավիճակ*</div>
-                      <label class="toggle2">
-                        <input class="toggle2-checkbox" type="checkbox" />
-                        <div class="toggle2-switch"></div>
-                      </label>
-                    </div>
+                  <div class="name flex">
+                    <p>Անուն*</p>
+                    <input type="text" placeholder="Անուն" />
                   </div>
-                  <button class="addPage">Պահպանել</button>
-                </form>
-              </div>
-              <div class="new_vehicle2">
-                <div class="table-title">
-                  <div class="table-title-text">Փոփոխել հաշվառման վայրը</div>
-                </div>
-                <form class="new_vehicle_content">
-                  <div class="new_vehicle_fieldset">
-                    <div>
-                      <div class="field_title">Անուն*</div>
-                      <input
-                        id="car"
-                        placeholder="Տրակտոր"
-                        class="main-input"
-                      />
-                    </div>
-                    <div>
-                      <div class="field_title">Կարգավիճակ*</div>
-                      <label class="toggle2">
-                        <input class="toggle2-checkbox" type="checkbox" />
-                        <div class="toggle2-switch"></div>
-                      </label>
-                    </div>
+                  <div class="surname flex">
+                    <p>Ազգանուն*</p>
+                    <input type="text" placeholder="Ազգանուն" />
                   </div>
-                  <button class="addPage">Պահպանել</button>
+                  <div class="fatherland flex">
+                    <p>Հայրանուն*</p>
+                    <input type="text" placeholder="Հայրանուն" />
+                  </div>
+                  <div class="email flex">
+                    <p>Էլ. հասցե*</p>
+                    <input type="email" />
+                  </div>
+                  <div class="password flex">
+                    <p>Գաղտնաբառ*</p>
+                    <input type="password" />
+                  </div>
+                  <div class="confirm_password flex">
+                    <p>Գաղտնաբառի հաստատում*</p>
+                    <input type="password" />
+                  </div>
+                  <div class="role flex">
+                    <p>Դեր*</p>
+                    <select name="" id="">
+                      <option value="">Օգտատեր</option>
+                    </select>
+                  </div>
+                  <div class="language flex">
+                    <p>Լեզու*</p>
+                    <select name="" id="">
+                      <option value="">Հայերեն</option>
+                      <option value="">Ռուսերեն</option>
+                      <option value="">Անգլերեն</option>
+                    </select>
+                  </div>
+                  <div class="status flex">
+                    <p>Կարգավիճակ*</p>
+                    <label class="toggle">
+                      <input class="toggle-checkbox" type="checkbox" />
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div class="buttons">
+                    <button class="button1">Չեղարկել</button>
+                    <button class="button2">Պահպանել</button>
+                  </div>
                 </form>
               </div>
             </div>
-            <!-- ------------------------------------------------------- -->
-            <!-- Pagination -->
-            <!-- ------------------------------------------------------- -->
-            <div class="pagination">
-              <div class="page-item previous-page">
-                <a class="page-link" href="javascript:void(0)"
-                  ><span>‹‹</span></a
-                >
-              </div>
-              <div class="page-item current-page">
-                <a class="page-link" href="javascript:void(0)">1</a>
-              </div>
-              <div class="page-item dots">
-                <a class="page-link" href="javascript:void(0)">...</a>
-              </div>
-              <div class="page-item current-page">
-                <a class="page-link" href="javascript:void(0)">5</a>
-              </div>
-              <div class="page-item current-page page-active">
-                <a class="page-link" href="javascript:void(0)">6</a>
-              </div>
-              <div class="page-item current-page">
-                <a class="page-link" href="javascript:void(0)">7</a>
-              </div>
-              <div class="page-item dots">
-                <a class="page-link" href="javascript:void(0)">...</a>
-              </div>
-              <div class="page-item current-page">
-                <a class="page-link" href="javascript:void(0)">13</a>
-              </div>
-              <div class="page-item next-page">
-                <a class="page-link" href="javascript:void(0)"
-                  ><span>››</span></a
-                >
-              </div>
-            </div>
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
-            <!-- ======================================================= -->
           </div>
         </section>
         <!-- right section end-->
       </main>
-
-      <script src="../../js/index.js"></script>
-      <script src="./countingPlaces.js"></script>
     </div>
+    <script src="../../js/index.js"></script>
+    <script src="../../js/modal.js"></script>
   </body>
 </html>

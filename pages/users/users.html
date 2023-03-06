@@ -469,7 +469,7 @@
                 <button class="btn-transparent" id="modal-deny-btn">
                   Չեղարկել
                 </button>
-                <button class="addPage">Հաստատել</button>
+                <button class="addPage" id="modal-accept-btn">Հաստատել</button>
               </div>
             </div>
           </div>
@@ -477,13 +477,11 @@
       </div>
     </div>
     <script src="../../js/index.js"></script>
+    <script src="../../js/modal.js"></script>
     <script>
       document.querySelectorAll(".toggle").forEach((el) => {
         el.addEventListener("click", () => showModal("#confirm-modal"));
       });
-      document
-        .getElementById("modal-deny-btn")
-        .addEventListener("click", hideModal);
     </script>
   </body>
 </html>

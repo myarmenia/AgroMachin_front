@@ -189,6 +189,10 @@
 /* ================================ */
 /* ================================ */
 
+.active-sidebar-item {
+  color: var(--light-blue);
+}
+
 .sidebar {
 	position: fixed;
 	top: 0;
@@ -286,9 +290,8 @@
 	text-decoration: none;
 	color: white;
 }
-
-a:focus .link_name {
-	color: #7098d5 !important;
+.link-active {
+  color: #7098d5 !important;
 }
 a:focus .sidebar .nav-links li a .link_name {
 	font-weight: 600;
