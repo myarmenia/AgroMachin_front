@@ -74,19 +74,7 @@ pages_link.forEach((el, i) => {
     link_name[i].classList.toggle("link-active");
   });
 });
-// menu activ
-// document.querySelectorAll(".modal .close").forEach((el) => {
-//   el.addEventListener("click", hideModal);
-// });
-// window.addEventListener("click", (e) => {
-//   if (e.target == modal_container) {
-//     hideModal();
-//   }
-// });
 
-// ==================================================================
-
-//cousm input
 // focused
 const coustm_input = document.getElementsByClassName("coustm_input");
 for (let i = 0; i < coustm_input.length; i++) {
@@ -129,3 +117,11 @@ for (let i = 0; i < input.length; i++) {
     }
   });
 }
+// sign out
+const signOutBtn = document.getElementsByClassName("signOutBtn")[0];
+const userSignOutContainer = document.getElementsByClassName("userSignOut")[0];
+signOutBtn.addEventListener("click", () => {
+  console.log(userSignOutContainer);
+  userSignOutContainer.classList.toggle("active");
+});
+// sign out

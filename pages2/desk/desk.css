@@ -1,67 +1,67 @@
-/** @format */
-
-.tabs_container {
-  width: 100%;
-  padding: 10px;
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background-color: #343957;
-  color: #fff;
-}
-
-.tabs_coulm {
+/* input */
+.pageTitle {
   display: flex;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #5f6368;
+}
+a {
+  text-decoration: none;
+  color: none;
+}
+
+.deskTable {
+  border-radius: 10px;
+}
+.desk-links {
+  display: flex;
+  gap: 40px;
+  margin: 30px 0 57px;
+}
+.desk-link-card {
+  width: 247.73px;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 6px;
-  width: 100%;
-  padding: 10px;
-  list-style-type: none;
-  /* justify-content: center; */
+  justify-content: center;
+  padding: 20px 20px;
+  gap: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  text-decoration: none;
 }
-.tabs_text {
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  display: inline-block;
-}
-.tabs_text.tabs_activ {
-  color: #7098d5;
-}
-
-.tab_item.tabs_activ span {
-  color: #7098d5;
-}
-body {
-  background: #00b6ad;
-}
-
-h2 {
-  color: white;
+.desk-link-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
   text-align: center;
-  margin: 0 0 20px 0;
+
+  /* main blue */
+
+  color: #343957;
 }
+/*  */
 
 /* Form Effect 1 Design */
-.form1Wrap {
-  display: inline-block;
-  vertical-align: top;
-  width: 200px;
-  min-height: 300px;
-  margin: 10px 10px;
-  /* background: rgba(40, 43, 48, 0.6); */
+/* .form1Wrap {
+  cursor: pointer;
 }
-
+.newContactForm {
+  cursor: pointer;
+} */
 .controlGroup {
   min-width: 200px;
   min-height: 40px;
-  margin-bottom: 30px;
+
   position: relative;
   color: white;
 }
-.controlGroup:first-child {
-  margin-left: 0;
-}
+
 .controlGroup.textArea {
   margin: 10px 0 0 0;
   width: 98.5%;
@@ -75,17 +75,22 @@ h2 {
   position: absolute;
   width: 100%;
   padding: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  -ms-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  -o-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
 }
 
 .form1Wrap .controlGroup label {
   bottom: 3px;
-  color: #343957;
 }
 .form1Wrap .controlGroup input,
 .form1Wrap .controlGroup textarea {
   border: none;
   height: 0;
-  border-top: 2px solid white;
+  border-top: 1px solid black;
   bottom: 0;
 }
 .form1Wrap .controlGroup input,
@@ -97,7 +102,6 @@ h2 {
   background: rgba(0, 0, 0, 0.4);
   outline: none;
   box-sizing: border-box;
-  color: white;
 }
 .form1Wrap .textArea textarea {
   width: 100%;
@@ -108,6 +112,7 @@ h2 {
   bottom: 34px;
   font-size: 11px;
   outline: none;
+  cursor: pointer;
 }
 .form1Wrap .controlGroup.focus input,
 .form1Wrap .controlGroup.focus textarea {
@@ -122,3 +127,9 @@ h2 {
   padding: 20px;
   outline: none;
 }
+
+/* Form Effect 2 Design */
+
+/* Form Effect 3 Design */
+
+/*  */

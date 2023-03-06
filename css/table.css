@@ -181,8 +181,6 @@ td {
   cursor: pointer;
 }
 .tableChild {
-  max-height: calc(100vh - 280px);
-  overflow: auto;
   position: relative;
 }
 .tableChild::-webkit-scrollbar {
@@ -210,7 +208,6 @@ td {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  z-index: 10;
 }
 
 .toggle-switch {

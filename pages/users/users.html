@@ -282,8 +282,22 @@
             </div>
             <img
               src="../../assets/sideBarIcon/headerUser.svg"
-              class="bx bxs-user"
+              class="bx bxs-user signOutBtn"
             />
+            <div class="userSignOut">
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/headerUser.svg"
+                  class="bx bxs-user"
+                />Անձնական էջ
+              </a>
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/signout.svg"
+                  class="bx bxs-user"
+                />Դուրս գալ
+              </a>
+            </div>
           </div>
         </header>
         <!-- header end -->
@@ -469,7 +483,7 @@
                 <button class="btn-transparent" id="modal-deny-btn">
                   Չեղարկել
                 </button>
-                <button class="addPage">Հաստատել</button>
+                <button class="addPage" id="modal-accept-btn">Հաստատել</button>
               </div>
             </div>
           </div>
@@ -478,10 +492,5 @@
     </div>
     <script src="../../js/index.js"></script>
     <script src="../../js/modal.js"></script>
-    <script>
-      document.querySelectorAll(".toggle").forEach((el) => {
-        el.addEventListener("click", () => showModal("#confirm-modal"));
-      });
-    </script>
   </body>
 </html>
