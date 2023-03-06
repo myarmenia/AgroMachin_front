@@ -40,24 +40,15 @@ a {
   font-size: 16px;
   line-height: 21px;
   text-align: center;
-
-  /* main blue */
-
   color: #343957;
 }
 /*  */
 
 /* Form Effect 1 Design */
-/* .form1Wrap {
-  cursor: pointer;
-}
-.newContactForm {
-  cursor: pointer;
-} */
+
 .controlGroup {
   min-width: 200px;
   min-height: 40px;
-
   position: relative;
   color: white;
 }
@@ -85,6 +76,10 @@ a {
 
 .form1Wrap .controlGroup label {
   bottom: 3px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9f9f9f;
 }
 .form1Wrap .controlGroup input,
 .form1Wrap .controlGroup textarea {
@@ -101,13 +96,12 @@ a {
 .form1Wrap .controlGroup textarea:focus {
   background: rgba(0, 0, 0, 0.4);
   outline: none;
-  box-sizing: border-box;
 }
+
 .form1Wrap .textArea textarea {
   width: 100%;
   resize: none;
 }
-/*** Focus Effects Style 1 ***/
 .form1Wrap .controlGroup.focus label {
   bottom: 34px;
   font-size: 11px;
@@ -127,9 +121,26 @@ a {
   padding: 20px;
   outline: none;
 }
-
-/* Form Effect 2 Design */
-
-/* Form Effect 3 Design */
-
-/*  */
+.inputWrap img {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+/* open default */
+.form1Wrap .controlGroup input:not(:placeholder-shown) + label {
+  bottom: 34px;
+  font-size: 11px;
+  outline: none;
+  cursor: pointer;
+}
+.form1Wrap .controlGroup input::placeholder {
+  font-size: 0;
+}
+.form1Wrap .controlGroup input:not(:placeholder-shown),
+.form1Wrap .controlGroup textarea:not(:placeholder-shown) {
+  bottom: -11px;
+  padding: 20px;
+  outline: none;
+}
+/* open default */
+/* Form Effect */
