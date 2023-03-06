@@ -4,7 +4,9 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-
+.title-linkChild {
+  width: 100%;
+}
 .new_user {
   width: 100%;
   min-height: 630px;

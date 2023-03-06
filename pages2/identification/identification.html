@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../font/font.css" />
     <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="identification.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="newRole.css" />
   </head>
   <body>
     <div id="app">
@@ -22,20 +21,21 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/user.svg"
+                src="../../assets/sidebarIcon/5img.svg"
                 class="bx bx-grid-alt"
               />
-
-              <span class="link_name">Օգտատերեր</span>
+              <span class="link_name">Գրասեղան</span>
             </a>
             <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Օգտատերեր </a></li>
+              <li>
+                <a class="link_name" href="#">Գրասեղան</a>
+              </li>
             </ul>
           </li>
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/role.svg"
+                src="../../assets/sidebarIcon/archiv.svg"
                 class="bx bx-grid-alt"
               />
 
@@ -48,31 +48,18 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/car.svg"
+                src="../../assets/sidebarIcon/5img.svg"
                 class="bx bx-grid-alt"
               />
-              <span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
+              <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
             </a>
             <ul class="sub-menu blank">
               <li>
-                <a class="link_name" href="#">Տրանսպորտային միջոցի տեսակ </a>
+                <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
               </li>
             </ul>
           </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/techtype.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տեխնիկայի սարքինության տեսակ</a>
-              </li>
-            </ul>
-          </li>
+
           <li>
             <div class="iocn-link">
               <a href="#">
@@ -93,19 +80,28 @@
               </ul>
             </div>
           </li>
+
           <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/5img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
-              </li>
-            </ul>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../assets/sidebarIcon/7img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Տրված համարանիշներ</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
+                <li>
+                  <a href="#"
+                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <div class="iocn-link">
@@ -137,53 +133,6 @@
                 </li>
               </ul>
             </div>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <img
-                  src="../../assets/sidebarIcon/7img.svg"
-                  class="bx bx-grid-alt"
-                />
-                <span class="link_name">Տրված համարանիշներ</span>
-              </a>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <div class="menu-panel">
-              <ul class="sub-menu">
-                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
-                <li>
-                  <a href="#"
-                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/8img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Բառարան</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Բառարան</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="#">
-              <img
-                src="../../assets/sidebarIcon/9img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Լեզուներ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Լեզուներ</a></li>
-            </ul>
           </li>
           <li>
             <a href="#">
@@ -288,67 +237,49 @@
         </header>
         <!-- header end -->
         <!-- right section start-->
-
-        <section class="right-section new-roleSection">
+        <section class="right-section">
           <div class="right-sectionChild">
+            
             <div class="title-link2">
-              <div class="title-linkChild">
-                <a href="#" class="link-direction">Գլխավոր</a>
-                <div>></div>
-                <a href="./page.html" class="link-direction"> Օգտատերեր </a>
-                <div>></div>
-                <a href="" class="link-direction"> Փոփոխել դերի տվյալները</a>
-              </div>
-            </div>
-            <div class="app">
-              <div class="new_role">
-                <div class="create_role">
-                  <h3>Ստեղծել նոր դեր</h3>
-                </div>
-                <form action="" id="form" class="role_form">
-                  <div class="role_block">
-                    <input type="text" class="role_input" placeholder="Դեր"/>
-                    <h3 class="choose_tool">Ընտրել համապատասխան գործիքներ</h3>
-                    <hr>
-                    <div class="input_checkbox">
-                      <label for=""
-                        ><input type="checkbox" /> Օգտատիրոջ ավելացում</label
-                      >
-                      <label for=""
-                        ><input type="checkbox" /> Օգտատիրոջ փոփոխում</label
-                      >
-                      <label for=""
-                        ><input type="checkbox" /> Օգտատիրոջ ջնջում</label
-                      >
-                      <label for=""><input type="checkbox" /> Դեր</label>
-                    </div>
-                    <div class="buttons">
-                      <input class="button1" type="submit" value="Չեղարկել" />
-                      <input class="button2" type="submit" value="Պահպանել" />
+              <div class="form1Wrap">
+                <form class="newContactForm">
+                  <div class="controlGroup">
+                    <label for="name">Name</label>
+                    <div class="inputWrap">
+                      <input id="name" />
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-          </div>
-          <div class="tool">
-            <div class="new_tool">
-              <div class="add_tool">
-                <h3>Ավելացնել նոր գործիք</h3>
+            <div class="control">
+                <div class="control_number">
+                  <div class="title">
+                    <h3>Հայտի նույնականացում</h3>
+                  </div>
+                  <label for="">Հսկիչ համար FGTY-
+                    <div class="form1Wrap">
+                        <form class="newContactForm">
+                          <div class="controlGroup">
+                            <label for="name1" class="login">Մուտքագրել տվյալներ</label>
+                            <div class="inputWrap">
+                              <input id="name1">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                  </label>
+                  <div class="tool_name">
+                    <input type="submit" class="submit" value="Հավաստել">
+                  </div>
+                </div>
               </div>
-              <label for=""
-                >Գործիքի անունը*
-                <input type="text" placeholder="Օգտատիրոջ հեռացում"
-              /></label>
-              <div class="tool_name">
-                <input type="submit" class="submit" value="Պահպանել" />
-              </div>
-            </div>
           </div>
         </section>
         <!-- right section end-->
       </main>
     </div>
     <script src="../../js/index.js"></script>
+    <script src="../input.js"></script>
   </body>
 </html>

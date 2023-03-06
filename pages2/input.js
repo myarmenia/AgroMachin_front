@@ -1,7 +1,4 @@
-const formWrap = document.querySelector(".form1Wrap");
-const inp = document.querySelector("#name");
-inp.value = "red";
-
+const formWrap = document.querySelectorAll(".form1Wrap");
 const handleFocus = (event) => {
   event.target.closest(".controlGroup").classList.add("focus");
 };
@@ -12,5 +9,9 @@ const handleBlur = (event) => {
     controlGroup.classList.remove("focus");
   }
 };
-formWrap.addEventListener("focusin", handleFocus, true);
-formWrap.addEventListener("focusout", handleBlur, true);
+formWrap.forEach((el) => {
+  el.addEventListener("focusin", handleFocus, true);
+});
+formWrap.forEach((el) => {
+  el.addEventListener("focusout", handleBlur, true);
+});
