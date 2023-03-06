@@ -37,6 +37,7 @@ let option = document.querySelectorAll(".option");
 let title = "";
 const activ = document.getElementsByClassName("show");
 for (let i = 0; i < dropBtn.length; i++) {
+  console.log("test");
   dropBtn[i].addEventListener("click", function (e) {
     for (let m = 0; m < activ.length; m++) {
       activ[m].classList.toggle("show");
