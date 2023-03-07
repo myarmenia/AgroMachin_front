@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/table.css" />
-    <link rel="stylesheet" href="desk.css" />
+    <link rel="stylesheet" href="../../../css/index.css" />
+    <link rel="stylesheet" href="../../input.css" />
+    <link rel="stylesheet" href="./changeOwnership.css" />
+
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
@@ -16,13 +17,13 @@
       <!-- sidebar start -->
       <div class="sidebar close">
         <div class="logo-details">
-          <img src="../../assets/sidebarIcon/logo.svg" />
+          <img src="../../../assets/sidebarIcon/logo.svg" />
         </div>
         <ul class="nav-links">
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/5img.svg"
+                src="../../../assets/sidebarIcon/5img.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Գրասեղան</span>
@@ -36,7 +37,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/archiv.svg"
+                src="../../../assets/sidebarIcon/archiv.svg"
                 class="bx bx-grid-alt"
               />
 
@@ -49,7 +50,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/5img.svg"
+                src="../../../assets/sidebarIcon/5img.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
@@ -65,7 +66,7 @@
             <div class="iocn-link">
               <a href="#">
                 <img
-                  src="../../assets/sidebarIcon/4img.svg"
+                  src="../../../assets/sidebarIcon/4img.svg"
                   class="bx bx-grid-alt"
                 />
                 <span class="link_name">Տեխնիկայի հաշվառում</span>
@@ -86,7 +87,7 @@
             <div class="iocn-link">
               <a href="#">
                 <img
-                  src="../../assets/sidebarIcon/7img.svg"
+                  src="../../../assets/sidebarIcon/7img.svg"
                   class="bx bx-grid-alt"
                 />
                 <span class="link_name">Տրված համարանիշներ</span>
@@ -108,7 +109,7 @@
             <div class="iocn-link">
               <a href="#">
                 <img
-                  src="../../assets/sidebarIcon/6img.svg"
+                  src="../../../assets/sidebarIcon/6img.svg"
                   class="bx bx-grid-alt"
                 />
                 <span class="link_name">Վարման իրավունքի Խմբեր</span>
@@ -138,7 +139,7 @@
           <li>
             <a href="#">
               <img
-                src="../../assets/sidebarIcon/10img.svg"
+                src="../../../assets/sidebarIcon/10img.svg"
                 class="bx bx-grid-alt"
               />
               <span class="link_name">Հաշվետվություններ</span>
@@ -147,19 +148,6 @@
               <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
             </ul>
           </li>
-
-          <!-- <li>
-          <div class="profile-details">
-            <div class="profile-content">
-              <img src="image/profile.jpg" alt="profileImg">
-            </div>
-            <div class="name-job">
-              <div class="profile_name">anun azganun</div>
-              <div class="job">Profession</div>
-            </div>
-            <i class="bx bx-log-out"></i>
-          </div>
-        </li> -->
         </ul>
       </div>
       <!-- sidebar end -->
@@ -169,7 +157,7 @@
         <header class="main-header">
           <div class="home-content">
             <img
-              src="../../assets/sideBarIcon/menuIcon.svg"
+              src="../../../assets/sideBarIcon/menuIcon.svg"
               class="bx bx-menu"
             />
           </div>
@@ -231,7 +219,7 @@
               </div>
             </div>
             <img
-              src="../../assets/sideBarIcon/headerUser.svg"
+              src="../../../assets/sideBarIcon/headerUser.svg"
               class="bx bxs-user"
             />
           </div>
@@ -240,68 +228,99 @@
         <!-- right section start-->
         <section class="right-section">
           <div class="right-sectionChild">
-            <div class="title-link2">
-              <div class="pageTitle">Գրասեղան</div>
+            <div class="searchContainer">
               <div class="form1Wrap">
                 <div class="controlGroup">
                   <div class="inputWrap">
                     <input id="search" placeholder="search" />
                     <label for="search">Որոնել</label>
-                    <img src="../../assets/table/inp-search.svg" />
+                    <img src="../../../assets/table/inp-search.svg" />
                   </div>
                 </div>
               </div>
             </div>
-            <div class="desk-links">
-              <a href="#" class="desk-link-card">
-                <img src="../../assets/desk/ownership.svg" />
-                <div class="desk-link-text">Սեփականության փոփոխություն</div>
-              </a>
-              <a href="#" class="desk-link-card">
-                <img src="../../assets/desk/accountChange.svg" />
-                <div class="desk-link-text">Հաշվառման փոփոխություն</div>
-              </a>
-              <a href="#" class="desk-link-card">
-                <img src="../../assets/desk/ownership.svg" />
-                <div class="desk-link-text">Համարանիշը տնօրինողի գրանցում</div>
-              </a>
-              <a href="#" class="desk-link-card">
-                <img src="../../assets/desk/ownership.svg" />
-                <div class="desk-link-text">Տեղեկանքի տրամադրում</div>
-              </a>
-            </div>
-            <div class="tableContainer deskTable">
-              <div class="tableChild">
-                <table>
-                  <tr class="firstLine">
-                    <td>Հայտի համար</td>
-                    <td>Կարգավիճակ</td>
-                    <td>Հաշվառման համարանիշ</td>
-                    <td>Վկայականի համար</td>
-                    <td>Ստացող ՀՔԲ</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">123456</a></td>
-                    <td>Մերժված</td>
-                    <td>UU 1777</td>
-                    <td></td>
-                    <td>Երևանի ՀՔԲ</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">123456</a></td>
-                    <td>Մերժված</td>
-                    <td>UU 1777</td>
-                    <td></td>
-                    <td>Երևանի ՀՔԲ</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">123456</a></td>
-                    <td>Մերժված</td>
-                    <td>UU 1777</td>
-                    <td></td>
-                    <td>Երևանի ՀՔԲ</td>
-                  </tr>
-                </table>
+            <div class="changeOwnerSearch">
+              <div class="searchTitle">Սեփականության փոփոխություն</div>
+              <div class="formContainer">
+                <form>
+                  <div class="formContainerChild">
+                    <div class="form1Wrap">
+                      <div class="controlGroup">
+                        <div class="inputWrap">
+                          <input id="inp1" placeholder="search" />
+                          <label for="inp1"
+                            >Փոփոխվող ՏՄ-ի նույնացման համար</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="doubleInpTitle">Փոփոխվող ՏՄ-ի համարանիշը</div>
+                    <div class="doubleInp">
+                      <div class="form1Wrap">
+                        <div class="controlGroup">
+                          <div class="inputWrap">
+                            <input id="inp2" placeholder="search" />
+                            <label for="inp2">&nbsp;</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form1Wrap">
+                        <div class="controlGroup">
+                          <div class="inputWrap">
+                            <input id="inp3" placeholder="search" />
+                            <label for="inp3">&nbsp;</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form1Wrap">
+                      <div class="controlGroup">
+                        <div class="inputWrap">
+                          <input id="inp4" placeholder="search" />
+                          <label for="inp4">Սեփականության վկայական</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formContainerChild2">
+                    <div class="form1Wrap">
+                      <div class="controlGroup">
+                        <div class="inputWrap">
+                          <input id="inp5" placeholder="search" />
+                          <label for="inp5">Հենասարքի համար</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form1Wrap">
+                      <div class="controlGroup">
+                        <div class="inputWrap">
+                          <input id="inp6" placeholder="search" />
+                          <label for="inp6">Շարժիչի համար</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form1Wrap">
+                      <div class="controlGroup">
+                        <div class="inputWrap">
+                          <input id="inp7" placeholder="search" />
+                          <label for="inp7"
+                            >Օնլայն առուվաճառքի պայմանագրի համար</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form1Wrap">
+                      <div class="controlGroup">
+                        <div class="inputWrap">
+                          <input id="inp8" placeholder="search" />
+                          <label for="inp8"
+                            >Մաքսային համակարգի գրանցման համար</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -309,7 +328,7 @@
         <!-- right section end-->
       </main>
     </div>
-    <script src="../../js/index.js"></script>
-    <script src="../input.js"></script>
+    <script src="../../../js/index.js"></script>
+    <script src="../../input.js"></script>
   </body>
 </html>
