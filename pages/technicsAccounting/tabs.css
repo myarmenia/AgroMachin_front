@@ -1,93 +1,115 @@
 /** @format */
 
 .tabs_container {
-	width: 100%;
-	padding: 10px;
-	/* background-color: rgba(255, 255, 255, 0.8); */
-	border-radius: 10px;
-	margin-bottom: 10px;
-	background-color: #343957;
-	color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #5f6368;
+
+  position: relative;
+}
+.tabs_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background: #7098d5;
+  opacity: 0.3;
+  border-radius: 8px;
 }
 
 .tabs_coulm {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	width: 100%;
-	padding: 10px;
-	list-style-type: none;
-	/* justify-content: center; */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  list-style-type: none;
+  /* justify-content: center; */
 }
 .tabs_text {
-	font-size: 14px;
-	font-weight: 500;
-	cursor: pointer;
-	display: inline-block;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #5f6368;
+  padding: 10px 18.5px;
+}
+.tabs_text:first-child {
+  padding-left: 29px;
+}
+.tabs_text:last-child {
+  padding-right: 29px;
 }
 .tabs_text.tabs_activ {
-	color: #7098d5;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #343957;
 }
 
 .tab_item.tabs_activ span {
-	color: #7098d5;
+  color: #7098d5;
 }
 body {
-	background: #00b6ad;
+  background: #00b6ad;
 }
 
 h2 {
-	color: white;
-	text-align: center;
-	margin: 0 0 20px 0;
+  color: white;
+  text-align: center;
+  margin: 0 0 20px 0;
 }
 
 /* Form Effect 1 Design */
 .form1Wrap {
-	display: inline-block;
-	vertical-align: top;
-	width: 200px;
-	min-height: 300px;
-	margin: 10px 10px;
-	/* background: rgba(40, 43, 48, 0.6); */
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  min-height: 300px;
+  margin: 10px 10px;
+  /* background: rgba(40, 43, 48, 0.6); */
 }
 
 .controlGroup {
-	min-width: 200px;
-	min-height: 40px;
-	margin-bottom: 30px;
-	position: relative;
-	color: white;
+  min-width: 200px;
+  min-height: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  color: white;
 }
 .controlGroup:first-child {
-	margin-left: 0;
+  margin-left: 0;
 }
 .controlGroup.textArea {
-	margin: 10px 0 0 0;
-	width: 98.5%;
+  margin: 10px 0 0 0;
+  width: 98.5%;
 }
 .controlGroup input {
-	width: 100%;
+  width: 100%;
 }
 .form1Wrap .controlGroup label,
 .form1Wrap .controlGroup input,
 .form1Wrap .controlGroup textarea {
-	position: absolute;
-	width: 100%;
-	padding: 0;
-	
+  position: absolute;
+  width: 100%;
+  padding: 0;
 }
 
 .form1Wrap .controlGroup label {
-	bottom: 3px;
-	color: #343957;
+  bottom: 3px;
+  color: #343957;
 }
 .form1Wrap .controlGroup input,
 .form1Wrap .controlGroup textarea {
-	border: none;
-	height: 0;
-	border-top: 2px solid white;
-	bottom: 0;
+  border: none;
+  height: 0;
+  border-top: 2px solid white;
+  bottom: 0;
 }
 .form1Wrap .controlGroup input,
 .form1Wrap .controlGroup textarea,
@@ -95,31 +117,31 @@ h2 {
 .form1Wrap .controlGroup textarea:active,
 .form1Wrap .controlGroup input:focus,
 .form1Wrap .controlGroup textarea:focus {
-	background: rgba(0, 0, 0, 0.4);
-	outline: none;
-	box-sizing: border-box;
-	color: white;
+  background: rgba(0, 0, 0, 0.4);
+  outline: none;
+  box-sizing: border-box;
+  color: white;
 }
 .form1Wrap .textArea textarea {
-	width: 100%;
-	resize: none;
+  width: 100%;
+  resize: none;
 }
 /*** Focus Effects Style 1 ***/
 .form1Wrap .controlGroup.focus label {
-	bottom: 34px;
-	font-size: 11px;
-	outline: none;
+  bottom: 34px;
+  font-size: 11px;
+  outline: none;
 }
 .form1Wrap .controlGroup.focus input,
 .form1Wrap .controlGroup.focus textarea {
-	bottom: -11px;
-	padding: 20px;
-	outline: none;
+  bottom: -11px;
+  padding: 20px;
+  outline: none;
 }
 
 .form1Wrap .controlGroup.focus textarea {
-	height: 95px;
-	bottom: -67px;
-	padding: 20px;
-	outline: none;
+  height: 95px;
+  bottom: -67px;
+  padding: 20px;
+  outline: none;
 }

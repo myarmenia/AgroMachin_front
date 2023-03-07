@@ -2,6 +2,7 @@
 // Modal toggling
 // ------------------------------------------------------------------
 const modal_container = document.querySelector(".modal-container");
+
 function showModal(name) {
   const modal = document.querySelector(name);
 
@@ -33,6 +34,7 @@ function hideModal() {
     }, 300);
   }
 }
+
 window.addEventListener("click", (e) => {
   if (e.target == modal_container) {
     hideModal();
@@ -41,9 +43,7 @@ window.addEventListener("click", (e) => {
 document.querySelectorAll(".modal .close").forEach((el) => {
   el.addEventListener("click", hideModal);
 });
-document.getElementById("modal-deny-btn").addEventListener("click", hideModal);
-document
-  .getElementById("modal-accept-btn")
-  .addEventListener("click", hideModal);
-
+document.querySelectorAll(".modal-deny-btn").forEach((el) => {
+  el.addEventListener("click", hideModal);
+});
 // ==================================================================

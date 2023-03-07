@@ -142,6 +142,7 @@
   border: none;
   color: #fff;
 }
+
 @media only screen and (max-width: 1190px) {
   .new-roleSection {
     flex-direction: column;

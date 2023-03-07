@@ -10,6 +10,21 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <style>
+      #table-route td:nth-child(2) {
+        width: 100%;
+      }
+      #table-route td:nth-child(3),
+      #table-route td:nth-child(4),
+      #table-route td:nth-child(5) {
+        text-align: center;
+      }
+      #table-route td:nth-child(3) > *,
+      #table-route td:nth-child(4) > *,
+      #table-route td:nth-child(5) > * {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -291,12 +306,17 @@
                 <div class="page">Դերեր</div>
               </div>
               <div class="tableChild">
-                <table>
+                <table
+                  data-route="users-table"
+                  data-delete="delete-table"
+                  id="table-route"
+                >
                   <tr class="firstLine">
                     <td>№</td>
                     <td>Դեր</td>
 
                     <td>Կարգավիճակ</td>
+                    <td>afdsfsdf</td>
                     <td>Փոփոխել</td>
                   </tr>
                   <tr>
@@ -309,7 +329,12 @@
                         <div class="toggle-switch"></div>
                       </label>
                     </td>
-
+                    <td>
+                      <img
+                        src="../../assets/table/Trash.svg"
+                        class="trashbin"
+                      />
+                    </td>
                     <td>
                       <a>
                         <img src="../../assets/table/pen.svg" class="pen"
@@ -326,11 +351,17 @@
                         <div class="toggle-switch"></div>
                       </label>
                     </td>
-
+                    <td>
+                      <img
+                        src="../../assets/table/Trash.svg"
+                        class="trashbin"
+                      />
+                    </td>
                     <td>
                       <img src="../../assets/table/pen.svg" class="pen" />
                     </td>
                   </tr>
+
                   <tr>
                     <td></td>
                     <td>Ադմինիստրատոր</td>
@@ -341,7 +372,12 @@
                         <div class="toggle-switch"></div>
                       </label>
                     </td>
-
+                    <td>
+                      <img
+                        src="../../assets/table/Trash.svg"
+                        class="trashbin"
+                      />
+                    </td>
                     <td>
                       <img src="../../assets/table/pen.svg" class="pen" />
                     </td>
@@ -399,13 +435,31 @@
           <div class="modal-content">
             <div class="modal-confirm-box">
               <p class="modal-confirm-box-title">
-                Դուք ցանկանո՞ւմ եք ապակտիվացնել օգտատիրոջը
+                Դուք ցանկանո՞ւմ եք հաստատել գործողությունը
               </p>
               <div class="modal-confirm-buttons">
                 <button class="btn-transparent" id="modal-deny-btn">
                   Չեղարկել
                 </button>
-                <button class="addPage">Հաստատել</button>
+                <a href="" class="addPage" id="modal-accept-btn">Հաստատել</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="remove-modal">
+          <div class="modal-head">
+            <h3 class="modal-title">Կարգավիճակի փոփոխություն</h3>
+            <div class="close">&#x2715;</div>
+          </div>
+          <div class="modal-content">
+            <div class="modal-confirm-box">
+              <p class="modal-confirm-box-title">
+                Դուք ցանկանո՞ւմ եք հաստատել գործողությունը 111111111111
+              </p>
+              <div class="modal-confirm-buttons">
+                <button class="btn-transparent modal-deny-btn">Չեղարկել</button>
+                <a href="" class="addPage" id="modal-remove-btn">Հաստատել</a>
               </div>
             </div>
           </div>
@@ -414,10 +468,5 @@
     </div>
     <script src="../../js/index.js"></script>
     <script src="../../js/modal.js"></script>
-    <script>
-      document.querySelectorAll(".toggle").forEach((el) => {
-        el.addEventListener("click", () => showModal("#confirm-modal"));
-      });
-    </script>
   </body>
 </html>
