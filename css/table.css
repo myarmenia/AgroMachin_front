@@ -36,7 +36,7 @@
 /* ================================ */
 /* ================================ */
 /* ================================ */
-*/ .image {
+.image {
   width: 40px;
   height: 27px;
 }
@@ -67,19 +67,6 @@
   height: 30px;
   gap: 5px;
 }
-.link-direction:last-child {
-  color: #343957 !important;
-}
-.title-linkChild > div {
-  font: menu;
-}
-.link-direction {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #575757;
-  text-decoration: none;
-}
 .tableContainer {
   background: #ffffff;
   border-radius: 10px;
@@ -109,25 +96,6 @@
   box-sizing: border-box;
 }
 
-.addPage {
-  width: 143px;
-  height: 30px;
-  background: #7098d5;
-  border-radius: 8px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  border: 0;
-  cursor: pointer;
-  letter-spacing: 0.01em;
-  color: #ffffff;
-  text-decoration: none;
-
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 table {
   width: 100%;
   height: auto;
@@ -182,6 +150,7 @@ td {
 }
 .tableChild {
   position: relative;
+  overflow: auto;
 }
 .tableChild::-webkit-scrollbar {
   width: 4px;

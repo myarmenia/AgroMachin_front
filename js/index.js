@@ -2,11 +2,35 @@
 //  Variables
 // ------------------------------------------------------------------
 const cur_table = document.getElementById("table-route"),
-  remove_btn = document.getElementById("modal-remove-btn"),
+  remove_form = document.getElementById("modal-remove-form"),
   remove_modal = document.getElementById("remove-modal"),
   accept_btn = document.getElementById("modal-accept-btn"),
-  confirm_modal = document.getElementById("confirm-modal");
+  confirm_modal = document.getElementById("confirm-modal"),
+  formWrap = document.querySelectorAll(".form1Wrap"),
+  table_route_delete = cur_table.attributes["data-delete"].value,
+  table_route_route = cur_table.attributes["data-route"].value;
 
+// ==================================================================
+// ==================================================================
+// ==================================================================
+//
+// Input cunstucturing
+const handleFocus = (event) => {
+  event.target.closest(".controlGroup").classList.add("focus");
+};
+const handleBlur = (event) => {
+  const target = event.target;
+  const controlGroup = target.closest(".controlGroup");
+  if (!target.value) {
+    controlGroup.classList.remove("focus");
+  }
+};
+formWrap.forEach((el) => {
+  el.addEventListener("focusin", handleFocus);
+});
+formWrap.forEach((el) => {
+  el.addEventListener("focusout", handleBlur);
+});
 // ==================================================================
 // ==================================================================
 // ==================================================================
@@ -65,50 +89,6 @@ for (var k = 0; k < option.length; k++) {
 
 // dropdown
 
-//cousm input
-// focused
-const coustm_input = document.getElementsByClassName("coustm_input");
-for (let i = 0; i < coustm_input.length; i++) {
-  const element = coustm_input[i];
-  element.addEventListener("click", (e) => {
-    const input = document.getElementsByClassName("input");
-    const input_container = document.getElementsByClassName("input_container");
-    const label_container = document.getElementsByClassName("label_container");
-    for (let k = 0; k < input.length; k++) {
-      if (i === k) {
-        input[k].focus();
-        input[k].classList.add("input_focused");
-      }
-    }
-    for (let k = 0; k < input_container.length; k++) {
-      if (i === k) {
-        input_container[k].classList.add("input_container_focused");
-      }
-    }
-    for (let k = 0; k < label_container.length; k++) {
-      if (i === k) {
-        label_container[k].classList.add("label_container_focused");
-      }
-    }
-  });
-}
-//blur
-const input = document.getElementsByClassName("input");
-for (let i = 0; i < input.length; i++) {
-  const element = input[i];
-  console.log(element.value);
-  element.addEventListener("blur", () => {
-    const input_container = document.getElementsByClassName("input_container");
-    const label_container = document.getElementsByClassName("label_container");
-    console.log(element.value);
-    if (!element.element.value) {
-      element.classList.remove("input_focused");
-      input_container[i].classList.remove("input_container_focused");
-      label_container[i].classList.remove("label_container_focused");
-    }
-  });
-}
-
 // ----------------------------------------------------------------------------
 // Open modal with checkbox
 document.querySelectorAll(".toggle-checkbox").forEach((el, i) => {
@@ -117,16 +97,14 @@ document.querySelectorAll(".toggle-checkbox").forEach((el, i) => {
   el.addEventListener("click", function () {
     const checkbox_id = this.attributes["data-index"].value,
       checkbox_checked =
-        this.attributes["data-checked"].value === "false" ? false : true,
-      route_name = cur_table.attributes["data-route"].value;
+        this.attributes["data-checked"].value === "false" ? false : true;
 
     this.checked = checkbox_checked;
 
-    accept_btn.href = `${route_name}/${checkbox_id}/${
+    accept_btn.href = `${table_route_route}/${checkbox_id}/${
       checkbox_checked ? 0 : 1
     }`;
     showModal("#confirm-modal");
-    confirm_modal.setAttribute("data-modal-id", checkbox_id);
   });
 });
 // ============================================================================
@@ -136,12 +114,10 @@ document.querySelectorAll(".toggle-checkbox").forEach((el, i) => {
 document.querySelectorAll(".trashbin").forEach((el, i) => {
   el.setAttribute("data-index", i);
   el.addEventListener("click", function () {
-    const checkbox_id = this.attributes["data-index"].value,
-      route_name = cur_table.attributes["data-route"].value;
+    const checkbox_id = this.attributes["data-index"].value;
 
-    remove_btn.href = `${route_name}/${checkbox_id}`;
+    remove_form.action = `${table_route_delete}/${checkbox_id}`;
     showModal("#remove-modal");
-    remove_modal.setAttribute("data-modal-id", checkbox_id);
   });
 });
 // ============================================================================
