@@ -17,6 +17,9 @@ function showModal(name) {
     modal.classList.add("modal-open");
   }, 1);
 }
+document.querySelectorAll(".toggle").forEach((el) => {
+  el.addEventListener("click", () => showModal("#confirm-modal"));
+});
 function hideModal() {
   const modals = document.getElementsByClassName("modal");
   for (let i = 0; i < modals.length; i++) {

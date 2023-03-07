@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../font/font.css" />
     <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/modal.css" />
-    <link rel="stylesheet" href="../../css/table.css" />
-    <link rel="stylesheet" href="./createDictionary.css " />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="createNewLanguage.css" />
   </head>
   <body>
     <div id="app">
@@ -289,64 +288,50 @@
         </header>
         <!-- header end -->
         <!-- right section start-->
+
         <section class="right-section">
           <div class="right-sectionChild">
-            <div class="title-link2">
-              <div class="title-linkChild">
-                <a href="#" class="link-direction">Գլխավոր</a>
-                <div>></div>
-                <a href="./page.html" class="link-direction">Բառարան </a>
-                <div>></div>
-                <a href="./page.html" class="link-direction">
-                  Ստեղծել բանալի տեգ
-                </a>
-              </div>
-              <a href="" class="addPage" id="addPage">+ Նոր օգտատեր</a>
-            </div>
-            <div class="tableContainer">
-              <div class="table-title">
-                <div class="page">Ստեղծել նոր բանալի տեգ</div>
-                <div class="dropdown-container">
-                  <div class="navbar dictionarySelect">
-                    <div class="dropdown">
-                      <button class="dropbtn">
-                        <div id="drop-title">Բաժիններ</div>
-                        <img src="../../assets/table/greyArrow.svg" alt="" />
-                      </button>
-                      <div
-                        class="dropdown-content myDropdown dictionaryDropdown"
-                      >
-                        <div class="option">Օգտատիրոջ ավելացում</div>
-                        <div class="option">Օգտատիրոջ ավելացում</div>
-                        <div class="option">Օգտատիրոջ ավելացում</div>
-                        <div class="option">Օգտատիրոջ ավելացում</div>
-                        <div class="option">Օգտատիրոջ ավելացում</div>
-                      </div>
-                    </div>
+            <div class="title-link2 vehicleType_crumbs_container">
+                <div>
+                  <div class="title-linkChild vehicleType_crumbs_box1">
+                    <a href="#" class="link-direction">Գլխավոր</a>
+                    <div>></div>
+                    <a href="./page.html" class="link-direction">Լեզուներ</a>
+                    <div>></div>
+                    <a href="./page.html" class="link-direction">Ստեղծել նոր լեզու</a>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="createKey">
-              <div class="createKeyChild">
-                <form>
-                  <div>
-                    <label>Բանալի տեգ*</label
-                    ><input type="text" placeholder="Նոր բանալի տեգ" />
+            <div class="app">
+              <div class="new_language">
+                <div class="create_language">
+                  <h3>Ստեղծել նոր լեզու</h3>
+                </div>
+                <form action="" id="form" class="language_form">
+                  <div class="language_block">
+                    <div class="selectLanguage">
+                        <label for="" class="language">Լեզու*
+                            <div class="select">
+                                <select id="standard-select">
+                                  <option value="">Ընտրել լեզուն</option>
+                                  <option value="">Հայերեն</option>
+                                  <option value="">Русский</option>
+                                  <option value="">English</option>
+                                </select>
+                              </div>
+                        </label>
+                        <label for="" class="sections">Բաժիններ <input type="text" placeholder="Նոր բաժին"></label>
+                    </div>
+                    <div class="input_checkbox">
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                      <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
+                    </div>
+                    <div class="buttons">
+                      <input class="button2" type="submit" value="Պահպանել">
+                    </div>
                   </div>
-                  <div>
-                    <label>Հայերեն</label
-                    ><input type="text" placeholder="Թարգմանություն" />
-                  </div>
-                  <div>
-                    <label>Русский</label
-                    ><input type="text" placeholder="Թարգմանություն" />
-                  </div>
-                  <div>
-                    <label>English</label
-                    ><input type="text" placeholder="Թարգմանություն" />
-                  </div>
-                  <div><button class="main-btn">Պահպանել</button></div>
                 </form>
               </div>
             </div>

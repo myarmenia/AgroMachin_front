@@ -4,17 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/font.css" />
+    <!-- <link rel="stylesheet" href="../css/index.css" /> -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="media.css" />
     <title>Police</title>
   </head>
   <body>
+    <div id="app">
     <div class="background">
-      <select name="" id="">
+      <!-- <select name="" id="">
         <option value="">AM</option>
         <option value="">RU</option>
         <option value="">EN</option>
-      </select>
+      </select> -->
+      <div class="language">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <div id="drop-title">Հայերեն</div>
+            <svg
+              width="19"
+              height="18"
+              viewBox="0 0 19 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405"
+                stroke="#575757"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9.89551 12.8555H15.3582"
+                stroke="#575757"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6.61816 2.47644V4.11523"
+                stroke="#575757"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.24805 4.11523H10.9883"
+                stroke="#575757"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
+                stroke="#575757"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
+                stroke="#575757"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="dropdown-content myDropdown">
+            <div class="option">Անգլերեն</div>
+            <div class="option">Հայերեն</div>
+            <div class="option">Ռուսերեն</div>
+          </div>
+        </div>
+      </div>
+    </div>
       <div class="Police">
         <div class="loginData">
           <div class="login">
@@ -23,36 +84,42 @@
               <div class="verticalLine"></div>
               <div class="data">
                 <h2>Մուտքային տվյալներ</h2>
-                <form id="form_log_in" class="form">
+                <form id="form_log_in" class="form" name="myForm">
                   <input
                     name="email"
+                    id="email"
                     type="email"
+                    class="border_error"
                     placeholder="Էլ. փոստ"
                     value=""
                   />
+                  <div class="error">обязательное поле</div>
                   <input
                     name="password"
                     id="password"
                     type="password"
-                    class="password"
+                    class="password border_error"
                     placeholder="Գաղտնաբառ"
                   />
+                  <div class="error password_error">обязательное поле</div>
                   <input
                     name="password"
                     type="password"
                     style="display: none"
-                    class="newPassword disabledpassword"
+                    class="newPassword disabledpassword border_error"
                     placeholder="Նոր գաղտնաբառ"
                     disabled
                   />
+                  <div class="error newpassword_error">обязательное поле</div>
                   <input
                     name="confirm_password"
                     type="password"
                     style="display: none"
-                    class="newPassword disabledpassword"
+                    class="newPassword disabledpassword border_error"
                     placeholder="Կրկնել գաղտնաբառը"
                     disabled
                   />
+                  <div class="error newpassword_error">обязательное поле</div>
                   <button class="button" type="submit">Մուտք</button>
                 </form>
               </div>
@@ -62,7 +129,8 @@
         <p>ՀՀ Ոստիկանության «Ճանապարհային Ոստիկանություն»</p>
       </div>
     </div>
-
+  </div>
+    <!-- <script src="../js/index.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>

@@ -8,11 +8,12 @@
 
     <link rel="stylesheet" href="../../../css/index.css " />
     <link rel="stylesheet" href="../../../css/table.css" />
+    <link rel="stylesheet" href="./countingPlaces.css" />
+    <link rel="stylesheet" href="../../../css/modal.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./countingPlaces.css" />
   </head>
   <body>
     <div id="app">
@@ -321,7 +322,10 @@
                     <div>
                       <div class="main-input-search-box">
                         <input placeholder="Որոնել" class="main-input" />
-                        <img src="../../../assets/table/inp-search.svg" alt="" />
+                        <img
+                          src="../../../assets/table/inp-search.svg"
+                          alt=""
+                        />
                       </div>
                       <!-- <button class="addPage" id="new_record">
                         Ստեղծել գրառում
@@ -495,32 +499,31 @@
         </section>
         <!-- right section end-->
       </main>
-
-      <div class="modal-container">
-        <div class="modal" id="confirm-modal">
-          <div class="modal-head">
-            <h3 class="modal-title">Կարգավիճակի փոփոխություն</h3>
-            <div class="close">&#x2715;</div>
-          </div>
-          <div class="modal-content">
-            <div class="modal-confirm-box">
-              <p class="modal-confirm-box-title">
-                Դուք ցանկանո՞ւմ եք ապակտիվացնել օգտատիրոջը
-              </p>
-              <div class="modal-confirm-buttons">
-                <button class="btn-transparent" id="modal-deny-btn">
-                  Չեղարկել
-                </button>
-                <button class="addPage" id="modal-accept-btn">Հաստատել</button>
-              </div>
+    </div>
+    <div class="modal-container">
+      <div class="modal" id="confirm-modal">
+        <div class="modal-head">
+          <h3 class="modal-title">Կարգավիճակի փոփոխություն</h3>
+          <div class="close">&#x2715;</div>
+        </div>
+        <div class="modal-content">
+          <div class="modal-confirm-box">
+            <p class="modal-confirm-box-title">
+              Դուք ցանկանո՞ւմ եք ապակտիվացնել օգտատիրոջը
+            </p>
+            <div class="modal-confirm-buttons">
+              <button class="btn-transparent" id="modal-deny-btn">
+                Չեղարկել
+              </button>
+              <button class="addPage" id="modal-accept-btn">Հաստատել</button>
             </div>
           </div>
         </div>
       </div>
-
-      <script src="../../../js/index.js"></script>
-      <script src="../../../js/modal.js"></script>
-      <script src="./countingPlaces.js"></script>
     </div>
+    <script src="../../../js/index.js"></script>
+    <script src="../../../js/modal.js"></script>
+    <script src="../countingPlaces/countingPlaces.js"></script>
+
   </body>
 </html>

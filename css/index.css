@@ -8,7 +8,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.error_message {
+  margin-top: 8px;
+  color: #f00;
+  font-size: 10px;
+  font-family: SegoeUI;
+}
+.error_border {
+  border: 1px solid #f00 !important;
+}
 /* -------------------------------- */
 /* Variables */
 /* -------------------------------- */
@@ -417,6 +425,36 @@ a:focus .sidebar .nav-links li a .link_name {
 .sidebar .profile-details .job {
   font-size: 12px;
 }
+/* usersignup */
+.userSignOut {
+  position: absolute;
+  width: 128.06px;
+  height: 78.61px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  top: 80%;
+  right: 2%;
+  padding: 20px 12px;
+  display: none;
+  gap: 5px;
+  flex-direction: column;
+}
+.userSignOut.active {
+  display: flex;
+}
+.userSignOut a {
+  font-weight: 400;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #575757;
+}
+/* usersignup */
 .home-section {
   position: relative;
   padding: 0rem;
@@ -445,7 +483,6 @@ a:focus .sidebar .nav-links li a .link_name {
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
-  color: #343957;
   font-size: 35px;
 }
 .bx {
@@ -502,7 +539,7 @@ header {
   transition: all 0.4s ease-in;
   background-color: #bdbdc75c;
   min-height: calc(100vh - 80px);
-  padding: 50px 15px 40px 27px;
+  padding: 50px 35px 40px 40px;
 }
 .right-sectionChild {
   width: 100%;
@@ -685,9 +722,7 @@ header {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  z-index: 10;
 }
-
 .toggle-switch {
   display: inline-block;
   background: #ccc;
@@ -741,7 +776,6 @@ header {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  z-index: 10;
 }
 
 .toggle2-switch {
