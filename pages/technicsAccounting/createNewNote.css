@@ -9,6 +9,11 @@
 .app {
   background: #fff;
   border-radius: 10px;
+
+  padding: 0 18px;
+}
+.right-section {
+  justify-content: start;
 }
 .new_note {
   width: 100%;
