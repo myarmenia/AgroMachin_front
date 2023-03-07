@@ -29,8 +29,8 @@
 .form1Wrap .controlGroup label {
   bottom: 3px;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 19px;
   color: #9f9f9f;
 }
 .form1Wrap .controlGroup input,
@@ -40,6 +40,7 @@
   border-top: 1px solid #9f9f9f;
   bottom: 0;
 }
+
 .form1Wrap .controlGroup input,
 .form1Wrap .controlGroup textarea,
 .form1Wrap .controlGroup input:active,

@@ -22,5 +22,38 @@
   border-bottom: 1px solid #dadada;
 }
 .formContainer {
-  padding: 75px 116px;
+  height: 100%;
+  padding: 20px 0;
+}
+form {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+.formContainerChild,
+.formContainerChild2 {
+  width: 60%;
+  padding: 0 140px;
+
+  height: auto;
+}
+
+.formContainerChild > div,
+.formContainerChild2 > div {
+  margin-top: 20px;
+}
+.doubleInpTitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #9f9f9f;
+  margin-top: 10px;
+}
+.doubleInp {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.form1Wrap .controlGroup input {
+  background: #bdbdc75c !important;
 }
