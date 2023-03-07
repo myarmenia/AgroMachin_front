@@ -95,24 +95,24 @@
 //   getData(e.target);
 // });
 
-const tabs = document.getElementsByClassName("tabs_text")
+const tabs = document.getElementsByClassName("tabs_text");
 for (let i = 0; i < tabs.length; i++) {
-	tabs[i].addEventListener("click", () => {
-		for (const elem of tabs) {
-			elem.classList.remove("tabs_activ")
-		}
-		if (+tabs[i].attributes["data-count"].value === i) {
-			tabs[i].classList.add("tabs_activ")
-		}
-		const app = document.getElementsByClassName("app_activ")
-		console.log(app)
-		for (const elem of app) {
-			console.log(elem.attributes["data-activ_tab"].value)
-			if (+elem.attributes["data-activ_tab"].value === i) {
-				elem.style.display = "block"
-			} else {
-				elem.style.display = "none"
-			}
-		}
-	})
+  tabs[i].addEventListener("click", (event) => {
+    for (const elem of tabs) {
+      elem.classList.remove("tabs_activ");
+    }
+    if (+tabs[i].attributes["data-count"].value === i) {
+      tabs[i].classList.add("tabs_activ");
+    }
+    const app = document.getElementsByClassName("app_activ");
+    console.log(app);
+    for (const elem of app) {
+      console.log(elem.attributes["data-activ_tab"].value);
+      if (+elem.attributes["data-activ_tab"].value === i) {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
+      }
+    }
+  });
 }
