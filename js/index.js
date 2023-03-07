@@ -1,6 +1,15 @@
-/** @format */
+// ------------------------------------------------------------------
+//  Variables
+// ------------------------------------------------------------------
+const cur_table = document.getElementById("table-route"),
+  remove_btn = document.getElementById("modal-remove-btn"),
+  remove_modal = document.getElementById("remove-modal"),
+  accept_btn = document.getElementById("modal-accept-btn"),
+  confirm_modal = document.getElementById("confirm-modal");
 
-// active link
+// ==================================================================
+// ==================================================================
+// ==================================================================
 
 // active link
 
@@ -100,6 +109,43 @@ for (let i = 0; i < input.length; i++) {
     }
   });
 }
+
+// ----------------------------------------------------------------------------
+// Open modal with checkbox
+document.querySelectorAll(".toggle-checkbox").forEach((el, i) => {
+  el.setAttribute("data-index", i);
+  el.setAttribute("data-checked", el.checked);
+  el.addEventListener("click", function () {
+    const checkbox_id = this.attributes["data-index"].value,
+      checkbox_checked =
+        this.attributes["data-checked"].value === "false" ? false : true,
+      route_name = cur_table.attributes["data-route"].value;
+
+    this.checked = checkbox_checked;
+
+    accept_btn.href = `${route_name}/${checkbox_id}/${
+      checkbox_checked ? 0 : 1
+    }`;
+    showModal("#confirm-modal");
+    confirm_modal.setAttribute("data-modal-id", checkbox_id);
+  });
+});
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// Open modal with trashbin
+document.querySelectorAll(".trashbin").forEach((el, i) => {
+  el.setAttribute("data-index", i);
+  el.addEventListener("click", function () {
+    const checkbox_id = this.attributes["data-index"].value,
+      route_name = cur_table.attributes["data-route"].value;
+
+    remove_btn.href = `${route_name}/${checkbox_id}`;
+    showModal("#remove-modal");
+    remove_modal.setAttribute("data-modal-id", checkbox_id);
+  });
+});
+// ============================================================================
 // sign out
 const signOutBtn = document.getElementsByClassName("signOutBtn")[0];
 const userSignOutContainer = document.getElementsByClassName("userSignOut")[0];
