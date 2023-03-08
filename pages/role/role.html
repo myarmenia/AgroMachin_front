@@ -298,7 +298,7 @@
                 <div>></div>
                 <a href="./page.html" class="link-direction">Դեր</a>
               </div>
-              <a href="" class="addPage" id="addPage">+ Նոր դեր</a>
+              <a href="" class="main-btn" id="addPage">+ Նոր դեր</a>
             </div>
 
             <div class="tableContainer">
@@ -438,10 +438,8 @@
                 Դուք ցանկանո՞ւմ եք հաստատել գործողությունը
               </p>
               <div class="modal-confirm-buttons">
-                <button class="btn-transparent" id="modal-deny-btn">
-                  Չեղարկել
-                </button>
-                <a href="" class="addPage" id="modal-accept-btn">Հաստատել</a>
+                <button class="btn-transparent modal-deny-btn">Չեղարկել</button>
+                <a href="" class="main-btn" id="modal-accept-btn">Հաստատել</a>
               </div>
             </div>
           </div>
@@ -459,7 +457,10 @@
               </p>
               <div class="modal-confirm-buttons">
                 <button class="btn-transparent modal-deny-btn">Չեղարկել</button>
-                <a href="" class="addPage" id="modal-remove-btn">Հաստատել</a>
+
+                <form action="" id="modal-remove-form">
+                  <button class="main-btn">Հաստատել</button>
+                </form>
               </div>
             </div>
           </div>
@@ -467,5 +468,6 @@
       </div>
     </div>
     <script src="../../js/index.js"></script>
-    <script src="../../js/modal.js"></script> </body>
+    <script src="../../js/modal.js"></script>
+  </body>
 </html>

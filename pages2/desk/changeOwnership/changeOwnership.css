@@ -3,10 +3,6 @@
   display: flex;
   justify-content: end;
 }
-.form1Wrap {
-  max-width: 310px;
-  min-width: 250px;
-}
 .changeOwnerSearch {
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -25,27 +21,28 @@
   padding: 17px 20px;
   border-bottom: 1px solid #dadada;
 }
-.formContainer {
-  height: 100%;
-  padding: 20px 0;
+.form {
+  height: auto;
+  width: 80%;
+  margin: 30px auto;
 }
-form {
+.formContainer {
+  display: flex;
+  justify-content: space-between;
   gap: 20px;
 }
-.formChild {
-  display: flex;
-  justify-content: space-around;
-}
-.formContainerChild,
-.formContainerChild2 {
+.formContainer > div {
   width: 100%;
-  padding: 0 0 0 100px;
-
-  height: auto;
+  max-width: 400px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
-.formContainerChild > div,
-.formContainerChild2 > div {
+.formContainer > div > div {
+  margin-bottom: 35px;
+}
+.formContainer2 {
   margin-top: 20px;
 }
 .doubleInpTitle {
@@ -53,7 +50,6 @@ form {
   font-size: 14px;
   line-height: 19px;
   color: #9f9f9f;
-  margin-top: 10px;
 }
 .doubleInp {
   display: flex;
@@ -61,16 +57,51 @@ form {
   margin-top: 10px;
 }
 .doubleInp .form1Wrap {
-  min-width: 100px;
+  min-width: 130px;
 }
 .doubleInp .form1Wrap .controlGroup {
-  min-width: 100px;
+  min-width: 130px;
 }
 .form1Wrap .controlGroup input {
   background: #bdbdc75c !important;
 }
-.formBtn {
-  width: 417px;
+.checkboxContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  overflow: auto;
+  margin-top: 55px;
+}
+
+/* scrooll */
+.checkboxContainer::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+.checkboxContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.checkboxContainer::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+}
+
+/* Handle on hover */
+.checkboxContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* scrooll */
+.checkboxChild {
+  display: flex;
+  gap: 20px;
+}
+.checkboxChild label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #575757;
 }
