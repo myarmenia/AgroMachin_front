@@ -156,6 +156,7 @@
 
 /* New input styles */
 /* Form Effect 1 Design */
+/* Form Effect 1 Design */
 .controlGroup {
   min-width: 200px;
   min-height: 40px;
@@ -257,6 +258,8 @@
 /* open default */
 /* Form Effect */
 
+/* Form Effect */
+
 /* ================================ */
 /* ================================ */
 /* ================================ */
@@ -337,18 +340,6 @@
   text-align: center;
   line-height: 50px;
 }
-/* .sidebar .logo-details .logo_name {
-  font-size: 22px;
-  color: #fff;
-  font-weight: 600;
-  transition: 0.4s ease-in;
-  transition-delay: 0.1s;
-}
-.sidebar.close .logo-details .logo_name {
-  transition-delay: 0s;
-  opacity: 0;
-  pointer-events: none;
-} */
 .sidebar .nav-links {
   height: 100%;
   padding: 10px 0 150px 0;
@@ -653,37 +644,6 @@ header {
 }
 .bxs-user {
   cursor: pointer;
-}
-@media (max-width: 768px) {
-  /* .search-box input {
-    width: 100%;
-  } */
-}
-@media (max-width: 400px) {
-  /* .sidebar.close .nav-links li .sub-menu {
-    display: none;
-  } */
-  /* .sidebar {
-    width: 78px;
-  }
-  .sidebar.close {
-    width: 0;
-  }
-  .home-section {
-    left: 78px;
-    width: calc(100% - 78px);
-    z-index: 100;
-  }
-  .sidebar.close ~ .home-section {
-    width: 100%;
-    left: 0;
-  } */
-  .bx-menu {
-    display: none !important;
-  }
-  .sidebar .logo-details {
-    width: 90%;
-  }
 }
 /* ----------------------------------------- */
 /* styles for javascript */

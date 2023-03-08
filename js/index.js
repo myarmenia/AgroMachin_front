@@ -6,7 +6,6 @@ const cur_table = document.getElementById("table-route"),
   remove_modal = document.getElementById("remove-modal"),
   accept_btn = document.getElementById("modal-accept-btn"),
   confirm_modal = document.getElementById("confirm-modal"),
-  formWrap = document.querySelectorAll(".form1Wrap"),
   table_route_delete = cur_table.attributes["data-delete"].value,
   table_route_route = cur_table.attributes["data-route"].value;
 
@@ -15,6 +14,7 @@ const cur_table = document.getElementById("table-route"),
 // ==================================================================
 //
 // Input cunstucturing
+const formWrap = document.querySelectorAll(".form1Wrap");
 const handleFocus = (event) => {
   event.target.closest(".controlGroup").classList.add("focus");
 };
@@ -125,7 +125,6 @@ document.querySelectorAll(".trashbin").forEach((el, i) => {
 const signOutBtn = document.getElementsByClassName("signOutBtn")[0];
 const userSignOutContainer = document.getElementsByClassName("userSignOut")[0];
 signOutBtn.addEventListener("click", () => {
-  console.log(userSignOutContainer);
   userSignOutContainer.classList.toggle("active");
 });
 // sign out
