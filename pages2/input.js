@@ -1,6 +1,4 @@
 const formWrap = document.querySelectorAll(".form1Wrap");
-const barev = document.querySelectorAll("#barev");
-
 const handleFocus = (event) => {
   event.target.closest(".controlGroup").classList.add("focus");
 };
@@ -12,8 +10,8 @@ const handleBlur = (event) => {
   }
 };
 formWrap.forEach((el) => {
-  el.addEventListener("focusin", handleFocus, true);
+  el.addEventListener("focusin", handleFocus);
 });
 formWrap.forEach((el) => {
-  el.addEventListener("focusout", handleBlur, true);
+  el.addEventListener("focusout", handleBlur);
 });
