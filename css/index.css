@@ -126,6 +126,19 @@
 /* -------------------------------- */
 /* Forms */
 /* -------------------------------- */
+.custom-select-rounded {
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  border-bottom: 1px solid #dadada !important;
+  height: 30px !important;
+}
+.custom-select-rounded span {
+  padding-left: 10px;
+}
+.custom-select-rounded i {
+  right: 10px;
+  width: 13px;
+}
 .custom-select {
   width: fit-content;
   border-bottom: 1px solid #575757;
@@ -193,6 +206,10 @@
 .options-open {
   display: flex;
 }
+.option-active {
+  color: #343957;
+  font-weight: bold;
+}
 /* ======================================= */
 
 .main-input {
@@ -258,13 +275,16 @@
   width: 100%;
   border: none;
   height: 0 !important;
-  border-top: 2px solid white;
+  border-top: 1px solid #575757;
 }
 .input-wrap::placeholder {
   color: transparent;
 }
 .main-label {
   width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  color: #9f9f9f;
 }
 .main-label,
 .input-wrap {
