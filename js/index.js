@@ -25,9 +25,8 @@ document.querySelectorAll(".input-wrap").forEach((input, i) => {
   group.innerHTML = `
     <div class="input-box ${input.value ? "focus" : ""}">
       <span class="main-label">${placeholder}</span>
-      <input placeholder="${placeholder}" class="${className}" value="${
-    input.value
-  }" />
+      <input placeholder="${placeholder}" class="${className}" 
+      value="${input.value}" />
     </div>
   `;
 });
@@ -136,7 +135,7 @@ function selectToggle(e) {
     }
     option.addEventListener("click", function () {
       input.value = this.attributes["data-value"].value;
-      span.innerText = option.innerText;
+      span.innerText = option.innerText.trim();
       options.classList.remove("options-open");
 
       [...options.children].forEach((e) => {
@@ -149,12 +148,26 @@ function selectToggle(e) {
   });
 }
 
-function loggg() {
-  console.log(inpppp.value);
-}
-
 custom_selects.forEach((select, i) => {
+  const input = select.children[0],
+    span = select.children[1];
   select.addEventListener("click", selectToggle);
+  const options = select.closest(".custom-select").children[1];
+  [...options.children].forEach((option) => {
+    if (option.attributes["data-selected"]) {
+      option.classList.add("option-active");
+      input.value = option.attributes["data-value"].value;
+      span.innerText = option.innerText.trim();
+
+      [...options.children].forEach((e) => {
+        e.removeAttribute("data-selected");
+        e.classList.remove("option-active");
+      });
+
+      option.classList.add("option-active");
+      option.setAttribute("data-selected", true);
+    }
+  });
 });
 
 // ============================================================================
