@@ -310,12 +310,14 @@
                   </div>
                   <div class="name flex">
                     <p>Անուն*</p>
-                    <input type="text" placeholder="Անուն" />
-                  </div>
+                    <input type="text" placeholder="Անուն"/>
+                    </div>
+                      <div class="error_message">Պարտադիր լրացման դաշտ</div>
                   <div class="surname flex">
                     <p>Ազգանուն*</p>
                     <input type="text" placeholder="Ազգանուն" />
                   </div>
+                  <div class="error_message">Պարտադիր լրացման դաշտ</div>
                   <div class="fatherland flex">
                     <p>Հայրանուն*</p>
                     <input type="text" placeholder="Հայրանուն" />
@@ -334,10 +336,20 @@
                   </div>
                   <div class="role flex">
                     <p>Դեր*</p>
-                    <select name="" id="">
-                      <option value="">Օգտատեր</option>
-                    </select>
+                    <div class="navbar navbar_select">
+                      <div class="dropdown">
+                        <div class="dropbtnCheckBox">
+                          <div>Դեր</div>
+                        </div>
+                        <div class="dropdown-content myDropdownCheckBox">
+                          <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
+                          <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
+                          <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div class="box_container"></div>
                   <div class="language flex">
                     <p>Լեզու*</p>
                     <select name="" id="">
@@ -366,5 +378,6 @@
       </main>
     </div>
     <script src="../../js/index.js"></script>
+    <script src="users.js"></script>
   </body>
 </html>

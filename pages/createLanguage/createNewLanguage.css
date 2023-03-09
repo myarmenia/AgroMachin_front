@@ -71,7 +71,6 @@
     flex-direction: column;
     margin-left: calc(100% - 90%);
     line-height: 2;
-    margin-top: 20px;
   }
   .new_language .language_form .language_block .input_checkbox label {
     display: flex;

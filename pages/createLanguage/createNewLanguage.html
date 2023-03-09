@@ -311,18 +311,29 @@
                   <div class="language_block">
                     <div class="selectLanguage">
                         <label for="" class="language">Լեզու*
+                          <div class="input_error">
                             <div class="select">
-                                <select id="standard-select">
-                                  <option value="">Ընտրել լեզուն</option>
-                                  <option value="">Հայերեն</option>
-                                  <option value="">Русский</option>
-                                  <option value="">English</option>
-                                </select>
-                              </div>
+                              <select id="standard-select">
+                                <option value="">Ընտրել լեզուն</option>
+                                <option value="">Հայերեն</option>
+                                <option value="">Русский</option>
+                                <option value="">English</option>
+                              </select>
+                            </div>
+                            <div class="error_message">Պարտադիր լրացման դաշտ</div>
+                          </div>
                         </label>
-                        <label for="" class="sections">Բաժիններ <input type="text" placeholder="Նոր բաժին"></label>
+                        <label for="" class="sections">Նոր բաժին
+                          <div class="input_error">
+                          <input type="text" placeholder="Նոր բաժին">
+                          <div class="error_message">Պարտադիր լրացման դաշտ</div>
+                        </div></label>
+                        
                     </div>
+                    
                     <div class="input_checkbox">
+                      <h3 class="choose_tool error_tool">Ընտրել համապատասխան բաժիններ</h3>
+                      <hr class="error_hr">
                       <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
                       <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>
                       <label for=""><input type="checkbox"> Օգտատիրոջ ավելացում</label>

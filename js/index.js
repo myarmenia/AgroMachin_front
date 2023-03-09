@@ -121,10 +121,10 @@ for (let i = 0; i < input.length; i++) {
   });
 }
 // sign out
-const signOutBtn = document.getElementsByClassName("signOutBtn")[0];
-const userSignOutContainer = document.getElementsByClassName("userSignOut")[0];
-signOutBtn.addEventListener("click", () => {
-  console.log(userSignOutContainer);
-  userSignOutContainer.classList.toggle("active");
-});
+// const signOutBtn = document.getElementsByClassName("signOutBtn")[0];
+// const userSignOutContainer = document.getElementsByClassName("userSignOut")[0];
+// signOutBtn.addEventListener("click", () => {
+//   console.log(userSignOutContainer);
+//   userSignOutContainer.classList.toggle("active");
+// });
 // sign out
