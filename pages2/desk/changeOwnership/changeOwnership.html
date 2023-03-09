@@ -4,15 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../css/index.css" />
-    <link rel="stylesheet" href="../../input.css" />
     <link rel="stylesheet" href="./changeOwnership.css" />
-
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
   </head>
-
   <body>
     <div id="app">
       <!-- sidebar start -->
@@ -242,9 +239,9 @@
             </div>
             <div class="changeOwnerSearch">
               <div class="searchTitle">Սեփականության փոփոխություն</div>
-              <div class="formContainer">
-                <form>
-                  <div class="formContainerChild">
+              <div class="form">
+                <div class="formContainer">
+                  <div>
                     <div class="form1Wrap">
                       <div class="controlGroup">
                         <div class="inputWrap">
@@ -255,7 +252,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="doubleInpTitle">Փոփոխվող ՏՄ-ի համարանիշը</div>
+                    <p class="doubleInpTitle">Փոփոխվող ՏՄ-ի համարանիշը</p>
                     <div class="doubleInp">
                       <div class="form1Wrap">
                         <div class="controlGroup">
@@ -283,7 +280,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="formContainerChild2">
+                  <div>
                     <div class="form1Wrap">
                       <div class="controlGroup">
                         <div class="inputWrap">
@@ -321,15 +318,98 @@
                       </div>
                     </div>
                   </div>
-                </form>
+                </div>
+                <div class="formContainer2">
+                  <button class="main-btn">Որոնել</button>
+                </div>
               </div>
             </div>
+            <form class="checkboxContainer">
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Առուվաճառքի պայմանագրով ձեռք բերված ՏՄ-ի գրանցում</label
+                >
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Նվիրատվության պայմանագրով ձեռք բերված ՏՄ-ի գրանցում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Ժառանգության իրավունքի վկայագրով ձեռք բերված ՏՄ-ի գրանցում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Փոխանակման պայմանագրով ձեռք բերված ՏՄ-ի գրանցում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Ելք գրանցումից (խոտանում)
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Գրավի վկայագրի տրամադրում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label>Գրավի վկայագրի մարում </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Ելք գրանցումից (մեկնում այլ պետություն)
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Գրանցման վերականգնում (խոտանումից)
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Սեփականության վկայագրի փոխանակում կամ կորցրածի տրամադրում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Առանց սեփականության վկայագրի հաշվառված ՏՄ-ի սեփականության
+                  վկայագրի տրամադրում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Լիզինգի վկայագրի տրամադրում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label>Լիզինգի վկայագրի մարում </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Շտեմարանում տվյալների ուղղում
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Սեփականատիրոջ փոփոխություն նախկին առուվաճառքի պայմանագրի
+                  լուծման համաձայն
+                </label>
+              </div>
+              <div class="checkboxChild">
+                <input type="checkbox" /><label
+                  >Աճուրդի միջոցով ձեռք բերված ԱՄՏ-ի գրանցում
+                </label>
+              </div>
+              <button class="main-btn">Պահպանել</button>
+            </form>
           </div>
         </section>
         <!-- right section end-->
       </main>
     </div>
     <script src="../../../js/index.js"></script>
-    <script src="../../input.js"></script>
   </body>
 </html>
