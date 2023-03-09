@@ -4,7 +4,6 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-
 @media screen and (max-width: 1099px) {
   .new_user .user_form .status {
     width: 58%;
@@ -31,14 +30,14 @@
   }
   .new_user .user_form .flex {
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 669px) {
-    .new_user .user_form .status {
-        width: 63%;
-    }
+  .new_user .user_form .status {
+    width: 63%;
+  }
 }
 @media screen and (max-width: 589px) {
   .new_user .user_form .confirm_password input {

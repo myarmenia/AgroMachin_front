@@ -114,6 +114,9 @@ td {
   padding: 0 15px;
   color: #575757;
 }
+td img {
+  display: flex;
+}
 th,
 td {
   border: 1px solid #dadada;
