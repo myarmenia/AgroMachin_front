@@ -10,11 +10,13 @@
 }
 a {
   text-decoration: none;
-  color: none;
+  color: #000;
 }
-
 .deskTable {
-  border-radius: 10px;
+  border-radius: 15px;
+}
+.firstLine {
+  background: none;
 }
 .desk-links {
   display: flex;
@@ -40,96 +42,6 @@ a {
   font-size: 16px;
   line-height: 21px;
   text-align: center;
-
-  /* main blue */
-
   color: #343957;
 }
-/*  */
 
-/* Form Effect 1 Design */
-/* .form1Wrap {
-  cursor: pointer;
-}
-.newContactForm {
-  cursor: pointer;
-} */
-.controlGroup {
-  min-width: 200px;
-  min-height: 40px;
-
-  position: relative;
-  color: white;
-}
-
-.controlGroup.textArea {
-  margin: 10px 0 0 0;
-  width: 98.5%;
-}
-.controlGroup input {
-  width: 100%;
-}
-.form1Wrap .controlGroup label,
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea {
-  position: absolute;
-  width: 100%;
-  padding: 0;
-  cursor: pointer;
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  -moz-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  -ms-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  -o-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-}
-
-.form1Wrap .controlGroup label {
-  bottom: 3px;
-}
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea {
-  border: none;
-  height: 0;
-  border-top: 1px solid black;
-  bottom: 0;
-}
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea,
-.form1Wrap .controlGroup input:active,
-.form1Wrap .controlGroup textarea:active,
-.form1Wrap .controlGroup input:focus,
-.form1Wrap .controlGroup textarea:focus {
-  background: rgba(0, 0, 0, 0.4);
-  outline: none;
-  box-sizing: border-box;
-}
-.form1Wrap .textArea textarea {
-  width: 100%;
-  resize: none;
-}
-/*** Focus Effects Style 1 ***/
-.form1Wrap .controlGroup.focus label {
-  bottom: 34px;
-  font-size: 11px;
-  outline: none;
-  cursor: pointer;
-}
-.form1Wrap .controlGroup.focus input,
-.form1Wrap .controlGroup.focus textarea {
-  bottom: -11px;
-  padding: 20px;
-  outline: none;
-}
-
-.form1Wrap .controlGroup.focus textarea {
-  height: 95px;
-  bottom: -67px;
-  padding: 20px;
-  outline: none;
-}
-
-/* Form Effect 2 Design */
-
-/* Form Effect 3 Design */
-
-/*  */

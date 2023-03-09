@@ -1,439 +1,362 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../css/index.css" />
-    <link rel="stylesheet" href="../../../css/modal.css" />
-    <link rel="stylesheet" href="../../../css/table.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="app">
-      <!-- sidebar start -->
-      <div class="sidebar close">
-        <div class="logo-details">
-          <img src="../../../assets/sidebarIcon/logo.svg" />
-        </div>
-        <ul class="nav-links">
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/user.svg"
-                class="bx bx-grid-alt"
-              />
 
-              <span class="link_name">Օգտատերեր</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Օգտատերեր </a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/role.svg"
-                class="bx bx-grid-alt"
-              />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../css/index.css" />
+  <link rel="stylesheet" href="../../../css/modal.css" />
+  <link rel="stylesheet" href="../../../css/table.css" />
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+</head>
 
-              <span class="link_name">Դեր</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Դեր </a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/car.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տրանսպորտային միջոցի տեսակ </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/techtype.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տեխնիկայի սարքինության տեսակ</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <img
-                  src="../../../assets/sidebarIcon/4img.svg"
-                  class="bx bx-grid-alt"
-                />
-                <span class="link_name">Տեխնիկայի հաշվառում</span>
-              </a>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <div class="menu-panel">
-              <ul class="sub-menu">
-                <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
-                <li><a href="#">Հաշվառման վայրեր</a></li>
-                <li><a href="#">Հաշվառման հայտ</a></li>
-                <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/5img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <img
-                  src="../../../assets/sidebarIcon/6img.svg"
-                  class="bx bx-grid-alt"
-                />
-                <span class="link_name">Վարման իրավունքի Խմբեր</span>
-              </a>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <div class="menu-panel">
-              <ul class="sub-menu">
-                <li>
-                  <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
-                </li>
-                <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
-                <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
-                <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
-                <li>
-                  <a href="#"
-                    >Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
-                    կրկնօրինակի տրամադրում</a
-                  >
-                </li>
-                <li>
-                  <a href="#">Վարման իրավունքի փաստաթղթեր</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <img
-                  src="../../../assets/sidebarIcon/7img.svg"
-                  class="bx bx-grid-alt"
-                />
-                <span class="link_name">Տրված համարանիշներ</span>
-              </a>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <div class="menu-panel">
-              <ul class="sub-menu">
-                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
-                <li>
-                  <a href="#"
-                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/8img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Բառարան</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Բառարան</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/9img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Լեզուներ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Լեզուներ</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              <img
-                src="../../../assets/sidebarIcon/10img.svg"
-                class="bx bx-grid-alt"
-              />
-              <span class="link_name">Հաշվետվություններ</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
-            </ul>
-          </li>
-        </ul>
+<body>
+  <div id="app">
+    <!-- sidebar start -->
+    <div class="sidebar close">
+      <div class="logo-details">
+        <img src="../../../assets/sidebarIcon/logo.svg" />
       </div>
-      <!-- sidebar end -->
-      <main class="home-section">
-        <!-- header start -->
-        <div class="header-blocking-div"></div>
-        <header class="main-header">
-          <div class="home-content">
-            <img
-              src="../../../assets/sideBarIcon/menuIcon.svg"
-              class="bx bx-menu"
-            />
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/user.svg" class="bx bx-grid-alt" />
+
+            <span class="link_name">Օգտատերեր</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Օգտատերեր </a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/role.svg" class="bx bx-grid-alt" />
+
+            <span class="link_name">Դեր</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Դեր </a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/car.svg" class="bx bx-grid-alt" />
+            <span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#">Տրանսպորտային միջոցի տեսակ </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/techtype.svg" class="bx bx-grid-alt" />
+            <span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#">Տեխնիկայի սարքինության տեսակ</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <img src="../../../assets/sidebarIcon/4img.svg" class="bx bx-grid-alt" />
+              <span class="link_name">Տեխնիկայի հաշվառում</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
           </div>
-          <div class="home-content2">
-            <div class="navbar">
-              <div class="dropdown">
-                <button class="dropbtn">
-                  <div id="drop-title">Հայերեն</div>
-                  <svg
-                    width="19"
-                    height="18"
-                    viewBox="0 0 19 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M9.89551 12.8555H15.3582"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6.61816 2.47644V4.11523"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2.24805 4.11523H10.9883"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div class="dropdown-content myDropdown">
-                  <div class="option">Անգլերեն</div>
-                  <div class="option">Հայերեն</div>
-                  <div class="option">Ռուսերեն</div>
-                </div>
+          <div class="menu-panel">
+            <ul class="sub-menu">
+              <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
+              <li><a href="#">Հաշվառման վայրեր</a></li>
+              <li><a href="#">Հաշվառման հայտ</a></li>
+              <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/5img.svg" class="bx bx-grid-alt" />
+            <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <img src="../../../assets/sidebarIcon/6img.svg" class="bx bx-grid-alt" />
+              <span class="link_name">Վարման իրավունքի Խմբեր</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <div class="menu-panel">
+            <ul class="sub-menu">
+              <li>
+                <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
+              </li>
+              <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
+              <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
+              <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
+              <li>
+                <a href="#">Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
+                  կրկնօրինակի տրամադրում</a>
+              </li>
+              <li>
+                <a href="#">Վարման իրավունքի փաստաթղթեր</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <img src="../../../assets/sidebarIcon/7img.svg" class="bx bx-grid-alt" />
+              <span class="link_name">Տրված համարանիշներ</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <div class="menu-panel">
+            <ul class="sub-menu">
+              <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
+              <li>
+                <a href="#">Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/8img.svg" class="bx bx-grid-alt" />
+            <span class="link_name">Բառարան</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Բառարան</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/9img.svg" class="bx bx-grid-alt" />
+            <span class="link_name">Լեզուներ</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Լեզուներ</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/sidebarIcon/10img.svg" class="bx bx-grid-alt" />
+            <span class="link_name">Հաշվետվություններ</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- sidebar end -->
+    <main class="home-section">
+      <!-- header start -->
+      <div class="header-blocking-div"></div>
+      <header class="main-header">
+        <div class="home-content">
+          <img src="../../../assets/sideBarIcon/menuIcon.svg" class="bx bx-menu" />
+        </div>
+        <div class="home-content2">
+          <div class="navbar">
+            <div class="dropdown">
+              <button class="dropbtn">
+                <div id="drop-title">Հայերեն</div>
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405" stroke="#575757" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M9.89551 12.8555H15.3582" stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.61816 2.47644V4.11523" stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2.24805 4.11523H10.9883" stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
+                    stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
+                    stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="dropdown-content myDropdown">
+                <div class="option">Անգլերեն</div>
+                <div class="option">Հայերեն</div>
+                <div class="option">Ռուսերեն</div>
               </div>
             </div>
-            <img
-              src="../../../assets/sideBarIcon/headerUser.svg"
-              class="bx bxs-user"
-            />
           </div>
-        </header>
-        <!-- header end -->
-        <!-- right section start-->
-        <section class="right-section">
-          <div class="right-sectionChild">
-            <div class="title-link2">
-              <div class="title-linkChild">
-                <a href="#" class="link-direction">Գլխավոր</a>
-                <div>></div>
-                <a href="./page.html" class="link-direction"
-                  >Տեխնիկայի հաշվառում
-                </a>
-                <div>></div>
-                <a href="./page.html" class="link-direction">
-                  Հաշվառման հայտ
-                </a>
-              </div>
-              <a href="" class="main-btn" id="addPage"
-                >Ստեղծել հաշվառման հայտ</a
-              >
+          <img src="../../../assets/sideBarIcon/headerUser.svg" class="bx bxs-user" />
+        </div>
+      </header>
+      <!-- header end -->
+      <!-- right section start-->
+      <section class="right-section">
+        <div class="right-sectionChild">
+          <div class="title-link2">
+            <div class="title-linkChild">
+              <a href="#" class="link-direction">Գլխավոր</a>
+              <div>></div>
+              <a href="./page.html" class="link-direction">Տեխնիկայի հաշվառում
+              </a>
+              <div>></div>
+              <a href="./page.html" class="link-direction">
+                Հաշվառման հայտ
+              </a>
             </div>
-
-            <div class="tableContainer">
-              <div class="table-title">
-                <div class="page">Հաշվառման հայտեր</div>
-                <div class="table-input-search-box">
-                  <input placeholder="Որոնել" class="table-input" />
-                  <img src="../../../assets/table/inp-search.svg" alt="" />
-                </div>
-              </div>
-              <div class="tableChild">
-                <table>
-                  <tr class="firstLine">
-                    <td>№</td>
-                    <td>Անուն</td>
-                    <td>Տեսակ</td>
-                    <td>Կարգավիճակ</td>
-                    <td>Ջնջել</td>
-                    <td>Փոփոխել</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>Վարորդական իրավունքի ստեղծում</td>
-                    <td>Վարորդական իրավունք</td>
-
-                    <td>
-                      <label class="toggle">
-                        <input class="toggle-checkbox" type="checkbox" />
-                        <div class="toggle-switch"></div>
-                      </label>
-                    </td>
-                    <td><img src="../../../assets/table/Trash.svg" /></td>
-                    <td>
-                      <a>
-                        <img src="../../../assets/table/pen.svg" class="pen" />
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>Վարորդական իրավունքի ստեղծում</td>
-                    <td>Վարորդական իրավունք</td>
-
-                    <td>
-                      <label class="toggle">
-                        <input class="toggle-checkbox" type="checkbox" />
-                        <div class="toggle-switch"></div>
-                      </label>
-                    </td>
-                    <td><img src="../../../assets/table/Trash.svg" /></td>
-                    <td>
-                      <a>
-                        <img src="../../../assets/table/pen.svg" class="pen" />
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>Վարորդական իրավունքի ստեղծում</td>
-                    <td>Վարորդական իրավունք</td>
-
-                    <td>
-                      <label class="toggle">
-                        <input class="toggle-checkbox" type="checkbox" />
-                        <div class="toggle-switch"></div>
-                      </label>
-                    </td>
-                    <td><img src="../../../assets/table/Trash.svg" /></td>
-                    <td>
-                      <a>
-                        <img src="../../../assets/table/pen.svg" class="pen" />
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
+            <a href="" class="main-btn" id="addPage">Ստեղծել հաշվառման հայտ</a>
           </div>
 
-          <!-- ------------------------------------------------------- -->
-          <!-- Pagination -->
-          <!-- ------------------------------------------------------- -->
-          <div class="pagination">
-            <div class="page-item previous-page">
-              <a class="page-link" href="javascript:void(0)"><span>‹‹</span></a>
-            </div>
-            <div class="page-item current-page">
-              <a class="page-link" href="javascript:void(0)">1</a>
-            </div>
-            <div class="page-item dots">
-              <a class="page-link" href="javascript:void(0)">...</a>
-            </div>
-            <div class="page-item current-page">
-              <a class="page-link" href="javascript:void(0)">5</a>
-            </div>
-            <div class="page-item current-page page-active">
-              <a class="page-link" href="javascript:void(0)">6</a>
-            </div>
-            <div class="page-item current-page">
-              <a class="page-link" href="javascript:void(0)">7</a>
-            </div>
-            <div class="page-item dots">
-              <a class="page-link" href="javascript:void(0)">...</a>
-            </div>
-            <div class="page-item current-page">
-              <a class="page-link" href="javascript:void(0)">13</a>
-            </div>
-            <div class="page-item next-page">
-              <a class="page-link" href="javascript:void(0)"><span>››</span></a>
-            </div>
-          </div>
-          <!-- ======================================================= -->
-          <!-- ======================================================= -->
-          <!-- ======================================================= -->
-        </section>
-        <!-- right section end-->
-      </main>
-
-      <div class="modal-container">
-        <div class="modal" id="confirm-modal">
-          <div class="modal-head">
-            <h3 class="modal-title">Կարգավիճակի փոփոխություն</h3>
-            <div class="close">&#x2715;</div>
-          </div>
-          <div class="modal-content">
-            <div class="modal-confirm-box">
-              <p class="modal-confirm-box-title">
-                Դուք ցանկանո՞ւմ եք ապակտիվացնել օգտատիրոջը
-              </p>
-              <div class="modal-confirm-buttons">
-                <button class="btn-transparent" id="modal-deny-btn">
-                  Չեղարկել
-                </button>
-                <button class="addPage" id="modal-accept-btn">Հաստատել</button>
+          <div class="tableContainer">
+            <div class="table-title">
+              <div class="page">Հաշվառման հայտեր</div>
+              <div class="table-input-search-box">
+                <input placeholder="Որոնել" class="table-input" />
+                <img src="../../../assets/table/inp-search.svg" alt="" />
               </div>
+            </div>
+            <div class="tableChild">
+              <table>
+                <tr class="firstLine">
+                  <td>№</td>
+                  <td>Անուն</td>
+                  <td>Տեսակ</td>
+                  <td>Կարգավիճակ</td>
+                  <td>Ջնջել</td>
+                  <td>Փոփոխել</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Վարորդական իրավունքի ստեղծում</td>
+                  <td>Վարորդական իրավունք</td>
+
+                  <td>
+                    <label class="toggle">
+                      <input class="toggle-checkbox" type="checkbox" />
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </td>
+                  <td><img src="../../../assets/table/Trash.svg" /></td>
+                  <td>
+                    <a>
+                      <img src="../../../assets/table/pen.svg" class="pen" />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Վարորդական իրավունքի ստեղծում</td>
+                  <td>Վարորդական իրավունք</td>
+
+                  <td>
+                    <label class="toggle">
+                      <input class="toggle-checkbox" type="checkbox" />
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </td>
+                  <td><img src="../../../assets/table/Trash.svg" /></td>
+                  <td>
+                    <a>
+                      <img src="../../../assets/table/pen.svg" class="pen" />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Վարորդական իրավունքի ստեղծում</td>
+                  <td>Վարորդական իրավունք</td>
+
+                  <td>
+                    <label class="toggle">
+                      <input class="toggle-checkbox" type="checkbox" />
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </td>
+                  <td><img src="../../../assets/table/Trash.svg" /></td>
+                  <td>
+                    <a>
+                      <img src="../../../assets/table/pen.svg" class="pen" />
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------------------------------------------- -->
+        <!-- Pagination -->
+        <!-- ------------------------------------------------------- -->
+        <div class="pagination">
+          <div class="page-item previous-page">
+            <a class="page-link" href="javascript:void(0)"><span>‹‹</span></a>
+          </div>
+          <div class="page-item current-page">
+            <a class="page-link" href="javascript:void(0)">1</a>
+          </div>
+          <div class="page-item dots">
+            <a class="page-link" href="javascript:void(0)">...</a>
+          </div>
+          <div class="page-item current-page">
+            <a class="page-link" href="javascript:void(0)">5</a>
+          </div>
+          <div class="page-item current-page page-active">
+            <a class="page-link" href="javascript:void(0)">6</a>
+          </div>
+          <div class="page-item current-page">
+            <a class="page-link" href="javascript:void(0)">7</a>
+          </div>
+          <div class="page-item dots">
+            <a class="page-link" href="javascript:void(0)">...</a>
+          </div>
+          <div class="page-item current-page">
+            <a class="page-link" href="javascript:void(0)">13</a>
+          </div>
+          <div class="page-item next-page">
+            <a class="page-link" href="javascript:void(0)"><span>››</span></a>
+          </div>
+        </div>
+        <!-- ======================================================= -->
+        <!-- ======================================================= -->
+        <!-- ======================================================= -->
+      </section>
+      <!-- right section end-->
+    </main>
+
+    <div class="modal-container">
+      <div class="modal" id="confirm-modal">
+        <div class="modal-head">
+          <h3 class="modal-title">Կարգավիճակի փոփոխություն</h3>
+          <div class="close">&#x2715;</div>
+        </div>
+        <div class="modal-content">
+          <div class="modal-confirm-box">
+            <p class="modal-confirm-box-title">
+              Դուք ցանկանո՞ւմ եք ապակտիվացնել օգտատիրոջը
+            </p>
+            <div class="modal-confirm-buttons">
+              <button class="btn-transparent" id="modal-deny-btn">
+                Չեղարկել
+              </button>
+              <button class="addPage" id="modal-accept-btn">Հաստատել</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="../../../js/index.js"></script>
-    <script src="../../../js/modal.js"></script>
-  
-  </body>
+  </div>
+  <script src="../../../js/index.js"></script>
+  <script src="../../../js/modal.js"></script>
+
+</body>
+
 </html>

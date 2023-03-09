@@ -10,8 +10,8 @@ const handleBlur = (event) => {
   }
 };
 formWrap.forEach((el) => {
-  el.addEventListener("focusin", handleFocus, true);
+  el.addEventListener("focusin", handleFocus);
 });
 formWrap.forEach((el) => {
-  el.addEventListener("focusout", handleBlur, true);
+  el.addEventListener("focusout", handleBlur);
 });

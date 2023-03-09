@@ -167,6 +167,113 @@ label {
   letter-spacing: -0.019em;
   color: #575757;
 }
+
+/* New input styles */
+/* Form Effect 1 Design */
+/* Form Effect 1 Design */
+.controlGroup {
+  min-width: 200px;
+  min-height: 40px;
+  position: relative;
+  color: white;
+}
+.controlGroup.textArea {
+  margin: 10px 0 0 0;
+  width: 98.5%;
+}
+.controlGroup input {
+  width: 100%;
+}
+.form1Wrap .controlGroup label,
+.form1Wrap .controlGroup input,
+.form1Wrap .controlGroup textarea {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  -ms-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  -o-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.form1Wrap .controlGroup label {
+  bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #9f9f9f;
+}
+.form1Wrap .controlGroup input,
+.form1Wrap .controlGroup textarea {
+  border: none;
+  height: 0;
+  border-top: 1px solid #9f9f9f;
+  bottom: 0;
+}
+
+.form1Wrap .controlGroup input,
+.form1Wrap .controlGroup textarea,
+.form1Wrap .controlGroup input:active,
+.form1Wrap .controlGroup textarea:active,
+.form1Wrap .controlGroup input:focus,
+.form1Wrap .controlGroup textarea:focus {
+  background: white;
+  outline: none;
+  border-radius: 5px;
+}
+
+.form1Wrap .textArea textarea {
+  width: 100%;
+  resize: none;
+}
+.form1Wrap .controlGroup.focus label {
+  bottom: 34px;
+  font-size: 11px;
+  outline: none;
+  cursor: pointer;
+}
+.form1Wrap .controlGroup.focus input,
+.form1Wrap .controlGroup.focus textarea {
+  bottom: -11px;
+  padding: 20px;
+  outline: none;
+  border: none;
+}
+
+.form1Wrap .controlGroup.focus textarea {
+  height: 95px;
+  bottom: -67px;
+  padding: 20px;
+  outline: none;
+}
+.inputWrap img {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+/* open default */
+.form1Wrap .controlGroup input:not(:placeholder-shown) + label {
+  bottom: 34px;
+  font-size: 11px;
+  outline: none;
+  cursor: pointer;
+}
+.form1Wrap .controlGroup input::placeholder {
+  font-size: 0;
+}
+.form1Wrap .controlGroup input:not(:placeholder-shown),
+.form1Wrap .controlGroup textarea:not(:placeholder-shown) {
+  bottom: -11px;
+  padding: 20px;
+  outline: none;
+}
+/* open default */
+/* Form Effect */
+
+/* Form Effect */
+
 /* ================================ */
 /* ================================ */
 /* ================================ */
@@ -187,7 +294,9 @@ label {
 }
 .main-btn {
   width: fit-content;
-  min-width: 143px;
+  min-width: 127px;
+  height: fit-content;
+  text-align: center;
   background: var(--light-blue);
   border-radius: 8px;
   font-size: 14px;
@@ -196,7 +305,7 @@ label {
   letter-spacing: 0.01em;
   color: #ffffff;
   text-decoration: none;
-  padding: 5.5px 16px;
+  padding: 6px 16px;
 }
 .main-btn-gray {
   color: #575757;
@@ -245,18 +354,6 @@ label {
   text-align: center;
   line-height: 50px;
 }
-/* .sidebar .logo-details .logo_name {
-  font-size: 22px;
-  color: #fff;
-  font-weight: 600;
-  transition: 0.4s ease-in;
-  transition-delay: 0.1s;
-}
-.sidebar.close .logo-details .logo_name {
-  transition-delay: 0s;
-  opacity: 0;
-  pointer-events: none;
-} */
 .sidebar .nav-links {
   height: 100%;
   padding: 10px 0 150px 0;
@@ -562,37 +659,6 @@ header {
 .bxs-user {
   cursor: pointer;
 }
-@media (max-width: 768px) {
-  /* .search-box input {
-    width: 100%;
-  } */
-}
-@media (max-width: 400px) {
-  /* .sidebar.close .nav-links li .sub-menu {
-    display: none;
-  } */
-  /* .sidebar {
-    width: 78px;
-  }
-  .sidebar.close {
-    width: 0;
-  }
-  .home-section {
-    left: 78px;
-    width: calc(100% - 78px);
-    z-index: 100;
-  }
-  .sidebar.close ~ .home-section {
-    width: 100%;
-    left: 0;
-  } */
-  .bx-menu {
-    display: none !important;
-  }
-  .sidebar .logo-details {
-    width: 90%;
-  }
-}
 /* ----------------------------------------- */
 /* styles for javascript */
 /* ----------------------------------------- */
@@ -615,6 +681,12 @@ header {
 /* ------------------------------------ */
 /* Pagination */
 /* ------------------------------------ */
+
+/* ================ */
+/* ================ */
+/* ================ */
+/* ================ */
+/* ================ */
 .pagination {
   display: flex;
   text-align: center;
@@ -686,6 +758,10 @@ header {
 .page-active a {
   color: white !important;
 }
+/* ======================================== */
+/* ======================================== */
+/* ======================================== */
+
 /* link direction */
 .title-link2 {
   width: 100%;
@@ -708,6 +784,7 @@ header {
 }
 .link-direction:last-child {
   color: #343957 !important;
+  font-weight: bold !important;
 }
 .title-linkChild > div {
   font: menu;
@@ -897,4 +974,33 @@ header {
 } */
 .stroke .input:focus {
   top: 0;
+}
+/*button class*/
+.submit {
+  width: 127px;
+  height: 30px;
+  border: 1px solid #7098D5;
+  border-radius: 10px;
+  background: #fff;
+  color: #7098D5;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.submit:hover {
+  border: none;
+  background: #7098D5;
+  color: #fff;
+}
+a.submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
