@@ -961,3 +961,32 @@ header {
 .stroke .input:focus {
   top: 0;
 }
+/*button class*/
+.submit {
+  width: 127px;
+  height: 30px;
+  border: 1px solid #7098D5;
+  border-radius: 10px;
+  background: #fff;
+  color: #7098D5;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.submit:hover {
+  border: none;
+  background: #7098D5;
+  color: #fff;
+}
+a.submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
