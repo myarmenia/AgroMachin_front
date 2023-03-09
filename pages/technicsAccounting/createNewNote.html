@@ -356,16 +356,40 @@
                       <div>
                         <div class="custom-select">
                           <div class="select-heading">
-                            <input class="select-input" type="text" hidden />
+                            <input
+                              id="inpppp"
+                              class="select-input"
+                              type="text"
+                              hidden
+                            />
                             <span class="input-value">Հիմք փաստաթուղթ*</span>
                             <i class="select-chev"></i>
                           </div>
                           <div class="select-options">
-                            <div class="select-option">aaaaaaaaa</div>
-                            <div class="select-option">bbbbbbbbb</div>
-                            <div class="select-option">ccccccccc</div>
+                            <div class="select-option" data-value="aaa">
+                              aaaaaaaaa
+                            </div>
+                            <div class="select-option" data-value="bbb">
+                              bbbbbbbbb
+                            </div>
+                            <div
+                              class="select-option"
+                              data-value="ooo"
+                              data-selected="true"
+                            >
+                              ccccccccc
+                            </div>
+                            <div class="select-option" data-value="ddd">
+                              ddddddddd
+                            </div>
+                            <div class="select-option" data-value="uuu">
+                              eeeeeeeee
+                            </div>
                           </div>
                         </div>
+
+                        <button onclick="loggg()" type="button">Log</button>
+
                         <div class="form1Wrap">
                           <div class="controlGroup">
                             <div class="inputWrap">

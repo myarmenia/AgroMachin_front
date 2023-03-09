@@ -327,37 +327,60 @@
             <div class="tableContainer">
               <div class="table-title">
                 <div class="page">Օգտատերեր</div>
-                <div class="table-input-search-box">
-                  <input placeholder="Որոնել" class="table-input" />
-                  <img src="../../assets/table/inp-search.svg" alt="" />
-                </div>
-                <div class="dropdown-container">
-                  <div class="navbar">
-                    <div class="dropdown">
-                      <button class="dropbtn">
-                        <div id="drop-title">Սորտավորել</div>
-                        <img src="../../assets/table/greyArrow.svg" alt="" />
-                      </button>
-                      <div class="dropdown-content myDropdown">
-                        <div class="option">Աճման կարգով</div>
 
-                        <div class="option">Նվազման կարգով</div>
+                <div class="dropdown-container">
+                  <div class="custom-select custom-select-rounded">
+                    <div class="select-heading">
+                      <input
+                        id="inpppp"
+                        class="select-input"
+                        type="text"
+                        hidden
+                      />
+                      <span class="input-value">Սորտավորել</span>
+                      <i class="select-chev"></i>
+                    </div>
+                    <div class="select-options">
+                      <div class="select-option" data-value="aaa">
+                        Աճման կարգով
+                      </div>
+                      <div class="select-option" data-value="bbb">
+                        Նվազման կարգով
                       </div>
                     </div>
                   </div>
-                  <div class="navbar">
-                    <div class="dropdown">
-                      <button class="dropbtn">
-                        <div id="drop-title">Ֆիլտրել</div>
-                        <img src="../../assets/table/greyArrow.svg" alt="" />
-                      </button>
-                      <div class="dropdown-content myDropdown">
-                        <div class="option">ըստ անվան</div>
-                        <div class="option">ըստ ID</div>
-                        <div class="option">ըստ էլ․ հասցե</div>
+                  <div class="custom-select custom-select-rounded">
+                    <div class="select-heading">
+                      <input
+                        id="inpppp"
+                        class="select-input"
+                        type="text"
+                        hidden
+                      />
+                      <span class="input-value">Ֆիլտրել</span>
+                      <i class="select-chev"></i>
+                    </div>
+                    <div class="select-options">
+                      <div class="select-option" data-value="aaa">
+                        ըստ անվան
+                      </div>
+                      <div class="select-option" data-value="bbb">ըստ ID</div>
+                      <div
+                        class="select-option"
+                        data-value="ooo"
+                        data-selected="true"
+                      >
+                        ըստ էլ․ հասցե
                       </div>
                     </div>
                   </div>
+                  <button class="main-btn">Հաստատել</button>
+                  <form class="table-input-search-box">
+                    <input placeholder="Որոնել" class="table-input" />
+                    <button>
+                      <img src="../../assets/table/inp-search.svg" alt="" />
+                    </button>
+                  </form>
                 </div>
               </div>
               <div class="tableChild">
