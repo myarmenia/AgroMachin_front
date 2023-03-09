@@ -116,6 +116,9 @@ td {
   padding: 0 15px;
   color: #575757;
 }
+.forWidth {
+  width: 100px;
+}
 td img {
   display: flex;
 }
