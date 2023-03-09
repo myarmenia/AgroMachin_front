@@ -15,3 +15,4 @@ formWrap.forEach((el) => {
 formWrap.forEach((el) => {
   el.addEventListener("focusout", handleBlur);
 });
+

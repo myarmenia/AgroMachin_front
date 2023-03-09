@@ -176,3 +176,22 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 40px;
   height: 40px;
 }
+.form1Wrap {
+  margin: 0;
+  margin-top: 5px;
+  min-height: auto;
+}
+.controlGroup {
+  margin-bottom: 5px;
+}
+.form1Wrap .controlGroup input,
+.form1Wrap .controlGroup textarea {
+  border-color: #575757;
+  border-width: 1px;
+}
+
+.note-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

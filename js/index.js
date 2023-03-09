@@ -6,30 +6,49 @@ const cur_table = document.getElementById("table-route"),
   remove_modal = document.getElementById("remove-modal"),
   accept_btn = document.getElementById("modal-accept-btn"),
   confirm_modal = document.getElementById("confirm-modal"),
-  table_route_delete = cur_table.attributes["data-delete"].value,
-  table_route_route = cur_table.attributes["data-route"].value;
+  custom_selects = document.querySelectorAll(".select-heading"),
+  table_route_delete = cur_table && cur_table.attributes["data-delete"].value,
+  table_route_route = cur_table && cur_table.attributes["data-route"].value;
+// ==================================================================
+// ==================================================================
+// ==================================================================
 
-// ==================================================================
-// ==================================================================
-// ==================================================================
-//
+// ---------------------------------
 // Input cunstucturing
-const formWrap = document.querySelectorAll(".form1Wrap");
-const handleFocus = (event) => {
-  event.target.closest(".controlGroup").classList.add("focus");
-};
-const handleBlur = (event) => {
-  const target = event.target;
-  const controlGroup = target.closest(".controlGroup");
-  if (!target.value) {
-    controlGroup.classList.remove("focus");
-  }
-};
-formWrap.forEach((el) => {
-  el.addEventListener("focusin", handleFocus);
+// ---------------------------------
+document.querySelectorAll(".input-wrap").forEach((input, i) => {
+  const placeholder = input.placeholder,
+    id = input.id,
+    className = input.className;
+  group = input.parentElement;
+
+  group.innerHTML = `
+    <div class="input-box ${input.value ? "focus" : ""}">
+      <label for="${id}" class="main-label">${placeholder}</label>
+      <input id="${id}" placeholder="${placeholder}" class="${className}" value="${
+    input.value
+  }" />
+    </div>
+  `;
 });
-formWrap.forEach((el) => {
-  el.addEventListener("focusout", handleBlur);
+
+document.querySelectorAll(".main-label, .input-wrap").forEach((elem, i) => {
+  elem.addEventListener("focus", function (event) {
+    event.stopPropagation();
+    if (!this.value) {
+      this.parentElement.classList.remove("focus");
+    }
+    this.parentElement.classList.add("focus");
+  });
+});
+
+document.querySelectorAll(".main-label, .input-wrap").forEach((elem, i) => {
+  elem.addEventListener("blur", function (event) {
+    event.stopPropagation();
+    if (!this.value) {
+      this.parentElement.classList.remove("focus");
+    }
+  });
 });
 // ==================================================================
 // ==================================================================
@@ -86,41 +105,8 @@ for (var k = 0; k < option.length; k++) {
     this.parentElement.classList.remove("show");
   });
 }
-
 // dropdown
 
-// ----------------------------------------------------------------------------
-// Open modal with checkbox
-document.querySelectorAll(".toggle-checkbox").forEach((el, i) => {
-  el.setAttribute("data-index", i);
-  el.setAttribute("data-checked", el.checked);
-  el.addEventListener("click", function () {
-    const checkbox_id = this.attributes["data-index"].value,
-      checkbox_checked =
-        this.attributes["data-checked"].value === "false" ? false : true;
-
-    this.checked = checkbox_checked;
-
-    accept_btn.href = `${table_route_route}/${checkbox_id}/${
-      checkbox_checked ? 0 : 1
-    }`;
-    showModal("#confirm-modal");
-  });
-});
-// ============================================================================
-
-// ----------------------------------------------------------------------------
-// Open modal with trashbin
-document.querySelectorAll(".trashbin").forEach((el, i) => {
-  el.setAttribute("data-index", i);
-  el.addEventListener("click", function () {
-    const checkbox_id = this.attributes["data-index"].value;
-
-    remove_form.action = `${table_route_delete}/${checkbox_id}`;
-    showModal("#remove-modal");
-  });
-});
-// ============================================================================
 // sign out
 const signOutBtn = document.getElementsByClassName("signOutBtn")[0];
 const userSignOutContainer = document.getElementsByClassName("userSignOut")[0];
@@ -128,3 +114,33 @@ signOutBtn.addEventListener("click", () => {
   userSignOutContainer.classList.toggle("active");
 });
 // sign out
+
+// ----------------------------------------------------------------------------
+// Custom select
+function selectToggle(e) {
+  e.stopPropagation();
+
+  const options = this.closest(".custom-select").children[1],
+    input = this.children[0],
+    span = this.children[1];
+  options.classList.toggle("options-open");
+
+  [...options.children].forEach((option) => {
+    window.addEventListener("click", (e) => {
+      if (e.target != option) {
+        options.classList.remove("options-open");
+      }
+    });
+    option.addEventListener("click", function () {
+      input.value = option.innerText;
+      span.innerText = option.innerText;
+      options.classList.remove("options-open");
+    });
+  });
+}
+
+custom_selects.forEach((select, i) => {
+  select.addEventListener("click", selectToggle);
+});
+
+// ============================================================================
