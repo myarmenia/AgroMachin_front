@@ -30,7 +30,24 @@
   list-style-type: none;
   justify-content: space-between;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
+}
+.tabs_coulm::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.tabs_coulm::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.tabs_coulm::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+}
+.tabs_coulm::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.tab_item {
+  min-height: 100%;
 }
 .tabs_text {
   cursor: pointer;
