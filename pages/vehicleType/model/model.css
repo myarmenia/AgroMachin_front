@@ -44,11 +44,7 @@
 .new_vehicle_show {
   display: block;
 }
-.img-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .vehicleType_table_container tr > td:nth-child(2) {
   width: 30%;
 }
