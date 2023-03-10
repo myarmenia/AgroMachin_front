@@ -359,6 +359,22 @@
   text-decoration: none;
   padding: 6px 16px;
 }
+.main-btn-white {
+  width: fit-content;
+  min-width: 127px;
+  height: fit-content;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  color: #7098d5;
+  border: 1px solid #7098d5;
+  text-decoration: none;
+  padding: 6px 16px;
+}
 .main-btn-gray {
   color: #575757;
   background: #dadada;

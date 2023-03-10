@@ -2,14 +2,11 @@
 // Modal toggling
 // ------------------------------------------------------------------
 const modal_container = document.querySelector(".modal-container");
-
 function showModal(name) {
   const modal = document.querySelector(name);
-
   document.body.classList.add("scroll-disabled");
   modal_container.style.display = "block";
   modal.style.display = "block";
-
   setTimeout(() => {
     // modal.classList.remove("modal-close");
     // modal_container.classList.remove("modal-close");
@@ -22,6 +19,7 @@ document.querySelectorAll(".toggle").forEach((el) => {
 });
 function hideModal() {
   const modals = document.getElementsByClassName("modal");
+
   for (let i = 0; i < modals.length; i++) {
     const modal = modals[i];
 
