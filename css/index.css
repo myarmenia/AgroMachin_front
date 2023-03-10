@@ -362,7 +362,7 @@ label {
 }
 .main-btn {
   width: fit-content;
-  min-width: 127px;
+  min-width: 137px;
   height: fit-content;
   text-align: center;
   background: var(--light-blue);
