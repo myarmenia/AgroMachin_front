@@ -16,17 +16,29 @@ const cur_table = document.getElementById("table-route"),
 // ---------------------------------
 // Input cunstucturing
 // ---------------------------------
+
+function randomNum() {
+  const word = "qwertyuiop_asdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+  let id = "";
+  for (let i = 0; i < 7; i++) {
+    id += word[Math.floor(Math.random() * word.length)];
+  }
+  return id;
+}
+
 document.querySelectorAll(".input-wrap").forEach((input, i) => {
   const placeholder = input.placeholder,
-    id = input.id,
+    id = input.id || randomNum(),
     className = input.className;
   group = input.parentElement;
 
   group.innerHTML = `
     <div class="input-box ${input.value ? "focus" : ""}">
-      <span class="main-label">${placeholder}</span>
-      <input placeholder="${placeholder}" class="${className}" 
-      value="${input.value}" />
+      <label for="${id}" class="main-label">${placeholder}</label>
+      <input id="${id}" placeholder="${placeholder}" class="${className}" value="${
+    input.value
+  }" />
+  
     </div>
   `;
 });
