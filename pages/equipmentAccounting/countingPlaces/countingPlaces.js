@@ -5,14 +5,16 @@ const change_record_btn = document.querySelectorAll("#change_record");
 
 function articleToggle() {
   new_vehicle2.classList.remove("new_vehicle_show2");
-  new_vehicle.classList.toggle("new_vehicle_show");
+  new_vehicle.classList.add("new_vehicle_show");
 }
 function articleChangeToggle() {
   new_vehicle.classList.remove("new_vehicle_show");
-  new_vehicle2.classList.toggle("new_vehicle_show2");
+  new_vehicle2.classList.add("new_vehicle_show2");
 }
 new_record_btn.addEventListener("click", articleToggle);
-change_record_btn.addEventListener("click", articleChangeToggle);
+for (i = 0; i < change_record_btn.length; i++) {
+  change_record_btn[i].addEventListener("click", articleChangeToggle);
+}
 
 document.querySelectorAll(".toggle").forEach((el) => {
   el.addEventListener("click", function () {
@@ -20,6 +22,3 @@ document.querySelectorAll(".toggle").forEach((el) => {
     showModal("#confirm-modal");
   });
 });
-for (i = 0; i < change_record_btn.length; i++) {
-  change_record_btn[i].addEventListener("click", articleChangeToggle);
-}

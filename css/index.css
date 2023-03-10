@@ -300,7 +300,10 @@ label {
   width: 100%;
   font-weight: 600;
   font-size: 14px;
+  min-height: 16px;
   color: #9f9f9f;
+  cursor: pointer;
+  height: 20px;
 }
 .main-label,
 .input-wrap {
@@ -313,6 +316,22 @@ label {
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   display: block;
 }
+/* input for search */
+.search-input-group {
+  position: relative;
+}
+.search-input-group img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.search-input-group .input-box.focus img {
+  position: absolute;
+  right: 10px;
+  top: 25px !important;
+}
+
+/* input for search */
 .input-box.focus .main-label {
   font-size: 11px;
 }
@@ -1023,33 +1042,4 @@ header {
 } */
 .stroke .input:focus {
   top: 0;
-}
-/*button class*/
-.submit {
-  width: 127px;
-  height: 30px;
-  border: 1px solid #7098d5;
-  border-radius: 10px;
-  background: #fff;
-  color: #7098d5;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 14px;
-  display: inline-block;
-}
-
-.submit:hover {
-  border: none;
-  background: #7098d5;
-  color: #fff;
-}
-a.submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-div.submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
