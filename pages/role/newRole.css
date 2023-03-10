@@ -113,7 +113,7 @@
 .tool .new_tool label {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   gap: 15px;
   font-size: 14px;
   font-weight: 600;

@@ -309,9 +309,15 @@
               <div class="tableContainer">
                 <div class="table-title">
                   <div class="vehicleType_table_head">
-                    <span> Տրանսպորտային միջոցի Մակնիշ</span>
+                    <div class="back_arrow">
+                      <a href="">
+                        <img src="../../../assets/table/backArrow.svg" alt="">
+                      </a>
+                      <span>Տրանսպորտային միջոցի Մակնիշ</span>
+                    </div>
                     <div>
                       <div class="main-input-search-box">
+                        
                         <input placeholder="Որոնել" class="main-input" />
                         <img
                           src="../../../assets/table/inp-search.svg"
@@ -345,7 +351,7 @@
                           </div>
                         </td>
                         <td>
-                          <div class="img-center">
+                          <div class="img-center" id="change_record">
                             <img src="../../../assets/table/pen.svg" alt="" />
                           </div>
                         </td>
@@ -354,7 +360,6 @@
                   </table>
                 </div>
               </div>
-
               <div class="new_vehicle">
                 <div class="table-title">
                   <div class="table-title-text">
@@ -364,15 +369,22 @@
                 <form class="new_vehicle_content">
                   <div class="new_vehicle_fieldset">
                     <label for="car">ՏՄ մակնիշ*</label>
-                    <input
-                      id="car"
-                      placeholder="Գրել մակնիշը"
-                      class="main-input"
-                    />
+                    <input id="car" placeholder="Գրել մակնիշը" class="main-input" />
                   </div>
-                  <button class="addPage">Պահպանել</button>
+                  <button class="main-btn">Պահպանել</button>
                 </form>
               </div>
+              <div class="new_vehicle2">
+                <div class="table-title">
+                  <div class="table-title-text">Փոփոխել տրանսպորտային միջոցի մակնիշը</div>
+                </div>
+                <form class="new_vehicle_content">
+                  <div class="new_vehicle_fieldset">
+                    <label for="car">ՏՄ մակնիշ*</label>
+                    <input id="car" placeholder="Գրել մակնիշը" class="main-input" />
+                  </div>
+                  <button class="main-btn">Պահպանել</button>
+                </form>
             </div>
           </div>
           <!-- ------------------------------------------------------- -->
