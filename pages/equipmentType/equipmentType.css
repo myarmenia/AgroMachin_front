@@ -45,7 +45,7 @@
 .vehicleType_table_container tr > td:nth-child(2) {
   width: 100%;
 }
-.vehicleType_table_container tr > td:nth-child(3) > div,
+/* .vehicleType_table_container tr > td:nth-child(3) > div,
 .vehicleType_table_container tr > td:last-child > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,7 +56,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
+} */
 .vehicleType_table_container tr > td:nth-child(3) img,
 .vehicleType_table_container tr > td:last-child img {
   cursor: pointer;

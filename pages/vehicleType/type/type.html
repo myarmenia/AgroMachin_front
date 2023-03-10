@@ -1,334 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vehicle_types - type</title>
+    <link rel="stylesheet" href="../../../css/index.css " />
+    <link rel="stylesheet" href="../../../css/table.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./type.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>vehicle_types - type</title>
-  <link rel="stylesheet" href="../../../css/index.css " />
-  <link rel="stylesheet" href="../../../css/table.css" />
-  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./type.css" />
-</head>
+  <body>
+    <div id="app">
+      <!-- sidebar start -->
+      <div class="sidebar close">
+        <div class="logo-details">
+          <img src="../../../assets/sidebarIcon/logo.svg" />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/user.svg"
+                class="bx bx-grid-alt"
+              />
 
-<body>
-  <div id="app">
-    <!-- sidebar start -->
-    <div class="sidebar close">
-      <div class="logo-details">
-        <img src="../../../assets/sidebarIcon/logo.svg" />
+              <span class="link_name">Օգտատերեր</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Օգտատերեր </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/role.svg"
+                class="bx bx-grid-alt"
+              />
+
+              <span class="link_name">Դեր</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Դեր </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/car.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li>
+                <a class="link_name" href="#">Տրանսպորտային միջոցի տեսակ </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/techtype.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li>
+                <a class="link_name" href="#">Տեխնիկայի սարքինության տեսակ</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../../assets/sidebarIcon/4img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Տեխնիկայի հաշվառում</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
+                <li><a href="#">Հաշվառման վայրեր</a></li>
+                <li><a href="#">Հաշվառման հայտ</a></li>
+                <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/5img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li>
+                <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../../assets/sidebarIcon/6img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Վարման իրավունքի Խմբեր</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li>
+                  <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
+                </li>
+                <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
+                <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
+                <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
+                <li>
+                  <a href="#"
+                    >Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
+                    կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Վարման իրավունքի փաստաթղթեր</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../../assets/sidebarIcon/7img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Տրված համարանիշներ</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
+                <li>
+                  <a href="#"
+                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/8img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Բառարան</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Բառարան</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/9img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Լեզուներ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Լեզուներ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../../assets/sidebarIcon/10img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Հաշվետվություններ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/user.svg" class="bx bx-grid-alt" />
-
-            <span class="link_name">Օգտատերեր</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Օգտատերեր </a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/role.svg" class="bx bx-grid-alt" />
-
-            <span class="link_name">Դեր</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Դեր </a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/car.svg" class="bx bx-grid-alt" />
-            <span class="link_name">Տրանսպորտային միջոցի տեսակ</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li>
-              <a class="link_name" href="#">Տրանսպորտային միջոցի տեսակ </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/techtype.svg" class="bx bx-grid-alt" />
-            <span class="link_name">Տեխնիկայի սարքինության տեսակ</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li>
-              <a class="link_name" href="#">Տեխնիկայի սարքինության տեսակ</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <div class="iocn-link">
-            <a href="#">
-              <img src="../../../assets/sidebarIcon/4img.svg" class="bx bx-grid-alt" />
-              <span class="link_name">Տեխնիկայի հաշվառում</span>
-            </a>
-            <i class="bx bxs-chevron-down arrow"></i>
+      <!-- sidebar end -->
+      <main class="home-section">
+        <!-- header start -->
+        <div class="header-blocking-div"></div>
+        <header class="main-header">
+          <div class="home-content">
+            <img
+              src="../../../assets/sideBarIcon/menuIcon.svg"
+              class="bx bx-menu"
+            />
           </div>
-          <div class="menu-panel">
-            <ul class="sub-menu">
-              <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
-              <li><a href="#">Հաշվառման վայրեր</a></li>
-              <li><a href="#">Հաշվառման հայտ</a></li>
-              <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/5img.svg" class="bx bx-grid-alt" />
-            <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li>
-              <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <div class="iocn-link">
-            <a href="#">
-              <img src="../../../assets/sidebarIcon/6img.svg" class="bx bx-grid-alt" />
-              <span class="link_name">Վարման իրավունքի Խմբեր</span>
-            </a>
-            <i class="bx bxs-chevron-down arrow"></i>
-          </div>
-          <div class="menu-panel">
-            <ul class="sub-menu">
-              <li>
-                <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
-              </li>
-              <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
-              <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
-              <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
-              <li>
-                <a href="#">Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
-                  կրկնօրինակի տրամադրում</a>
-              </li>
-              <li>
-                <a href="#">Վարման իրավունքի փաստաթղթեր</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="iocn-link">
-            <a href="#">
-              <img src="../../../assets/sidebarIcon/7img.svg" class="bx bx-grid-alt" />
-              <span class="link_name">Տրված համարանիշներ</span>
-            </a>
-            <i class="bx bxs-chevron-down arrow"></i>
-          </div>
-          <div class="menu-panel">
-            <ul class="sub-menu">
-              <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
-              <li>
-                <a href="#">Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/8img.svg" class="bx bx-grid-alt" />
-            <span class="link_name">Բառարան</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Բառարան</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/9img.svg" class="bx bx-grid-alt" />
-            <span class="link_name">Լեզուներ</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Լեզուներ</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <img src="../../../assets/sidebarIcon/10img.svg" class="bx bx-grid-alt" />
-            <span class="link_name">Հաշվետվություններ</span>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- sidebar end -->
-    <main class="home-section">
-      <!-- header start -->
-      <div class="header-blocking-div"></div>
-      <header class="main-header">
-        <div class="home-content">
-          <img src="../../../assets/sideBarIcon/menuIcon.svg" class="bx bx-menu" />
-        </div>
-        <div class="home-content2">
-          <div class="navbar">
-            <div class="dropdown">
-              <button class="dropbtn">
-                <div id="drop-title">Հայերեն</div>
-                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405" stroke="#575757" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M9.89551 12.8555H15.3582" stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M6.61816 2.47644V4.11523" stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M2.24805 4.11523H10.9883" stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
-                  <path
-                    d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
-                    stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
-                  <path
-                    d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
-                    stroke="#575757" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-              <div class="dropdown-content myDropdown">
-                <div class="option">Անգլերեն</div>
-                <div class="option">Հայերեն</div>
-                <div class="option">Ռուսերեն</div>
+          <div class="home-content2">
+            <div class="navbar">
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <div id="drop-title">Հայերեն</div>
+                  <svg
+                    width="19"
+                    height="18"
+                    viewBox="0 0 19 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.89551 12.8555H15.3582"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.61816 2.47644V4.11523"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.24805 4.11523H10.9883"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
+                      stroke="#575757"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div class="dropdown-content myDropdown">
+                  <div class="option">Անգլերեն</div>
+                  <div class="option">Հայերեն</div>
+                  <div class="option">Ռուսերեն</div>
+                </div>
               </div>
             </div>
+            <img
+              src="../../../assets/sideBarIcon/headerUser.svg"
+              class="bx bxs-user"
+            />
           </div>
-          <img src="../../../assets/sideBarIcon/headerUser.svg" class="bx bxs-user" />
-        </div>
-      </header>
-      <!-- header end -->
-      <!-- right section start-->
-      <section class="right-section">
-        <div class="right-sectionChild">
-          <div class="title-link2 vehicleType_crumbs_container">
-            <div>
-              <div class="title-linkChild vehicleType_crumbs_box1">
-                <a href="#" class="link-direction">Գլխավոր</a>
-                <div>></div>
-                <a href="./page.html" class="link-direction">Տրանսպորտային միջոցի տեսակ</a>
-              </div>
-              <div class="vehicle_types">
-                <button class="main-btn main-btn-gray main-btn-darkgray" id="new_record">
-                  Ստեղծել ՏՄ տեսակ
-                </button>
-                <button class="main-btn main-btn-gray">
-                  Ստեղծել ՏՄ մակնիշ
-                </button>
-                <button class="main-btn main-btn-gray">
-                  Ստեղծել ՏՄ մոդել
-                </button>
+        </header>
+        <!-- header end -->
+        <!-- right section start-->
+        <section class="right-section">
+          <div class="right-sectionChild">
+            <div class="title-link2 vehicleType_crumbs_container">
+              <div>
+                <div class="title-linkChild vehicleType_crumbs_box1">
+                  <a href="#" class="link-direction">Գլխավոր</a>
+                  <div>></div>
+                  <a href="./page.html" class="link-direction"
+                    >Տրանսպորտային միջոցի տեսակ</a
+                  >
+                </div>
+                <div class="vehicle_types">
+                  <button
+                    class="main-btn main-btn-gray main-btn-darkgray"
+                    id="new_record"
+                  >
+                    Ստեղծել ՏՄ տեսակ
+                  </button>
+                  <button class="main-btn main-btn-gray">
+                    Ստեղծել ՏՄ մակնիշ
+                  </button>
+                  <button class="main-btn main-btn-gray">
+                    Ստեղծել ՏՄ մոդել
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="vehicleType_main_container">
-            <div class="tableContainer">
-              <div class="table-title">
-                <div class="vehicleType_table_head">
-                  <span> Տրանսպորտային միջոցի տեսակ</span>
-                  <div>
-                    <div class="main-input-search-box">
-                      <input placeholder="Որոնել" class="main-input" />
-                      <img src="../../../assets/table/inp-search.svg" alt="" />
-                    </div>
-                    <!-- <button class="addPage" id="new_record">
+            <div class="vehicleType_main_container">
+              <div class="tableContainer">
+                <div class="table-title">
+                  <div class="vehicleType_table_head">
+                    <span> Տրանսպորտային միջոցի տեսակ</span>
+                    <div>
+                      <div class="main-input-search-box">
+                        <input placeholder="Որոնել" class="main-input" />
+                        <img
+                          src="../../../assets/table/inp-search.svg"
+                          alt=""
+                        />
+                      </div>
+                      <!-- <button class="addPage" id="new_record">
                         Ստեղծել գրառում
                       </button> -->
+                    </div>
+                  </div>
+                  <!-- <button class="addPage" id="addPage">+ Նոր օգտատեր</button> -->
+                </div>
+                <div class="vehicleType_table_container">
+                  <table>
+                    <thead>
+                      <tr class="vehicleType_thead">
+                        <td>№</td>
+                        <td>Անուն</td>
+                        <td class="forWidth">Ջնջել</td>
+                        <td class="forWidth">Փոփոխել</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td>Lorem ipsum dolor sit amet.</td>
+                        <td>
+                          <div class="img-center">
+                            <img src="../../../assets/table/Trash.svg" alt="" />
+                          </div>
+                        </td>
+                        <td>
+                          <div class="img-center">
+                            <img src="../../../assets/table/pen.svg" alt="" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="new_vehicle">
+                <div class="table-title">
+                  <div class="table-title-text">
+                    Ստեղծել տրանսպորտային միջոցի տեսակ
                   </div>
                 </div>
-                <!-- <button class="addPage" id="addPage">+ Նոր օգտատեր</button> -->
-              </div>
-              <div class="vehicleType_table_container">
-                <table>
-                  <thead>
-                    <tr class="vehicleType_thead">
-                      <td>№</td>
-                      <td>Անուն</td>
-                      <td>Ջնջել</td>
-                      <td>Փոփոխել</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td>
-                        <div class="img-center">
-                          <img src="../../../assets/table/Trash.svg" alt="" />
-                        </div>
-                      </td>
-                      <td>
-                        <div class="img-center">
-                          <img src="../../../assets/table/pen.svg" alt="" />
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <form class="new_vehicle_content">
+                  <div class="new_vehicle_fieldset">
+                    <label for="car">Անուն*</label>
+                    <input id="car" placeholder="Տրակտոր" class="main-input" />
+                  </div>
+                  <button class="addPage">Պահպանել</button>
+                </form>
               </div>
             </div>
-
-            <div class="new_vehicle">
-              <div class="table-title">
-                <div class="table-title-text">
-                  Ստեղծել տրանսպորտային միջոցի տեսակ
-                </div>
-              </div>
-              <form class="new_vehicle_content">
-                <div class="new_vehicle_fieldset">
-                  <label for="car">Անուն*</label>
-                  <input id="car" placeholder="Տրակտոր" class="main-input" />
-                </div>
-                <button class="addPage">Պահպանել</button>
-              </form>
+          </div>
+          <!-- ------------------------------------------------------- -->
+          <!-- Pagination -->
+          <!-- ------------------------------------------------------- -->
+          <div class="pagination">
+            <div class="page-item previous-page">
+              <a class="page-link" href="javascript:void(0)"><span>‹‹</span></a>
+            </div>
+            <div class="page-item current-page">
+              <a class="page-link" href="javascript:void(0)">1</a>
+            </div>
+            <div class="page-item dots">
+              <a class="page-link" href="javascript:void(0)">...</a>
+            </div>
+            <div class="page-item current-page">
+              <a class="page-link" href="javascript:void(0)">5</a>
+            </div>
+            <div class="page-item current-page page-active">
+              <a class="page-link" href="javascript:void(0)">6</a>
+            </div>
+            <div class="page-item current-page">
+              <a class="page-link" href="javascript:void(0)">7</a>
+            </div>
+            <div class="page-item dots">
+              <a class="page-link" href="javascript:void(0)">...</a>
+            </div>
+            <div class="page-item current-page">
+              <a class="page-link" href="javascript:void(0)">13</a>
+            </div>
+            <div class="page-item next-page">
+              <a class="page-link" href="javascript:void(0)"><span>››</span></a>
             </div>
           </div>
-        </div>
-        <!-- ------------------------------------------------------- -->
-        <!-- Pagination -->
-        <!-- ------------------------------------------------------- -->
-        <div class="pagination">
-          <div class="page-item previous-page">
-            <a class="page-link" href="javascript:void(0)"><span>‹‹</span></a>
-          </div>
-          <div class="page-item current-page">
-            <a class="page-link" href="javascript:void(0)">1</a>
-          </div>
-          <div class="page-item dots">
-            <a class="page-link" href="javascript:void(0)">...</a>
-          </div>
-          <div class="page-item current-page">
-            <a class="page-link" href="javascript:void(0)">5</a>
-          </div>
-          <div class="page-item current-page page-active">
-            <a class="page-link" href="javascript:void(0)">6</a>
-          </div>
-          <div class="page-item current-page">
-            <a class="page-link" href="javascript:void(0)">7</a>
-          </div>
-          <div class="page-item dots">
-            <a class="page-link" href="javascript:void(0)">...</a>
-          </div>
-          <div class="page-item current-page">
-            <a class="page-link" href="javascript:void(0)">13</a>
-          </div>
-          <div class="page-item next-page">
-            <a class="page-link" href="javascript:void(0)"><span>››</span></a>
-          </div>
-        </div>
-        <!-- ======================================================= -->
-        <!-- ======================================================= -->
-        <!-- ======================================================= -->
-      </section>
-      <!-- right section end-->
-    </main>
+          <!-- ======================================================= -->
+          <!-- ======================================================= -->
+          <!-- ======================================================= -->
+        </section>
+        <!-- right section end-->
+      </main>
 
-    <script src="../../../js/index.js"></script>
-    <script src="./type.js"></script>
-  </div>
-</body>
-
+      <script src="../../../js/index.js"></script>
+      <script src="./type.js"></script>
+    </div>
+  </body>
 </html>

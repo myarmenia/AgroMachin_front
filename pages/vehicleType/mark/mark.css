@@ -16,11 +16,6 @@
   gap: 20px;
 }
 
-.img-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .vehicleType_main_container {
   display: -ms-grid;
   display: grid;

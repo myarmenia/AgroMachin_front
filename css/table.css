@@ -21,7 +21,9 @@
   width: 25%;
   min-width: 250px;
 }
-.table-input-search-box > img {
+.table-input-search-box > button {
+  border: none;
+  background-color: transparent;
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -113,6 +115,12 @@ td {
   letter-spacing: -0.019em;
   padding: 0 15px;
   color: #575757;
+}
+.forWidth {
+  width: 100px;
+}
+td img {
+  display: flex;
 }
 th,
 td {

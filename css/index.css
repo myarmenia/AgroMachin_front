@@ -140,6 +140,92 @@ label {
 /* -------------------------------- */
 /* Forms */
 /* -------------------------------- */
+.custom-select-rounded {
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  border-bottom: 1px solid #dadada !important;
+  height: 30px !important;
+}
+.custom-select-rounded span {
+  padding-left: 10px;
+}
+.custom-select-rounded i {
+  right: 10px;
+  width: 13px;
+}
+.custom-select {
+  width: fit-content;
+  border-bottom: 1px solid #575757;
+  min-width: 200px;
+  height: 35px;
+  position: relative;
+  z-index: 20;
+}
+.select-heading {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+.select-chev {
+  background: url("../assets/select-chev.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+  width: 15px;
+  height: 10px;
+}
+.input-value {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  border: none;
+  z-index: 1;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 14px;
+  color: #9f9f9f;
+}
+.select-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: absolute;
+  top: calc(100% + 12px);
+  display: none;
+}
+.select-option {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  color: #9f9f9f;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.select-option:first-child {
+  padding-top: 15px;
+}
+.select-option:last-child {
+  padding-bottom: 15px;
+}
+.select-option:hover {
+  color: #343957;
+}
+.options-open {
+  display: flex;
+}
+.option-active {
+  color: #343957;
+  font-weight: bold;
+}
+/* ======================================= */
+
 .main-input {
   background: #ffffff;
   border: 1px solid #dadada;
@@ -168,111 +254,72 @@ label {
   color: #575757;
 }
 
-/* New input styles */
-/* Form Effect 1 Design */
-/* Form Effect 1 Design */
-.controlGroup {
+/* -------------------------------------------------- */
+/* -------------------- Input ----------------------- */
+/* -------------------------------------------------- */
+.input-group {
   min-width: 200px;
-  min-height: 40px;
+  min-height: 46px;
+  height: 100%;
   position: relative;
   color: white;
 }
-.controlGroup.textArea {
-  margin: 10px 0 0 0;
-  width: 98.5%;
-}
-.controlGroup input {
-  width: 100%;
-}
-.form1Wrap .controlGroup label,
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea {
+.input-box {
   position: absolute;
   width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.input-wrap,
+.input-wrap:active,
+.input-wrap:focus {
+  height: 100%;
+  outline: none;
+  resize: none;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  color: white;
+  display: block;
+}
+.input-wrap {
+  width: 100%;
+  border: none;
+  height: 0 !important;
+  border-top: 1px solid #575757;
+}
+.input-wrap::placeholder {
+  color: transparent;
+}
+.main-label {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  color: #9f9f9f;
+}
+.main-label,
+.input-wrap {
+  width: 100%;
   padding: 0;
-  cursor: pointer;
   -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   -moz-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   -ms-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   -o-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  display: block;
 }
-
-.form1Wrap .controlGroup label {
-  bottom: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  color: #9f9f9f;
-}
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea {
-  border: none;
-  height: 0;
-  border-top: 1px solid #9f9f9f;
-  bottom: 0;
-}
-
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea,
-.form1Wrap .controlGroup input:active,
-.form1Wrap .controlGroup textarea:active,
-.form1Wrap .controlGroup input:focus,
-.form1Wrap .controlGroup textarea:focus {
-  background: white;
-  outline: none;
-  border-radius: 5px;
-}
-
-.form1Wrap .textArea textarea {
-  width: 100%;
-  resize: none;
-}
-.form1Wrap .controlGroup.focus label {
-  bottom: 34px;
+.input-box.focus .main-label {
   font-size: 11px;
-  outline: none;
-  cursor: pointer;
 }
-.form1Wrap .controlGroup.focus input,
-.form1Wrap .controlGroup.focus textarea {
-  bottom: -11px;
-  padding: 20px;
-  outline: none;
-  border: none;
+.input-box.focus .input-wrap {
+  padding: 15px 10px;
 }
-
-.form1Wrap .controlGroup.focus textarea {
-  height: 95px;
-  bottom: -67px;
-  padding: 20px;
-  outline: none;
-}
-.inputWrap img {
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-}
-/* open default */
-.form1Wrap .controlGroup input:not(:placeholder-shown) + label {
-  bottom: 34px;
-  font-size: 11px;
-  outline: none;
-  cursor: pointer;
-}
-.form1Wrap .controlGroup input::placeholder {
-  font-size: 0;
-}
-.form1Wrap .controlGroup input:not(:placeholder-shown),
-.form1Wrap .controlGroup textarea:not(:placeholder-shown) {
-  bottom: -11px;
-  padding: 20px;
-  outline: none;
-}
-/* open default */
-/* Form Effect */
-
-/* Form Effect */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
 
 /* ================================ */
 /* ================================ */
@@ -979,10 +1026,10 @@ header {
 .submit {
   width: 127px;
   height: 30px;
-  border: 1px solid #7098D5;
+  border: 1px solid #7098d5;
   border-radius: 10px;
   background: #fff;
-  color: #7098D5;
+  color: #7098d5;
   text-decoration: none;
   cursor: pointer;
   font-size: 14px;
@@ -991,15 +1038,15 @@ header {
 
 .submit:hover {
   border: none;
-  background: #7098D5;
+  background: #7098d5;
   color: #fff;
 }
-a.submit{
+a.submit {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-div.submit{
+div.submit {
   display: flex;
   align-items: center;
   justify-content: center;
