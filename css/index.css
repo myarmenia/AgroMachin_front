@@ -241,7 +241,9 @@ label {
 .main-input-search-box {
   position: relative;
 }
-.main-input-search-box > img {
+.main-input-search-box > button {
+  background: none;
+  border: none;
   position: absolute;
   transform: translateY(-50%);
   top: 50%;

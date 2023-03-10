@@ -209,17 +209,17 @@
               <div class="title-linkChild vehicleType_crumbs_box1">
                 <a href="#" class="link-direction">Գլխավոր</a>
                 <div>></div>
-                <a href="./page.html" class="link-direction">Տրանսպորտային միջոցի տեսակ</a>
+                <a href="./page.html" class="link-direction">Տրանսպորտային միջոցի մոդել</a>
               </div>
               <div class="vehicle_types">
                 <button class="main-btn main-btn-gray">
-                  Ստեղծել ՏՄ տեսակ
+                  ՏՄ տեսակ
                 </button>
                 <button class="main-btn main-btn-gray">
-                  Ստեղծել ՏՄ մակնիշ
+                  ՏՄ մակնիշ
                 </button>
                 <button class="main-btn main-btn-gray main-btn-darkgray" id="new_record">
-                  Ստեղծել ՏՄ մոդել
+                  ՏՄ մոդել
                 </button>
               </div>
             </div>
@@ -228,11 +228,18 @@
             <div class="tableContainer">
               <div class="table-title">
                 <div class="vehicleType_table_head">
-                  <span> Տրանսպորտային միջոցի մոդել</span>
+                  <div class="back_arrow">
+                    <a href="">
+                      <img src="../../../assets/table/backArrow.svg" alt="">
+                    </a>
+                    <span>Տրանսպորտային միջոցի մոդել</span>
+                  </div>
                   <div>
                     <div class="main-input-search-box">
                       <input placeholder="Որոնել" class="main-input" />
-                      <img src="../../../assets/table/inp-search.svg" alt="" />
+                      <button>
+                        <img src="../../../assets/table/inp-search.svg" alt=""/>
+                      </button>
                     </div>
                     <!-- <button class="addPage" id="new_record">
                         Ստեղծել գրառում
@@ -263,7 +270,7 @@
                         </div>
                       </td>
                       <td>
-                        <div class="img-center">
+                        <div class="img-center" id="change_record">
                           <img src="../../../assets/table/pen.svg" alt="" />
                         </div>
                       </td>
@@ -290,7 +297,6 @@
                       </button>
                       <div class="dropdown-content myDropdown">
                         <div class="option">asdfdsf</div>
-
                         <div class="option">asdfdsf</div>
                       </div>
                     </div>
@@ -300,7 +306,42 @@
                   <label for="car">ՏՄ մոդել*</label>
                   <input id="car" placeholder="Գրել մակնիշը" class="main-input" />
                 </div>
-                <button class="addPage">Պահպանել</button>
+                <div class="new_vehicle_fieldset">
+                  <label for="car" class="description">Նկարագրություն</label>
+                  <textarea name="" id=""></textarea>
+                </div>
+                <button class="main-btn">Պահպանել</button>
+              </form>
+            </div>
+            <div class="new_vehicle2">
+              <div class="table-title">
+                <div class="table-title-text">Փոփոխել տրանսպորտային միջոցի մոդելը</div>
+              </div>
+              <form class="new_vehicle_content">
+                <div class="new_vehicle_fieldset">
+                  <label for="car">ՏՄ մակնիշ*</label>
+                  <div class="navbar modelNavbar">
+                    <div class="dropdown">
+                      <button class="dropbtn" type="button">
+                        <div id="drop-title">Տրակտոր</div>
+                        <img src="../../../assets/table/greyArrow.svg" alt="" />
+                      </button>
+                      <div class="dropdown-content myDropdown">
+                        <div class="option">asdfdsf</div>
+                        <div class="option">asdfdsf</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="new_vehicle_fieldset">
+                  <label for="car">ՏՄ մոդել*</label>
+                  <input id="car" placeholder="Գրել մակնիշը" class="main-input" />
+                </div>
+                <div class="new_vehicle_fieldset">
+                  <label for="car" class="description">Նկարագրություն</label>
+                  <textarea name="" id=""></textarea>
+                </div>
+                <button class="main-btn">Պահպանել</button>
               </form>
             </div>
           </div>

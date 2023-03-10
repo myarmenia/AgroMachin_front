@@ -7,6 +7,11 @@
 .error_message {
   margin-left: calc(100% - 48%);
 }
+.main-btn {
+  min-width: 70px;
+  font-size: 12px;
+  padding: 8px 0;
+}
 .navbar_select {
   width: 48%;
   height: 30px;
