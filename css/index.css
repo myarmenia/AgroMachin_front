@@ -753,7 +753,8 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 5px;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 .title-linkChild {
   display: -webkit-box;

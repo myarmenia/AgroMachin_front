@@ -42,26 +42,6 @@
   display: block;
 }
 
-.vehicleType_table_container tr > td:nth-child(2) {
-  width: 100%;
-}
-/* .vehicleType_table_container tr > td:nth-child(3) > div,
-.vehicleType_table_container tr > td:last-child > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-} */
-.vehicleType_table_container tr > td:nth-child(3) img,
-.vehicleType_table_container tr > td:last-child img {
-  cursor: pointer;
-}
-
 .vehicleType_table_head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,10 +104,10 @@
 }
 
 .new_vehicle_content label {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-top: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #343957;
 }
 .table-title-text {
   width: 100%;
