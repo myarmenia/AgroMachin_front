@@ -266,7 +266,7 @@
                         <div class="input-validatation-box">
                           <input
                             placeholder="Լիլիթ"
-                            class="user-input input-validate"
+                            class="user-input input-should-validate"
                             autocomplete="username"
                             data-error="required"
                           />
@@ -279,7 +279,7 @@
                         <div class="input-validatation-box">
                           <input
                             placeholder="Ազգանուն"
-                            class="user-input input-validate"
+                            class="user-input input-should-validate"
                             data-error="this is error"
                           />
                         </div>
@@ -291,7 +291,7 @@
                         <div class="input-validatation-box">
                           <input
                             placeholder="Հայրանուն"
-                            class="user-input input-validate"
+                            class="user-input input-should-validate"
                           />
                         </div>
                       </div>
@@ -303,7 +303,7 @@
                           <input
                             placeholder="Էլ․ հասցե*"
                             type="email"
-                            class="user-input input-validate"
+                            class="user-input input-should-validate"
                             autocomplete="username"
                           />
                         </div>
@@ -316,7 +316,7 @@
                           <input
                             placeholder="Գաղտնաբառ*"
                             type="password"
-                            class="user-input input-validate"
+                            class="user-input input-should-validate"
                             autocomplete="new-password"
                           />
                         </div>
@@ -329,7 +329,7 @@
                           <input
                             placeholder="Գաղտնաբառի հաստատում"
                             type="password"
-                            class="user-input input-validate"
+                            class="user-input input-should-validate"
                             autocomplete="new-password"
                           />
                         </div>
@@ -344,7 +344,7 @@
                           >
                             <div class="select-heading">
                               <input
-                                class="select-input input-validate"
+                                class="select-input input-should-validate"
                                 type="text"
                                 autocomplete="true"
                               />
@@ -377,7 +377,7 @@
                           >
                             <div class="select-heading">
                               <input
-                                class="select-input input-validate"
+                                class="select-input input-should-validate"
                                 type="text"
                               />
                               <span class="input-value user-value"
@@ -389,6 +389,9 @@
                               />
                             </div>
                             <div class="select-options">
+                              <div class="select-option" data-value="">
+                                datark
+                              </div>
                               <div class="select-option" data-value="aaa">
                                 Աճման կարգով
                               </div>
@@ -407,7 +410,7 @@
                         <div class="toggle-input">
                           <label class="toggle2">
                             <input
-                              class="toggle2-checkbox input-validate"
+                              class="toggle2-checkbox input-should-validate"
                               type="checkbox"
                               checked
                             />
@@ -417,7 +420,7 @@
                       </div>
                     </div>
                     <div class="button-container">
-                      <button class="main-btn-white">Չեղարկել</button>
+                      <button class="main-btn-white" id="btnbtn">Չեղարկել</button>
                       <button class="main-btn" type="submit">Պահպանել</button>
                     </div>
                   </form>

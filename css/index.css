@@ -265,7 +265,7 @@ hr {
   font-size: 10px;
   line-height: 7px;
   color: white;
-  box-shadow: 0px -4px 10px 3px #8080804f;
+  box-shadow: 0px 4px 15px #8080804f;
 }
 .input-error-message::after {
   content: "";
