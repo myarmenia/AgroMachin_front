@@ -35,10 +35,9 @@ document.querySelectorAll(".input-wrap").forEach((input, i) => {
   group.innerHTML = `
     <div class="input-box ${input.value ? "focus" : ""}">
       <label for="${id}" class="main-label">${placeholder}</label>
-      <input id="${id}" placeholder="${placeholder}" class="${className}" value="${
-    input.value
-  }" />
-  
+      <input id="${id}" placeholder="${placeholder}" class="${className}" 
+        value="${input.value}" 
+      />
     </div>
   `;
 });
