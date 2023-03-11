@@ -1,5 +1,11 @@
+.main-app-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .new-roleSection {
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 .right-sectionChild {
   width: 56%;
@@ -47,7 +53,7 @@
   padding-left: 10px;
 }
 .choose_tool {
-  font-size: 12px;
+  font-size: 14px;
   color: #5f6368;
   margin-top: 20px;
 }
@@ -82,7 +88,7 @@
 .tool {
   width: 42%;
   height: 220px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   background: #fff;
   border-radius: 10px;
   position: relative;
