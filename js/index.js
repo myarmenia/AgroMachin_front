@@ -171,17 +171,19 @@ custom_selects.forEach((select, i) => {
 // ----------------------------------------------------------------------------
 // Form validation
 // ----------------------------------------------------------------------------
-// Elements in form must have "input-validate" className 
+// Elements in form must have "input-should-validate" className
 function formValidate(e) {
   const formItems = this.elements;
 
   [...formItems].forEach((elem) => {
     if (
       elem.tagName.toLowerCase() !== "button" &&
-      elem.classList.contains("input-validate")
+      elem.classList.contains("input-should-validate")
     ) {
       const selectBox = elem.closest(".custom-select");
       const item = selectBox || elem;
+
+      elem.classList.add("input-validate");
       if (!elem.value) {
         e.preventDefault();
 
@@ -208,28 +210,35 @@ function formValidate(e) {
       }
     }
   });
-}
 
-document.querySelectorAll(".input-validate").forEach((el) => {
-  el.addEventListener("input", function () {
-    const selectBox = this.closest(".custom-select");
-    const item = selectBox || this;
-    if (!this.value) {
-      const error = document.createElement("div");
-      error.className = "input-error-message";
-      error.innerHTML = item.attributes["data-error"]?.value || "error arya";
-      item.after(error);
-      item.classList.add("input-invalid");
-    } else {
-      if (
-        item.nextElementSibling &&
-        item.nextElementSibling.classList.contains("input-error-message")
-      ) {
-        item.nextElementSibling.remove();
+  document.querySelectorAll(".input-validate").forEach((el) => {
+    el.addEventListener("input", function () {
+      const selectBox = this.closest(".custom-select");
+      const item = selectBox || this;
+      if (!this.value) {
+        if (
+          !item.nextElementSibling ||
+          (item.nextElementSibling &&
+            !item.nextElementSibling.classList.contains("input-error-message"))
+        ) {
+          const error = document.createElement("div");
+          error.className = "input-error-message";
+          error.innerHTML =
+            item.attributes["data-error"]?.value || "error arya";
+          item.after(error);
+        }
+        item.classList.add("input-invalid");
+      } else {
+        if (
+          item.nextElementSibling &&
+          item.nextElementSibling.classList.contains("input-error-message")
+        ) {
+          console.log(item.nextElementSibling);
+          item.nextElementSibling.remove();
+        }
+        item.classList.remove("input-invalid");
       }
-      item.classList.remove("input-invalid");
-    }
+    });
   });
-});
-
+}
 // ============================================================================
