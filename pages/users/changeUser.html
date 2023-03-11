@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/index.css " />
     <link rel="stylesheet" href="./users.css" />
-    <link rel="stylesheet" href="./media.css" />
+
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
@@ -225,66 +225,40 @@
             />
           </div>
           <div class="home-content2">
-            <div class="navbar">
-              <div class="dropdown">
-                <button class="dropbtn">
-                  <div id="drop-title">Հայերեն</div>
-                  <svg
-                    width="19"
-                    height="18"
-                    viewBox="0 0 19 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M9.89551 12.8555H15.3582"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6.61816 2.47644V4.11523"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2.24805 4.11523H10.9883"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div class="dropdown-content myDropdown">
-                  <div class="option">Անգլերեն</div>
-                  <div class="option">Հայերեն</div>
-                  <div class="option">Ռուսերեն</div>
-                </div>
+            <div class="custom-select custom-select-rounded language-select">
+              <div class="select-heading">
+                <input id="inpppp" class="select-input" type="text" hidden />
+                <span class="input-value user-value">Հայերեն</span>
+                <img
+                  src="../../assets/sideBarIcon/translate.svg"
+                  class="select-chev"
+                />
+              </div>
+              <div class="select-options">
+                <div class="select-option" data-value="aaa">Անգլերեն</div>
+                <div class="select-option" data-value="bbb">Հայերեն</div>
+                <div class="select-option" data-value="bbb">Ռուսերեն</div>
               </div>
             </div>
+
             <img
               src="../../assets/sideBarIcon/headerUser.svg"
-              class="bx bxs-user"
+              class="bx bxs-user signOutBtn"
             />
+            <div class="userSignOut">
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/headerUser.svg"
+                  class="bx bxs-user"
+                />Անձնական էջ
+              </a>
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/signout.svg"
+                  class="bx bxs-user"
+                />Դուրս գալ
+              </a>
+            </div>
           </div>
         </header>
         <!-- header end -->
@@ -310,73 +284,144 @@
                   <a href=""><img src="../../assets/table/backArrow.svg" /></a>
                   <h3>Փոփոխել օգտատիրոջ տվյալները</h3>
                 </div>
-                <form action="" class="user_form">
-                  <div class="place flex">
-                    <p>Հաշվառման վայր</p>
-                    <select name="" class="select" id="">
-                      <option value="">Երևան</option>
-                      <option value="">Շիրակի մարզ</option>
-                      <option value="">Լոռու մարզ</option>
-                      <option value="">Տավուշի մարզ</option>
-                      <option value="">Արագածոտնի մարզ</option>
-                      <option value="">Արարատի մարզ</option>
-                      <option value="">Գեղարքունիքի մարզ</option>
-                      <option value="">Վայոց Ձորի մարզ</option>
-                      <option value="">Կոտայքի մարզ</option>
-                      <option value="">Արմավիրի մարզ</option>
-                      <option value="">Սյունիքի մարզ</option>
-                    </select>
-                  </div>
-                  <div class="name flex">
-                    <p>Անուն*</p>
-                    <input type="text" placeholder="Անուն" />
-                  </div>
-                  <div class="surname flex">
-                    <p>Ազգանուն*</p>
-                    <input type="text" placeholder="Ազգանուն" />
-                  </div>
-                  <div class="fatherland flex">
-                    <p>Հայրանուն*</p>
-                    <input type="text" placeholder="Հայրանուն" />
-                  </div>
-                  <div class="email flex">
-                    <p>Էլ. հասցե*</p>
-                    <input type="email" />
-                  </div>
-                  <div class="password flex">
-                    <p>Գաղտնաբառ*</p>
-                    <input type="password" />
-                  </div>
-                  <div class="confirm_password flex">
-                    <p>Գաղտնաբառի հաստատում*</p>
-                    <input type="password" />
-                  </div>
-                  <div class="role flex">
-                    <p>Դեր*</p>
-                    <select name="" id="">
-                      <option value="">Օգտատեր</option>
-                    </select>
-                  </div>
-                  <div class="language flex">
-                    <p>Լեզու*</p>
-                    <select name="" id="">
-                      <option value="">Հայերեն</option>
-                      <option value="">Ռուսերեն</option>
-                      <option value="">Անգլերեն</option>
-                    </select>
-                  </div>
-                  <div class="status flex">
-                    <p>Կարգավիճակ*</p>
-                    <label class="toggle">
-                      <input class="toggle-checkbox" type="checkbox" />
-                      <div class="toggle-switch"></div>
-                    </label>
-                  </div>
-                  <div class="buttons">
-                    <button class="main-btn-white">Չեղարկել</button>
-                    <button class="main-btn">Պահպանել</button>
-                  </div>
-                </form>
+                <div class="user_form">
+                  <form action="" class="form-container">
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Հաշվառման վայր</label>
+                        <input placeholder="Կոտայքի մարզ" class="user-input" />
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Անուն*</label>
+                        <input placeholder="Լիլիթ" class="user-input error" />
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Ազգանուն*</label>
+                        <input placeholder="Ազգանուն" class="user-input" />
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Հայրանուն*</label>
+                        <input placeholder="Հայրանուն" class="user-input" />
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Էլ․ հասցե*</label>
+                        <input
+                          placeholder="Էլ․ հասցե*"
+                          type="email"
+                          class="user-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Գաղտնաբառ*</label>
+                        <input
+                          placeholder="Գաղտնաբառ*"
+                          type="password"
+                          class="user-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Գաղտնաբառի հաստատում*</label>
+                        <input
+                          placeholder="Գաղտնաբառի հաստատում"
+                          type="password"
+                          class="user-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Դեր*</label>
+                        <div
+                          class="custom-select custom-select-rounded userSelect"
+                        >
+                          <div class="select-heading">
+                            <input
+                              id="inpppp"
+                              class="select-input"
+                              type="text"
+                              hidden
+                            />
+                            <span class="input-value user-value">Օգտատեր</span>
+                            <img
+                              src="../../assets/select-chev.svg"
+                              class="select-chev"
+                            />
+                          </div>
+                          <div class="select-options">
+                            <div class="select-option" data-value="aaa">
+                              Աճման կարգով
+                            </div>
+                            <div class="select-option" data-value="bbb">
+                              Նվազման կարգով
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Լեզու*</label>
+                        <div
+                          class="custom-select custom-select-rounded userSelect"
+                        >
+                          <div class="select-heading">
+                            <input
+                              id="inpppp"
+                              class="select-input"
+                              type="text"
+                              hidden
+                            />
+                            <span class="input-value user-value">Հայերեն</span>
+                            <img
+                              src="../../assets/select-chev.svg"
+                              class="select-chev"
+                            />
+                          </div>
+                          <div class="select-options">
+                            <div class="select-option" data-value="aaa">
+                              Աճման կարգով
+                            </div>
+                            <div class="select-option" data-value="bbb">
+                              Նվազման կարգով
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>Կարգավիճակ*</label>
+                        <div class="toggle-input">
+                          <label class="toggle2">
+                            <input
+                              class="toggle2-checkbox"
+                              type="checkbox"
+                              checked
+                            />
+                            <div class="toggle2-switch"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-container">
+                      <button class="main-btn-white">Չեղարկել</button>
+                      <button class="main-btn" type="submit">Պահպանել</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

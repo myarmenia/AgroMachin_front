@@ -1,9 +1,10 @@
-.tableContainer {
+.dictionary-table {
   border-radius: 10px 10px 0 0;
 }
-.dictionarySelect,
-.dictionaryDropdown {
-  width: 200px;
+
+.backArrow {
+  display: flex;
+  gap: 10px;
 }
 .createKey {
   width: 100%;
