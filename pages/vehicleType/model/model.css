@@ -156,6 +156,9 @@
 .table-title-text {
   width: 100%;
 }
+.custom-model {
+  width: 100%;
+}
 @media (max-width: 1000px) {
   .vehicleType_main_container {
     -ms-grid-columns: auto;

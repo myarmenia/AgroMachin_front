@@ -78,19 +78,7 @@
   left: 0;
   bottom: 0;
 }
-.new_role .role_form .buttons input {
-  width: 100px;
-  height: 30px;
-  border-radius: 7px;
-  border: 1px solid #7098d5;
-  background: #fff;
-  color: #7098d5;
-  cursor: pointer;
-}
-.new_role .role_form .buttons input:hover {
-  background: #7098d5;
-  color: #fff;
-}
+
 .tool {
   width: 42%;
   height: 220px;
@@ -129,25 +117,12 @@
   outline: none;
   padding-left: 10px;
 }
-.tool .new_tool .submit {
-  width: 127px;
-  height: 30px;
-  background: #fff;
-  border: 1px solid #7098d5;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #7098d5;
-  position: absolute;
-  bottom: 35px;
-  left: 50%;
-  transform: translateX(-30%);
+.tool_name {
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  align-items: center;
 }
-.tool .new_tool .submit:hover {
-  background: #7098d5;
-  border: none;
-  color: #fff;
-}
-
 @media only screen and (max-width: 1190px) {
   .new-roleSection {
     flex-direction: column;

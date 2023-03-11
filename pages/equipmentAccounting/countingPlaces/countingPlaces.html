@@ -230,66 +230,40 @@
             />
           </div>
           <div class="home-content2">
-            <div class="navbar">
-              <div class="dropdown">
-                <button class="dropbtn">
-                  <div id="drop-title">Հայերեն</div>
-                  <svg
-                    width="19"
-                    height="18"
-                    viewBox="0 0 19 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.4514 15.0405L12.6276 7.39282L8.80371 15.0405"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M9.89551 12.8555H15.3582"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6.61816 2.47644V4.11523"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2.24805 4.11523H10.9883"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M8.80322 4.11523C8.80322 5.85378 8.11259 7.52111 6.88326 8.75044C5.65392 9.97978 3.98659 10.6704 2.24805 10.6704"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M4.80859 6.30029C5.26041 7.57823 6.09728 8.68469 7.20397 9.46732C8.31066 10.25 9.63275 10.6703 10.9882 10.6704"
-                      stroke="#575757"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div class="dropdown-content myDropdown">
-                  <div class="option">Անգլերեն</div>
-                  <div class="option">Հայերեն</div>
-                  <div class="option">Ռուսերեն</div>
-                </div>
+            <div class="custom-select custom-select-rounded language-select">
+              <div class="select-heading">
+                <input id="inpppp" class="select-input" type="text" hidden />
+                <span class="input-value">Հայերեն</span>
+                <img
+                  src="../../../assets/sideBarIcon/translate.svg"
+                  class="select-chev"
+                />
+              </div>
+              <div class="select-options">
+                <div class="select-option" data-value="aaa">Անգլերեն</div>
+                <div class="select-option" data-value="bbb">Հայերեն</div>
+                <div class="select-option" data-value="bbb">Ռուսերեն</div>
               </div>
             </div>
+
             <img
               src="../../../assets/sideBarIcon/headerUser.svg"
-              class="bx bxs-user"
+              class="bx bxs-user signOutBtn"
             />
+            <div class="userSignOut">
+              <a href="">
+                <img
+                  src="../../../assets/sideBarIcon/headerUser.svg"
+                  class="bx bxs-user"
+                />Անձնական էջ
+              </a>
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/signout.svg"
+                  class="bx bxs-user"
+                />Դուրս գալ
+              </a>
+            </div>
           </div>
         </header>
         <!-- header end -->
@@ -318,29 +292,32 @@
             <div class="vehicleType_main_container">
               <div class="tableContainer">
                 <form action="">
-                <div class="table-title">
-                  <div class="vehicleType_table_head">
-                    <span>Հաշվառման վայրեր</span>
-                    <div>
-                      <div class="main-input-search-box">
-                        <input placeholder="Որոնել" class="main-input" />
-                        <button>
-                          <img src="../../../assets/table/inp-search.svg" alt="" />
-                        </button>
-                      </div>
-                      <!-- <button class="main-btn" id="new_record">
+                  <div class="table-title">
+                    <div class="vehicleType_table_head">
+                      <span>Հաշվառման վայրեր</span>
+                      <div>
+                        <div class="main-input-search-box">
+                          <input placeholder="Որոնել" class="main-input" />
+                          <button>
+                            <img
+                              src="../../../assets/table/inp-search.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <!-- <button class="main-btn" id="new_record">
                         Ստեղծել գրառում
                       </button> -->
+                      </div>
                     </div>
+                    <!-- <button class="main-btn" id="addPage">+ Նոր օգտատեր</button> -->
                   </div>
-                  <!-- <button class="main-btn" id="addPage">+ Նոր օգտատեր</button> -->
-                </div>
-              </form>
+                </form>
                 <div class="vehicleType_table_container">
                   <table>
                     <thead>
                       <tr class="vehicleType_thead">
-                        <td>№</td>
+                        <td class="num">№</td>
                         <td>Անուն</td>
                         <td class="forWidth">Կարգավիճակ</td>
                         <td class="forWidth">Ջնջել</td>
