@@ -247,59 +247,89 @@
                   <h3>Ստեղծել նոր օգտատեր</h3>
                 </div>
                 <div class="user_form">
-                  <form action="" class="form-container">
+                  <form action="" class="form-container" id="create_user">
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Հաշվառման վայր</label>
-                        <input placeholder="Կոտայքի մարզ" class="user-input" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Կոտայքի մարզ"
+                            class="user-input"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Անուն*</label>
-                        <input placeholder="Լիլիթ" class="user-input error" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Լիլիթ"
+                            class="user-input input-validate"
+                            autocomplete="username"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Ազգանուն*</label>
-                        <input placeholder="Ազգանուն" class="user-input" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Ազգանուն"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Հայրանուն*</label>
-                        <input placeholder="Հայրանուն" class="user-input" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Հայրանուն"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Էլ․ հասցե*</label>
-                        <input
-                          placeholder="Էլ․ հասցե*"
-                          type="email"
-                          class="user-input"
-                        />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Էլ․ հասցե*"
+                            type="email"
+                            class="user-input input-validate"
+                            autocomplete="username"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Գաղտնաբառ*</label>
-                        <input
-                          placeholder="Գաղտնաբառ*"
-                          type="password"
-                          class="user-input"
-                        />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գաղտնաբառ*"
+                            type="password"
+                            class="user-input input-validate"
+                            autocomplete="new-password"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Գաղտնաբառի հաստատում*</label>
-                        <input
-                          placeholder="Գաղտնաբառի հաստատում"
-                          type="password"
-                          class="user-input"
-                        />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գաղտնաբառի հաստատում"
+                            type="password"
+                            class="user-input input-validate"
+                            autocomplete="new-password"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
@@ -310,10 +340,9 @@
                         >
                           <div class="select-heading">
                             <input
-                              id="inpppp"
-                              class="select-input"
+                              class="select-input input-validate"
                               type="text"
-                              hidden
+                              autocomplete="true"
                             />
                             <span class="input-value user-value">Օգտատեր</span>
                             <img
@@ -340,10 +369,8 @@
                         >
                           <div class="select-heading">
                             <input
-                              id="inpppp"
-                              class="select-input"
+                              class="select-input input-validate"
                               type="text"
-                              hidden
                             />
                             <span class="input-value user-value">Հայերեն</span>
                             <img
@@ -369,7 +396,7 @@
                         <div class="toggle-input">
                           <label class="toggle2">
                             <input
-                              class="toggle2-checkbox"
+                              class="toggle2-checkbox input-validate"
                               type="checkbox"
                               checked
                             />
@@ -392,5 +419,6 @@
       </main>
     </div>
     <script src="../../js/index.js"></script>
+    <script src="users.js"></script>
   </body>
 </html>
