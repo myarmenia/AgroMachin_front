@@ -103,9 +103,9 @@ signOutBtn.addEventListener("click", () => {
 function selectToggle(e) {
   e.stopPropagation();
 
-  custom_selects.forEach(el => {
-    el.closest(".custom-select").classList.remove("options-open")
-  })
+  custom_selects.forEach((el) => {
+    el.closest(".custom-select").classList.remove("options-open");
+  });
 
   const options = this.closest(".custom-select").children[1],
     select = this.closest(".custom-select"),
@@ -134,6 +134,8 @@ function selectToggle(e) {
       });
       this.classList.add("option-active");
       this.setAttribute("data-selected", true);
+
+      input.dispatchEvent(new Event("change")); // Like
     });
   });
 }
@@ -161,4 +163,76 @@ custom_selects.forEach((select, i) => {
   });
 });
 
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// Custom select
+function formValidate(e) {
+  const formItems = this.elements;
+
+  [...formItems].forEach((elem) => {
+    if (
+      elem.tagName.toLowerCase() !== "button" &&
+      elem.classList.contains("input-validate")
+    ) {
+      const selectBox = elem.closest(".custom-select");
+      if (!elem.value) {
+        e.preventDefault();
+
+        if (selectBox) {
+          selectBox.classList.add("input-invalid");
+        } else {
+          elem.classList.add("input-invalid");
+          const error = document.createElement("div");
+          error.className = "input-error-message";
+          error.innerHTML = "error arya";
+          elem.after(error);
+        }
+      } else {
+        if (selectBox) {
+          selectBox.classList.remove("input-invalid");
+        } else {
+          if (
+            elem.nextElementSibling &&
+            elem.nextElementSibling.classList.contains("input-error-message")
+          ) {
+            elem.nextElementSibling.remove();
+          }
+          elem.classList.remove("input-invalid");
+        }
+      }
+    }
+  });
+}
+
+document.querySelectorAll(".input-validate").forEach((el) => {
+  ["input", "change"].forEach((eventName) => {
+    el.addEventListener(eventName, function () {
+      const selectBox = this.closest(".custom-select");
+      if (!this.value) {
+        if (selectBox) {
+          selectBox.classList.add("input-invalid");
+        } else {
+          const error = document.createElement("div");
+          error.className = "input-error-message";
+          error.innerHTML = "error arya";
+          this.after(error);
+          this.classList.add("input-invalid");
+        }
+      } else {
+        if (selectBox) {
+          selectBox.classList.remove("input-invalid");
+        } else {
+          if (
+            this.nextElementSibling &&
+            this.nextElementSibling.classList.contains("input-error-message")
+          ) {
+            this.nextElementSibling.remove();
+          }
+          this.classList.remove("input-invalid");
+        }
+      }
+    });
+  });
+});
 // ============================================================================

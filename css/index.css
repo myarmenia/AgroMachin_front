@@ -60,23 +60,22 @@ hr {
   right: 10px;
   width: 13px;
 }
+.language-select {
+  min-width: 120px !important;
+}
+
 .custom-select {
   width: fit-content;
   border-bottom: 1px solid #575757;
   min-width: 200px;
   height: 35px;
   position: relative;
-  /* z-index: 20; */
-}
-.language-select {
-  min-width: 120px;
 }
 .select-heading {
   position: relative;
   width: 100%;
   height: 100%;
   cursor: pointer;
-  /* z-index: 2; */
 }
 .select-chev {
   position: absolute;
@@ -84,6 +83,9 @@ hr {
   top: 50%;
   right: 10px;
   object-fit: cover;
+}
+.select-input {
+  display: none;
 }
 .input-value {
   position: absolute;
@@ -245,6 +247,23 @@ hr {
 }
 .input-group.input-group-search.focus .search-icon {
   top: 74%;
+}
+
+.input-validatation-box {
+  position: relative;
+}
+.input-invalid {
+  border: 1px solid red !important;
+}
+.input-error-message {
+  padding: 1px 8px;
+  background: red;
+  position: absolute;
+  top: calc(-100% + 8px);
+  font-size: 12px;
+  right: -20%;
+  color: white;
+  border-radius: 3px;
 }
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
@@ -592,9 +611,6 @@ a:focus .sidebar .nav-links li a .link_name {
 header {
   display: flex;
   justify-content: space-between;
-}
-.error {
-  color: red;
 }
 .correct {
   color: chartreuse;
