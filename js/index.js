@@ -103,15 +103,21 @@ signOutBtn.addEventListener("click", () => {
 function selectToggle(e) {
   e.stopPropagation();
 
+  custom_selects.forEach(el => {
+    el.closest(".custom-select").classList.remove("options-open")
+  })
+
   const options = this.closest(".custom-select").children[1],
+    select = this.closest(".custom-select"),
     input = this.children[0],
     span = this.children[1];
-  options.classList.toggle("options-open");
+
+  select.classList.toggle("options-open");
 
   [...options.children].forEach((option, i) => {
     window.addEventListener("click", (e) => {
       if (e.target != option) {
-        options.classList.remove("options-open");
+        select.classList.remove("options-open");
       }
     });
     if (option.attributes["data-selected"]) {
@@ -120,7 +126,7 @@ function selectToggle(e) {
     option.addEventListener("click", function () {
       input.value = this.attributes["data-value"].value;
       span.innerText = option.innerText.trim();
-      options.classList.remove("options-open");
+      select.classList.remove("options-open");
 
       [...options.children].forEach((e) => {
         e.removeAttribute("data-selected");
@@ -135,6 +141,7 @@ function selectToggle(e) {
 custom_selects.forEach((select, i) => {
   const input = select.children[0],
     span = select.children[1];
+
   select.addEventListener("click", selectToggle);
   const options = select.closest(".custom-select").children[1];
   [...options.children].forEach((option) => {
