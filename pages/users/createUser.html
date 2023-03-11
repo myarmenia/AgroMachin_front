@@ -255,6 +255,7 @@
                           <input
                             placeholder="Կոտայքի մարզ"
                             class="user-input"
+                            name="region"
                           />
                         </div>
                       </div>
@@ -267,6 +268,7 @@
                             placeholder="Լիլիթ"
                             class="user-input input-validate"
                             autocomplete="username"
+                            data-error="required"
                           />
                         </div>
                       </div>
@@ -278,6 +280,7 @@
                           <input
                             placeholder="Ազգանուն"
                             class="user-input input-validate"
+                            data-error="this is error"
                           />
                         </div>
                       </div>
@@ -335,27 +338,31 @@
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Դեր*</label>
-                        <div
-                          class="custom-select custom-select-rounded userSelect"
-                        >
-                          <div class="select-heading">
-                            <input
-                              class="select-input input-validate"
-                              type="text"
-                              autocomplete="true"
-                            />
-                            <span class="input-value user-value">Օգտատեր</span>
-                            <img
-                              src="../../assets/select-chev.svg"
-                              class="select-chev"
-                            />
-                          </div>
-                          <div class="select-options">
-                            <div class="select-option" data-value="aaa">
-                              Աճման կարգով
+                        <div class="input-validatation-box">
+                          <div
+                            class="custom-select custom-select-rounded userSelect"
+                          >
+                            <div class="select-heading">
+                              <input
+                                class="select-input input-validate"
+                                type="text"
+                                autocomplete="true"
+                              />
+                              <span class="input-value user-value"
+                                >Օգտատեր</span
+                              >
+                              <img
+                                src="../../assets/select-chev.svg"
+                                class="select-chev"
+                              />
                             </div>
-                            <div class="select-option" data-value="bbb">
-                              Նվազման կարգով
+                            <div class="select-options">
+                              <div class="select-option" data-value="aaa">
+                                Աճման կարգով
+                              </div>
+                              <div class="select-option" data-value="bbb">
+                                Նվազման կարգով
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -364,26 +371,30 @@
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Լեզու*</label>
-                        <div
-                          class="custom-select custom-select-rounded userSelect"
-                        >
-                          <div class="select-heading">
-                            <input
-                              class="select-input input-validate"
-                              type="text"
-                            />
-                            <span class="input-value user-value">Հայերեն</span>
-                            <img
-                              src="../../assets/select-chev.svg"
-                              class="select-chev"
-                            />
-                          </div>
-                          <div class="select-options">
-                            <div class="select-option" data-value="aaa">
-                              Աճման կարգով
+                        <div class="input-validatation-box">
+                          <div
+                            class="custom-select custom-select-rounded userSelect"
+                          >
+                            <div class="select-heading">
+                              <input
+                                class="select-input input-validate"
+                                type="text"
+                              />
+                              <span class="input-value user-value"
+                                >Հայերեն</span
+                              >
+                              <img
+                                src="../../assets/select-chev.svg"
+                                class="select-chev"
+                              />
                             </div>
-                            <div class="select-option" data-value="bbb">
-                              Նվազման կարգով
+                            <div class="select-options">
+                              <div class="select-option" data-value="aaa">
+                                Աճման կարգով
+                              </div>
+                              <div class="select-option" data-value="bbb">
+                                Նվազման կարգով
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -420,5 +431,10 @@
     </div>
     <script src="../../js/index.js"></script>
     <script src="users.js"></script>
+    <script>
+      // createUser
+      const create_user = document.getElementById("create_user");
+      create_user.addEventListener("submit", formValidate);
+    </script>
   </body>
 </html>

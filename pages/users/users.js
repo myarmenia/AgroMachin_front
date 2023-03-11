@@ -96,6 +96,3 @@ for (let i = 0; i < check_input.length; i++) {
   });
 }
 
-
-const create_user = document.getElementById("create_user");
-create_user.addEventListener("submit", formValidate)

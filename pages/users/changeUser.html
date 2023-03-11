@@ -285,86 +285,115 @@
                   <h3>Փոփոխել օգտատիրոջ տվյալները</h3>
                 </div>
                 <div class="user_form">
-                  <form action="" class="form-container">
+                  <form action="" class="form-container" id="change_user">
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Հաշվառման վայր</label>
-                        <input placeholder="Կոտայքի մարզ" class="user-input" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Կոտայքի մարզ"
+                            class="user-input"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Անուն*</label>
-                        <input placeholder="Լիլիթ" class="user-input error" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Լիլիթ"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Ազգանուն*</label>
-                        <input placeholder="Ազգանուն" class="user-input" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Ազգանուն"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Հայրանուն*</label>
-                        <input placeholder="Հայրանուն" class="user-input" />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Հայրանուն"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Էլ․ հասցե*</label>
-                        <input
-                          placeholder="Էլ․ հասցե*"
-                          type="email"
-                          class="user-input"
-                        />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Էլ․ հասցե*"
+                            type="email"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Գաղտնաբառ*</label>
-                        <input
-                          placeholder="Գաղտնաբառ*"
-                          type="password"
-                          class="user-input"
-                        />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գաղտնաբառ*"
+                            type="password"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Գաղտնաբառի հաստատում*</label>
-                        <input
-                          placeholder="Գաղտնաբառի հաստատում"
-                          type="password"
-                          class="user-input"
-                        />
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գաղտնաբառի հաստատում"
+                            type="password"
+                            class="user-input input-validate"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Դեր*</label>
-                        <div
-                          class="custom-select custom-select-rounded userSelect"
-                        >
-                          <div class="select-heading">
-                            <input
-                              id="inpppp"
-                              class="select-input"
-                              type="text"
-                              hidden
-                            />
-                            <span class="input-value user-value">Օգտատեր</span>
-                            <img
-                              src="../../assets/select-chev.svg"
-                              class="select-chev"
-                            />
-                          </div>
-                          <div class="select-options">
-                            <div class="select-option" data-value="aaa">
-                              Աճման կարգով
+                        <div class="input-validatation-box">
+                          <div
+                            class="custom-select custom-select-rounded userSelect"
+                          >
+                            <div class="select-heading">
+                              <input
+                                class="select-input input-validate"
+                                type="text"
+                                hidden
+                              />
+                              <span class="input-value user-value"
+                                >Օգտատեր</span
+                              >
+                              <img
+                                src="../../assets/select-chev.svg"
+                                class="select-chev"
+                              />
                             </div>
-                            <div class="select-option" data-value="bbb">
-                              Նվազման կարգով
+                            <div class="select-options">
+                              <div class="select-option" data-value="aaa">
+                                Աճման կարգով
+                              </div>
+                              <div class="select-option" data-value="bbb">
+                                Նվազման կարգով
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -373,28 +402,31 @@
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Լեզու*</label>
-                        <div
-                          class="custom-select custom-select-rounded userSelect"
-                        >
-                          <div class="select-heading">
-                            <input
-                              id="inpppp"
-                              class="select-input"
-                              type="text"
-                              hidden
-                            />
-                            <span class="input-value user-value">Հայերեն</span>
-                            <img
-                              src="../../assets/select-chev.svg"
-                              class="select-chev"
-                            />
-                          </div>
-                          <div class="select-options">
-                            <div class="select-option" data-value="aaa">
-                              Աճման կարգով
+                        <div class="input-validatation-box">
+                          <div
+                            class="custom-select custom-select-rounded userSelect"
+                          >
+                            <div class="select-heading">
+                              <input
+                                class="select-input input-validate"
+                                type="text"
+                                hidden
+                              />
+                              <span class="input-value user-value"
+                                >Հայերեն</span
+                              >
+                              <img
+                                src="../../assets/select-chev.svg"
+                                class="select-chev"
+                              />
                             </div>
-                            <div class="select-option" data-value="bbb">
-                              Նվազման կարգով
+                            <div class="select-options">
+                              <div class="select-option" data-value="aaa">
+                                Աճման կարգով
+                              </div>
+                              <div class="select-option" data-value="bbb">
+                                Նվազման կարգով
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -430,5 +462,11 @@
       </main>
     </div>
     <script src="../../js/index.js"></script>
+    <script src="users.js"></script>
+    <script>
+      // changeUser
+      const change_user = document.getElementById("change_user");
+      change_user.addEventListener("submit", formValidate);
+    </script>
   </body>
 </html>

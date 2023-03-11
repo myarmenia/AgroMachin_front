@@ -115,11 +115,6 @@ function selectToggle(e) {
   select.classList.toggle("options-open");
 
   [...options.children].forEach((option, i) => {
-    window.addEventListener("click", (e) => {
-      if (e.target != option) {
-        select.classList.remove("options-open");
-      }
-    });
     if (option.attributes["data-selected"]) {
       option.classList.add("option-active");
     }
@@ -135,7 +130,7 @@ function selectToggle(e) {
       this.classList.add("option-active");
       this.setAttribute("data-selected", true);
 
-      input.dispatchEvent(new Event("change")); // Like
+      input.dispatchEvent(new Event("input"));
     });
   });
 }
@@ -146,6 +141,14 @@ custom_selects.forEach((select, i) => {
 
   select.addEventListener("click", selectToggle);
   const options = select.closest(".custom-select").children[1];
+
+  window.addEventListener("click", (wEvent) => {
+    if (wEvent.target !== options) {
+      custom_selects.forEach((sel) => {
+        sel.closest(".custom-select").classList.remove("options-open");
+      });
+    }
+  });
   [...options.children].forEach((option) => {
     if (option.attributes["data-selected"]) {
       option.classList.add("option-active");
@@ -166,7 +169,9 @@ custom_selects.forEach((select, i) => {
 // ============================================================================
 
 // ----------------------------------------------------------------------------
-// Custom select
+// Form validation
+// ----------------------------------------------------------------------------
+// Elements in form must have "input-validate" className 
 function formValidate(e) {
   const formItems = this.elements;
 
@@ -176,63 +181,55 @@ function formValidate(e) {
       elem.classList.contains("input-validate")
     ) {
       const selectBox = elem.closest(".custom-select");
+      const item = selectBox || elem;
       if (!elem.value) {
         e.preventDefault();
 
-        if (selectBox) {
-          selectBox.classList.add("input-invalid");
-        } else {
-          elem.classList.add("input-invalid");
+        item.classList.add("input-invalid");
+        if (
+          !item.nextElementSibling ||
+          (item.nextElementSibling &&
+            item.nextElementSibling.className !== "input-error-message")
+        ) {
           const error = document.createElement("div");
           error.className = "input-error-message";
-          error.innerHTML = "error arya";
-          elem.after(error);
+          error.innerHTML =
+            item.attributes["data-error"]?.value || "error arya";
+          item.after(error);
         }
       } else {
-        if (selectBox) {
-          selectBox.classList.remove("input-invalid");
-        } else {
-          if (
-            elem.nextElementSibling &&
-            elem.nextElementSibling.classList.contains("input-error-message")
-          ) {
-            elem.nextElementSibling.remove();
-          }
-          elem.classList.remove("input-invalid");
+        if (
+          item.nextElementSibling &&
+          item.nextElementSibling.classList.contains("input-error-message")
+        ) {
+          item.nextElementSibling.remove();
         }
+        item.classList.remove("input-invalid");
       }
     }
   });
 }
 
 document.querySelectorAll(".input-validate").forEach((el) => {
-  ["input", "change"].forEach((eventName) => {
-    el.addEventListener(eventName, function () {
-      const selectBox = this.closest(".custom-select");
-      if (!this.value) {
-        if (selectBox) {
-          selectBox.classList.add("input-invalid");
-        } else {
-          const error = document.createElement("div");
-          error.className = "input-error-message";
-          error.innerHTML = "error arya";
-          this.after(error);
-          this.classList.add("input-invalid");
-        }
-      } else {
-        if (selectBox) {
-          selectBox.classList.remove("input-invalid");
-        } else {
-          if (
-            this.nextElementSibling &&
-            this.nextElementSibling.classList.contains("input-error-message")
-          ) {
-            this.nextElementSibling.remove();
-          }
-          this.classList.remove("input-invalid");
-        }
+  el.addEventListener("input", function () {
+    const selectBox = this.closest(".custom-select");
+    const item = selectBox || this;
+    if (!this.value) {
+      const error = document.createElement("div");
+      error.className = "input-error-message";
+      error.innerHTML = item.attributes["data-error"]?.value || "error arya";
+      item.after(error);
+      item.classList.add("input-invalid");
+    } else {
+      if (
+        item.nextElementSibling &&
+        item.nextElementSibling.classList.contains("input-error-message")
+      ) {
+        item.nextElementSibling.remove();
       }
-    });
+      item.classList.remove("input-invalid");
+    }
   });
 });
+
 // ============================================================================
