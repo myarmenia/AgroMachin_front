@@ -16,7 +16,6 @@ const cur_table = document.getElementById("table-route"),
 // ---------------------------------
 // Input cunstucturing
 // ---------------------------------
-
 function randomNum() {
   const word = "qwertyuiop_asdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
   let id = "";
@@ -25,46 +24,46 @@ function randomNum() {
   }
   return id;
 }
-
 document.querySelectorAll(".input-wrap").forEach((input, i) => {
   const placeholder = input.placeholder,
     id = input.id || randomNum(),
-    className = input.className;
-  group = input.parentElement;
+    group = input.parentElement;
 
-  group.innerHTML = `
-    <div class="input-box ${input.value ? "focus" : ""}">
-      <label for="${id}" class="main-label">${placeholder}</label>
-      <input id="${id}" placeholder="${placeholder}" class="${className}" value="${
-    input.value
-  }" />
-  
-    </div>
-  `;
+  if (input.value) {
+    group.classList.add("focus");
+  }
+  input.remove();
+
+  const box = document.createElement("div"),
+    label = document.createElement("label");
+
+  box.className = "input-box";
+  label.className = "main-label";
+  label.innerHTML = placeholder;
+  label.setAttribute("for", id);
+  input.id = id;
+  box.append(label, input);
+
+  group.prepend(box);
 });
-
 document.querySelectorAll(".main-label, .input-wrap").forEach((elem, i) => {
   elem.addEventListener("focus", function (event) {
     event.stopPropagation();
     if (!this.value) {
-      this.parentElement.classList.remove("focus");
+      this.closest(".input-group").classList.remove("focus");
     }
-    this.parentElement.classList.add("focus");
+    this.closest(".input-group").classList.add("focus");
   });
-});
-
-document.querySelectorAll(".main-label, .input-wrap").forEach((elem, i) => {
   elem.addEventListener("blur", function (event) {
     event.stopPropagation();
     if (!this.value) {
-      this.parentElement.classList.remove("focus");
+      this.closest(".input-group").classList.remove("focus");
     }
   });
 });
-// ==================================================================
-// ==================================================================
-// ==================================================================
-
+// ============================================================
+// ============================================================
+// ============================================================
 // active link
 
 let arrow = document.querySelectorAll(".arrow");

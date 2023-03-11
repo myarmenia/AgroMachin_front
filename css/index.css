@@ -228,27 +228,23 @@ hr {
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   display: block;
 }
-/* input for search */
-.search-input-group {
-  position: relative;
-}
-.search-input-group img {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-.search-input-group .input-box.focus img {
-  position: absolute;
-  right: 10px;
-  top: 25px !important;
-}
-
-/* input for search */
-.input-box.focus .main-label {
+.input-group.focus .main-label {
   font-size: 11px;
 }
-.input-box.focus .input-wrap {
+.input-group.focus .input-wrap {
   padding: 15px 10px;
+}
+.search-icon {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 3px;
+  background: transparent;
+  border: none;
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+}
+.input-group.input-group-search.focus .search-icon {
+  top: 74%;
 }
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
