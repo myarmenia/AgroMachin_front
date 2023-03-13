@@ -299,10 +299,7 @@
                       <div class="input-containerChild">
                         <label>Անուն*</label>
                         <div class="input-validatation-box">
-                          <input
-                            placeholder="Լիլիթ"
-                            class="user-input input-should-validate"
-                          />
+                          <input placeholder="Լիլիթ" class="user-input" />
                         </div>
                       </div>
                     </div>
@@ -310,10 +307,7 @@
                       <div class="input-containerChild">
                         <label>Ազգանուն*</label>
                         <div class="input-validatation-box">
-                          <input
-                            placeholder="Ազգանուն"
-                            class="user-input input-should-validate"
-                          />
+                          <input placeholder="Ազգանուն" class="user-input" />
                         </div>
                       </div>
                     </div>
@@ -321,10 +315,7 @@
                       <div class="input-containerChild">
                         <label>Հայրանուն*</label>
                         <div class="input-validatation-box">
-                          <input
-                            placeholder="Հայրանուն"
-                            class="user-input input-should-validate"
-                          />
+                          <input placeholder="Հայրանուն" class="user-input" />
                         </div>
                       </div>
                     </div>
@@ -335,7 +326,7 @@
                           <input
                             placeholder="Էլ․ հասցե*"
                             type="email"
-                            class="user-input input-should-validate"
+                            class="user-input"
                           />
                         </div>
                       </div>
@@ -347,7 +338,7 @@
                           <input
                             placeholder="Գաղտնաբառ*"
                             type="password"
-                            class="user-input input-should-validate"
+                            class="user-input"
                           />
                         </div>
                       </div>
@@ -359,8 +350,10 @@
                           <input
                             placeholder="Գաղտնաբառի հաստատում"
                             type="password"
-                            class="user-input input-should-validate"
+                            class="user-input"
+                            autocomplete="new-password"
                           />
+                          <div class="input-error-message">this is error</div>
                         </div>
                       </div>
                     </div>
@@ -395,6 +388,7 @@
                               ></ul>
                             </div>
                           </div>
+                          <div class="input-error-message">this is error</div>
                         </div>
                       </div>
                     </div>
@@ -436,15 +430,17 @@
                     <div class="input-container">
                       <div class="input-containerChild">
                         <label>Կարգավիճակ*</label>
-                        <div class="toggle-input">
-                          <label class="toggle2">
-                            <input
-                              class="toggle2-checkbox"
-                              type="checkbox"
-                              checked
-                            />
-                            <div class="toggle2-switch"></div>
-                          </label>
+                        <div class="toggle-box">
+                          <div class="toggle-input">
+                            <label class="toggle2">
+                              <input
+                                class="toggle2-checkbox"
+                                type="checkbox"
+                                checked
+                              />
+                              <div class="toggle2-switch"></div>
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>

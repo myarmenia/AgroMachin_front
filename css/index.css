@@ -923,7 +923,7 @@ header {
 
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1131,3 +1131,53 @@ header {
 .stroke .input:focus {
   top: 0;
 }
+/* input container css */
+.input-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  height: 50px;
+}
+.input-containerChild {
+  display: flex;
+  gap: 35px;
+  position: relative;
+}
+.input-containerChild > label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #343957;
+  min-width: 200px;
+  text-align: right;
+  white-space: nowrap;
+}
+.user-input,
+.userSelect {
+  width: 100%;
+  min-width: 256px;
+  max-width: 350px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: -0.019em;
+  color: #575757;
+  outline: none;
+}
+.user-input {
+  padding: 2px 0 2px 10px;
+}
+.user-value {
+  /* font-family:; */
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: -0.019em;
+  color: #7d7878;
+  outline: none;
+}
+/* input container css */

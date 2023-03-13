@@ -14,40 +14,31 @@
   padding: 10px 50px 30px;
 }
 .createKeyChild {
-  width: 400px;
+  width: 600px;
   height: auto;
 }
+form {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
-form label {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  color: #343957;
-  width: 100px;
-  text-align: end;
-}
-form input {
-  width: 256px;
-  height: 30px;
-  background: #ffffff;
-  border: 1px solid #dadada;
-  border-radius: 8px;
-  outline: none;
-  padding: 0 10px;
-}
-form div {
+/* form > div {
   display: flex;
   justify-content: space-around;
   gap: 10px;
   height: 50px;
   margin-top: 10px;
   align-items: center;
-}
-form div:first-child {
+} */
+form > div:first-child {
+  margin-top: 30px;
   height: 80px;
   border-bottom: 1px solid #dadada;
 }
-form div:nth-child(2) {
+form > div:nth-child(2) {
   margin-top: 30px;
 }
 .main-btn {
