@@ -212,22 +212,20 @@
             />
           </div>
           <div class="home-content2">
-            <div class="custom-select custom-select-rounded language-select">
-              <div class="select-heading">
-                <input id="inpppp" class="select-input" type="text" hidden />
-                <span class="input-value">Հայերեն</span>
-                <img
-                  src="../../assets/sideBarIcon/translate.svg"
-                  class="select-chev"
-                />
-              </div>
-              <div class="select-options">
-                <div class="select-option" data-value="aaa">Անգլերեն</div>
-                <div class="select-option" data-value="bbb">Հայերեն</div>
-                <div class="select-option" data-value="bbb">Ռուսերեն</div>
+            <div class="select_mate select_language" data-mate-select="active">
+              <select name="" onchange="" onclick="return false;" id="">
+                <option value="">Հայերեն</option>
+                <option value="1">Select option 1</option>
+                <option value="2">Select option 2</option>
+              </select>
+              <p class="selecionado_opcion" onclick="open_select(this)"></p>
+              <span onclick="open_select(this)" class="icon_select_mate"
+                ><img src="../../assets/sideBarIcon/translate.svg"
+              /></span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int" style="height: 0"></ul>
               </div>
             </div>
-
             <img
               src="../../assets/sideBarIcon/headerUser.svg"
               class="bx bxs-user signOutBtn"

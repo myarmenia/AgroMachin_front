@@ -215,22 +215,20 @@
             />
           </div>
           <div class="home-content2">
-            <div class="custom-select custom-select-rounded language-select">
-              <div class="select-heading">
-                <input id="inpppp" class="select-input" type="text" hidden />
-                <span class="input-value">Հայերեն</span>
-                <img
-                  src="../../assets/sideBarIcon/translate.svg"
-                  class="select-chev"
-                />
-              </div>
-              <div class="select-options">
-                <div class="select-option" data-value="aaa">Անգլերեն</div>
-                <div class="select-option" data-value="bbb">Հայերեն</div>
-                <div class="select-option" data-value="bbb">Ռուսերեն</div>
+            <div class="select_mate select_language" data-mate-select="active">
+              <select name="" onchange="" onclick="return false;" id="">
+                <option value="">Հայերեն</option>
+                <option value="1">Select option 1</option>
+                <option value="2">Select option 2</option>
+              </select>
+              <p class="selecionado_opcion" onclick="open_select(this)"></p>
+              <span onclick="open_select(this)" class="icon_select_mate"
+                ><img src="../../assets/sideBarIcon/translate.svg"
+              /></span>
+              <div class="cont_list_select_mate">
+                <ul class="cont_select_int" style="height: 0"></ul>
               </div>
             </div>
-
             <img
               src="../../assets/sideBarIcon/headerUser.svg"
               class="bx bxs-user signOutBtn"
@@ -344,29 +342,23 @@
                   <div class="new_vehicle_fieldset">
                     <label for="car">ՏՄ մակնիշ*</label>
 
-                    <div
-                      class="custom-select custom-select-rounded custom-model"
-                    >
-                      <div class="select-heading">
-                        <input
-                          id="inpppp"
-                          class="select-input"
-                          type="text"
-                          hidden
-                        />
-                        <span class="input-value">Սորտավորել</span>
-                        <img
-                          src="../../assets/select-chev.svg"
-                          class="select-chev"
-                        />
-                      </div>
-                      <div class="select-options">
-                        <div class="select-option" data-value="aaa">
-                          Աճման կարգով
-                        </div>
-                        <div class="select-option" data-value="bbb">
-                          Նվազման կարգով
-                        </div>
+                    <div class="select_mate" data-mate-select="active">
+                      <select name="" onchange="" onclick="return false;" id="">
+                        <option value="">Հայերեն</option>
+                        <option value="1">Select option 1</option>
+                        <option value="2">Select option 2</option>
+                      </select>
+                      <p
+                        class="selecionado_opcion"
+                        onclick="open_select(this)"
+                      ></p>
+                      <span
+                        onclick="open_select(this)"
+                        class="icon_select_mate icon"
+                        ><img src="../../assets/select-chev.svg"
+                      /></span>
+                      <div class="cont_list_select_mate">
+                        <ul class="cont_select_int" style="height: 0"></ul>
                       </div>
                     </div>
                   </div>
@@ -375,7 +367,7 @@
                     <input
                       id="car"
                       placeholder="Գրել մակնիշը"
-                      class="main-input"
+                      class="model-inp"
                     />
                   </div>
                   <div class="new_vehicle_fieldset">
@@ -395,29 +387,23 @@
                   <div class="new_vehicle_fieldset">
                     <label for="car">ՏՄ մակնիշ*</label>
 
-                    <div
-                      class="custom-select custom-select-rounded custom-model"
-                    >
-                      <div class="select-heading">
-                        <input
-                          id="inpppp"
-                          class="select-input"
-                          type="text"
-                          hidden
-                        />
-                        <span class="input-value">Սորտավորել</span>
-                        <img
-                          src="../../assets/select-chev.svg"
-                          class="select-chev"
-                        />
-                      </div>
-                      <div class="select-options">
-                        <div class="select-option" data-value="aaa">
-                          Աճման կարգով
-                        </div>
-                        <div class="select-option" data-value="bbb">
-                          Նվազման կարգով
-                        </div>
+                    <div class="select_mate" data-mate-select="active">
+                      <select name="" onchange="" onclick="return false;" id="">
+                        <option value="">Հայերեն</option>
+                        <option value="1">Select option 1</option>
+                        <option value="2">Select option 2</option>
+                      </select>
+                      <p
+                        class="selecionado_opcion"
+                        onclick="open_select(this)"
+                      ></p>
+                      <span
+                        onclick="open_select(this)"
+                        class="icon_select_mate icon"
+                        ><img src="../../assets/select-chev.svg"
+                      /></span>
+                      <div class="cont_list_select_mate">
+                        <ul class="cont_select_int"></ul>
                       </div>
                     </div>
                   </div>
@@ -426,7 +412,7 @@
                     <input
                       id="car"
                       placeholder="Գրել մակնիշը"
-                      class="main-input"
+                      class="model-inp"
                     />
                   </div>
                   <div class="new_vehicle_fieldset">
