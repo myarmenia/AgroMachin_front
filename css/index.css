@@ -47,7 +47,8 @@ hr {
   display: flex;
   gap: 20px;
 }
-.custom-select-rounded {
+
+/* .custom-select-rounded {
   border: 1px solid #dadada;
   border-radius: 8px;
   border-bottom: 1px solid #dadada !important;
@@ -137,9 +138,155 @@ hr {
 .option-active {
   color: #343957;
   font-weight: bold;
-}
+} */
 /* ======================================= */
+/* custom select Art */
+/* ///  DECORATION CSS ///  */
+.cont_select_center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -30px;
+  margin-left: -150px;
+}
 
+.cont_heg_50 {
+  position: absolute;
+  height: 50%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fd7b52;
+}
+/* ///  END DECORATION CSS  ///  */
+
+.icon_select_mate {
+  position: absolute;
+  top: 5px;
+  right: 3%;
+  cursor: pointer;
+  transition: all 275ms;
+}
+
+.select_mate {
+  position: relative;
+  float: left;
+  /* min-width: 300px; */
+  width: 256px;
+
+  font-family: "Roboto";
+  color: #777;
+  font-weight: 300;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  /* box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.3); */
+  transition: all 375ms ease-in-out;
+  /* Oculto el elemento select */
+}
+.select_language {
+  width: 120px;
+}
+.select_mate select {
+  position: absolute;
+  overflow: hidden;
+  height: 0px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.select_mate.line {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.select_mate:hover {
+  border-color: #7098d5;
+}
+.cont_list_select_mate {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.cont_select_int {
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  z-index: 999;
+  height: 0;
+  overflow: auto;
+  max-height: 253px;
+  /* height: 253px; */
+  width: 100%;
+  background-color: #fff;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-radius: 0px 0px 3px 3px;
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+  transition: all 375ms ease-in-out;
+}
+.cont_select_int::-webkit-scrollbar {
+  width: 3px;
+  height: 4px;
+}
+
+/* Track */
+.cont_select_int::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.cont_select_int::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+}
+
+/* Handle on hover */
+.cont_select_int::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.cont_select_int li {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #e7eef9;
+  list-style-type: none;
+  padding: 10px 2%;
+  margin: 0px;
+  transition: all 275ms ease-in-out;
+  display: block;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+}
+.cont_select_int:active {
+  background-color: #d2def0;
+}
+.cont_select_int li:hover {
+  background-color: #d2def0;
+}
+.cont_select_int li:last-child {
+  border-radius: 3px;
+  border-bottom: 0px;
+}
+
+/* etiqueta <p> con la opcion selecionada  */
+.selecionado_opcion {
+  padding: 5px 10px;
+  width: 96%;
+  display: block;
+  font-size: 14px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+/* custom select Art */
 .main-input {
   background: #ffffff;
   border: 1px solid #dadada;

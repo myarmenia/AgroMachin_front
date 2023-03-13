@@ -127,7 +127,18 @@
   font-size: 14px;
   font-weight: 600;
 }
+.model-inp {
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  padding: 8px 13px;
 
+  font-size: 12px;
+  letter-spacing: -0.019em;
+  color: #575757;
+  width: 256px;
+  outline: none;
+}
 .table-title-text {
   width: 100%;
 }
