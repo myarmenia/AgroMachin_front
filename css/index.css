@@ -595,7 +595,7 @@ a:focus .sidebar .nav-links li a .link_name {
   color: #fff;
   font-size: 14px;
   padding: 12px 0;
-  /* white-space: nowrap; */
+  height: auto;
   word-break: break-word;
   opacity: 0.6;
   transition: all 0.4s ease-in;
