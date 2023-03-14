@@ -6,9 +6,9 @@ const cur_table = document.getElementById("table-route"),
   remove_modal = document.getElementById("remove-modal"),
   accept_btn = document.getElementById("modal-accept-btn"),
   confirm_modal = document.getElementById("confirm-modal"),
-  custom_selects = document.querySelectorAll(".select-heading"),
   table_route_delete = cur_table && cur_table.attributes["data-delete"].value,
-  table_route_route = cur_table && cur_table.attributes["data-route"].value;
+  table_route_route = cur_table && cur_table.attributes["data-route"].value,
+  custom_selects = document.querySelectorAll("[data-mate-select='active']");
 // ==================================================================
 // ==================================================================
 // ==================================================================
@@ -98,193 +98,27 @@ signOutBtn.addEventListener("click", () => {
 });
 // sign out
 
-// ----------------------------------------------------------------------------
-// Custom select hin
-// function selectToggle(e) {
-//   e.stopPropagation();
-
-//   custom_selects.forEach((el) => {
-//     el.closest(".custom-select").classList.remove("options-open");
-//   });
-
-//   const options = this.closest(".custom-select").children[1],
-//     select = this.closest(".custom-select"),
-//     input = this.children[0],
-//     span = this.children[1];
-
-//   select.classList.toggle("options-open");
-
-//   [...options.children].forEach((option, i) => {
-//     if (option.attributes["data-selected"]) {
-//       option.classList.add("option-active");
-//     }
-//     option.addEventListener("click", function () {
-//       input.value = this.attributes["data-value"].value;
-//       span.innerText = option.innerText.trim();
-//       select.classList.remove("options-open");
-
-//       [...options.children].forEach((e) => {
-//         e.removeAttribute("data-selected");
-//         e.classList.remove("option-active");
-//       });
-//       this.classList.add("option-active");
-//       this.setAttribute("data-selected", true);
-
-//       input.dispatchEvent(new Event("input"));
-//     });
-//   });
-// }
-
-// custom_selects.forEach((select, i) => {
-//   const input = select.children[0],
-//     span = select.children[1];
-
-//   select.addEventListener("click", selectToggle);
-//   const options = select.closest(".custom-select").children[1];
-
-//   window.addEventListener("click", (wEvent) => {
-//     if (wEvent.target !== options) {
-//       custom_selects.forEach((sel) => {
-//         sel.closest(".custom-select").classList.remove("options-open");
-//       });
-//     }
-//   });
-//   [...options.children].forEach((option) => {
-//     if (option.attributes["data-selected"]) {
-//       option.classList.add("option-active");
-//       input.value = option.attributes["data-value"].value;
-//       span.innerText = option.innerText.trim();
-
-//       [...options.children].forEach((e) => {
-//         e.removeAttribute("data-selected");
-//         e.classList.remove("option-active");
-//       });
-
-//       option.classList.add("option-active");
-//       option.setAttribute("data-selected", true);
-//     }
-//   });
-// });
-
-// ============================================================================
-
-// ----------------------------------------------------------------------------
-// Form validation
-// ----------------------------------------------------------------------------
-// Elements in form must have "input-should-validate" className
-// function formValidate(e) {
-//   const formItems = this.elements;
-
-//   [...formItems].forEach((elem) => {
-//     if (
-//       elem.tagName.toLowerCase() !== "button" &&
-//       elem.classList.contains("input-should-validate")
-//     ) {
-//       const selectBox = elem.closest(".custom-select");
-//       const item = selectBox || elem;
-
-//       elem.classList.add("input-validate");
-//       if (!elem.value) {
-//         e.preventDefault();
-
-//         item.classList.add("input-invalid");
-//         if (
-//           !item.nextElementSibling ||
-//           (item.nextElementSibling &&
-//             item.nextElementSibling.className !== "input-error-message")
-//         ) {
-//           const error = document.createElement("div");
-//           error.className = "input-error-message";
-//           error.innerHTML =
-//             item.attributes["data-error"]?.value || "error arya";
-//           item.after(error);
-//         }
-//       } else {
-//         if (
-//           item.nextElementSibling &&
-//           item.nextElementSibling.classList.contains("input-error-message")
-//         ) {
-//           item.nextElementSibling.remove();
-//         }
-//         item.classList.remove("input-invalid");
-//       }
-//     }
-//   });
-
-//   document.querySelectorAll(".input-validate").forEach((el) => {
-//     el.addEventListener("input", function () {
-//       const selectBox = this.closest(".custom-select");
-//       const item = selectBox || this;
-//       if (!this.value) {
-//         if (
-//           !item.nextElementSibling ||
-//           (item.nextElementSibling &&
-//             !item.nextElementSibling.classList.contains("input-error-message"))
-//         ) {
-//           const error = document.createElement("div");
-//           error.className = "input-error-message";
-//           error.innerHTML =
-//             item.attributes["data-error"]?.value || "error arya";
-//           item.after(error);
-//         }
-//         item.classList.add("input-invalid");
-//       } else {
-//         if (
-//           item.nextElementSibling &&
-//           item.nextElementSibling.classList.contains("input-error-message")
-//         ) {
-//           console.log(item.nextElementSibling);
-//           item.nextElementSibling.remove();
-//         }
-//         item.classList.remove("input-invalid");
-//       }
-//     });
-//   });
-// }
 // // ============================================================================
+
 // custom select Art
 window.onload = function () {
-  crear_select();
-};
+  for (var e = 0; e < custom_selects.length; e++) {
+    const optionsContainer = document.createElement("div"),
+      optionsUl = document.createElement("ul");
+    optionsContainer.className = "cont_list_select_mate";
+    optionsUl.className = "cont_select_int";
+    optionsUl.style.height = "0";
+    optionsContainer.append(optionsUl);
+    custom_selects[e].append(optionsContainer);
 
-function isMobileDevice() {
-  return (
-    typeof window.orientation !== "undefined" ||
-    navigator.userAgent.indexOf("IEMobile") !== -1
-  );
-}
+    var li = [];
+    const ul_cont = custom_selects[e].querySelector("ul"),
+      select_ = custom_selects[e].querySelector("select"),
+      select_optiones = select_.options,
+      placeholder = custom_selects[e].querySelector(".selecionado_opcion");
 
-var li = new Array();
-function crear_select() {
-  var div_cont_select = document.querySelectorAll(
-    "[data-mate-select='active']"
-  );
-  var select_ = "";
-  for (var e = 0; e < div_cont_select.length; e++) {
-    div_cont_select[e].setAttribute("data-indx-select", e);
-    div_cont_select[e].setAttribute("data-selec-open", "false");
-    var ul_cont = document.querySelectorAll(
-      "[data-indx-select='" + e + "'] > .cont_list_select_mate > ul"
-    );
-    select_ = document.querySelectorAll(
-      "[data-indx-select='" + e + "'] >select"
-    )[0];
-    if (isMobileDevice()) {
-      select_.addEventListener("change", function () {
-        _select_option(select_.selectedIndex, e);
-      });
-    }
-    var select_optiones = select_.options;
-    document
-      .querySelectorAll(
-        "[data-indx-select='" + e + "']  > .selecionado_opcion "
-      )[0]
-      .setAttribute("data-n-select", e);
-    document
-      .querySelectorAll(
-        "[data-indx-select='" + e + "']  > .icon_select_mate "
-      )[0]
-      .setAttribute("data-n-select", e);
+    custom_selects[e].setAttribute("data-is-open", "false");
+
     for (var i = 0; i < select_optiones.length; i++) {
       li[i] = document.createElement("li");
       if (
@@ -292,137 +126,81 @@ function crear_select() {
         select_.value == select_optiones[i].innerHTML
       ) {
         li[i].className = "active";
-        document.querySelector(
-          "[data-indx-select='" + e + "']  > .selecionado_opcion "
-        ).innerHTML = select_optiones[i].innerHTML;
+        placeholder.innerHTML = select_optiones[i].innerHTML;
       }
       li[i].setAttribute("data-index", i);
-      li[i].setAttribute("data-selec-index", e);
-      // funcion click al selecionar
-      li[i].addEventListener("click", function () {
-        _select_option(
-          this.getAttribute("data-index"),
-          this.getAttribute("data-selec-index")
-        );
-      });
+      li[i].addEventListener("click", setSelectOption);
 
       li[i].innerHTML = select_optiones[i].innerHTML;
-      ul_cont[0].appendChild(li[i]);
-    } // Fin For select_optiones
-  } // fin for divs_cont_select
-} // Fin Function
-
-var cont_slc = 0;
-function open_select(idx) {
-  var idx1 = idx.getAttribute("data-n-select");
-  var ul_cont_li = document.querySelectorAll(
-    "[data-indx-select='" + idx1 + "'] .cont_select_int > li"
-  );
-  var hg = 0;
-  var slect_open = document
-    .querySelectorAll("[data-indx-select='" + idx1 + "']")[0]
-    .getAttribute("data-selec-open");
-  var slect_element_open = document.querySelectorAll(
-    "[data-indx-select='" + idx1 + "'] select"
-  )[0];
-  if (isMobileDevice()) {
-    if (window.document.createEvent) {
-      // All
-      var evt = window.document.createEvent("MouseEvents");
-      evt.initMouseEvent(
-        "mousedown",
-        false,
-        true,
-        window,
-        0,
-        0,
-        0,
-        0,
-        0,
-        false,
-        false,
-        false,
-        false,
-        0,
-        null
-      );
-      slect_element_open.dispatchEvent(evt);
-    } else if (slect_element_open.fireEvent) {
-      // IE
-      slect_element_open.fireEvent("onmousedown");
-    } else {
-      slect_element_open.click();
-    }
-  } else {
-    for (var i = 0; i < ul_cont_li.length; i++) {
-      hg += ul_cont_li[i].offsetHeight;
-    }
-    if (slect_open == "false") {
-      document
-        .querySelectorAll("[data-indx-select='" + idx1 + "']")[0]
-        .setAttribute("data-selec-open", "true");
-      document.querySelectorAll(
-        "[data-indx-select='" + idx1 + "'] > .cont_list_select_mate > ul"
-      )[0].style.height = hg + "px";
-      document.querySelectorAll(
-        "[data-indx-select='" + idx1 + "'] > .icon_select_mate.icon"
-      )[0].style.transform = "rotate(180deg)";
-    } else {
-      document
-        .querySelectorAll("[data-indx-select='" + idx1 + "']")[0]
-        .setAttribute("data-selec-open", "false");
-      document.querySelectorAll(
-        "[data-indx-select='" + idx1 + "'] > .icon_select_mate"
-      )[0].style.transform = "rotate(0deg)";
-      document.querySelectorAll(
-        "[data-indx-select='" + idx1 + "'] > .cont_list_select_mate > ul"
-      )[0].style.height = "0px";
+      ul_cont.appendChild(li[i]);
     }
   }
-} // fin function open_select
+};
 
-function salir_select(indx) {
-  var select_ = document.querySelectorAll(
-    "[data-indx-select='" + indx + "'] > select"
-  )[0];
-  document.querySelectorAll(
-    "[data-indx-select='" + indx + "'] > .cont_list_select_mate > ul"
-  )[0].style.height = "0px";
-  document.querySelector(
-    "[data-indx-select='" + indx + "'] > .icon_select_mate.icon"
-  ).style.transform = "rotate(0deg)";
-  document
-    .querySelectorAll("[data-indx-select='" + indx + "']")[0]
-    .setAttribute("data-selec-open", "false");
+function openSelect() {
+  const select = this.closest(".select_mate"),
+    ul = select.querySelector("ul"),
+    icon = select.querySelector(".icon_select_mate.icon"),
+    ul_cont_li = select.querySelectorAll("li"),
+    slect_open = select.getAttribute("data-is-open");
+  var hg = 0;
+
+  custom_selects.forEach((select1) => {
+    const ul1 = select1.querySelector("ul"),
+      icon1 = select1.querySelector(".icon_select_mate");
+
+    ul1.style.height = "0px";
+    icon1.style.transform = "rotate(0deg)";
+    if (select != select1) {
+      select1.setAttribute("data-is-open", "false");
+    }
+  });
+
+  ul_cont_li.forEach((el) => (hg += el.offsetHeight));
+
+  if (slect_open == "false") {
+    select.setAttribute("data-is-open", "true");
+    ul.style.height = hg + "px";
+    icon.style.transform = "rotate(180deg)";
+  } else {
+    select.setAttribute("data-is-open", "false");
+    icon.style.transform = "rotate(0deg)";
+    ul.style.height = "0px";
+  }
 }
 
-function _select_option(indx, selc) {
-  if (isMobileDevice()) {
-    selc = selc - 1;
-  }
-  var select_ = document.querySelectorAll(
-    "[data-indx-select='" + selc + "'] > select"
-  )[0];
+function closeSelectByLi(li) {
+  const select = li.closest(".select_mate"),
+    ul = select.querySelector("ul"),
+    icon = select.querySelector(".icon_select_mate.icon");
+  console.log(select);
 
-  var li_s = document.querySelectorAll(
-    "[data-indx-select='" + selc + "'] .cont_select_int > li"
-  );
-  var p_act = (document.querySelectorAll(
-    "[data-indx-select='" + selc + "'] > .selecionado_opcion"
-  )[0].innerHTML = li_s[indx].innerHTML);
-  var select_optiones = document.querySelectorAll(
-    "[data-indx-select='" + selc + "'] > select > option"
-  );
-  for (var i = 0; i < li_s.length; i++) {
-    if (li_s[i].className == "active") {
-      li_s[i].className = "";
-    }
-    li_s[indx].className = "active";
-  }
+  ul.style.height = "0px";
+  icon.style.transform = "rotate(0deg)";
+  select.setAttribute("data-is-open", "false");
+}
+
+function setSelectOption() {
+  const select_box = this.closest(".select_mate"),
+    title = select_box.querySelector(".selecionado_opcion"),
+    indx = +this.getAttribute("data-index"),
+    select_ = select_box.querySelector("select"),
+    li_s = select_box.querySelectorAll("li"),
+    select_optiones = select_.querySelectorAll("option");
+
+  title.innerHTML = this.innerHTML;
+
+  li_s.forEach((li) => li.classList.remove("active"));
+  li_s[indx].className = "active";
+
   select_optiones[indx].selected = true;
   select_.selectedIndex = indx;
   select_.onchange();
-  salir_select(selc);
+  closeSelectByLi(this);
 }
+
+document.querySelectorAll(".select-title").forEach((el) => {
+  el.addEventListener("click", openSelect);
+});
 
 // custom select Art
