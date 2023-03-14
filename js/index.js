@@ -96,9 +96,7 @@ signOutBtn.addEventListener("click", () => {
   userSignOutContainer.classList.toggle("active");
 });
 // sign out
-
 // // ============================================================================
-
 // custom select Art
 window.onload = function () {
   for (var e = 0; e < custom_selects.length; e++) {
@@ -135,7 +133,6 @@ window.onload = function () {
     }
   }
 };
-
 function openSelect() {
   const select = this.closest(".select_mate"),
     ul = select.querySelector("ul"),
@@ -143,20 +140,16 @@ function openSelect() {
     ul_cont_li = select.querySelectorAll("li"),
     slect_open = select.getAttribute("data-is-open");
   var hg = 0;
-
   custom_selects.forEach((select1) => {
     const ul1 = select1.querySelector("ul"),
       icon1 = select1.querySelector(".icon_select_mate");
-
     ul1.style.height = "0px";
     icon1.style.transform = "rotate(0deg)";
     if (select != select1) {
-      select1.setAttribute("data-is-open", "false");
+    select1.setAttribute("data-is-open", "false");
     }
   });
-
   ul_cont_li.forEach((el) => (hg += el.offsetHeight));
-
   if (slect_open == "false") {
     select.setAttribute("data-is-open", "true");
     ul.style.height = hg + "px";
@@ -167,39 +160,31 @@ function openSelect() {
     ul.style.height = "0px";
   }
 }
-
 function closeSelectByLi(li) {
   const select = li.closest(".select_mate"),
-    ul = select.querySelector("ul"),
-    icon = select.querySelector(".icon_select_mate.icon");
+  ul = select.querySelector("ul"),
+  icon = select.querySelector(".icon_select_mate.icon");
   console.log(select);
-
   ul.style.height = "0px";
   icon.style.transform = "rotate(0deg)";
   select.setAttribute("data-is-open", "false");
 }
-
 function setSelectOption() {
   const select_box = this.closest(".select_mate"),
-    title = select_box.querySelector(".selecionado_opcion"),
-    indx = +this.getAttribute("data-index"),
-    select_ = select_box.querySelector("select"),
-    li_s = select_box.querySelectorAll("li"),
-    select_optiones = select_.querySelectorAll("option");
-
+  title = select_box.querySelector(".selecionado_opcion"),
+  indx = +this.getAttribute("data-index"),
+  select_ = select_box.querySelector("select"),
+  li_s = select_box.querySelectorAll("li"),
+  select_optiones = select_.querySelectorAll("option");
   title.innerHTML = this.innerHTML;
-
   li_s.forEach((li) => li.classList.remove("active"));
   li_s[indx].className = "active";
-
   select_optiones[indx].selected = true;
   select_.selectedIndex = indx;
   select_.onchange();
   closeSelectByLi(this);
 }
-
 document.querySelectorAll(".select-title").forEach((el) => {
   el.addEventListener("click", openSelect);
 });
-
 // custom select Art
