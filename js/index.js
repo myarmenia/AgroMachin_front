@@ -85,7 +85,6 @@ for (var i = 0; i < arrow.length; i++) {
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
 const header = document.getElementsByTagName("header")[0];
-
 sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("close");
   header.classList.toggle("header-active");

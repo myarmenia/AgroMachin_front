@@ -58,12 +58,12 @@
   outline: none;
   padding-left: 10px;
 }
-.choose_tool {
+/* .choose_tool {
   font-size: 14px;
   color: #5f6368;
   margin-top: 20px;
   margin-bottom: 10px;
-}
+} */
 .new_role .role_form .role_block .input_checkbox {
   display: flex;
   flex-direction: column;
