@@ -16,17 +16,19 @@ for (let i = 0; i < dropbtnCheckBox.length; i++) {
         activshow[m].classList.remove("show");
       }
     }
-    title = dropBtn[i].children[0];
+    title = dropbtnCheckBox[i].children[0];
     if (myDropdownCheckBox[i].attributes["data-open"]) {
+      e.target.closest(".navbar_select").querySelector(".icon").style.transform = "rotate(0)"
       myDropdownCheckBox[i].classList.remove("show");
       myDropdownCheckBox[i].removeAttribute("data-open");
     } else {
+      e.target.closest(".navbar_select").querySelector(".icon").style.transform = "rotate(180deg)"
       myDropdownCheckBox[i].classList.add("show");
       myDropdownCheckBox[i].setAttribute("data-open", 1);
     }
     showValus.forEach((el) => {
       boxContainer[0].append(el);
-      boxContainer[0].style.display = "block";
+      boxContainer[0].style.display = "flex";
     });
   });
 }
@@ -58,12 +60,12 @@ for (let i = 0; i < check_input.length; i++) {
           boxContainer[0].style.display = "none";
         }
       });
-      const icon = document.createElement("img");
-      icon.src = "../../assets/table/Trash.svg";
-      icon.classList.add("delletadwswas");
+      const icon = document.createElement("div");
+      icon.innerHTML = "X";
+      icon.classList.add("delete");
       const span = document.createElement("span");
       span.innerHTML = e.target.value;
-      span.classList.add("box_textawdswasd");
+      span.classList.add("box_text");
       box.append(span);
       box.append(icon);
       if (

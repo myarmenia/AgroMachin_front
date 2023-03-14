@@ -335,33 +335,23 @@
                       <div class="input-containerChild">
                         <label>Դեր*</label>
                         <div class="input-validatation-box">
-                          <div class="select_mate" data-mate-select="active">
-                            <select
-                              name=""
-                              onchange=""
-                              onclick="return false;"
-                              id=""
-                            >
-                              <option value="">Հայերեն</option>
-                              <option value="1">Select option 1</option>
-                              <option value="2">Select option 2</option>
-                            </select>
-                            <p
-                              class="selecionado_opcion"
-                              onclick="open_select(this)"
-                            ></p>
-                            <span
-                              onclick="open_select(this)"
-                              class="icon_select_mate icon"
+                            <div class="navbar navbar_select">
+                              <div class="dropdown">
+                                <div class="dropbtnCheckBox">
+                                  <div>Դեր</div>
+                                </div>
+                                <span
+                                    class="icon_select_mate icon"
                               ><img src="../../assets/select-chev.svg"
                             /></span>
-                            <div class="cont_list_select_mate">
-                              <ul
-                                class="cont_select_int"
-                                style="height: 0"
-                              ></ul>
+                                <div class="dropdown-content myDropdownCheckBox">
+                                  <div class="dropdownoption checkbox check_input"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
+                                  <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
+                                  <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
+                          <div class="box_container"></div>
                         </div>
                       </div>
                     </div>
@@ -432,10 +422,5 @@
     </div>
     <script src="../../js/index.js"></script>
     <script src="users.js"></script>
-    <script>
-      // createUser
-      const create_user = document.getElementById("create_user");
-      create_user.addEventListener("submit", formValidate);
-    </script>
   </body>
 </html>
