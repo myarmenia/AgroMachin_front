@@ -258,8 +258,8 @@
               <div>></div>
               <a href="" class="link-direction"> Փոփոխել դերի տվյալները</a>
             </div>
-            <a href=""><img src="../../assets/table/backArrow.svg" /></a>
           </div>
+          <a href=""><img src="../../assets/table/backArrow.svg" /></a>
 
           <div class="main-app-container">
             <div class="right-sectionChild">
@@ -270,9 +270,18 @@
                   </div>
                   <form action="" id="form" class="role_form">
                     <div class="role_block">
-                      <input type="text" class="role_input" placeholder="Դեր" />
-                      <h3 class="choose_tool">Ընտրել համապատասխան գործիքներ</h3>
-                      <hr />
+                      <div class="input-container">
+                        <div class="input-containerChild">
+                          <div class="input-validatation-box">
+                            <input placeholder="Դեր" class="user-input" />
+                            <div class="input-error-message">this is error</div>
+                          </div>
+                        </div>
+                      </div>
+                      <h3 class="checkbox_container_label error-checbox">
+                        Ընտրել համապատասխան գործիք
+                      </h3>
+
                       <div class="input_checkbox">
                         <label for=""
                           ><input type="checkbox" /> Օգտատիրոջ ավելացում</label
@@ -285,6 +294,7 @@
                         >
                         <label for=""><input type="checkbox" /> Դեր</label>
                       </div>
+
                       <div class="buttons">
                         <input
                           class="main-btn-white"
@@ -307,13 +317,19 @@
                 <div class="add_tool">
                   <h3>Ավելացնել նոր գործիք</h3>
                 </div>
-                <label for=""
-                  >Գործիքի անունը*
-                  <input type="text" placeholder="Օգտատիրոջ հեռացում"
-                /></label>
-                <div class="tool_name">
-                  <input type="submit" class="main-btn" value="Պահպանել" />
-                </div>
+                <form class="tool-input">
+                  <div class="input-container">
+                    <div class="input-containerChild">
+                      <div class="input-validatation-box">
+                        <input placeholder="Դեր" class="user-input" />
+                        <div class="input-error-message">this is error</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tool_name">
+                    <input type="submit" class="main-btn" value="Պահպանել" />
+                  </div>
+                </form>
               </div>
             </div>
           </div>

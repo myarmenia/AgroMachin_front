@@ -39,47 +39,30 @@
   margin: 0 auto;
 }
 .selectLanguage {
-  width: 345px;
+  width: 360px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
-
+}
+.selectLanguage:first-child {
   margin-top: 45px;
-}
-.selectLanguage label {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 14px;
-  color: #343957;
-  font-weight: 600;
-}
-
-.changeLanguage,
-.sections input {
-  width: 256px;
-  height: 30px;
-  border-radius: 10px;
-  border: 1px solid #dadada;
-  outline: none;
-}
-.new_language .language_form .language_block .sections input {
-  padding-left: 12px;
-}
-.sections input::placeholder {
-  color: #575757;
-  font-family: SegoeUI;
-  font-size: 12px;
 }
 .checkbox_container_label {
   border-bottom: 1px solid #dadada;
-  width: 30%;
+  width: 300px;
   height: 40px;
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
+  color: #5f6368;
+  font-weight: 600;
+}
+.error-checbox {
+  border-bottom: 1px solid red;
+  color: red;
 }
 .input_checkbox {
   display: flex;

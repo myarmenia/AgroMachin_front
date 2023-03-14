@@ -101,7 +101,7 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 20px 30px 35px 18px;
+  padding: 20px 30px 35px 0;
 }
 .new_vehicle_content > button {
   margin: 0 auto;
@@ -114,10 +114,18 @@
   display: flex;
 
   gap: 35px;
-  min-width: 215px;
+
   /* width: 70%; */
 }
-
+.input-containerChild > label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #343957;
+  min-width: 110px;
+  text-align: right;
+  white-space: nowrap;
+}
 .new_vehicle_content label {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -146,14 +154,14 @@
 .new_vehicle_fieldset .description {
   width: fit-content;
 }
-.new_vehicle_fieldset > textarea {
+.new_vehicle_fieldset textarea {
   min-height: 70px;
   outline: none;
   border: 1px solid #dadada;
   border-radius: 8px;
   resize: none;
   padding: 8px 13px;
-  width: 86%;
+  width: 256px;
 }
 .modelNavbar {
   width: 100%;

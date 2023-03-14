@@ -273,42 +273,59 @@
                 <form action="" id="form" class="language_form">
                   <div class="language_block">
                     <div class="selectLanguage">
-                      <label for="" class="language"
-                        >Լեզու*
-                        <div class="select_mate" data-mate-select="active">
-                          <select
-                            name=""
-                            onchange=""
-                            onclick="return false;"
-                            id=""
-                          >
-                            <option value="">Հայերեն</option>
-                            <option value="1">Select option 1</option>
-                            <option value="2">Select option 2</option>
-                          </select>
-                          <p
-                            class="selecionado_opcion"
-                            onclick="open_select(this)"
-                          ></p>
-                          <span
-                            onclick="open_select(this)"
-                            class="icon_select_mate icon"
-                            ><img src="../../assets/select-chev.svg"
-                          /></span>
-                          <div class="cont_list_select_mate">
-                            <ul class="cont_select_int" style="height: 0"></ul>
+                      <div class="input-container">
+                        <div class="input-containerChild">
+                          <label>Լեզու*</label>
+                          <div class="input-validatation-box">
+                            <div class="select_mate" data-mate-select="active">
+                              <select
+                                name=""
+                                onchange=""
+                                onclick="return false;"
+                                id=""
+                              >
+                                <option value="">Հայերեն</option>
+                                <option value="1">Select option 1</option>
+                                <option value="2">Select option 2</option>
+                              </select>
+                              <p
+                                class="selecionado_opcion"
+                                onclick="open_select(this)"
+                              ></p>
+                              <span
+                                onclick="open_select(this)"
+                                class="icon_select_mate icon"
+                                ><img src="../../assets/select-chev.svg"
+                              /></span>
+                              <div class="cont_list_select_mate">
+                                <ul
+                                  class="cont_select_int"
+                                  style="height: 0"
+                                ></ul>
+                              </div>
+                            </div>
+                            <div class="input-error-message">this is error</div>
                           </div>
                         </div>
-                      </label>
-                      <label for="" class="sections"
-                        >Բաժիններ
-                        <input
-                          type="text"
-                          autocomplete="true"
-                          placeholder="Նոր բաժին"
-                      /></label>
+                      </div>
                     </div>
-                    <div class="checkbox_container_label">
+                    <div class="selectLanguage">
+                      <div class="input-container">
+                        <div class="input-containerChild">
+                          <label>Բաժիններ</label>
+                          <div class="input-validatation-box">
+                            <input
+                              placeholder="Նոր բաժին"
+                              type="password"
+                              class="user-input"
+                              autocomplete="new-password"
+                            />
+                            <div class="input-error-message">this is error</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkbox_container_label error-checbox">
                       Ընտրել համապատասխան բաձինը
                     </div>
                     <div class="input_checkbox">
@@ -325,6 +342,7 @@
                         ><input type="checkbox" /> Օգտատիրոջ ավելացում</label
                       >
                     </div>
+
                     <div class="buttons">
                       <input class="main-btn" type="submit" value="Պահպանել" />
                     </div>
