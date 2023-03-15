@@ -47,6 +47,13 @@
   display: flex;
   gap: 20px;
 }
+.dropdown-container .formSelect {
+  display: flex;
+  gap: 20px;
+}
+.formSelect .select_mate {
+  width: 200px;
+}
 
 /* .custom-select-rounded {
   border: 1px solid #dadada;
@@ -173,7 +180,6 @@
   float: left;
   /* min-width: 300px; */
   width: 256px;
-
   font-family: "Roboto";
   color: #777;
   font-weight: 300;
@@ -199,9 +205,13 @@
   border-top: none;
   border-left: none;
   border-right: none;
+  border-bottom: 2px solid #9f9f9f;
   border-radius: 0;
+  width: 100%;
 }
-
+.select_mate.line:hover {
+  border-color: #9f9f9f;
+}
 .select_mate:hover {
   border-color: #7098d5;
 }
@@ -322,10 +332,15 @@
 /* -------------------------------------------------- */
 .input-group {
   min-width: 200px;
-  min-height: 46px;
+  min-height: 41px;
+  max-height: 36px;
   height: 100%;
   position: relative;
   color: white;
+  transition: all ease 100ms;
+}
+.input-group.focus {
+  min-height: 60px;
 }
 .input-box {
   position: absolute;
@@ -343,9 +358,9 @@
   outline: none;
   resize: none;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: #d4e0f2;
   box-sizing: border-box;
-  color: white;
+  color: #5f6368;
   display: block;
 }
 .input-wrap {
@@ -353,6 +368,7 @@
   border: none;
   height: 0 !important;
   border-top: 1px solid #575757;
+  outline: none;
 }
 .input-wrap::placeholder {
   color: transparent;
@@ -360,7 +376,7 @@
 .main-label {
   width: 100%;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   min-height: 16px;
   color: #9f9f9f;
   cursor: pointer;
@@ -758,6 +774,10 @@ a:focus .sidebar .nav-links li a .link_name {
   color: white;
   cursor: pointer;
 }
+.archivImg {
+  width: 10px;
+  height: 17px !important;
+}
 .home-section .home-content .bx-menu {
   margin: 0 15px;
   cursor: pointer;
@@ -781,7 +801,7 @@ header {
   transition: all 0.4s ease-in;
   background-color: #bdbdc75c;
   min-height: calc(100vh - 80px);
-  padding: 50px 35px 40px 40px;
+  padding: 40px 35px 40px 40px;
 }
 .right-sectionChild {
   width: 100%;
