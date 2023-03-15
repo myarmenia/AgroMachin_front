@@ -346,22 +346,42 @@
                       <div class="input-containerChild">
                         <label>Դեր*</label>
                         <div class="input-validatation-box">
-                            <div class="navbar navbar_select">
-                              <div class="dropdown">
-                                <div class="dropbtnCheckBox">
-                                  <div>Դեր</div>
+                          <div class="navbar navbar_select">
+                            <div class="dropdown">
+                              <div class="dropbtnCheckBox">
+                                <div>Դեր</div>
+                              </div>
+                              <span class="icon_select_mate icon"
+                                ><img src="../../assets/select-chev.svg"
+                              /></span>
+                              <div class="dropdown-content myDropdownCheckBox">
+                                <div class="dropdownoption checkbox">
+                                  <input
+                                    type="checkbox"
+                                    name=""
+                                    class="check_input"
+                                    value="Օգտատեր"
+                                  />Օգտատեր
                                 </div>
-                                <span
-                                    class="icon_select_mate icon"
-                              ><img src="../../assets/select-chev.svg"
-                            /></span>
-                                <div class="dropdown-content myDropdownCheckBox">
-                                  <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
-                                  <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
-                                  <div class="dropdownoption checkbox"><input type="checkbox" name="" class="check_input" value="Օգտատեր">Օգտատեր</div>
+                                <div class="dropdownoption checkbox">
+                                  <input
+                                    type="checkbox"
+                                    name=""
+                                    class="check_input"
+                                    value="Օգտատեր"
+                                  />Օգտատեր
+                                </div>
+                                <div class="dropdownoption checkbox">
+                                  <input
+                                    type="checkbox"
+                                    name=""
+                                    class="check_input"
+                                    value="Օգտատեր"
+                                  />Օգտատեր
                                 </div>
                               </div>
                             </div>
+                          </div>
                           <div class="box_container"></div>
                         </div>
                       </div>
@@ -375,7 +395,7 @@
                               name=""
                               onchange=""
                               onclick="return false;"
-                              id=""
+                              id="select1"
                             >
                               <option value="">Հայերեն</option>
                               <option value="1">Select option 1</option>
@@ -413,7 +433,13 @@
                       <button class="main-btn-white" id="btnbtn">
                         Չեղարկել
                       </button>
-                      <button class="main-btn" type="submit">Պահպանել</button>
+                      <button
+                        onclick="console.log(select1.value)"
+                        class="main-btn"
+                        type="button"
+                      >
+                        Պահպանել
+                      </button>
                     </div>
                   </form>
                 </div>
