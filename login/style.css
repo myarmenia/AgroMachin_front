@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   background: #343957;
@@ -19,13 +19,13 @@ body {
   height: 100%;
   padding: 20px;
 }
- .language {
+.language {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 .select-option {
-  padding: 0 10px 5px; 
+  padding: 0 10px 5px;
 }
 /* //dropdown */
 /* .navbar {
@@ -103,14 +103,14 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .background .Police {
   height: 100%;
@@ -134,8 +134,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .background .login .logo {
   width: 205px;
@@ -152,10 +152,10 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   height: 330px;
 }
 .background .login .data #form_log_in {
@@ -165,11 +165,11 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .background .login .data h2 {
   font-size: 28px;
@@ -179,7 +179,7 @@ body {
   height: 40px;
   outline: none;
   padding-left: 10px;
-  border: 1px solid #DADADA;
+  border: 1px solid #dadada;
   border-radius: 8px;
 }
 .background .login .data button {
@@ -192,9 +192,7 @@ body {
   color: #fff;
   cursor: pointer;
 }
-.background p {
-  margin-top: calc(100% - 95%);
-}
+
 .border_error {
   border: 1px solid #f00;
   border-radius: 10px;
