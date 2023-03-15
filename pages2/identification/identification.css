@@ -1,128 +1,51 @@
 .title-link2 {
-    justify-content: flex-end;
-}
-.controlGroup {
-    min-width: 200px;
-    min-height: 40px;
-    position: relative;
-    color: white;
-  }
-  .controlGroup.textArea {
-    margin: 10px 0 0 0;
-    width: 98.5%;
-  }
-  .controlGroup input {
-    width: 100%;
-  }
-  .form1Wrap .controlGroup .login {
-    font-size: 12px;
-    color: #9F9F9F;
-    font-weight: 600;
-    font-family: SegoeUI;
-  }
-.form1Wrap .controlGroup label,
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea {
-  position: absolute;
-  width: 100%;
-  padding: 0;
-  cursor: pointer;
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  -moz-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  -ms-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  -o-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-}
-
-.form1Wrap .controlGroup label {
-  bottom: 3px;
-}
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea {
-  border: none;
-  height: 0;
-  border-top: 1px solid black;
-  bottom: 0;
-}
-.form1Wrap .controlGroup input,
-.form1Wrap .controlGroup textarea,
-.form1Wrap .controlGroup input:active,
-.form1Wrap .controlGroup textarea:active,
-.form1Wrap .controlGroup input:focus,
-.form1Wrap .controlGroup textarea:focus {
-  background: rgba(0, 0, 0, 0.4);
-  outline: none;
-  box-sizing: border-box;
-}
-.form1Wrap .textArea textarea {
-  width: 100%;
-  resize: none;
-}
-/*** Focus Effects Style 1 ***/
-.form1Wrap .controlGroup.focus label {
-  bottom: 34px;
-  font-size: 11px;
-  outline: none;
-  cursor: pointer;
-}
-.form1Wrap .controlGroup.focus input,
-.form1Wrap .controlGroup.focus textarea {
-  bottom: -11px;
-  padding: 20px;
-  outline: none;
-}
-
-.form1Wrap .controlGroup.focus textarea {
-  height: 95px;
-  bottom: -67px;
-  padding: 20px;
-  outline: none;
+  display: flex;
+  align-items: flex-end;
 }
 .control {
-    width: 100%;
-    height: 280px;
-    margin-top: 30px;
-    background: #fff;
-    border-radius: 10px;
-    position: relative;
-  }
-  .control .title {
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #ececec;
-    padding: 16px 0 0 25px;
-  }
-  .control .title h3 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #5F6368;
-  }
-  .control .control_number label {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 15px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #575757;
-    margin-top: 20px;
-  }
-  .control .control_number .submit {
-    width: 127px;
-    height: 30px;
-    background: #fff;
-    border: 1px solid #7098d5;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #7098d5;
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-30%);
-  }
-  .control .control_number .submit:hover {
-    background: #7098d5;
-    border: none;
-    color: #fff;
-  }
-  
+  width: 100%;
+  height: 280px;
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.control .title {
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #ececec;
+  padding: 16px 0 0 25px;
+}
+.control .title h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f6368;
+}
+.control_number {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tool_name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.identification_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 70px 0 80px;
+}
+.identification_form > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #575757;
+}

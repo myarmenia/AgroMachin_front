@@ -108,7 +108,6 @@ window.onload = function () {
     optionsContainer.append(optionsUl);
     custom_selects[e].append(optionsContainer);
 
-    var li = [];
     const ul_cont = custom_selects[e].querySelector("ul"),
       select_ = custom_selects[e].querySelector("select"),
       select_optiones = select_.options,
@@ -117,23 +116,30 @@ window.onload = function () {
     custom_selects[e].setAttribute("data-is-open", "false");
 
     for (var i = 0; i < select_optiones.length; i++) {
-      li[i] = document.createElement("li");
+      const li = document.createElement("li");
       if (
         select_optiones[i].selected == true ||
         select_.value == select_optiones[i].innerHTML
       ) {
-        li[i].className = "active";
+        li.className = "active";
         placeholder.innerHTML = select_optiones[i].innerHTML;
       }
-      li[i].setAttribute("data-index", i);
-      li[i].addEventListener("click", setSelectOption);
+      li.setAttribute("data-index", i);
+      li.addEventListener("click", setSelectOption);
 
-      li[i].innerHTML = select_optiones[i].innerHTML;
-      ul_cont.appendChild(li[i]);
+      li.innerHTML = select_optiones[i].innerHTML;
+
+      window.addEventListener("click", function (e) {
+        if (e.target != li) {
+          closeSelectByElem(li);
+        }
+      });
+      ul_cont.appendChild(li);
     }
   }
 };
-function openSelect() {
+function openSelect(e) {
+  e.stopPropagation();
   const select = this.closest(".select_mate"),
     ul = select.querySelector("ul"),
     icon = select.querySelector(".icon_select_mate.icon"),
@@ -146,43 +152,44 @@ function openSelect() {
     ul1.style.height = "0px";
     icon1.style.transform = "rotate(0deg)";
     if (select != select1) {
-    select1.setAttribute("data-is-open", "false");
+      select1.setAttribute("data-is-open", "false");
     }
   });
   ul_cont_li.forEach((el) => (hg += el.offsetHeight));
   if (slect_open == "false") {
     select.setAttribute("data-is-open", "true");
     ul.style.height = hg + "px";
-    icon.style.transform = "rotate(180deg)";
+    if (icon) icon.style.transform = "rotate(180deg)";
   } else {
     select.setAttribute("data-is-open", "false");
-    icon.style.transform = "rotate(0deg)";
     ul.style.height = "0px";
+    if (icon) icon.style.transform = "rotate(0deg)";
   }
 }
-function closeSelectByLi(li) {
-  const select = li.closest(".select_mate"),
-  ul = select.querySelector("ul"),
-  icon = select.querySelector(".icon_select_mate.icon");
-  console.log(select);
+function closeSelectByElem(elem) {
+  const select = elem.closest(".select_mate"),
+    ul = select.querySelector("ul"),
+    icon = select.querySelector(".icon_select_mate.icon");
+
   ul.style.height = "0px";
-  icon.style.transform = "rotate(0deg)";
+  if (icon) icon.style.transform = "rotate(0deg)";
   select.setAttribute("data-is-open", "false");
 }
 function setSelectOption() {
   const select_box = this.closest(".select_mate"),
-  title = select_box.querySelector(".selecionado_opcion"),
-  indx = +this.getAttribute("data-index"),
-  select_ = select_box.querySelector("select"),
-  li_s = select_box.querySelectorAll("li"),
-  select_optiones = select_.querySelectorAll("option");
+    title = select_box.querySelector(".selecionado_opcion"),
+    indx = +this.getAttribute("data-index"),
+    select_ = select_box.querySelector("select"),
+    li_s = select_box.querySelectorAll("li"),
+    select_optiones = select_.querySelectorAll("option");
+
   title.innerHTML = this.innerHTML;
   li_s.forEach((li) => li.classList.remove("active"));
   li_s[indx].className = "active";
   select_optiones[indx].selected = true;
   select_.selectedIndex = indx;
   select_.onchange();
-  closeSelectByLi(this);
+  closeSelectByElem(this);
 }
 document.querySelectorAll(".select-title").forEach((el) => {
   el.addEventListener("click", openSelect);
