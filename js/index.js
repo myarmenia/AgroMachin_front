@@ -183,7 +183,7 @@ function setSelectOption() {
     li_s = select_box.querySelectorAll("li"),
     select_optiones = select_.querySelectorAll("option");
 
-  title.innerHTML = this.innerHTML;
+    title.innerHTML = this.innerHTML;
   li_s.forEach((li) => li.classList.remove("active"));
   li_s[indx].className = "active";
   select_optiones[indx].selected = true;
