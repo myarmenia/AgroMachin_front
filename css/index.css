@@ -291,7 +291,7 @@
   padding: 5px 10px;
   width: 96%;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0px;
   cursor: pointer;
 }
@@ -916,6 +916,12 @@ header {
 .toggle-checkbox:checked + .toggle-switch:before {
   left: 20px;
 }
+
+
+
+
+
+
 
 .toggle-checkbox {
   position: absolute;
