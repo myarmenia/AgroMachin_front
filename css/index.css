@@ -211,9 +211,13 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 2px solid #9f9f9f;
+  border-bottom: 1px solid #575757;
   border-radius: 0;
   width: 100%;
+  margin: 5px 0 9px;
+}
+.select_mate.line .selecionado_opcion {
+  padding-left: 0;
 }
 .select_mate.line.error-select {
   border-bottom: 2px solid #f00 !important;
