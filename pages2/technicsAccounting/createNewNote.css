@@ -15,7 +15,9 @@
 .note-container {
   max-width: 350px;
   min-width: 300px;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .double-inp {
   display: flex;
