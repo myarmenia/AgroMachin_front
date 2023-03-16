@@ -38,7 +38,7 @@
   gap: 20px;
 }
 .new-note-btn {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .double-inp-box .input-group {
   min-width: 100px;
@@ -57,7 +57,7 @@
 }
 .double-radio-box label {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 19px;
   color: #9f9f9f;
 }
@@ -94,6 +94,19 @@
 .modal .close {
   scale: 1.8;
 }
+.modal-ul::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+.modal-ul::-webkit-scrollbar-track {
+  background: #dadada;
+}
+.modal-ul::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+}
+.modal-ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 /* ----- */
 /* ----- */
@@ -119,4 +132,31 @@
 }
 .modal-title {
   font-size: 18px;
+}
+
+/* ============================================= */
+.transaction-type-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: circle inside;
+}
+.transaction-type-ul > li span {
+  font-size: 14px;
+  color: #343957;
+  line-height: 19px;
+}
+.transaction-type-ul > li > div {
+  display: flex;
+  gap: 23px;
+}
+.transaction-type-ul-delete {
+  color: #e63030;
+  border: 1px solid #e63030;
+  height: 16px;
+  line-height: 14px;
+  width: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  background-color: transparent;
 }
