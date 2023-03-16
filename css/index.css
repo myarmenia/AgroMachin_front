@@ -209,6 +209,9 @@
   border-radius: 0;
   width: 100%;
 }
+.select_mate.line.error-select {
+  border-bottom: 2px solid #f00 !important;
+}
 .select_mate.line:hover {
   border-color: #9f9f9f;
 }
@@ -579,6 +582,7 @@
   display: flex;
   align-items: center;
   min-width: 60px;
+  max-width: 234px;
   height: 53px;
   text-decoration: none;
   color: white;
@@ -916,12 +920,6 @@ header {
 .toggle-checkbox:checked + .toggle-switch:before {
   left: 20px;
 }
-
-
-
-
-
-
 
 .toggle-checkbox {
   position: absolute;
