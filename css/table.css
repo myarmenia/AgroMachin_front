@@ -187,59 +187,18 @@ td:last-child {
 .tableChild::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-/* switch start */
-.toggle {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
+.pageTitle {
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #5f6368;
 }
-
-.toggle-switch {
-  display: inline-block;
-  background: #ccc;
-  border-radius: 16px;
-  width: 28px;
-  height: 12px;
-  position: relative;
-  vertical-align: middle;
-  -webkit-transition: background 0.25s;
-  -o-transition: background 0.25s;
-  transition: background 0.25s;
+.deskTable a {
+  text-decoration: none;
+  color: #000;
 }
-.toggle-switch:before,
-.toggle-switch:after {
-  content: "";
+.deskTable {
+  border-radius: 15px;
 }
-.toggle-switch:before {
-  display: block;
-  background: #4a77ba;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  -webkit-transition: left 0.25s;
-  -o-transition: left 0.25s;
-  transition: left 0.25s;
-}
-.toggle:hover .toggle-switch:before {
-  background: #4a77ba;
-  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-}
-.toggle-checkbox:checked + .toggle-switch {
-  background: #7098d5;
-}
-.toggle-checkbox:checked + .toggle-switch:before {
-  left: 20px;
-}
-
-.toggle-checkbox {
-  position: absolute;
-  visibility: hidden;
-}
-/* switch end */
