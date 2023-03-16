@@ -382,6 +382,9 @@
   border-top: 1px solid #575757;
   outline: none;
 }
+.input-wrap-error {
+  border-top: 2px solid red;
+}
 .input-wrap::placeholder {
   color: transparent;
 }
