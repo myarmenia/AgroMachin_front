@@ -36,32 +36,36 @@
   max-width: 400px;
   height: 240px;
   display: flex;
+  gap: 12px;
   flex-direction: column;
 }
 
 .formContainer2 {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 .doubleInpTitle {
   font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 12px;
+  min-height: 16px;
   color: #9f9f9f;
+  cursor: pointer;
 }
 .doubleInp {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
 }
-.doubleInp .form1Wrap {
+.doubleInp .input-group {
   min-width: 130px;
+  min-height: 32px;
 }
-.doubleInp .form1Wrap .controlGroup {
-  min-width: 130px;
+.doubleInp .main-label {
+  min-height: 0;
 }
-.form1Wrap .controlGroup input {
-  background: #bdbdc75c !important;
-}
+
 .checkboxContainer {
   display: flex;
   flex-direction: column;
