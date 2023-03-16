@@ -249,52 +249,14 @@
                       <div class="input-group">
                         <input
                           class="input-wrap"
-                          placeholder="Գույքի ծածկագիրը /կոդը/*"
+                          placeholder="Գույքի ծածկագիր/կոդ/*"
                         />
                       </div>
 
                       <div class="input-group">
                         <input
                           class="input-wrap"
-                          placeholder="Գործարքի ծածկագիրը*"
-                        />
-                      </div>
-
-                      <div class="input-group">
-                        <input
-                          class="input-wrap"
-                          placeholder="Հաշվառման հայտ*"
-                        />
-                      </div>
-
-                      <div class="input-group">
-                        <input class="input-wrap" placeholder="Մակնիշը*" />
-                      </div>
-
-                      <div class="input-group">
-                        <input class="input-wrap" placeholder="Մոդել*" />
-                      </div>
-
-                      <div class="input-group">
-                        <input class="input-wrap" placeholder="Տարեթիվը*" />
-                      </div>
-
-                      <div class="input-group">
-                        <input
-                          class="input-wrap"
-                          placeholder="Շարժիչի համարը*"
-                        />
-                      </div>
-                      <div class="input-group">
-                        <input
-                          class="input-wrap input-wrap-error"
-                          placeholder="Գին*"
-                        />
-                      </div>
-                      <div class="input-group">
-                        <input
-                          class="input-wrap"
-                          placeholder="Նույնացման համար*"
+                          placeholder="Գործարքի ծածկագիր*"
                         />
                       </div>
                       <div class="select_mate line" data-mate-select="active">
@@ -304,7 +266,7 @@
                           onclick="return false;"
                           id=""
                         >
-                          <option value="">Հայերեն</option>
+                          <option value="">Գործարքի տեսակ*</option>
                           <option value="1">Select option 1</option>
                           <option value="2">Select option 2</option>
                         </select>
@@ -315,7 +277,45 @@
                           /></span>
                         </div>
                       </div>
-                      <div class="main-btn new-note-btn">Բեռնել</div>
+                      <div class="input-group">
+                        <input
+                          class="input-wrap"
+                          placeholder="Հաշվառման հայտ*"
+                        />
+                      </div>
+
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Մակնիշ*" />
+                      </div>
+
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Մոդել*" />
+                      </div>
+
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Տարեթիվ*" />
+                      </div>
+
+                      <div class="input-group">
+                        <input
+                          class="input-wrap"
+                          placeholder="Շարժիչի համար*"
+                        />
+                      </div>
+                      <div class="input-group">
+                        <input
+                          class="input-wrap input-wrap-error"
+                          placeholder="Գին"
+                        />
+                      </div>
+                      <div class="input-group">
+                        <input
+                          class="input-wrap"
+                          placeholder="Նույնացման համար*"
+                        />
+                      </div>
+
+                      <div class="main-btn-white new-note-btn">Բեռնել</div>
                     </div>
                     <div class="note-container">
                       <div class="input-group">
@@ -334,7 +334,7 @@
                           onclick="return false;"
                           id=""
                         >
-                          <option value="">Հայերեն</option>
+                          <option value="">Վառելիքի տեսակ*</option>
                           <option value="1">Select option 1</option>
                           <option value="2">Select option 2</option>
                         </select>
@@ -376,7 +376,7 @@
                       <div class="input-group">
                         <input
                           class="input-wrap"
-                          placeholder="Նստատեղերի քանակը"
+                          placeholder="Նստատեղերի քանակ"
                         />
                       </div>
                       <div class="double-radio">
@@ -394,7 +394,7 @@
                       <div class="input-group">
                         <input
                           class="input-wrap"
-                          placeholder="Գրել համարանիշը"
+                          placeholder="Գրել համարանիշ"
                         />
                       </div>
                       <div class="select_mate line" data-mate-select="active">
@@ -404,7 +404,7 @@
                           onclick="return false;"
                           id=""
                         >
-                          <option value="">Հայերեն</option>
+                          <option value="">Սարքինության տեսակ</option>
                           <option value="1">Select option 1</option>
                           <option value="2">Select option 2</option>
                         </select>
@@ -421,17 +421,134 @@
                     <button class="main-btn">Պահպանել</button>
                   </div>
                 </form>
-                <div
+                <form
                   class="app app_activ"
-                  style="display: none"
+                  style="display: block"
                   data-activ_tab="1"
                 >
                   <div class="new_note">
-                    <div class="create_note">
-                      <h3>հայտատու</h3>
+                    <div class="note-container">
+                      <div class="select_mate line" data-mate-select="active">
+                        <select
+                          name=""
+                          onchange=""
+                          onclick="return false;"
+                          id=""
+                        >
+                          <option value="">Անձի կարգավիճակ*</option>
+                          <option value="1">Select option 1</option>
+                          <option value="2">Select option 2</option>
+                        </select>
+                        <div class="select-title">
+                          <p class="selecionado_opcion"></p>
+                          <span class="icon_select_mate icon"
+                            ><img src="../../assets/select-chev.svg"
+                          /></span>
+                        </div>
+                      </div>
+                      <div class="input-group">
+                        <input
+                          class="input-wrap"
+                          placeholder="Հեռախոսահամար*"
+                        />
+                      </div>
+
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Անուն*" />
+                      </div>
+
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Ազգանուն*" />
+                      </div>
+
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Հայրանուն*" />
+                      </div>
+                      <div class="select_mate line" data-mate-select="active">
+                        <select
+                          name=""
+                          onchange=""
+                          onclick="return false;"
+                          id=""
+                        >
+                          <option value="">Քաղաքացիություն*</option>
+                          <option value="1">Select option 1</option>
+                          <option value="2">Select option 2</option>
+                        </select>
+                        <div class="select-title">
+                          <p class="selecionado_opcion"></p>
+                          <span class="icon_select_mate icon"
+                            ><img src="../../assets/select-chev.svg"
+                          /></span>
+                        </div>
+                      </div>
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="ՍՔՀ/ ՀՎՀՀ*" />
+                      </div>
+                      <div class="input-group">
+                        <input
+                          class="input-wrap input-wrap-error"
+                          placeholder="Անձնագրի տվյալները*"
+                        />
+                      </div>
+                      <div class="main-btn-white new-note-btn">Բեռնել</div>
+                      <div class="double-radio">
+                        <div class="double-radio-box">
+                          <div class="radio-group">
+                            <input type="checkbox" />
+                            <label>Լիազորված անձ</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="note-container">
+                      <div class="input-group">
+                        <input
+                          class="input-wrap"
+                          placeholder="Համայնք/Վարչ․շրջան*"
+                        />
+                      </div>
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Բնակավայր*" />
+                      </div>
+                      <div class="input-group">
+                        <input
+                          class="input-wrap"
+                          placeholder="Փոստային դասիչ"
+                        />
+                      </div>
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Փողոց" />
+                      </div>
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Տան տեսակ" />
+                      </div>
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Շենք*" />
+                      </div>
+                      <div class="input-group">
+                        <input
+                          class="input-wrap"
+                          placeholder="Բնակարան/Սենյակ"
+                        />
+                      </div>
+                      <div class="input-group">
+                        <input class="input-wrap" placeholder="Բաժնեմասեր" />
+                      </div>
+                      <div class="double-radio">
+                        <div class="double-radio-box">
+                          <div class="radio-group">
+                            <a href="#"><img src="../../assets/plus.svg" /></a>
+                            <label>Տրանզիտ / Ժմնկ հմրնշ</label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                  <div class="btn-box">
+                    <button class="main-btn">Պահպանել</button>
+                  </div>
+                </form>
                 <div
                   class="app app_activ"
                   style="display: none"

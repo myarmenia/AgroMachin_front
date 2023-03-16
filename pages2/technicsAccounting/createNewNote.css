@@ -38,7 +38,7 @@
   gap: 20px;
 }
 .new-note-btn {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .double-inp-box .input-group {
   min-width: 100px;
@@ -57,7 +57,7 @@
 }
 .double-radio-box label {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 19px;
   color: #9f9f9f;
 }
