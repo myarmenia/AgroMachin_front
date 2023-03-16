@@ -10,6 +10,7 @@
   transition: 0.3s;
   opacity: 0;
   display: none;
+  padding: 20px;
 }
 .modal {
   z-index: 99999999;

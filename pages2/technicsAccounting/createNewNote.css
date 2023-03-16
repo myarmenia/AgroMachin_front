@@ -72,3 +72,91 @@
   width: 85%;
   height: 100px;
 }
+
+/* ========================================================= */
+/* ========================================================= */
+/* ========================================================= */
+#transaction-type-modal {
+  border-radius: 20px;
+  min-width: 63%;
+}
+.modal-content {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 32px 0 24px 64px;
+}
+.modal-head {
+  padding: 21px 44px 14px 64px;
+}
+.modal .close {
+  scale: 1.8;
+}
+.modal-ul::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+.modal-ul::-webkit-scrollbar-track {
+  background: #dadada;
+}
+.modal-ul::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+}
+.modal-ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+
+.modal-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 500px;
+  padding-right: 44px;
+}
+.modal-ul > li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.modal-ul + .main-btn {
+  align-self: flex-end;
+  margin-right: 44px;
+}
+.modal-title {
+  font-size: 18px;
+}
+
+/* ============================================= */
+.transaction-type-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: circle inside;
+}
+.transaction-type-ul > li span {
+  font-size: 14px;
+  color: #343957;
+  line-height: 19px;
+}
+.transaction-type-ul > li > div {
+  display: flex;
+  gap: 23px;
+}
+.transaction-type-ul-delete {
+  color: #e63030;
+  border: 1px solid #e63030;
+  height: 16px;
+  line-height: 14px;
+  width: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  background-color: transparent;
+}

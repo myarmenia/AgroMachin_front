@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../font/font.css" />
     <link rel="stylesheet" href="../../css/index.css" />
     <link rel="stylesheet" href="../../css/table.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
@@ -161,7 +162,7 @@
         <header class="main-header">
           <div class="home-content">
             <img
-              src="../../../assets/sideBarIcon/menuIcon.svg"
+              src="../../assets/sideBarIcon/menuIcon.svg"
               class="bx bx-menu"
             />
           </div>
@@ -259,24 +260,26 @@
                           placeholder="Գործարքի ծածկագիր*"
                         />
                       </div>
-                      <div class="select_mate line" data-mate-select="active">
-                        <select
-                          name=""
-                          onchange=""
-                          onclick="return false;"
-                          id=""
-                        >
-                          <option value="">Գործարքի տեսակ*</option>
-                          <option value="1">Select option 1</option>
-                          <option value="2">Select option 2</option>
-                        </select>
-                        <div class="select-title">
-                          <p class="selecionado_opcion"></p>
-                          <span class="icon_select_mate icon"
-                            ><img src="../../assets/select-chev.svg"
-                          /></span>
-                        </div>
-                      </div>
+                      <button
+                        id="transaction-type-modal-btn"
+                        class="main-btn-white new-note-btn"
+                        type="button"
+                      >
+                        Գործարքի տեսակ
+                      </button>
+                      <ul class="transaction-type-ul">
+                        <li>
+                          <div>
+                            <span
+                              >Առուվաճառքի պայմանագրով ձեռք բերված ՏՄ-ի
+                              գրանցում</span
+                            >
+                            <button class="transaction-type-ul-delete">
+                              &#x2715;
+                            </button>
+                          </div>
+                        </li>
+                      </ul>
                       <div class="input-group">
                         <input
                           class="input-wrap"
@@ -314,8 +317,6 @@
                           placeholder="Նույնացման համար*"
                         />
                       </div>
-
-                      <div class="main-btn-white new-note-btn">Բեռնել</div>
                     </div>
                     <div class="note-container">
                       <div class="input-group">
@@ -418,12 +419,12 @@
                     </div>
                   </div>
                   <div class="btn-box">
-                    <button class="main-btn">Պահպանել</button>
+                    <button type="button" class="main-btn">Պահպանել</button>
                   </div>
                 </form>
                 <form
                   class="app app_activ"
-                  style="display: block"
+                  style="display: none"
                   data-activ_tab="1"
                 >
                   <div class="new_note">
@@ -609,8 +610,101 @@
           </div>
         </section>
       </main>
+
+      <div class="modal-container">
+        <div class="modal" id="transaction-type-modal">
+          <div class="modal-head">
+            <h3 class="modal-title">Գործարքի տեսակ</h3>
+            <div class="close">&#x2715;</div>
+          </div>
+          <form class="modal-content">
+            <ul class="modal-ul">
+              <li>
+                <input type="checkbox" />
+                <span>Առուվաճառքի պայմանագրով ձեռք բերված ՏՄ-ի գրանցում</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span
+                  >Նվիրատվության պայմանագրով ձեռք բերված ՏՄ-ի գրանցում
+                </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span
+                  >Ժառանգության իրավունքի վկայագրով ձեռք բերված ՏՄ-ի
+                  գրանցում</span
+                >
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Փոխանակման պայմանագրով ձեռք բերված ՏՄ-ի գրանցում </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Ելք գրանցումից (խոտանում)</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Գրավի վկայագրի տրամադրում </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Գրավի վկայագրի մարում </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Ելք գրանցումից (մեկնում այլ պետություն)</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Գրանցման վերականգնում (խոտանումից) </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span
+                  >Սեփականության վկայագրի փոխանակում կամ կորցրածի
+                  տրամադրում</span
+                >
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span
+                  >Առանց սեփականության վկայագրի հաշվառված ՏՄ-ի սեփականության
+                  վկայագրի տրամադրում
+                </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Լիզինգի վկայագրի տրամադրում</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Լիզինգի վկայագրի մարում</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Շտեմարանում տվյալների ուղղում </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span
+                  >Սեփականատիրոջ փոփոխություն նախկին առուվաճառքի պայմանագրի
+                  լուծման համաձայն
+                </span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span>Աճուրդի միջոցով ձեռք բերված ԱՄՏ-ի գրանցում</span>
+              </li>
+            </ul>
+            <button class="main-btn">Պահպանել</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="../../js/index.js"></script>
+    <script src="../../js/modal.js"></script>
     <!-- <script src="../../js/modal.js"></script> -->
     <script src="tech.js"></script>
   </body>
