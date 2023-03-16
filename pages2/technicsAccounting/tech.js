@@ -116,3 +116,7 @@ for (let i = 0; i < tabs.length; i++) {
     }
   });
 }
+
+document
+  .querySelector("#transaction-type-modal-btn")
+  .addEventListener("click", () => showModal("#transaction-type-modal"));

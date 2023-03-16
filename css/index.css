@@ -336,23 +336,23 @@
   color: #575757;
 }
 
+.main-anchor-blue {
+  font-weight: 600;
+  font-size: 14px;
+  color: #7098d5;
+  text-decoration: underline;
+}
+
 /* -------------------------------------------------- */
 /* -------------------- Input ----------------------- */
 /* -------------------------------------------------- */
 .input-group {
   min-width: 200px;
-  min-height: 46px;
+  min-height: 45px;
   height: fit-content;
   position: relative;
   color: white;
   transition: all ease 100ms;
-}
-.input-group-blue .main-label {
-  color: #7098d5;
-  font-size: 14px;
-}
-.input-group-blue input {
-  border-color: #7098d5;
 }
 .input-box {
   position: absolute;
@@ -382,9 +382,6 @@
   border-top: 1px solid #575757;
   outline: none;
 }
-.input-wrap-error {
-  border-top: 2px solid red;
-}
 .input-wrap::placeholder {
   color: transparent;
 }
@@ -410,7 +407,7 @@
 }
 .input-group.focus .main-label {
   font-size: 10px;
-  min-height: 12px;
+  min-height: 14px;
 }
 .input-group.focus .input-wrap {
   padding: 15px 10px;

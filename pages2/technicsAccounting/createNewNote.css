@@ -72,3 +72,51 @@
   width: 85%;
   height: 100px;
 }
+
+/* ========================================================= */
+/* ========================================================= */
+/* ========================================================= */
+#transaction-type-modal {
+  border-radius: 20px;
+  min-width: 63%;
+}
+.modal-content {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 32px 0 24px 64px;
+}
+.modal-head {
+  padding: 21px 44px 14px 64px;
+}
+.modal .close {
+  scale: 1.8;
+}
+
+/* ----- */
+/* ----- */
+/* ----- */
+
+.modal-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 500px;
+  padding-right: 44px;
+}
+.modal-ul > li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.modal-ul + .main-btn {
+  align-self: flex-end;
+  margin-right: 44px;
+}
+.modal-title {
+  font-size: 18px;
+}
