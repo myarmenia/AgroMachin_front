@@ -62,7 +62,7 @@
   min-width: 130px;
   min-height: 32px;
 }
-.doubleInp .main-label {
+.doubleInp .input-group.focus .main-label {
   min-height: 0;
 }
 
