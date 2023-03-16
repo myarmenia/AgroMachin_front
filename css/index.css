@@ -341,15 +341,18 @@
 /* -------------------------------------------------- */
 .input-group {
   min-width: 200px;
-  min-height: 41px;
-  max-height: 36px;
-  height: 100%;
+  min-height: 46px;
+  height: fit-content;
   position: relative;
   color: white;
   transition: all ease 100ms;
 }
-.input-group.focus {
-  min-height: 60px;
+.input-group-blue .main-label {
+  color: #7098d5;
+  font-size: 14px;
+}
+.input-group-blue input {
+  border-color: #7098d5;
 }
 .input-box {
   position: absolute;
@@ -386,10 +389,10 @@
   width: 100%;
   font-weight: 600;
   font-size: 12px;
-  min-height: 16px;
+  min-height: 19px;
   color: #9f9f9f;
   cursor: pointer;
-  height: 20px;
+  /* height: 20px; */
 }
 .main-label,
 .input-wrap {
@@ -403,7 +406,8 @@
   display: block;
 }
 .input-group.focus .main-label {
-  font-size: 11px;
+  font-size: 10px;
+  min-height: 12px;
 }
 .input-group.focus .input-wrap {
   padding: 15px 10px;
