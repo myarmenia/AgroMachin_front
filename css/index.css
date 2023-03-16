@@ -193,6 +193,9 @@
 .select_language {
   width: 120px;
 }
+.select_language .selecionado_opcion {
+  padding: 6px 10px;
+}
 .select_mate select {
   position: absolute;
   overflow: hidden;
@@ -291,7 +294,7 @@
 
 /* etiqueta <p> con la opcion selecionada  */
 .selecionado_opcion {
-  padding: 5px 10px;
+  padding: 8px 10px;
   width: 96%;
   display: block;
   font-size: 12px;
@@ -410,6 +413,7 @@
   background: transparent;
   border: none;
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  cursor: pointer;
 }
 .input-group.input-group-search.focus .search-icon {
   top: 74%;

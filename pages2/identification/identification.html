@@ -169,7 +169,7 @@
         <header class="main-header">
           <div class="home-content">
             <img
-              src="../../../assets/sideBarIcon/menuIcon.svg"
+              src="../../assets/sideBarIcon/menuIcon.svg"
               class="bx bx-menu"
             />
           </div>
@@ -212,15 +212,11 @@
         <section class="right-section">
           <div class="right-sectionChild">
             <div class="title-link2">
-              <div class="form1Wrap">
-                <form class="newContactForm">
-                  <div class="controlGroup">
-                    <label for="name">Name</label>
-                    <div class="inputWrap">
-                      <input id="name" />
-                    </div>
-                  </div>
-                </form>
+              <div class="input-group input-group-search">
+                <input class="input-wrap" placeholder="Որոնել" />
+                <button class="search-icon">
+                  <img src="../../assets/table/inp-search.svg" alt="" />
+                </button>
               </div>
             </div>
             <div class="control">
@@ -228,24 +224,20 @@
                 <div class="title">
                   <h3>Հայտի նույնականացում</h3>
                 </div>
-                <label for=""
-                  >Հսկիչ համար FGTY-
-                  <div class="form1Wrap">
-                    <form class="newContactForm">
-                      <div class="controlGroup">
-                        <label for="name1" class="login"
-                          >Մուտքագրել տվյալներ</label
-                        >
-                        <div class="inputWrap">
-                          <input id="name1" />
-                        </div>
-                      </div>
-                    </form>
+                <form class="identification_form">
+                  <label for=""
+                    >Հսկիչ համար FGTY-
+                    <div class="input-group">
+                      <input
+                        class="input-wrap"
+                        placeholder="Մուտքագրել տվյալներ"
+                      />
+                    </div>
+                  </label>
+                  <div class="tool_name">
+                    <button class="main-btn">Հավաստել</button>
                   </div>
-                </label>
-                <div class="tool_name">
-                  <input type="submit" class="submit" value="Հավաստել" />
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -254,6 +246,5 @@
       </main>
     </div>
     <script src="../../js/index.js"></script>
-    <script src="../input.js"></script>
   </body>
 </html>
