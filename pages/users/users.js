@@ -9,22 +9,38 @@ const box_item = document.getElementsByClassName("box_item");
 let showValus = [];
 for (let i = 0; i < dropbtnCheckBox.length; i++) {
   dropbtnCheckBox[i].addEventListener("click", function (e) {
+    const uls = e.target
+      .closest(".dropdown")
+      .querySelector(".dropdown-content.myDropdownCheckBox");
+    let ul_height = 0;
+
     for (let m = 0; m < activshow.length; m++) {
       if (!activshow[m].classList.value.includes("show")) {
-        activshow[m].classList.toggle("show");
+        activshow[m].classList.add("show");
       } else {
         activshow[m].classList.remove("show");
       }
     }
     title = dropbtnCheckBox[i].children[0];
     if (myDropdownCheckBox[i].attributes["data-open"]) {
-      e.target.closest(".navbar_select").querySelector(".icon").style.transform = "rotate(0)"
+      e.target
+        .closest(".navbar_select")
+        .querySelector(".icon").style.transform = "rotate(0)";
       myDropdownCheckBox[i].classList.remove("show");
       myDropdownCheckBox[i].removeAttribute("data-open");
+      uls.style.height = 0;
     } else {
-      e.target.closest(".navbar_select").querySelector(".icon").style.transform = "rotate(180deg)"
+      e.target
+        .closest(".navbar_select")
+        .querySelector(".icon").style.transform = "rotate(180deg)";
       myDropdownCheckBox[i].classList.add("show");
       myDropdownCheckBox[i].setAttribute("data-open", 1);
+
+      [...uls.children].forEach((el) => {
+        ul_height += el.offsetHeight;
+      });
+      uls.style.height = ul_height + "px";
+      console.log(uls);
     }
     showValus.forEach((el) => {
       boxContainer[0].append(el);
@@ -97,4 +113,3 @@ for (let i = 0; i < check_input.length; i++) {
     }
   });
 }
-
