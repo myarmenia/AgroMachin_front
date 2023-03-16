@@ -92,7 +92,7 @@
 table {
   width: 100%;
   height: auto;
-  border: 1px solid #dadada;
+
   border-right: none;
   border-left: none;
   border-collapse: collapse;
@@ -122,6 +122,10 @@ th,
 td {
   border: 1px solid #dadada;
   border-left: none;
+  /* border-right: none; */
+}
+td:last-child {
+  border-right: none;
 }
 .pen {
   cursor: pointer;
@@ -141,6 +145,14 @@ td {
   color: #343957;
   border-color: none;
   min-width: 40px;
+}
+.table-no-border tr:first-child,
+.table-no-border tr:first-child td {
+  border-top: none !important;
+}
+.table-no-border tr:last-child,
+.table-no-border tr:last-child td {
+  border-bottom: none !important;
 }
 .modalButton {
   background: none;

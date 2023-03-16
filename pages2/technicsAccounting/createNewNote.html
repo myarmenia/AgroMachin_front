@@ -287,11 +287,35 @@
                       </div>
                       <div class="input-group">
                         <input
+                          class="input-wrap error_border"
+                          placeholder="Գին*"
+                        />
+                      </div>
+                      <div class="input-group">
+                        <input
                           class="input-wrap"
                           placeholder="Նույնացման համար*"
                         />
                       </div>
-                      <div class="main-btn">Բեռնել</div>
+                      <div class="select_mate line" data-mate-select="active">
+                        <select
+                          name=""
+                          onchange=""
+                          onclick="return false;"
+                          id=""
+                        >
+                          <option value="">Հայերեն</option>
+                          <option value="1">Select option 1</option>
+                          <option value="2">Select option 2</option>
+                        </select>
+                        <div class="select-title">
+                          <p class="selecionado_opcion"></p>
+                          <span class="icon_select_mate icon"
+                            ><img src="../../assets/select-chev.svg"
+                          /></span>
+                        </div>
+                      </div>
+                      <div class="main-btn new-note-btn">Բեռնել</div>
                     </div>
                     <div class="note-container">
                       <div class="input-group">
@@ -300,7 +324,10 @@
                           placeholder="Նույնացման համար*"
                         />
                       </div>
-                      <div class="select_mate line" data-mate-select="active">
+                      <div
+                        class="select_mate line error-select"
+                        data-mate-select="active"
+                      >
                         <select
                           name=""
                           onchange=""
