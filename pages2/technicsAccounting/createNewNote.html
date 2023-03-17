@@ -448,10 +448,11 @@
                   class="app app_activ"
                   style="display: none"
                   data-activ_tab="1"
+                  id="the_form"
                 >
                   <div class="new_note">
                     <div class="note-container-box">
-                      <div class="new_note_container">
+                      <div class="new_note_container" data-box-count="0">
                         <div class="new_note_title">
                           <div>Սեփականատերեր</div>
                           <div></div>
@@ -462,18 +463,15 @@
                               class="select_mate line"
                               data-mate-select="active"
                             >
-                              <select
-                                name=""
-                                onchange=""
-                                onclick="return false;"
-                                id=""
-                              >
+                              <select onchange="" onclick="return false;">
                                 <option value="">Անձի կարգավիճակ*</option>
                                 <option value="1">Select option 1</option>
                                 <option value="2">Select option 2</option>
                               </select>
                               <div class="select-title">
-                                <p class="selecionado_opcion"></p>
+                                <p class="selecionado_opcion">
+                                  Անձի կարգավիճակ*
+                                </p>
                                 <span class="icon_select_mate icon"
                                   ><img src="../../assets/select-chev.svg"
                                 /></span>
@@ -685,7 +683,7 @@
                       </div>
                     </div>
                     <div class="btn-box">
-                      <button type="button" class="main-btn">Պահպանել</button>
+                      <button class="main-btn">Պահպանել</button>
                     </div>
                   </div>
                 </form>

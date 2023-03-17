@@ -7,8 +7,8 @@ const cur_table = document.getElementById("table-route"),
   accept_btn = document.getElementById("modal-accept-btn"),
   confirm_modal = document.getElementById("confirm-modal"),
   table_route_delete = cur_table && cur_table.attributes["data-delete"].value,
-  table_route_route = cur_table && cur_table.attributes["data-route"].value,
-  custom_selects = document.querySelectorAll("[data-mate-select='active']");
+  table_route_route = cur_table && cur_table.attributes["data-route"].value;
+
 // ==================================================================
 // ==================================================================
 // ==================================================================
@@ -16,7 +16,7 @@ const cur_table = document.getElementById("table-route"),
 // ---------------------------------
 // Input cunstucturing
 // ---------------------------------
-function randomNum() {
+function randomId() {
   const word = "qwertyuiop_asdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
   let id = "";
   for (let i = 0; i < 7; i++) {
@@ -24,43 +24,50 @@ function randomNum() {
   }
   return id;
 }
-document.querySelectorAll(".input-wrap").forEach((input, i) => {
-  const placeholder = input.placeholder,
-    id = input.id || randomNum(),
-    group = input.parentElement;
+function createInputs(rootElement) {
+  rootElement.querySelectorAll(".input-wrap").forEach((input, i) => {
+    const placeholder = input.placeholder,
+      id = input.id || randomId(),
+      group = input.parentElement;
 
-  if (input.value) {
-    group.classList.add("focus");
-  }
-  input.remove();
-
-  const box = document.createElement("div"),
-    label = document.createElement("label");
-
-  box.className = "input-box";
-  label.className = "main-label";
-  label.innerHTML = placeholder;
-  label.setAttribute("for", id);
-  input.id = id;
-  box.append(label, input);
-
-  group.prepend(box);
-});
-document.querySelectorAll(".main-label, .input-wrap").forEach((elem, i) => {
-  elem.addEventListener("focus", function (event) {
-    event.stopPropagation();
-    if (!this.value) {
-      this.closest(".input-group").classList.remove("focus");
+    if (input.value) {
+      group.classList.add("focus");
     }
-    this.closest(".input-group").classList.add("focus");
+    input.remove();
+
+    const box = document.createElement("div"),
+      label = document.createElement("label");
+
+    box.className = "input-box";
+    label.className = "main-label";
+    label.innerHTML = placeholder;
+    label.setAttribute("for", id);
+    input.id = id;
+    box.append(label, input);
+
+    group.prepend(box);
   });
-  elem.addEventListener("blur", function (event) {
-    event.stopPropagation();
-    if (!this.value) {
-      this.closest(".input-group").classList.remove("focus");
-    }
-  });
-});
+
+  rootElement
+    .querySelectorAll(".main-label, .input-wrap")
+    .forEach((elem, i) => {
+      elem.addEventListener("focus", function (event) {
+        event.stopPropagation();
+        if (!this.value) {
+          this.closest(".input-group").classList.remove("focus");
+        }
+        this.closest(".input-group").classList.add("focus");
+      });
+      elem.addEventListener("blur", function (event) {
+        event.stopPropagation();
+        if (!this.value) {
+          this.closest(".input-group").classList.remove("focus");
+        }
+      });
+    });
+}
+createInputs(document);
+
 // ============================================================
 // ============================================================
 // ============================================================
@@ -98,7 +105,14 @@ signOutBtn.addEventListener("click", () => {
 // sign out
 // // ============================================================================
 // custom select Art
+
 window.onload = function () {
+  createSelectOptions(document);
+};
+function createSelectOptions(rootElement) {
+  const custom_selects = rootElement.querySelectorAll(
+    "[data-mate-select='active']"
+  );
   for (var e = 0; e < custom_selects.length; e++) {
     const optionsContainer = document.createElement("div"),
       optionsUl = document.createElement("ul");
@@ -117,10 +131,7 @@ window.onload = function () {
 
     for (var i = 0; i < select_optiones.length; i++) {
       const li = document.createElement("li");
-      if (
-        select_optiones[i].selected == true ||
-        select_.value == select_optiones[i].innerHTML
-      ) {
+      if (select_optiones[i].selected) {
         li.className = "active";
         placeholder.innerHTML = select_optiones[i].innerHTML;
       }
@@ -137,7 +148,7 @@ window.onload = function () {
       ul_cont.appendChild(li);
     }
   }
-};
+}
 function openSelect(e) {
   e.stopPropagation();
   const select = this.closest(".select_mate"),
@@ -146,15 +157,18 @@ function openSelect(e) {
     ul_cont_li = select.querySelectorAll("li"),
     slect_open = select.getAttribute("data-is-open");
   var hg = 0;
-  custom_selects.forEach((select1) => {
-    const ul1 = select1.querySelector("ul"),
-      icon1 = select1.querySelector(".icon_select_mate");
-    ul1.style.height = "0px";
-    icon1.style.transform = "rotate(0deg)";
-    if (select != select1) {
-      select1.setAttribute("data-is-open", "false");
-    }
-  });
+
+  document
+    .querySelectorAll("[data-mate-select='active']")
+    .forEach((select1) => {
+      const ul1 = select1.querySelector("ul"),
+        icon1 = select1.querySelector(".icon_select_mate");
+      ul1.style.height = "0px";
+      icon1.style.transform = "rotate(0deg)";
+      if (select != select1) {
+        select1.setAttribute("data-is-open", "false");
+      }
+    });
   ul_cont_li.forEach((el) => (hg += el.offsetHeight));
   if (slect_open == "false") {
     select.setAttribute("data-is-open", "true");
