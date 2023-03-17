@@ -7,19 +7,38 @@
 .new_note {
   width: 100%;
   min-height: 500px;
-
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.new_note_title {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #343957;
+}
+.new_note_title > div {
+  max-width: 334px;
+  min-width: 313px;
 }
 .note-container {
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  gap: 20px;
+}
+.note-container-child {
   max-width: 350px;
   min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.double-inp {
+/* .double-inp {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -36,9 +55,15 @@
 .double-inp-box {
   display: flex;
   gap: 20px;
-}
+} */
 .new-note-btn {
   margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+
+  text-decoration-line: underline;
+  color: #7098d5;
 }
 .double-inp-box .input-group {
   min-width: 100px;
@@ -72,7 +97,7 @@
   width: 85%;
   height: 100px;
 }
-
+#openAuthorized:checked
 /* ========================================================= */
 /* ========================================================= */
 /* ========================================================= */
