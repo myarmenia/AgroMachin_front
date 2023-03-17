@@ -183,7 +183,7 @@ function setSelectOption() {
     li_s = select_box.querySelectorAll("li"),
     select_optiones = select_.querySelectorAll("option");
 
-    title.innerHTML = this.innerHTML;
+  title.innerHTML = this.innerHTML;
   li_s.forEach((li) => li.classList.remove("active"));
   li_s[indx].className = "active";
   select_optiones[indx].selected = true;
@@ -195,3 +195,64 @@ document.querySelectorAll(".select-title").forEach((el) => {
   el.addEventListener("click", openSelect);
 });
 // custom select Art
+
+// --------------------------------------------------------------------
+// Modal checkboxes
+// --------------------------------------------------------------------
+const modal_form = document.querySelectorAll("[data-checkboxes-form]");
+
+modal_form.forEach((el) => {
+  el.addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log(111);
+
+    const formData = new FormData(e.target),
+      checkboxes = formData.getAll("modal-checkbox"),
+      form_id = this.getAttribute("data-checkboxes-form"),
+      checkboxes_ul = document.querySelector(
+        `[data-checkboxes-ul='${form_id}']`
+      ),
+      checkboxes_input = document.querySelector(
+        `[data-checkboxes-input='${form_id}']`
+      ),
+      form_labels = [...this.elements]
+        .filter((el) => el.tagName.toLowerCase() !== "button")
+        .map((el) => {
+          if (checkboxes.some((e) => el.value == e)) {
+            return [el, el.nextElementSibling];
+          }
+        })
+        .filter((el) => el !== undefined);
+
+    if (checkboxes.length) {
+      checkboxes_input.value = checkboxes;
+      checkboxes_ul.innerHTML = "";
+      form_labels.forEach(([el, span]) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <div>
+              <span>${span.innerHTML}</span>
+              <button type="button" 
+                class="transaction-type-ul-delete" 
+                data-checkboxes-delete='${el.value}'
+                >
+                &#x2715;
+              </button>
+            </div>`;
+        checkboxes_ul.append(li);
+        hideModal();
+
+        li.querySelector(".transaction-type-ul-delete").addEventListener(
+          "click",
+          function (e) {
+            const id = e.target.getAttribute("data-checkboxes-delete");
+            let input_value = checkboxes_input.value.split(",");
+            checkboxes_input.value = input_value.filter((el) => el !== id);
+            e.target.closest("li").remove();
+          }
+        );
+      });
+    }
+  });
+});
+// ====================================================================

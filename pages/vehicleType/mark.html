@@ -267,14 +267,19 @@
                 <a href="">
                   <img src="../../assets/table/backArrow.svg" alt="" />
                 </a>
-                
+           
+              </div>
+            </div>
+            <div class="vehicleType_main_container">
+              <div class="vehicleType_main_container-first-box">
+              <div class="vehicle_types_container">
                 <div class="vehicle_types">
                   <button class="main-btn main-btn-gray">
                      ՏՄ տեսակ
                   </button>
                   <button
                     class="main-btn main-btn-gray main-btn-darkgray"
-                    id="new_record"
+                
                   >
                      ՏՄ մակնիշ
                   </button>
@@ -282,9 +287,14 @@
                      ՏՄ մոդել
                   </button>
                 </div>
+                <button
+                type="button"
+                class="main-btn"
+                id="new_record"
+              >
+                Ստեղծել գրառում
+              </button>
               </div>
-            </div>
-            <div class="vehicleType_main_container">
               <div class="tableContainer">
                 <div class="table-title">
                   <div class="vehicleType_table_head">
@@ -340,95 +350,8 @@
                   </table>
                 </div>
               </div>
-              <div class="new_vehicle">
-                <div class="table-title">
-                  <div class="table-title-text">
-                    Ստեղծել տրանսպորտային միջոցի մակնիշ
-                  </div>
-                </div>
-                <form class="new_vehicle_content">
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>ՏՄ տեսակ*</label>
-                        <div class="input-validatation-box">
-                          <input
-                            placeholder="Գրել տեսակը"
-                            
-                            class="user-input"
-                            
-                          />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                   
-                  </div>
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>ՏՄ մակնիշ*</label>
-                        <div class="input-validatation-box">
-                          <input
-                            placeholder="Գրել մակնիշը"
-                
-                            class="user-input"
-                            
-                          />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                   
-                  </div>
-                  <button class="main-btn">Պահպանել</button>
-                </form>
-              </div>
-              <div class="new_vehicle2">
-                <div class="table-title">
-                  <div class="table-title-text">Փոփոխել տրանսպորտային միջոցի մակնիշը</div>
-                </div>
-                <form class="new_vehicle_content">
-                    
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>ՏՄ տեսակ*</label>
-                        <div class="input-validatation-box">
-                          <input
-                            placeholder="Գրել տեսակը"
-                            
-                            class="user-input"
-                            
-                          />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                   
-                  </div>
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>ՏՄ մակնիշ*</label>
-                        <div class="input-validatation-box">
-                          <input
-                            placeholder="Գրել մակնիշը"
-                
-                            class="user-input"
-                            
-                          />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                   
-                  </div>
-                  <button class="main-btn">Պահպանել</button>
-                </form>
-            </div>
-          </div>
-          <!-- ------------------------------------------------------- -->
+
+                        <!-- ------------------------------------------------------- -->
           <!-- Pagination -->
           <!-- ------------------------------------------------------- -->
           <nav
@@ -601,9 +524,99 @@
             </div>
           </div>
         </nav>
-          <!-- ======================================================= -->
-          <!-- ======================================================= -->
-          <!-- ======================================================= -->
+        <!-- ======================================================= -->
+        <!-- ======================================================= -->
+        <!-- ======================================================= -->
+              </div>
+              <div class="new_vehicle">
+                <div class="table-title">
+                  <div class="table-title-text">
+                    Ստեղծել տրանսպորտային միջոցի մակնիշ
+                  </div>
+                </div>
+                <form class="new_vehicle_content">
+                  <div class="new_vehicle_fieldset">
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>ՏՄ տեսակ*</label>
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գրել տեսակը"
+                            
+                            class="user-input"
+                            
+                          />
+                          <div class="input-error-message">this is error</div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <div class="new_vehicle_fieldset">
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>ՏՄ մակնիշ*</label>
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գրել մակնիշը"
+                
+                            class="user-input"
+                            
+                          />
+                          <div class="input-error-message">this is error</div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <button class="main-btn">Պահպանել</button>
+                </form>
+              </div>
+              <div class="new_vehicle2">
+                <div class="table-title">
+                  <div class="table-title-text">Փոփոխել տրանսպորտային միջոցի մակնիշը</div>
+                </div>
+                <form class="new_vehicle_content">
+                    
+                  <div class="new_vehicle_fieldset">
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>ՏՄ տեսակ*</label>
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գրել տեսակը"
+                            
+                            class="user-input"
+                            
+                          />
+                          <div class="input-error-message">this is error</div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <div class="new_vehicle_fieldset">
+                    <div class="input-container">
+                      <div class="input-containerChild">
+                        <label>ՏՄ մակնիշ*</label>
+                        <div class="input-validatation-box">
+                          <input
+                            placeholder="Գրել մակնիշը"
+                
+                            class="user-input"
+                            
+                          />
+                          <div class="input-error-message">this is error</div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <button class="main-btn">Պահպանել</button>
+                </form>
+            </div>
+          </div>
+
         </section>
         <!-- right section end-->
       </main>
