@@ -138,7 +138,7 @@
 .transaction-type-ul {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   list-style: circle inside;
 }
 .transaction-type-ul > li span {
@@ -148,15 +148,19 @@
 }
 .transaction-type-ul > li {
   display: flex;
+  gap: 7px;
+}
+.transaction-type-ul > li > div {
+  display: flex;
   gap: 23px;
 }
-.transaction-type-ul > li::marker {
-  unicode-bidi: isolate;
-  font-variant-numeric: tabular-nums;
-  text-transform: none;
-  text-indent: 0px !important;
-  text-align: start !important;
-  text-align-last: start !important;
+.transaction-type-ul > li::before {
+  height: 3px;
+  width: 3px;
+  content: "";
+  background-color: black;
+  border-radius: 100%;
+  margin-top: 8px;
 }
 .transaction-type-ul-delete {
   color: #e63030;
