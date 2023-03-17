@@ -106,6 +106,32 @@
 /* ========================================================= */
 /* ========================================================= */
 /* ========================================================= */
+.note-container-box {
+  display: flex;
+  flex-direction: column;
+}
+.new_note_container {
+  padding: 40px 0;
+  border-top: 1px solid #dadada;
+  position: relative;
+}
+.new_note_container:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+.note-title-btnBox {
+  display: flex;
+  justify-content: flex-end;
+}
+.note-container-delete {
+  background: transparent;
+  border: none;
+  font-size: 30px;
+}
+
+/* ========================================================= */
+/* ========================================================= */
+/* ========================================================= */
 #transaction-type-modal {
   border-radius: 20px;
   min-width: 63%;
