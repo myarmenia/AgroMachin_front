@@ -10,7 +10,8 @@
   display: flex;
   flex-direction: column;
 }
-.new_note_title {
+.new_note_title,
+.note-container_underbox {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
@@ -23,6 +24,10 @@
 .new_note_title > div {
   max-width: 334px;
   min-width: 313px;
+}
+.note-container_underbox > div {
+  max-width: 311px;
+  min-width: 300px;
 }
 .note-container {
   display: flex;
