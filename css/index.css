@@ -244,7 +244,7 @@
   max-height: 253px;
   /* height: 253px; */
   width: 100%;
-  background-color: #fff;
+  background-color: #d4e0f2;
   padding: 0px;
   margin-bottom: 0px;
   margin-top: 0px;
@@ -280,7 +280,7 @@
   position: relative;
   float: left;
   width: 100%;
-  border-bottom: 1px solid #e0e0e0;
+  border: 1px solid #d4e0f2;
   background-color: #e7eef9;
   list-style-type: none;
   padding: 10px 2%;
@@ -288,7 +288,7 @@
   transition: all 275ms ease-in-out;
   display: block;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 12px;
 }
 .cont_select_int:active {
