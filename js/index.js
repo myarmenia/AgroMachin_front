@@ -133,7 +133,7 @@ function openSelect(e) {
   ul_cont_li.forEach((el) => (hg += el.offsetHeight));
   if (slect_open == "false") {
     select.setAttribute("data-is-open", "true");
-    ul.style.height = hg + "px";
+    ul.style.height = hg + 3 + "px";
     if (icon) icon.style.transform = "rotate(180deg)";
   } else {
     select.setAttribute("data-is-open", "false");

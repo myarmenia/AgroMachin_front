@@ -128,6 +128,7 @@
   background: transparent;
   border: none;
   font-size: 30px;
+  cursor: pointer;
 }
 .download-right-box {
   position: relative;
@@ -137,6 +138,9 @@
   transform: translateY(-50%);
   top: 50%;
   left: calc(100% + 18px);
+}
+#add-owner {
+  cursor: pointer;
 }
 
 /* ========================================================= */
@@ -202,6 +206,9 @@
   flex-direction: column;
   gap: 20px;
   list-style: circle inside;
+  max-height: 175px;
+  overflow-y: auto;
+  padding: 0 10px;
 }
 .transaction-type-ul > li span {
   font-size: 14px;
@@ -214,7 +221,9 @@
 }
 .transaction-type-ul > li > div {
   display: flex;
-  gap: 23px;
+  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
 }
 .transaction-type-ul > li::before {
   height: 3px;
@@ -224,13 +233,20 @@
   border-radius: 100%;
   margin-top: 8px;
 }
+.transaction-type-ul > li:first-child {
+  margin-top: 10px;
+}
+.transaction-type-ul > li:last-child {
+  margin-bottom: 10px;
+}
 .transaction-type-ul-delete {
   color: #e63030;
   border: 1px solid #e63030;
   height: 16px;
-  line-height: 14px;
-  width: 18px;
+  line-height: 9px;
+  width: 16px;
   font-weight: 800;
   cursor: pointer;
   background-color: transparent;
+  flex-shrink: 0;
 }
