@@ -8,31 +8,29 @@ function showModal(name) {
   modal_container.style.display = "block";
   modal.style.display = "block";
   setTimeout(() => {
-    // modal.classList.remove("modal-close");
-    // modal_container.classList.remove("modal-close");
-    modal_container.classList.add("modal-open");
     modal.classList.add("modal-open");
+    if (modal.offsetHeight > window.innerHeight)
+      modal.classList.add("modal-open-sm");
+
+    modal_container.classList.add("modal-open");
   }, 1);
 }
 document.querySelectorAll(".toggle").forEach((el) => {
   el.addEventListener("click", () => showModal("#confirm-modal"));
 });
+
 function hideModal() {
   const modals = document.getElementsByClassName("modal");
 
+  modal_container.classList.remove("modal-open");
+  setTimeout(() => {
+    modal_container.style.display = "none";
+    document.body.classList.remove("scroll-disabled");
+  }, 300);
   for (let i = 0; i < modals.length; i++) {
     const modal = modals[i];
-
     modal.classList.remove("modal-open", "modal-open-sm");
-    modal_container.classList.remove("modal-open");
-
-    // modal_container.classList.add("modal-close");
-    // modal.classList.add("modal-close");
-    setTimeout(() => {
-      modal_container.style.display = "none";
-      modal.style.display = "none";
-      document.body.classList.remove("scroll-disabled");
-    }, 300);
+    setTimeout(() => (modal.style.display = "none"), 300);
   }
 }
 

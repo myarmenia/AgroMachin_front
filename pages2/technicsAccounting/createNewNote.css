@@ -112,6 +112,7 @@
 }
 .new_note_container {
   padding: 40px 0;
+  border: none;
   border-top: 1px solid #dadada;
   position: relative;
 }
@@ -128,13 +129,24 @@
   border: none;
   font-size: 30px;
 }
+.download-right-box {
+  position: relative;
+}
+.download-right-box > .main-anchor-blue {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: calc(100% + 18px);
+}
 
 /* ========================================================= */
 /* ========================================================= */
 /* ========================================================= */
 #transaction-type-modal {
-  border-radius: 20px;
   min-width: 63%;
+}
+#transaction-type-modal > .modal-group {
+  border-radius: 20px;
 }
 .modal-content {
   width: 100%;
@@ -145,7 +157,7 @@
   padding: 32px 0 24px 64px;
 }
 .modal-head {
-  padding: 21px 44px 14px 64px;
+  padding: 21px 30px 14px 64px;
 }
 .modal .close {
   scale: 1.8;
