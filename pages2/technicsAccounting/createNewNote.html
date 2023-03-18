@@ -251,8 +251,56 @@
                         <div class="select_mate line" data-mate-select="active">
                           <select name="" onchange="" onclick="return false;">
                             <option value="">Հիմք փաստաթուղթ*</option>
-                            <option value="1">Select option 1</option>
-                            <option value="2">Select option 2</option>
+                            <option value="0">Մաքսային հայտարարագիր</option>
+                            <option value="1">Առուվաճառքի պայմանագիր</option>
+                            <option value="2">
+                              Հանձնման-ընդունման արձանագրություն
+                            </option>
+                            <option value="3">Նվիրատվության պայմանագիր</option>
+                            <option value="4">Փոխանակման պայմանագիր</option>
+                            <option value="5">
+                              Համաձայնագիր պայմանագրի ուժը կորցրած ճանաչելու
+                              մասին
+                            </option>
+                            <option value="6">
+                              Ժառանգության իրավունքի վկայագիր
+                            </option>
+                            <option value="7">Դատական ակտ</option>
+                            <option value="8">Հաշիվ տեղեկանք</option>
+                            <option value="9">
+                              Շահած ՏՄ հանձնման-ընդունման ակտ
+                            </option>
+                            <option value="10">
+                              Ինքնաշեն ՏՄ փորձաքննության եզրակացություն
+                            </option>
+                            <option value="11">
+                              Խոտանման կապակցությամբ հաշվառումից հանելու
+                              տեղեկանք
+                            </option>
+                            <option value="12">
+                              Ըստ կտակի ժառանգության իրավունքի վկայագիր
+                            </option>
+                            <option value="13">Աճուրդի արձանագրություն</option>
+                            <option value="14">Բաժանիչ ակտ</option>
+                            <option value="15">
+                              Իրավ․ անձանց համար գույքի ներդրման պայմանագիր
+                              կանոնադրական կապիտալում
+                            </option>
+                            <option value="16">
+                              Հարկային մարմինների տրված տեղեկանք
+                            </option>
+                            <option value="17">
+                              Որոշում գրավադրված ՏՄ-ի արտադատական կարգով
+                              բռնագրավելու մասին
+                            </option>
+                            <option value="18">
+                              Շահումի տրամադրման պայմանագրով ձեռք բերված ՏՄ-ի
+                              գրանցում
+                            </option>
+                            <option value="19">Տարանցման հայտարարագիր</option>
+                            <option value="20">
+                              Գույքը պահանջատիրոջը հանձնելու մասին պայմանագիր
+                            </option>
                           </select>
                           <div class="select-title">
                             <p class="selecionado_opcion"></p>
@@ -284,25 +332,65 @@
                         <input
                           id="input_checkboxes"
                           hidden
+                          name="checkboxes_input"
                           data-checkboxes-input="0"
                         />
                         <ul
                           class="transaction-type-ul"
                           data-checkboxes-ul="0"
                         ></ul>
-                        <div class="input-group">
-                          <input
-                            class="input-wrap"
-                            placeholder="Հաշվառման հայտ*"
-                          />
+                        <div class="search-select-box">
+                          <div class="input-group">
+                            <input
+                              type="search"
+                              class="input-wrap"
+                              placeholder="Հաշվառման հայտ*"
+                            />
+                          </div>
+                          <div class="search-select-options">
+                            <div class="search-select-option" data-value="0">
+                              aaaaaa
+                            </div>
+                            <div class="search-select-option" data-value="1">
+                              bbbbbb
+                            </div>
+                            <div class="search-select-option" data-value="2">
+                              cccccc
+                            </div>
+                          </div>
                         </div>
 
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Մակնիշ*" />
+                        <div class="search-select-box">
+                          <div class="input-group">
+                            <input class="input-wrap" placeholder="Մակնիշ*" />
+                          </div>
+                          <div class="search-select-options">
+                            <div class="search-select-option" data-value="0">
+                              aaaaaa
+                            </div>
+                            <div class="search-select-option" data-value="1">
+                              bbbbbb
+                            </div>
+                            <div class="search-select-option" data-value="2">
+                              cccccc
+                            </div>
+                          </div>
                         </div>
-
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Մոդել*" />
+                        <div class="search-select-box">
+                          <div class="input-group">
+                            <input class="input-wrap" placeholder="Մոդել*" />
+                          </div>
+                          <div class="search-select-options">
+                            <div class="search-select-option" data-value="0">
+                              aaaaaa
+                            </div>
+                            <div class="search-select-option" data-value="1">
+                              bbbbbb
+                            </div>
+                            <div class="search-select-option" data-value="2">
+                              cccccc
+                            </div>
+                          </div>
                         </div>
                         <div class="input-group">
                           <input class="input-wrap" placeholder="Գույն*" />
@@ -311,11 +399,14 @@
                         <div class="input-group">
                           <input class="input-wrap" placeholder="Տարեթիվ*" />
                         </div>
-                        <div class="input-group">
-                          <input
-                            class="input-wrap input-wrap-error"
-                            placeholder="Գին"
-                          />
+                        <div class="download-right-box">
+                          <div class="input-group">
+                            <input
+                              class="input-wrap input-wrap-error"
+                              placeholder="Գին"
+                            />
+                          </div>
+                          <a href="#" class="main-anchor-blue">Բեռնել</a>
                         </div>
                         <div class="input-group">
                           <input
@@ -441,7 +532,7 @@
                     </div>
                   </div>
                   <div class="btn-box">
-                    <button type="button" class="main-btn">Պահպանել</button>
+                    <button type="submit" class="main-btn">Պահպանել</button>
                   </div>
                 </form>
                 <form
@@ -452,7 +543,7 @@
                 >
                   <div class="new_note">
                     <div class="note-container-box">
-                      <div class="new_note_container" data-box-count="0">
+                      <fieldset class="new_note_container" data-box-count="0">
                         <div class="new_note_title">
                           <div>Սեփականատերեր</div>
                           <div></div>
@@ -463,7 +554,11 @@
                               class="select_mate line"
                               data-mate-select="active"
                             >
-                              <select onchange="" onclick="return false;">
+                              <select
+                                name="group[0][status]"
+                                onchange=""
+                                onclick="return false;"
+                              >
                                 <option value="">Անձի կարգավիճակ*</option>
                                 <option value="1">Select option 1</option>
                                 <option value="2">Select option 2</option>
@@ -479,11 +574,16 @@
                             </div>
 
                             <div class="input-group">
-                              <input class="input-wrap" placeholder="Անուն*" />
+                              <input
+                                name="group[0][name]"
+                                class="input-wrap"
+                                placeholder="Անուն*"
+                              />
                             </div>
 
                             <div class="input-group">
                               <input
+                                name="group[0][last_name]"
                                 class="input-wrap"
                                 placeholder="Ազգանուն*"
                               />
@@ -662,7 +762,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </fieldset>
                     </div>
                     <div class="note-container_underbox">
                       <div class="double-radio">
@@ -750,93 +850,95 @@
 
       <div class="modal-container">
         <div class="modal" id="transaction-type-modal">
-          <div class="modal-head">
-            <h3 class="modal-title">Գործարքի տեսակ</h3>
-            <div class="close">&#x2715;</div>
+          <div class="modal-group">
+            <div class="modal-head">
+              <h3 class="modal-title">Գործարքի տեսակ</h3>
+              <div class="close">&#x2715;</div>
+            </div>
+            <form class="modal-content" data-checkboxes-form="0">
+              <ul class="modal-ul">
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="0" />
+                  <span>Առուվաճառքի պայմանագրով ձեռք բերված ՏՄ-ի գրանցում</span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="1" />
+                  <span
+                    >Նվիրատվության պայմանագրով ձեռք բերված ՏՄ-ի գրանցում
+                  </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="2" />
+                  <span
+                    >Ժառանգության իրավունքի վկայագրով ձեռք բերված ՏՄ-ի
+                    գրանցում</span
+                  >
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="3" />
+                  <span>Փոխանակման պայմանագրով ձեռք բերված ՏՄ-ի գրանցում </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="4" />
+                  <span>Ելք գրանցումից (խոտանում)</span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="5" />
+                  <span>Գրավի վկայագրի տրամադրում </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="6" />
+                  <span>Գրավի վկայագրի մարում </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="7" />
+                  <span>Ելք գրանցումից (մեկնում այլ պետություն)</span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="8" />
+                  <span>Գրանցման վերականգնում (խոտանումից) </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="9" />
+                  <span
+                    >Սեփականության վկայագրի փոխանակում կամ կորցրածի
+                    տրամադրում</span
+                  >
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="10" />
+                  <span
+                    >Առանց սեփականության վկայագրի հաշվառված ՏՄ-ի սեփականության
+                    վկայագրի տրամադրում
+                  </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="11" />
+                  <span>Լիզինգի վկայագրի տրամադրում</span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="12" />
+                  <span>Լիզինգի վկայագրի մարում</span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="13" />
+                  <span>Շտեմարանում տվյալների ուղղում </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="14" />
+                  <span
+                    >Սեփականատիրոջ փոփոխություն նախկին առուվաճառքի պայմանագրի
+                    լուծման համաձայն
+                  </span>
+                </li>
+                <li>
+                  <input type="checkbox" name="modal-checkbox" value="15" />
+                  <span>Աճուրդի միջոցով ձեռք բերված ԱՄՏ-ի գրանցում</span>
+                </li>
+              </ul>
+              <button class="main-btn" type="submit">Պահպանել</button>
+            </form>
           </div>
-          <form class="modal-content" data-checkboxes-form="0">
-            <ul class="modal-ul">
-              <li>
-                <input type="checkbox" name="modal-checkbox" value="0" />
-                <span>Առուվաճառքի պայմանագրով ձեռք բերված ՏՄ-ի գրանցում</span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" value="1" />
-                <span
-                  >Նվիրատվության պայմանագրով ձեռք բերված ՏՄ-ի գրանցում
-                </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" value="2" />
-                <span
-                  >Ժառանգության իրավունքի վկայագրով ձեռք բերված ՏՄ-ի
-                  գրանցում</span
-                >
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" value="3" />
-                <span>Փոխանակման պայմանագրով ձեռք բերված ՏՄ-ի գրանցում </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" value="4" />
-                <span>Ելք գրանցումից (խոտանում)</span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Գրավի վկայագրի տրամադրում </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Գրավի վկայագրի մարում </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Ելք գրանցումից (մեկնում այլ պետություն)</span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Գրանցման վերականգնում (խոտանումից) </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span
-                  >Սեփականության վկայագրի փոխանակում կամ կորցրածի
-                  տրամադրում</span
-                >
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span
-                  >Առանց սեփականության վկայագրի հաշվառված ՏՄ-ի սեփականության
-                  վկայագրի տրամադրում
-                </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Լիզինգի վկայագրի տրամադրում</span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Լիզինգի վկայագրի մարում</span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Շտեմարանում տվյալների ուղղում </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span
-                  >Սեփականատիրոջ փոփոխություն նախկին առուվաճառքի պայմանագրի
-                  լուծման համաձայն
-                </span>
-              </li>
-              <li>
-                <input type="checkbox" name="modal-checkbox" />
-                <span>Աճուրդի միջոցով ձեռք բերված ԱՄՏ-ի գրանցում</span>
-              </li>
-            </ul>
-            <button class="main-btn" type="submit">Պահպանել</button>
-          </form>
         </div>
       </div>
     </div>

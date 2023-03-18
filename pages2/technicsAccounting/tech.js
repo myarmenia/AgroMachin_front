@@ -128,18 +128,18 @@ function addOwner() {
   <div class="note-container">
     <div class="note-container-child">
       <div class="select_mate line" data-mate-select="active">
-        <select name="${randomId()}" onchange="" onclick="return false;"><option value="">Անձի կարգավիճակ*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
+        <select name="group[${note_count}][status]" onchange="" onclick="return false;"><option value="">Անձի կարգավիճակ*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
       </div>
-      <div class="input-group"><input name="${randomId()}" class="input-wrap" placeholder="Անուն*" /></div>
-      <div class="input-group"><input name="${randomId()}" class="input-wrap" placeholder="Ազգանուն*" /></div>
-      <div class="input-group"><input name="${randomId()}" class="input-wrap" placeholder="Հայրանուն*" /></div>
+      <div class="input-group"><input name="group[${note_count}][name]" class="input-wrap" placeholder="Անուն*" /></div>
+      <div class="input-group"><input name="group[${note_count}][last_name]" class="input-wrap" placeholder="Ազգանուն*" /></div>
+      <div class="input-group"><input class="input-wrap" placeholder="Հայրանուն*" /></div>
       <div class="select_mate line" data-mate-select="active">
-        <select name="${randomId()}" onchange="" onclick="return false;"><option value="">Քաղաքացիություն*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
+        <select onchange="" onclick="return false;"><option value="">Քաղաքացիություն*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
       </div>
       <div class="select_mate line" data-mate-select="active">
-        <select name="${randomId()}" onchange="" onclick="return false;"><option value="">Փաստաթղթի տեսակը*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
+        <select onchange="" onclick="return false;"><option value="">Փաստաթղթի տեսակը*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
       </div>
       <div class="input-group"><input class="input-wrap" placeholder="Անձնագրի սերիա և համար*" /></div>
@@ -171,30 +171,50 @@ function addOwner() {
     </div>
   </div>
   `;
-  const box = document.createElement("div");
+  const box = document.createElement("fieldset");
   box.className = "new_note_container";
-  box.setAttribute("data-box-count", note_count);
   box.innerHTML = addContainer;
   const cont = this.closest(".new_note").querySelector(".note-container-box");
   cont.append(box);
-  note_count++;
 
   createInputs(box);
   createSelectOptions(box);
-  
-  box.querySelectorAll(".select-title").forEach((el) => {
-    el.addEventListener("click", openSelect);
-  });
+
   box
     .querySelector(".note-title-btnBox > button")
     .addEventListener("click", function () {
       this.closest(".new_note_container").remove();
+
+      cont.querySelectorAll(".new_note_container").forEach((el, i) => {
+        el.setAttribute("data-box-count", i);
+      });
     });
+
+  // cont.querySelectorAll(".new_note_container").forEach((el, i) => {
+  //   el.setAttribute("data-box-count", i);
+  // });
+  // note_count = cont.querySelectorAll(".new_note_container").length - 1;
 }
 
 addBtn.addEventListener("click", addOwner);
 
 document.querySelector("#the_form").addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log(Object.fromEntries(new FormData(e.target)));
+  const formData = new FormData(e.target),
+    formObj = Object.fromEntries(formData),
+    group = [];
+
+  Object.entries(formObj).forEach(([key, value]) => {
+    const key_props = key.split("]").join("").split("["),
+      index = +key_props[1],
+      item_name = key_props[2];
+
+    if (!group[index]) group[index] = { ...group[index] };
+
+    Object.assign(group[index], { [item_name]: value });
+  });
+
+  if (group.length) {
+    console.log(group);
+  }
 });

@@ -13,7 +13,7 @@
 /* -------------------------------- */
 
 :root {
-  --select-delay: 300ms;
+  --select-delay: 700ms;
   --gray: #5f6368;
   --light-blue: #7098d5;
 }
@@ -43,6 +43,53 @@
   border: 1px solid #f00 !important;
 }
 
+/* -------------------------------------------------- */
+/* ---------------- Search-Select ------------------- */
+/* -------------------------------------------------- */
+.search-select-box {
+  position: relative;
+}
+.search-select-options {
+  position: absolute;
+  top: calc(100% + 3px);
+
+  z-index: 999;
+  height: 0;
+  overflow: hidden;
+  max-height: 253px;
+  width: 100%;
+  background-color: #d4e0f2;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-radius: 0px 0px 3px 3px;
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+  transition: all var(--select-delay) ease-in-out;
+}
+.search-select-option {
+  position: relative;
+  float: left;
+  width: 100%;
+  border: 1px solid #d4e0f2;
+  background-color: #e7eef9;
+  list-style-type: none;
+  padding: 10px 2%;
+  margin: 0px;
+  transition: all 275ms ease-in-out;
+  display: block;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+.search-select-option.active {
+  background: #d2def0;
+  color: #343957;
+}
+
+/* ================================================== */
+/* ================================================== */
+/* ================================================== */
+
 /* -------------------------------- */
 /* Forms */
 /* -------------------------------- */
@@ -58,98 +105,6 @@
   width: 200px;
 }
 
-/* .custom-select-rounded {
-  border: 1px solid #dadada;
-  border-radius: 8px;
-  border-bottom: 1px solid #dadada !important;
-  height: 30px !important;
-}
-.custom-select-rounded span {
-  padding-left: 10px;
-}
-.custom-select-rounded i {
-  right: 10px;
-  width: 13px;
-}
-.language-select {
-  min-width: 120px !important;
-}
-
-.custom-select {
-  width: fit-content;
-  border-bottom: 1px solid #575757;
-  min-width: 200px;
-  height: 35px;
-  position: relative;
-}
-.select-heading {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-.select-chev {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  right: 10px;
-  object-fit: cover;
-}
-.select-input {
-  display: none;
-}
-.input-value {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  border: none;
-  z-index: 1;
-  width: fit-content;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 36px;
-  color: #575757;
-}
-.select-options {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  position: absolute;
-  top: calc(100% + 12px);
-  display: none;
-  max-height: 200px;
-  overflow-y: auto;
-}
-.select-option {
-  width: 100%;
-  color: #575757;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: normal;
-}
-.select-option:first-child {
-  padding-top: 15px;
-}
-.select-option:last-child {
-  padding-bottom: 15px;
-}
-.select-option:hover {
-  color: #343957;
-}
-.custom-select.options-open > .select-options {
-  display: flex;
-  z-index: 30;
-}
-.option-active {
-  color: #343957;
-  font-weight: bold;
-} */
-/* ======================================= */
 /* custom select Art */
 /* ///  DECORATION CSS ///  */
 .cont_select_center {
@@ -345,7 +300,6 @@
   letter-spacing: -0.019em;
   color: #575757;
 }
-
 .main-anchor-blue {
   font-weight: 600;
   font-size: 14px;
@@ -356,6 +310,13 @@
 /* -------------------------------------------------- */
 /* -------------------- Input ----------------------- */
 /* -------------------------------------------------- */
+.main-anchor-blue {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: #7098d5;
+  text-decoration-skip-ink: none;
+}
 .input-group {
   min-width: 200px;
   min-height: 45px;
