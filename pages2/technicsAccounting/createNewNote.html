@@ -312,7 +312,7 @@
                         <div class="input-group">
                           <input
                             class="input-wrap"
-                            placeholder="Գույքի ծածկագիր/կոդ/*"
+                            placeholder="Գույքի ծածկագիր /կոդ/*"
                           />
                         </div>
 
@@ -339,6 +339,12 @@
                           class="transaction-type-ul"
                           data-checkboxes-ul="0"
                         ></ul>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Նույնացման համար*"
+                          />
+                        </div>
                         <div class="search-select-box">
                           <div class="input-group">
                             <input
@@ -407,12 +413,6 @@
                             />
                           </div>
                           <a href="#" class="main-anchor-blue">Բեռնել</a>
-                        </div>
-                        <div class="input-group">
-                          <input
-                            class="input-wrap"
-                            placeholder="Նույնացման համար*"
-                          />
                         </div>
                         <div class="input-group">
                           <input
@@ -495,11 +495,11 @@
                         <div class="double-radio">
                           <div class="double-radio-box">
                             <div class="radio-group">
-                              <input type="radio" />
+                              <input type="radio" name="car-license-plate" />
                               <label>Տրանզիտ / Ժմնկ հմրնշ</label>
                             </div>
                             <div class="radio-group">
-                              <input type="radio" />
+                              <input type="radio" name="car-license-plate" />
                               <label>Պետ․ հմրնշ</label>
                             </div>
                           </div>
@@ -560,8 +560,8 @@
                                 onclick="return false;"
                               >
                                 <option value="">Անձի կարգավիճակ*</option>
-                                <option value="1">Select option 1</option>
-                                <option value="2">Select option 2</option>
+                                <option value="1">Ֆիզիկական անձ</option>
+                                <option value="2">Իրավաբանական անձ</option>
                               </select>
                               <div class="select-title">
                                 <p class="selecionado_opcion">
@@ -668,15 +668,10 @@
                               class="select_mate line"
                               data-mate-select="active"
                             >
-                              <select
-                                name=""
-                                onchange=""
-                                onclick="return false;"
-                                id=""
-                              >
+                              <select onchange="" onclick="return false;">
                                 <option value="">Սեռ*</option>
-                                <option value="1">Select option 1</option>
-                                <option value="2">Select option 2</option>
+                                <option value="1">Արական</option>
+                                <option value="2">Իգական</option>
                               </select>
                               <div class="select-title">
                                 <p class="selecionado_opcion"></p>
@@ -699,8 +694,10 @@
                                 id=""
                               >
                                 <option value="">Երկիր*</option>
-                                <option value="1">Select option 1</option>
-                                <option value="2">Select option 2</option>
+                                <option value="1">Հայաստան</option>
+                                <option value="2">Ռուսաստան</option>
+                                <option value="2">Վրաստան</option>
+                                <option value="2">Ղազախստան</option>
                               </select>
                               <div class="select-title">
                                 <p class="selecionado_opcion"></p>
