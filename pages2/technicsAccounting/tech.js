@@ -95,6 +95,17 @@
 //   getData(e.target);
 // });
 
+// ----------------------------------------------------------------------
+// Variables
+// ----------------------------------------------------------------------
+const select_person_status = document.querySelectorAll(".select_person_status"),
+  physical_person = document.querySelector("#physical_person"),
+  juridical_person = document.querySelector("#juridical_person");
+
+// ======================================================================
+// ======================================================================
+// ======================================================================
+
 const tabs = document.getElementsByClassName("tabs_text");
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener("click", (event) => {
@@ -217,4 +228,27 @@ document.querySelector("#the_form").addEventListener("submit", function (e) {
   if (group.length) {
     console.log(group);
   }
+});
+
+select_person_status.forEach((el) => {
+  el.addEventListener("change", function () {
+    select_person_status.forEach((e) => {
+      const chosenOpt = [...e.options].find((opt) => opt.value === this.value),
+        activeOpt = e.closest(".select_mate").querySelectorAll("li");
+      chosenOpt.selected = true;
+
+      activeOpt.forEach((li) => {
+        if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
+          li.classList.add("active");
+        } else li.classList.remove("active");
+      });
+    });
+    if (this.value === "1") {
+      physical_person.style.display = "none";
+      juridical_person.style.display = "block";
+    } else {
+      physical_person.style.display = "block";
+      juridical_person.style.display = "none";
+    }
+  });
 });
