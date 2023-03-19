@@ -133,7 +133,7 @@ function openSelect(e) {
   ul_cont_li.forEach((el) => (hg += el.offsetHeight));
   if (slect_open == "false") {
     select.setAttribute("data-is-open", "true");
-    ul.style.height = hg + 3 + "px";
+    ul.style.height = hg + 1 + "px";
     if (icon) icon.style.transform = "rotate(180deg)";
   } else {
     select.setAttribute("data-is-open", "false");
@@ -163,7 +163,8 @@ function setSelectOption() {
   li_s[indx].className = "active";
   select_optiones[indx].selected = true;
   select_.selectedIndex = indx;
-  select_.onchange();
+  // select_.onchange();
+  select_.dispatchEvent(new Event("change"))
   closeSelectByElem(this);
 }
 
@@ -201,11 +202,13 @@ function createSelectOptions(rootElement = document) {
 
       li.innerHTML = select_optiones[i].innerHTML;
 
-      window.addEventListener("click", function (e) {
-        if (e.target != li) closeSelectByElem(li);
-      });
       ul_cont.appendChild(li);
     }
+    window.addEventListener("click", function (e) {
+      if ([...ul_cont.children].some((li) => li != e.target)) {
+        closeSelectByElem([...ul_cont.children].find((li) => li != e.target));
+      }
+    });
   }
 
   rootElement.querySelectorAll(".select-title").forEach((el) => {
@@ -255,8 +258,7 @@ modal_form.forEach((el) => {
               <button type="button" 
                 class="transaction-type-ul-delete" 
                 data-checkboxes-delete='${el.value}'
-                  >&#x2715;
-              </button>
+                  >&#x2715;</button>
             </div>`;
         checkboxes_ul.append(li);
         hideModal();
@@ -296,7 +298,7 @@ search_select.forEach((el) => {
       options_box = container.querySelector(".search-select-options");
 
     let hg =
-      options_box.children.length * options_box.children[0].offsetHeight + 3;
+      options_box.children.length * options_box.children[0].offsetHeight + 1;
     options_box.style.height = hg + "px";
     options_box.style.transitionDuration =
       Math.min(select_delay, options_box.children.length * 100) + "ms";
@@ -328,3 +330,4 @@ search_select.forEach((el) => {
   });
 });
 // ====================================================================
+
