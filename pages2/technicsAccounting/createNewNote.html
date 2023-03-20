@@ -246,6 +246,12 @@
                   data-activ_tab="0"
                 >
                   <div class="new_note">
+                    <div class="note-container-error">
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                    </div>
                     <div class="note-container">
                       <div class="note-container-child">
                         <div class="select_mate line" data-mate-select="active">
@@ -312,10 +318,9 @@
                         <div class="input-group">
                           <input
                             class="input-wrap"
-                            placeholder="Գույքի ծածկագիր /կոդ/*"
+                            placeholder="Գույքի ծածկագիր/կոդ/*"
                           />
                         </div>
-
                         <div class="input-group">
                           <input
                             class="input-wrap"
@@ -419,7 +424,9 @@
                             placeholder="Շարժիչի համար*"
                           />
                         </div>
-                        <a href="#" class="main-anchor-blue">Բեռնել</a>
+                        <button class="main-anchor-blue" type="button">
+                          Բեռնել
+                        </button>
                       </div>
                       <div class="note-container-child">
                         <div class="input-group">
@@ -533,10 +540,415 @@
                   id="the_form"
                 >
                   <div id="physical_person" class="new_note">
+                    <div class="note-container-error">
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                    </div>
                     <div class="note-container-box">
                       <fieldset class="new_note_container" data-box-count="0">
                         <div class="new_note_title">
                           <div>Սեփականատերեր</div>
+                          <div></div>
+                        </div>
+                        <div class="note-container">
+                          <div class="note-container-child">
+                            <div
+                              class="select_mate line"
+                              data-mate-select="active"
+                            >
+                              <select
+                                class="select_person_status"
+                                name="group[0][status]"
+                              >
+                                <option value="">Անձի կարգավիճակ*</option>
+                                <option value="0">Ֆիզիկական անձ</option>
+                                <option value="1">Իրավաբանական անձ</option>
+                              </select>
+                              <div class="select-title">
+                                <p class="selecionado_opcion">
+                                  Անձի կարգավիճակ*
+                                </p>
+                                <span class="icon_select_mate icon"
+                                  ><img src="../../assets/select-chev.svg"
+                                /></span>
+                              </div>
+                            </div>
+
+                            <div class="input-group">
+                              <input
+                                name="group[0][name]"
+                                class="input-wrap"
+                                placeholder="Անուն*"
+                              />
+                            </div>
+
+                            <div class="input-group">
+                              <input
+                                name="group[0][last_name]"
+                                class="input-wrap"
+                                placeholder="Ազգանուն*"
+                              />
+                            </div>
+
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Հայրանուն*"
+                              />
+                            </div>
+                            <div
+                              class="select_mate line"
+                              data-mate-select="active"
+                            >
+                              <select name="" id="">
+                                <option value="">Քաղաքացիություն*</option>
+                                <option value="1">Select option 1</option>
+                                <option value="2">Select option 2</option>
+                              </select>
+                              <div class="select-title">
+                                <p class="selecionado_opcion">
+                                  Քաղաքացիություն*
+                                </p>
+                                <span class="icon_select_mate icon"
+                                  ><img src="../../assets/select-chev.svg"
+                                /></span>
+                              </div>
+                            </div>
+                            <div
+                              class="select_mate line"
+                              data-mate-select="active"
+                            >
+                              <select name="" id="">
+                                <option value="">Փաստաթղթի տեսակը*</option>
+                                <option value="1">Select option 1</option>
+                                <option value="2">Select option 2</option>
+                              </select>
+                              <div class="select-title">
+                                <p class="selecionado_opcion"></p>
+                                <span class="icon_select_mate icon"
+                                  ><img src="../../assets/select-chev.svg"
+                                /></span>
+                              </div>
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Անձնագրի սերիա և համար*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Ում կողմից է տրված*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Երբ է տրված*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input class="input-wrap" placeholder="ՀԾՀ*" />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Ծննդյան ամսաթիվ*"
+                              />
+                            </div>
+                            <div
+                              class="select_mate line"
+                              data-mate-select="active"
+                            >
+                              <select>
+                                <option value="">Սեռ*</option>
+                                <option value="1">Արական</option>
+                                <option value="2">Իգական</option>
+                              </select>
+                              <div class="select-title">
+                                <p class="selecionado_opcion"></p>
+                                <span class="icon_select_mate icon"
+                                  ><img src="../../assets/select-chev.svg"
+                                /></span>
+                              </div>
+                            </div>
+                            <button class="main-anchor-blue" type="button">
+                              Բեռնել
+                            </button>
+                          </div>
+                          <div class="note-container-child">
+                            <div
+                              class="select_mate line"
+                              data-mate-select="active"
+                            >
+                              <select name="state" hidden id="state">
+                                <option value="">Երկիր*</option>
+                                <option value="1">Հայաստան</option>
+                                <option value="2">Ռուսաստան</option>
+                                <option value="2">Վրաստան</option>
+                                <option value="2">Ղազախստան</option>
+                              </select>
+                              <div class="select-title">
+                                <p class="selecionado_opcion"></p>
+                                <span class="icon_select_mate icon"
+                                  ><img src="../../assets/select-chev.svg"
+                                /></span>
+                              </div>
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Համայնք/Վարչ․շրջան*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Բնակավայր*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Փոստային դասիչ"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input class="input-wrap" placeholder="Փողոց" />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Տան տեսակ"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input class="input-wrap" placeholder="Շենք*" />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Բնակարան/Սենյակ"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Բաժնեմասեր (%-ով)"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Հեռախոսահամար*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input class="input-wrap" placeholder="Էլ․փոստ" />
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="note-container_underbox">
+                      <div class="double-radio">
+                        <div class="double-radio-box">
+                          <div class="radio-group">
+                            <input type="checkbox" id="openAuthorized" />
+                            <label>Լիազորված անձ</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="double-radio" id="add-owner">
+                        <div class="double-radio-box">
+                          <div class="radio-group">
+                            <img src="../../assets/plus.svg" />
+                            <label>Այլ սեփականատերեր</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <button class="main-btn">Պահպանել</button>
+                    </div>
+                  </div>
+                  <div
+                    id="juridical_person"
+                    style="display: none"
+                    class="new_note"
+                  >
+                    <div class="note-container-error">
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                    </div>
+                    <div class="note-container-box">
+                      <fieldset class="new_note_container" data-box-count="0">
+                        <div class="new_note_title">
+                          <div>Սեփականատերեր</div>
+                          <div></div>
+                        </div>
+                        <div class="note-container">
+                          <div class="note-container-child">
+                            <div
+                              class="select_mate line"
+                              data-mate-select="active"
+                            >
+                              <select
+                                class="select_person_status"
+                                name="group[0][status]"
+                              >
+                                <option value="">Անձի կարգավիճակ*</option>
+                                <option value="0">Ֆիզիկական անձ</option>
+                                <option value="1">Իրավաբանական անձ</option>
+                              </select>
+                              <div class="select-title">
+                                <p class="selecionado_opcion">
+                                  Անձի կարգավիճակ*
+                                </p>
+                                <span class="icon_select_mate icon"
+                                  ><img src="../../assets/select-chev.svg"
+                                /></span>
+                              </div>
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Իրավաբանական անձի անուն*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Իրավաբանական անձի հասցե*"
+                              />
+                            </div>
+                            <div
+                              class="select_mate line"
+                              data-mate-select="active"
+                            >
+                              <select>
+                                <option value="">
+                                  Պետական գրանցման ռեգիստր*
+                                </option>
+                                <option value="1">Select option 1</option>
+                                <option value="2">Select option 2</option>
+                              </select>
+                              <div class="select-title">
+                                <p class="selecionado_opcion"></p>
+                                <span class="icon_select_mate icon"
+                                  ><img src="../../assets/select-chev.svg"
+                                /></span>
+                              </div>
+                            </div>
+                            <div class="input-group">
+                              <input class="input-wrap" placeholder="ՀՎՀՀ*" />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Հեռախոսահամար"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                type="email"
+                                placeholder="Էլ․ փոստ"
+                              />
+                            </div>
+                            <button class="main-anchor-blue" type="button">
+                              Բեռնել
+                            </button>
+                          </div>
+                          <div class="note-container-child">
+                            <div class="input-group">
+                              <input class="input-wrap" placeholder="Անուն*" />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Ազգանուն*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Անձնագրի սերիա և համար*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Ում կողմից է տրված*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Երբ է տրված*"
+                              />
+                            </div>
+                            <div class="input-group">
+                              <input class="input-wrap" placeholder="ՀԾՀ*" />
+                            </div>
+                            <div class="input-group">
+                              <input
+                                class="input-wrap"
+                                placeholder="Հեռախոսահամար*"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="note-container_underbox">
+                      <div class="double-radio">
+                        <div class="double-radio-box">
+                          <div class="radio-group">
+                            <input type="checkbox" id="openAuthorized" />
+                            <label>Լիազորված անձ</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="btn-box">
+                        <button class="main-btn">Պահպանել</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- <div
+                  class="app app_activ"
+                  style="display: none"
+                  data-activ_tab="2"
+                >
+                  <div class="new_note">
+                    <div class="create_note">
+                      <h3>Այլ լիազորված անձ</h3>
+                    </div>
+                  </div>
+                </div> -->
+                <form
+                  class="app app_activ"
+                  style="display: none"
+                  data-activ_tab="2"
+                  id="the_form"
+                >
+                  <div id="physical_person" class="new_note">
+                    <div class="note-container-error">
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                    </div>
+                    <div class="note-container-box">
+                      <fieldset class="new_note_container" data-box-count="0">
+                        <div class="new_note_title">
+                          <div>Հայտատու</div>
                           <div></div>
                         </div>
                         <div class="note-container">
@@ -660,7 +1072,9 @@
                                 /></span>
                               </div>
                             </div>
-                            <a href="" class="main-anchor-blue"> Բեռնել </a>
+                            <button class="main-anchor-blue" type="button">
+                              Բեռնել
+                            </button>
                           </div>
                           <div class="note-container-child">
                             <div
@@ -720,7 +1134,7 @@
                             <div class="input-group">
                               <input
                                 class="input-wrap"
-                                placeholder="Բաժնեմասեր"
+                                placeholder="Բաժնեմասեր (%-ով)"
                               />
                             </div>
                             <div class="input-group">
@@ -838,7 +1252,9 @@
                                 placeholder="Էլ․ փոստ"
                               />
                             </div>
-                            <a href="" class="main-anchor-blue">Բեռնել</a>
+                            <button class="main-anchor-blue" type="button">
+                              Բեռնել
+                            </button>
                           </div>
                           <div class="note-container-child">
                             <div class="input-group">
@@ -896,387 +1312,6 @@
                     </div>
                   </div>
                 </form>
-                <!-- <div
-                  class="app app_activ"
-                  style="display: none"
-                  data-activ_tab="2"
-                >
-                  <div class="new_note">
-                    <div class="create_note">
-                      <h3>Այլ լիազորված անձ</h3>
-                    </div>
-                  </div>
-                </div> -->
-                <form
-                class="app app_activ"
-                style="display: none"
-                data-activ_tab="2"
-                id="the_form"
-              >
-                <div id="physical_person" class="new_note">
-                  <div class="note-container-box">
-                    <fieldset class="new_note_container" data-box-count="0">
-                      <div class="new_note_title">
-                        <div>Հայտատու</div>
-                        <div></div>
-                      </div>
-                      <div class="note-container">
-                        <div class="note-container-child">
-                          <div
-                            class="select_mate line"
-                            data-mate-select="active"
-                          >
-                            <select
-                              class="select_person_status"
-                              name="group[0][status]"
-                            >
-                              <option value="">Անձի կարգավիճակ*</option>
-                              <option value="0">Ֆիզիկական անձ</option>
-                              <option value="1">Իրավաբանական անձ</option>
-                            </select>
-                            <div class="select-title">
-                              <p class="selecionado_opcion">
-                                Անձի կարգավիճակ*
-                              </p>
-                              <span class="icon_select_mate icon"
-                                ><img src="../../assets/select-chev.svg"
-                              /></span>
-                            </div>
-                          </div>
-
-                          <div class="input-group">
-                            <input
-                              name="group[0][name]"
-                              class="input-wrap"
-                              placeholder="Անուն*"
-                            />
-                          </div>
-
-                          <div class="input-group">
-                            <input
-                              name="group[0][last_name]"
-                              class="input-wrap"
-                              placeholder="Ազգանուն*"
-                            />
-                          </div>
-
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Հայրանուն*"
-                            />
-                          </div>
-                          <div
-                            class="select_mate line"
-                            data-mate-select="active"
-                          >
-                            <select name="" id="">
-                              <option value="">Քաղաքացիություն*</option>
-                              <option value="1">Select option 1</option>
-                              <option value="2">Select option 2</option>
-                            </select>
-                            <div class="select-title">
-                              <p class="selecionado_opcion"></p>
-                              <span class="icon_select_mate icon"
-                                ><img src="../../assets/select-chev.svg"
-                              /></span>
-                            </div>
-                          </div>
-                          <div
-                            class="select_mate line"
-                            data-mate-select="active"
-                          >
-                            <select name="" id="">
-                              <option value="">Փաստաթղթի տեսակը*</option>
-                              <option value="1">Select option 1</option>
-                              <option value="2">Select option 2</option>
-                            </select>
-                            <div class="select-title">
-                              <p class="selecionado_opcion"></p>
-                              <span class="icon_select_mate icon"
-                                ><img src="../../assets/select-chev.svg"
-                              /></span>
-                            </div>
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Անձնագրի սերիա և համար*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Ում կողմից է տրված*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Երբ է տրված*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input class="input-wrap" placeholder="ՀԾՀ*" />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Ծննդյան ամսաթիվ*"
-                            />
-                          </div>
-                          <div
-                            class="select_mate line"
-                            data-mate-select="active"
-                          >
-                            <select>
-                              <option value="">Սեռ*</option>
-                              <option value="1">Արական</option>
-                              <option value="2">Իգական</option>
-                            </select>
-                            <div class="select-title">
-                              <p class="selecionado_opcion"></p>
-                              <span class="icon_select_mate icon"
-                                ><img src="../../assets/select-chev.svg"
-                              /></span>
-                            </div>
-                          </div>
-                          <a href="" class="main-anchor-blue"> Բեռնել </a>
-                        </div>
-                        <div class="note-container-child">
-                          <div
-                            class="select_mate line"
-                            data-mate-select="active"
-                          >
-                            <select name="state" hidden id="state">
-                              <option value="">Երկիր*</option>
-                              <option value="1">Հայաստան</option>
-                              <option value="2">Ռուսաստան</option>
-                              <option value="2">Վրաստան</option>
-                              <option value="2">Ղազախստան</option>
-                            </select>
-                            <div class="select-title">
-                              <p class="selecionado_opcion"></p>
-                              <span class="icon_select_mate icon"
-                                ><img src="../../assets/select-chev.svg"
-                              /></span>
-                            </div>
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Համայնք/Վարչ․շրջան*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Բնակավայր*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Փոստային դասիչ"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input class="input-wrap" placeholder="Փողոց" />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Տան տեսակ"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input class="input-wrap" placeholder="Շենք*" />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Բնակարան/Սենյակ"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Բաժնեմասեր"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Հեռախոսահամար*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input class="input-wrap" placeholder="Էլ․փոստ" />
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="note-container_underbox">
-                    <div class="double-radio">
-                      <div class="double-radio-box">
-                        <div class="radio-group">
-                          <input type="checkbox" id="openAuthorized" />
-                          <label>Լիազորված անձ</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="double-radio" id="add-owner">
-                      <div class="double-radio-box">
-                        <div class="radio-group">
-                          <img src="../../assets/plus.svg" />
-                          <label>Այլ սեփականատերեր</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="btn-box">
-                    <button class="main-btn">Պահպանել</button>
-                  </div>
-                </div>
-                <div
-                  id="juridical_person"
-                  style="display: none"
-                  class="new_note"
-                >
-                  <div class="note-container-box">
-                    <fieldset class="new_note_container" data-box-count="0">
-                      <div class="new_note_title">
-                        <div>Հայտատու</div>
-                        <div></div>
-                      </div>
-                      <div class="note-container">
-                        <div class="note-container-child">
-                          <div
-                            class="select_mate line"
-                            data-mate-select="active"
-                          >
-                            <select
-                              class="select_person_status"
-                              name="group[0][status]"
-                            >
-                              <option value="">Անձի կարգավիճակ*</option>
-                              <option value="0">Ֆիզիկական անձ</option>
-                              <option value="1">Իրավաբանական անձ</option>
-                            </select>
-                            <div class="select-title">
-                              <p class="selecionado_opcion">
-                                Անձի կարգավիճակ*
-                              </p>
-                              <span class="icon_select_mate icon"
-                                ><img src="../../assets/select-chev.svg"
-                              /></span>
-                            </div>
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Իրավաբանական անձի անուն*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Իրավաբանական անձի հասցե*"
-                            />
-                          </div>
-                          <div
-                            class="select_mate line"
-                            data-mate-select="active"
-                          >
-                            <select>
-                              <option value="">
-                                Պետական գրանցման ռեգիստր*
-                              </option>
-                              <option value="1">Select option 1</option>
-                              <option value="2">Select option 2</option>
-                            </select>
-                            <div class="select-title">
-                              <p class="selecionado_opcion"></p>
-                              <span class="icon_select_mate icon"
-                                ><img src="../../assets/select-chev.svg"
-                              /></span>
-                            </div>
-                          </div>
-                          <div class="input-group">
-                            <input class="input-wrap" placeholder="ՀՎՀՀ*" />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Հեռախոսահամար"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              type="email"
-                              placeholder="Էլ․ փոստ"
-                            />
-                          </div>
-                          <a href="" class="main-anchor-blue">Բեռնել</a>
-                        </div>
-                        <div class="note-container-child">
-                          <div class="input-group">
-                            <input class="input-wrap" placeholder="Անուն*" />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Ազգանուն*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Անձնագրի սերիա և համար*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Ում կողմից է տրված*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Երբ է տրված*"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <input class="input-wrap" placeholder="ՀԾՀ*" />
-                          </div>
-                          <div class="input-group">
-                            <input
-                              class="input-wrap"
-                              placeholder="Հեռախոսահամար*"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="note-container_underbox">
-                    <div class="double-radio">
-                      <div class="double-radio-box">
-                        <div class="radio-group">
-                          <input type="checkbox" id="openAuthorized" />
-                          <label>Լիազորված անձ</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="btn-box">
-                      <button class="main-btn">Պահպանել</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
                 <div
                   class="app app_activ"
                   style="display: none"
