@@ -251,3 +251,26 @@
   background-color: transparent;
   flex-shrink: 0;
 }
+
+/*Հանձնել*/
+.give {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.resort {
+  display: flex;
+  justify-content: space-between;
+}
+.resort h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #343957;
+}
+.resort .view > a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7098D5;
+}
+/*Հանձնել վերջ*/
