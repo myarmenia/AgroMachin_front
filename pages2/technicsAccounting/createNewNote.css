@@ -1,7 +1,7 @@
 .app {
   background: #fff;
   border-radius: 10px;
-  padding: 0 18px;
+  padding: 0 18px 60px;
 }
 
 .new_note {
@@ -101,7 +101,7 @@
   display: flex;
   justify-content: flex-end;
   width: 85%;
-  height: 100px;
+  align-items: center;
 }
 
 /* ========================================================= */
