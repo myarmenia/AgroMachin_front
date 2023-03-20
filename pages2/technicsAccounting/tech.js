@@ -162,7 +162,7 @@ function addOwner() {
         <select onchange="" onclick="return false;"><option value="">Սեռ*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
       </div>
-      <div class="main-anchor-blue">Բեռնել</div>
+      <a href="" class="main-anchor-blue">Բեռնել</a>
     </div>
     <div class="note-container-child">
       <div class="select_mate line" data-mate-select="active">
@@ -176,7 +176,7 @@ function addOwner() {
       <div class="input-group"><input class="input-wrap" placeholder="Տան տեսակ" /></div>
       <div class="input-group"><input class="input-wrap" placeholder="Շենք*" /></div>
       <div class="input-group"><input class="input-wrap" placeholder="Բնակարան/Սենյակ" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Բաժնեմասեր" /></div>
+      <div class="input-group"><input class="input-wrap" placeholder="Բաժնեմասեր (%-ով)" /></div>
       <div class="input-group"><input class="input-wrap" placeholder="Հեռախոսահամար*" /></div>
       <div class="input-group"><input class="input-wrap" placeholder="Էլ․փոստ" /></div>
     </div>
