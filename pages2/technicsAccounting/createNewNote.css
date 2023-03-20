@@ -61,7 +61,8 @@
   display: flex;
   gap: 20px;
 } */
-.new-note-btn {
+/* .new-note-btn {
+  all: unset;
   margin-top: 10px;
   font-weight: 600;
   font-size: 14px;
@@ -69,7 +70,7 @@
 
   text-decoration-line: underline;
   color: #7098d5;
-}
+} */
 .double-inp-box .input-group {
   min-width: 100px;
   min-height: 41px;
