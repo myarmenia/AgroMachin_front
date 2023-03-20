@@ -162,7 +162,7 @@ function addOwner() {
         <select onchange="" onclick="return false;"><option value="">Սեռ*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
       </div>
-      <div class="new-note-btn">Բեռնել</div>
+      <div class="main-anchor-blue">Բեռնել</div>
     </div>
     <div class="note-container-child">
       <div class="select_mate line" data-mate-select="active">
