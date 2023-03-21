@@ -100,7 +100,9 @@
 // ----------------------------------------------------------------------
 const select_person_status = document.querySelectorAll(".select_person_status"),
   physical_person = document.querySelector("#physical_person"),
-  juridical_person = document.querySelector("#juridical_person");
+  juridical_person = document.querySelector("#juridical_person"),
+  authorized_person = document.querySelector("#authorized_person"),
+  addBtn = document.querySelector("#add-owner");
 
 // ======================================================================
 // ======================================================================
@@ -129,8 +131,6 @@ for (let i = 0; i < tabs.length; i++) {
 document
   .querySelector("#transaction-type-modal-btn")
   .addEventListener("click", () => showModal("#transaction-type-modal"));
-
-const addBtn = document.querySelector("#add-owner");
 
 let note_count = 1;
 function addOwner() {
@@ -245,13 +245,27 @@ select_person_status.forEach((el) => {
     });
     if (this.value === "1") {
       physical_person.style.display = "none";
-      juridical_person.style.display = "block";
+      juridical_person.style.display = "flex";
+      addBtn.style.visibility = "hidden";
     } else {
-      physical_person.style.display = "block";
+      physical_person.style.display = "flex";
       juridical_person.style.display = "none";
+      addBtn.style.visibility = "visible";
     }
   });
 });
+
+document
+  .querySelector("#openAuthorized")
+  .addEventListener("change", function () {
+    if (this.checked) {
+      authorized_person.style.display = "flex";
+      addBtn.style.visibility = "hidden";
+    } else {
+      authorized_person.style.display = "none";
+      addBtn.style.visibility = "visible";
+    }
+  });
 
 let checkboxes = document.querySelectorAll(".handCheckbox");
 let handBtn = document.querySelectorAll(".main-btn")[0];

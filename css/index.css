@@ -118,7 +118,6 @@
   background-color: #d2def0;
 }
 
-
 /* ================================================== */
 /* ================================================== */
 /* ================================================== */
@@ -178,7 +177,14 @@
 .dropdown-container {
   display: flex;
   gap: 20px;
+  /* overflow-x: auto; */
 }
+/* .dropdown-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+} */
+
 .dropdown-container .formSelect {
   display: flex;
   gap: 20px;
