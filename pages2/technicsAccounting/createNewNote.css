@@ -108,9 +108,20 @@
 /* ========================================================= */
 /* ========================================================= */
 /* ========================================================= */
-.note-container-box {
+.note-container-box,
+#juridical_person,
+#authorized_person {
   display: flex;
   flex-direction: column;
+}
+#juridical_person,
+#authorized_person {
+  display: none;
+}
+#authorized_person {
+  padding: 40px 0;
+  border: none;
+  border-top: 1px solid #dadada;
 }
 .new_note_container {
   padding: 40px 0;

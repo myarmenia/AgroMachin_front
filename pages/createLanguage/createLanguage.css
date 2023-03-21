@@ -1,3 +1,8 @@
 .tableChild td:nth-child(6) div {
   display: flex;
 }
+@media (max-width: 1090px) {
+  .dropdown-container {
+    flex-direction: column;
+  }
+}
