@@ -413,6 +413,9 @@
   text-decoration: none;
   padding: 6px 16px;
 }
+.main-btn:disabled {
+  background-color: red;
+}
 .main-btn-white {
   width: fit-content;
   min-width: 127px;
