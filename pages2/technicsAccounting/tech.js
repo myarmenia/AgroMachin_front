@@ -252,3 +252,19 @@ select_person_status.forEach((el) => {
     }
   });
 });
+
+let checkboxes = document.querySelectorAll(".handCheckbox");
+let handBtn = document.querySelectorAll(".main-btn")[0];
+console.log(handBtn);
+function AreAnyCheckboxesChecked() {
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      console.log(handBtn);
+      handBtn.disabled = true;
+    }
+  }
+  handBtn.disabled = false;
+}
+checkboxes.forEach((_, i) => {
+  checkboxes[i].addEventListener("change", AreAnyCheckboxesChecked);
+});
