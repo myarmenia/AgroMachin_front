@@ -164,7 +164,7 @@ function setSelectOption() {
   select_optiones[indx].selected = true;
   select_.selectedIndex = indx;
   // select_.onchange();
-  select_.dispatchEvent(new Event("change"))
+  select_.dispatchEvent(new Event("change"));
   closeSelectByElem(this);
 }
 
@@ -331,3 +331,74 @@ search_select.forEach((el) => {
 });
 // ====================================================================
 
+// --------------------------------------------------------------------
+// Select checkboxes
+// --------------------------------------------------------------------
+const select_checkboxes = document.querySelectorAll(".select-checkboxes-title");
+select_checkboxes.forEach((el) => {
+  el.addEventListener("click", function () {
+    const container = this.closest(".select-checkboxes");
+    const options = container.querySelector(".select-checkboxes-options"),
+      checkboxes = options.querySelectorAll("input[type='checkbox']"),
+      select_id = container.getAttribute("data-checkboxes-select"),
+      ul = document.querySelector(`[data-checkboxes-ul="${select_id}"]`);
+
+    options.style.transitionDuration =
+      Math.min(select_delay, options.children.length * 100) + "ms";
+    if (
+      container.getAttribute("data-open") &&
+      container.getAttribute("data-open") == "false"
+    ) {
+      container.setAttribute("data-open", true);
+      options.style.height =
+        options.children.length * options.children[0].offsetHeight + 1 + "px";
+    } else {
+      ul.innerHTML = "";
+      options.style.height = 0;
+      container.setAttribute("data-open", false);
+      if ([...checkboxes].some((e) => e.checked)) {
+        [...checkboxes].forEach((e) => {
+          if (e.checked) {
+            const options_title = e.nextElementSibling.innerHTML,
+              li = document.createElement("li"),
+              heading = document.createElement("span"),
+              content = document.createElement("div"),
+              langs = e
+                .getAttribute("data-languages")
+                .split(",")
+                .filter((e) => !!e);
+
+            li.className = "language-group";
+            heading.className = "language-group-heading";
+            content.className = "language-group-content";
+            heading.innerHTML = `
+              <span>Բաժին՝ ${options_title}</span>
+              <i class="language-group-delete">&#x2715;</i>
+            `;
+            heading
+              .querySelector(".language-group-delete")
+              .addEventListener("click", function () {
+                this.closest(".language-group").remove();
+              });
+            li.append(heading, content);
+
+            langs.forEach((e) => {
+              const box = document.createElement("div");
+              box.className = "language-box";
+              box.innerHTML = `
+                  <span class="language-box-title">${e}</span>
+                  <div class="input-validatation-box">
+                    <input name="${e}['${options_title}'][]" placeholder="Թարգմանություն" type="text" class="user-input">
+                  </div>
+                `;
+
+              content.append(box);
+            });
+            ul.append(li);
+          }
+        });
+      }
+    }
+  });
+});
+// ====================================================================

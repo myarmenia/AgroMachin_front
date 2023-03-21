@@ -13,15 +13,9 @@
   border-radius: 0 0 10px 10px;
   padding: 10px 50px 30px;
 }
-.createKeyChild {
-  width: 600px;
-  height: auto;
-}
 form {
-  width: 85%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
 }
 
@@ -37,6 +31,7 @@ form > div:first-child {
   margin-top: 30px;
   height: 80px;
   border-bottom: 1px solid #dadada;
+  max-width: 50%;
 }
 form > div:nth-child(2) {
   margin-top: 30px;
@@ -44,3 +39,63 @@ form > div:nth-child(2) {
 .main-btn {
   width: 127px;
 }
+.new-input-container {
+  height: auto !important;
+  padding: 20px 0;
+  gap: 20px;
+}
+.btn-box {
+  display: flex;
+  justify-content: end;
+}
+
+/* --------------------------------------------------- */
+/* ----------------- Languages ul -------------------- */
+/* --------------------------------------------------- */
+
+.languages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+ul[data-checkboxes-ul] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  list-style: none;
+  gap: 20px;
+}
+.language-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.language-group-heading {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.language-group-delete {
+  padding: 0px 3px;
+  cursor: pointer;
+  font: menu;
+  font-size: 15px;
+}
+
+.language-group-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.language-box {
+  display: flex;
+  gap: 15px;
+}
+.language-box-title {
+  min-width: 30px;
+}
+
+/* =================================================== */
