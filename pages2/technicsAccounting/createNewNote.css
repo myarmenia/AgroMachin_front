@@ -281,7 +281,42 @@
   background-color: transparent;
   flex-shrink: 0;
 }
-
+/*Ստորագրություն */
+.subscript {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.subscript h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #343957;
+  letter-spacing: 0.01em;
+}
+.subscript p,
+.subscript span {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #575757;
+}
+.buyer-person, .owners {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+.buyer-person-name, .owners-name {
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+}
+.owners-name > div {
+  display: flex;
+  gap: 55px;
+}
+/*Ստորագրություն վերջ*/
 /*Հանձնել*/
 .hand {
   max-width: 800px;
@@ -326,7 +361,6 @@
 }
 .resort-text p {
   font-size: 14px;
-
   letter-spacing: 0.01em;
   color: #343957;
 }
