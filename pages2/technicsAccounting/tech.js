@@ -240,6 +240,10 @@ select_person_status.forEach((el) => {
       activeOpt.forEach((li) => {
         if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
           li.classList.add("active");
+          li
+            .closest(".select_mate")
+            .querySelector(".selecionado_opcion").innerHTML =
+            li.innerHTML.trim();
         } else li.classList.remove("active");
       });
     });
@@ -269,7 +273,6 @@ document
 
 let checkboxes = document.querySelectorAll(".handCheckbox");
 let handBtn = document.querySelectorAll(".main-btn")[0];
-console.log(handBtn);
 function AreAnyCheckboxesChecked() {
   for (var i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i].checked) {
