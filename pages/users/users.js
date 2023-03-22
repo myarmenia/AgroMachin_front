@@ -13,7 +13,6 @@ for (let i = 0; i < dropbtnCheckBox.length; i++) {
       .closest(".dropdown")
       .querySelector(".dropdown-content.myDropdownCheckBox");
     let ul_height = 0;
-
     for (let m = 0; m < activshow.length; m++) {
       if (!activshow[m].classList.value.includes("show")) {
         activshow[m].classList.add("show");
