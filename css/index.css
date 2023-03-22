@@ -520,7 +520,7 @@
   padding: 6px 16px;
 }
 .main-btn:disabled {
-  background-color: red;
+  background-color: #9f9f9f;
 }
 .main-btn-white {
   width: fit-content;
@@ -1061,6 +1061,9 @@ header {
   display: flex;
   gap: 35px;
   position: relative;
+}
+.toggle_width {
+  width: 256px;
 }
 .input-containerChild > label {
   font-weight: 600;
