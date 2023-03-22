@@ -239,6 +239,10 @@ select_person_status.forEach((el) => {
       activeOpt.forEach((li) => {
         if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
           li.classList.add("active");
+          li
+            .closest(".select_mate")
+            .querySelector(".selecionado_opcion").innerHTML =
+            li.innerHTML.trim();
         } else li.classList.remove("active");
       });
     });

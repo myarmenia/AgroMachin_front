@@ -42,7 +42,10 @@ window.addEventListener("click", (e) => {
 document.querySelectorAll(".modal .close").forEach((el) => {
   el.addEventListener("click", hideModal);
 });
-document.querySelectorAll(".modal-deny-btn").forEach((el) => {
+document.querySelectorAll("#modal-accept-btn").forEach((el) => {
+  el.addEventListener("click", hideModal);
+});
+document.querySelectorAll("#modal-deny-btn").forEach((el) => {
   el.addEventListener("click", hideModal);
 });
 // ==================================================================
