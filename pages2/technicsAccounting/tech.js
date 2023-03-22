@@ -295,9 +295,9 @@ function AreAnyCheckboxesChecked() {
   console.log(trueContainer.length);
   console.log(checkboxes.length);
   if (trueContainer.length === checkboxes.length) {
-    handBtn.disabled = true;
-  } else {
     handBtn.disabled = false;
+  } else {
+    handBtn.disabled = true;
   }
   console.log(trueContainer);
 }
