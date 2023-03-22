@@ -23,6 +23,8 @@
   left: 50%;
   opacity: 0;
   padding-bottom: 30px;
+  background: #fff;
+  border-radius: 10px;
   /* display: none; */
 }
 
