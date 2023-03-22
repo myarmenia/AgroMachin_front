@@ -236,7 +236,6 @@ select_person_status.forEach((el) => {
       const chosenOpt = [...e.options].find((opt) => opt.value === this.value),
         activeOpt = e.closest(".select_mate").querySelectorAll("li");
       chosenOpt.selected = true;
-
       activeOpt.forEach((li) => {
         if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
           li.classList.add("active");
@@ -266,18 +265,37 @@ document
       addBtn.style.visibility = "visible";
     }
   });
-
-let checkboxes = document.querySelectorAll(".handCheckbox");
-let handBtn = document.querySelectorAll(".main-btn")[0];
+const handBtnOperator = document.getElementById("handBtnOperator");
+const handFirst = document.getElementById("hand-first");
+const handSecond = document.getElementById("hand-second");
+const cancelBtn = document.getElementById("cancelBtn");
+const handBtn = document.getElementById("hand-btn");
 console.log(handBtn);
+handBtnOperator.addEventListener("click", () => {
+  handSecond.style.display = "flex";
+  handFirst.style.display = "none";
+});
+cancelBtn.addEventListener("click", () => {
+  handSecond.style.display = "none";
+  handFirst.style.display = "flex";
+});
+let checkboxes = document.querySelectorAll(".handCheckbox");
+
 function AreAnyCheckboxesChecked() {
+  let trueContainer = [];
   for (var i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i].checked) {
-      console.log(handBtn);
-      handBtn.disabled = true;
+      trueContainer.push(checkboxes[i].checked);
     }
   }
-  handBtn.disabled = false;
+  console.log(trueContainer.length);
+  console.log(checkboxes.length);
+  if (trueContainer.length === checkboxes.length) {
+    handBtn.disabled = true;
+  } else {
+    handBtn.disabled = false;
+  }
+  console.log(trueContainer);
 }
 checkboxes.forEach((_, i) => {
   checkboxes[i].addEventListener("change", AreAnyCheckboxesChecked);

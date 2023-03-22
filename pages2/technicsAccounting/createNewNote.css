@@ -22,6 +22,16 @@
   letter-spacing: 0.01em;
   color: #343957;
 }
+.new_note_select_person {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.new_note_select_person div {
+  max-width: 300px;
+  min-width: 300px;
+  margin-right: 15px;
+}
 .new_note_title > div {
   max-width: 334px;
   min-width: 313px;
@@ -302,12 +312,14 @@
   letter-spacing: 0.01em;
   color: #575757;
 }
-.buyer-person, .owners {
+.buyer-person,
+.owners {
   display: flex;
   flex-direction: column;
   gap: 33px;
 }
-.buyer-person-name, .owners-name {
+.buyer-person-name,
+.owners-name {
   width: 82%;
   display: flex;
   justify-content: space-between;
@@ -363,5 +375,8 @@
   font-size: 14px;
   letter-spacing: 0.01em;
   color: #343957;
+}
+#hand-second {
+  display: none;
 }
 /*Հանձնել վերջ*/
