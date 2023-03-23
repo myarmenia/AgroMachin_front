@@ -414,7 +414,7 @@ attached_materials_form.addEventListener("submit", function (e) {
     );
 
     tbody.append(tr);
-
+    
     [...e.target.elements].forEach((el) => {
       if (el.tagName.toLowerCase() !== "button") {
         el.value = "";
