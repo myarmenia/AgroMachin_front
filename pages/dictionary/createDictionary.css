@@ -31,7 +31,7 @@ form > div:first-child {
   margin-top: 30px;
   height: 80px;
   border-bottom: 1px solid #dadada;
-  max-width: 50%;
+  max-width: 60%;
 }
 form > div:nth-child(2) {
   margin-top: 30px;
@@ -52,12 +52,10 @@ form > div:nth-child(2) {
 /* --------------------------------------------------- */
 /* ----------------- Languages ul -------------------- */
 /* --------------------------------------------------- */
-
 .languages-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
 }
 ul[data-checkboxes-ul] {
   display: grid;
