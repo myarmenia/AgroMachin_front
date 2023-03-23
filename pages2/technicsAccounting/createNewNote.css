@@ -427,11 +427,25 @@
 .attached-materials-table_container {
   padding: 0 30px;
 }
-.attached-materials-table {
-}
+
 .attached-materials-table th,
 .attached-materials-table td {
   border: none;
   text-align: start;
+  padding: 0 15px;
+}
+.attached-materials-table th:last-child,
+.attached-materials-table td:last-child {
+  width: 30px;
+}
+.attached-materials-table-lastTd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.attached-materials-table-btn-box {
+  margin-top: 25px;
+  display: flex;
+  justify-content: end;
 }
 /* ================================================================= */
