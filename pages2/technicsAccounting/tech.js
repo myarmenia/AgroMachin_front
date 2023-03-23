@@ -310,7 +310,9 @@ document.querySelector("#the_form").addEventListener("submit", function (e) {
     addBtn.addEventListener("click", addOwner);
   }
 );
+// =======================================================================
 
+// Nayel mi hat
 const handBtnOperator = document.getElementById("handBtnOperator");
 const handFirst = document.getElementById("hand-first");
 const handSecond = document.getElementById("hand-second");
@@ -349,11 +351,7 @@ checkboxes.forEach((_, i) => {
 // ------------------------------------------------------------------
 // Attached Materials
 // ------------------------------------------------------------------
-
-// function attacheFile() {
-//   console.log(this.files);
-// }
-// attached_materials_file.addEventListener("change", attacheFile);
+let data = [];
 attached_materials_file_box.addEventListener("click", function () {
   this.querySelector(`input[type="file"]`).click();
 });
@@ -373,33 +371,45 @@ attached_materials_form.addEventListener("submit", function (e) {
   if (!formObj.file.name) formObj.file = "";
 
   if (Object.values(formObj).some((e) => !!e)) {
-    input_store.value += JSON.stringify({
-      ...formObj,
-      file: JSON.stringify(formObj.file),
-    });
-    const tr = document.createElement("tr");
+    // input_store.value += JSON.stringify({
+    //   ...formObj,
+    //   file: JSON.stringify(formObj.file),
+    // });
+    data = [...data, formObj];
+
+    const tr = document.createElement("div");
+    tr.className = "attached-materials-table-box";
     tr.innerHTML = `
-      <td>${formObj.type && formObj.type}</td>
-      <td>${formObj.price && formObj.price}</td>
-      <td>${formObj.number && formObj.number}</td>
-      <td>${formObj.date && formObj.date}</td>
-      <td>
-        <div class="attached-materials-table-lastTd">
-          ${
-            formObj.file &&
-            ` <a href="${URL.createObjectURL(formObj.file)}" download>
-              <img src="../../assets/pdfSVG.svg" alt="def"/>
-            </a>`
-          }
-          <img class="attached-materials-table-delete" src="../../assets/redX.svg" alt="def"/>
-        </div>
-      </td>
+      <span>${formObj.type && formObj.type}</span>
+      <span>${formObj.price && formObj.price}</span>
+      <span>${formObj.number && formObj.number}</span>
+      <span>${formObj.date && formObj.date}</span>
+      <div>
+        ${
+          formObj.file &&
+          `<a href="${URL.createObjectURL(formObj.file)}" download>
+            <img src="../../assets/pdfSVG.svg" alt="def"/>
+          </a>`
+        }
+      </div>
+      <img class="attached-materials-table-delete" src="../../assets/redX.svg" alt="def"/>
     `;
+
+    formObj.file && URL.revokeObjectURL(formObj.file);
 
     tr.querySelector(".attached-materials-table-delete").addEventListener(
       "click",
       function () {
-        this.closest("tr").remove();
+        [...tbody.children].forEach((el, i) => {
+          el.querySelector(".attached-materials-table-delete").setAttribute(
+            "data-count",
+            i
+          );
+        });
+
+        const delete_id = +this.getAttribute("data-count");
+        data = data.filter((_, i) => i !== delete_id);
+        this.closest(".attached-materials-table-box").remove();
       }
     );
 
@@ -408,6 +418,16 @@ attached_materials_form.addEventListener("submit", function (e) {
     [...e.target.elements].forEach((el) => {
       if (el.tagName.toLowerCase() !== "button") {
         el.value = "";
+        if (el.tagName.toLowerCase() === "select") {
+          el
+            .closest(".select_mate")
+            .querySelector(".selecionado_opcion").innerHTML =
+            el.options[0].innerHTML;
+          el.options[0].selected = true;
+          el.closest(".select_mate")
+            .querySelectorAll("li")
+            .forEach((elem) => elem.classList.remove("active"));
+        }
         el.closest(".input-group")?.classList.remove("focus");
       }
     });
