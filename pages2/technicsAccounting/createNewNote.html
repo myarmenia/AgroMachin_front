@@ -1739,6 +1739,7 @@
                         <form
                           id="attached-materials-form"
                           class="attached-materials-file_upload-box"
+                          data-attached-materials-form="0"
                         >
                           <div
                             class="attached-materials-file_upload"
@@ -1748,7 +1749,6 @@
                               name="file"
                               type="file"
                               class="main-file-input"
-                              multiple
                             />
                             <img src="../../assets/download.svg" alt="" />
                             <span class="main-file-label">Կցել փաստաթղթեր</span>
@@ -1772,10 +1772,9 @@
                           </div>
                           <div class="input-group">
                             <input
-                              class="input-wrap"
-                              disabled
-                              placeholder="Համար"
                               name="number"
+                              class="input-wrap"
+                              placeholder="Համար"
                             />
                           </div>
                           <div class="input-group">
@@ -1804,14 +1803,32 @@
                         <div class="attached-materials-table_container">
                           <table class="attached-materials-table">
                             <thead>
-                              <th>Տեսակ</th>
-                              <th>Գումար</th>
-                              <th>Համար</th>
-                              <th>Ամսաթիվ</th>
-                              <th>_</th>
+                              <tr>
+                                <th>Տեսակ</th>
+                                <th>Գումար</th>
+                                <th>Համար</th>
+                                <th>Ամսաթիվ</th>
+                                <th></th>
+                              </tr>
                             </thead>
+                            <tbody data-attached-materials-tbody="0"></tbody>
                           </table>
                         </div>
+                        <form class="attached-materials-table-btn-box">
+                          <input
+                            data-attached-materials-input="0"
+                            hidden
+                            id="inpinp"
+                            name="main_arr"
+                          />
+                          <button
+                            onclick="console.log(inpinp.value);"
+                            class="main-btn"
+                            type="button"
+                          >
+                            Պահպանել
+                          </button>
+                        </form>
                       </div>
                     </div>
                   </div>

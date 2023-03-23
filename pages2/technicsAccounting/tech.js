@@ -359,9 +359,64 @@ attached_materials_form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formData = new FormData(e.target),
-    formObj = Object.fromEntries(formData);
+    formObj = Object.fromEntries(formData),
+    form_id = this.getAttribute("data-attached-materials-form"),
+    tbody = document.querySelector(
+      `[data-attached-materials-tbody="${form_id}"]`
+    ),
+    input_store = document.querySelector(
+      `[data-attached-materials-input="${form_id}"]`
+    );
 
-  console.log(formObj);
+  if (!formObj.file.name) formObj.file = "";
+
+  if (Object.values(formObj).some((e) => !!e)) {
+    input_store.value += JSON.stringify({
+      ...formObj,
+      file: JSON.stringify(formObj.file),
+    });
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${formObj.type && formObj.type}</td>
+      <td>${formObj.price && formObj.price}</td>
+      <td>${formObj.number && formObj.number}</td>
+      <td>${formObj.date && formObj.date}</td>
+      <td>
+        <div class="attached-materials-table-lastTd">
+          ${
+            formObj.file &&
+            ` <a href="${URL.createObjectURL(formObj.file)}" download>
+              <img src="../../assets/pdfSVG.svg" alt="def"/>
+            </a>`
+          }
+          <img class="attached-materials-table-delete" src="../../assets/redX.svg" alt="def"/>
+        </div>
+      </td>
+    `;
+
+    tr.querySelector(".attached-materials-table-delete").addEventListener(
+      "click",
+      function () {
+        this.closest("tr").remove();
+      }
+    );
+
+    tbody.append(tr);
+
+    [...e.target.elements].forEach((el) => {
+      if (el.tagName.toLowerCase() !== "button") {
+        el.value = "";
+        el.closest(".input-group")?.classList.remove("focus");
+      }
+    });
+  }
+
+  [...tbody.children].forEach((el, i) => {
+    el.querySelector(".attached-materials-table-delete").setAttribute(
+      "data-count",
+      i
+    );
+  });
 });
 
 // ==================================================================
