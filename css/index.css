@@ -539,6 +539,7 @@
 }
 .main-btn:disabled {
   background-color: #9f9f9f;
+  cursor: default;
 }
 .main-btn-white {
   width: fit-content;
