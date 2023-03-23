@@ -101,8 +101,25 @@
 const select_person_status = document.querySelectorAll(".select_person_status"),
   physical_person = document.querySelector("#physical_person"),
   juridical_person = document.querySelector("#juridical_person"),
+  addBtn = document.querySelector("#add-owner"),
   authorized_person = document.querySelector("#authorized_person"),
-  addBtn = document.querySelector("#add-owner");
+  owner_auth_checkbox = document.querySelector("#openAuthorized");
+
+const select_person_status_buyer = document.querySelectorAll(
+    ".select_person_status_buyer"
+  ),
+  physical_person_buyer = document.querySelector("#physical_person_buyer"),
+  juridical_person_buyer = document.querySelector("#juridical_person_buyer"),
+  addBtn_buyer = document.querySelector("#add-owner_buyer"),
+  authorized_person__buyer = document.querySelector("#authorized_person_buyer"),
+  owner_auth_checkbox_buyer = document.querySelector("#openAuthorized_buyer");
+
+const attached_materials_file_box = document.querySelector(
+    "#attached-materials-file_box"
+  ),
+  attached_materials_file =
+    attached_materials_file_box.querySelector(`input[type="file"]`),
+  attached_materials_form = document.querySelector("#attached-materials-form");
 
 // ======================================================================
 // ======================================================================
@@ -138,10 +155,6 @@ function addOwner() {
   <div class="new_note_title"><div>Այլ սեփականատեր</div><div class="note-title-btnBox"><button type="button" class="note-container-delete">&#x2715;</button></div></div>
   <div class="note-container">
     <div class="note-container-child">
-      <div class="select_mate line" data-mate-select="active">
-        <select name="group[${note_count}][status]" onchange="" onclick="return false;"><option value="">Անձի կարգավիճակ*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
-        <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
-      </div>
       <div class="input-group"><input name="group[${note_count}][name]" class="input-wrap" placeholder="Անուն*" /></div>
       <div class="input-group"><input name="group[${note_count}][last_name]" class="input-wrap" placeholder="Ազգանուն*" /></div>
       <div class="input-group"><input class="input-wrap" placeholder="Հայրանուն*" /></div>
@@ -207,8 +220,6 @@ function addOwner() {
   // note_count = cont.querySelectorAll(".new_note_container").length - 1;
 }
 
-addBtn.addEventListener("click", addOwner);
-
 document.querySelector("#the_form").addEventListener("submit", function (e) {
   e.preventDefault();
   const formData = new FormData(e.target),
@@ -230,51 +241,81 @@ document.querySelector("#the_form").addEventListener("submit", function (e) {
   }
 });
 
-select_person_status.forEach((el) => {
-  el.addEventListener("change", function () {
-    select_person_status.forEach((e) => {
-      const chosenOpt = [...e.options].find((opt) => opt.value === this.value),
-        activeOpt = e.closest(".select_mate").querySelectorAll("li");
-      chosenOpt.selected = true;
-      activeOpt.forEach((li) => {
-        if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
-          li.classList.add("active");
-          li
-            .closest(".select_mate")
-            .querySelector(".selecionado_opcion").innerHTML =
-            li.innerHTML.trim();
-        } else li.classList.remove("active");
+[
+  {
+    name: select_person_status,
+    physical_person,
+    juridical_person,
+    addBtn,
+    checkbox: owner_auth_checkbox,
+    authorized_person,
+  },
+  {
+    name: select_person_status_buyer,
+    physical_person: physical_person_buyer,
+    juridical_person: juridical_person_buyer,
+    addBtn: addBtn_buyer,
+    checkbox: owner_auth_checkbox_buyer,
+    authorized_person: authorized_person__buyer,
+  },
+].forEach(
+  ({
+    name,
+    physical_person,
+    juridical_person,
+    addBtn,
+    checkbox,
+    authorized_person,
+  }) => {
+    name.forEach((el) => {
+      el.addEventListener("change", function () {
+        name.forEach((e) => {
+          const chosenOpt = [...e.options].find(
+              (opt) => opt.value === this.value
+            ),
+            activeOpt = e.closest(".select_mate").querySelectorAll("li");
+          chosenOpt.selected = true;
+          activeOpt.forEach((li) => {
+            if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
+              li.classList.add("active");
+              li
+                .closest(".select_mate")
+                .querySelector(".selecionado_opcion").innerHTML =
+                li.innerHTML.trim();
+            } else li.classList.remove("active");
+          });
+        });
+        if (this.value === "1") {
+          physical_person.style.display = "none";
+          juridical_person.style.display = "flex";
+          addBtn.style.visibility = "hidden";
+        } else {
+          physical_person.style.display = "flex";
+          juridical_person.style.display = "none";
+          addBtn.style.visibility = "visible";
+        }
       });
     });
-    if (this.value === "1") {
-      physical_person.style.display = "none";
-      juridical_person.style.display = "flex";
-      addBtn.style.visibility = "hidden";
-    } else {
-      physical_person.style.display = "flex";
-      juridical_person.style.display = "none";
-      addBtn.style.visibility = "visible";
-    }
-  });
-});
 
-document
-  .querySelector("#openAuthorized")
-  .addEventListener("change", function () {
-    if (this.checked) {
-      authorized_person.style.display = "flex";
-      addBtn.style.visibility = "hidden";
-    } else {
-      authorized_person.style.display = "none";
-      addBtn.style.visibility = "visible";
-    }
-  });
+    checkbox.addEventListener("change", function () {
+      if (this.checked) {
+        authorized_person.style.display = "flex";
+        addBtn.style.visibility = "hidden";
+      } else {
+        authorized_person.style.display = "none";
+        addBtn.style.visibility = "visible";
+      }
+    });
+
+    addBtn.addEventListener("click", addOwner);
+  }
+);
+
 const handBtnOperator = document.getElementById("handBtnOperator");
 const handFirst = document.getElementById("hand-first");
 const handSecond = document.getElementById("hand-second");
 const cancelBtn = document.getElementById("cancelBtn");
 const handBtn = document.getElementById("hand-btn");
-console.log(handBtn);
 handBtnOperator.addEventListener("click", () => {
   handSecond.style.display = "flex";
   handFirst.style.display = "none";
@@ -304,3 +345,25 @@ function AreAnyCheckboxesChecked() {
 checkboxes.forEach((_, i) => {
   checkboxes[i].addEventListener("change", AreAnyCheckboxesChecked);
 });
+
+// ------------------------------------------------------------------
+// Attached Materials
+// ------------------------------------------------------------------
+
+// function attacheFile() {
+//   console.log(this.files);
+// }
+// attached_materials_file.addEventListener("change", attacheFile);
+attached_materials_file_box.addEventListener("click", function () {
+  this.querySelector(`input[type="file"]`).click();
+});
+attached_materials_form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(e.target),
+    formObj = Object.fromEntries(formData);
+
+  console.log(formObj);
+});
+
+// ==================================================================
