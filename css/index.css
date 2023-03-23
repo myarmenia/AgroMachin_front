@@ -193,6 +193,25 @@
 /* -------------------------------- */
 /* Forms */
 /* -------------------------------- */
+.attached-materials-file_upload {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.main-file-input {
+  display: none;
+}
+.main-file-input::-webkit-file-upload-button {
+  appearance: none;
+  visibility: hidden;
+}
+.main-file-label {
+  font-size: 14px;
+  color: #343957;
+}
+
+/* ================================ */
 .dropdown-container {
   display: flex;
   gap: 20px;
@@ -335,7 +354,7 @@
   border-bottom: 0px;
 }
 .selecionado_opcion {
-  padding: 8px 10px;
+  padding: 5px 10px;
   width: 96%;
   display: block;
   margin: 0px;
@@ -471,7 +490,6 @@
 
 .input-validatation-box {
   position: relative;
-  width: 100%;
 }
 .input-invalid {
   border: 1px solid red !important;

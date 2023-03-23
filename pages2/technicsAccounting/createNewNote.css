@@ -125,10 +125,13 @@
   flex-direction: column;
 }
 #juridical_person,
-#authorized_person {
+#authorized_person,
+#juridical_person_buyer,
+#authorized_person_buyer {
   display: none;
 }
-#authorized_person {
+#authorized_person,
+#authorized_person_buyer {
   padding: 40px 0;
   border: none;
   border-top: 1px solid #dadada;
@@ -142,6 +145,7 @@
 .new_note_container:first-child {
   padding-top: 0;
   border-top: none;
+  width: 100%;
 }
 .note-container-error {
   width: 100%;
@@ -380,3 +384,54 @@
   display: none;
 }
 /*Հանձնել վերջ*/
+
+/* ----------------------------------------------------------------- */
+/* Attached Materials */
+/* ----------------------------------------------------------------- */
+.attached-materials-container {
+  width: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.attached-materials-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #343957;
+}
+.attached-materials-file_upload-container {
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+}
+.attached-materials-file_upload-box {
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.attached-materials-file-btn_box {
+  display: flex;
+  justify-content: end;
+}
+.attached-materials-store {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+.attached-materials-table_container {
+  padding: 0 30px;
+}
+.attached-materials-table {
+}
+.attached-materials-table th,
+.attached-materials-table td {
+  border: none;
+  text-align: start;
+}
+/* ================================================================= */

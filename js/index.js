@@ -349,10 +349,7 @@ select_checkboxes.forEach((el) => {
     evt.stopPropagation();
     const container = this.closest(".select-checkboxes"),
       options = container.querySelector(".select-checkboxes-options"),
-      content = container.querySelector(".select-checkboxes-content"),
-      checkboxes = options.querySelectorAll("input[type='checkbox']"),
-      select_id = container.getAttribute("data-checkboxes-select"),
-      ul = document.querySelector(`[data-checkboxes-ul="${select_id}"]`);
+      content = container.querySelector(".select-checkboxes-content");
 
     if (
       container.hasAttribute("data-open") &&
@@ -374,8 +371,8 @@ select_checkboxes.forEach((el) => {
     .querySelector(".select-checkboxes-btn")
     .addEventListener("click", function () {
       const container = this.closest(".select-checkboxes"),
-        options = container.querySelector(".select-checkboxes-options"),
         content = container.querySelector(".select-checkboxes-content"),
+        options = container.querySelector(".select-checkboxes-options"),
         checkboxes = options.querySelectorAll("input[type='checkbox']"),
         select_id = container.getAttribute("data-checkboxes-select"),
         ul = document.querySelector(`[data-checkboxes-ul="${select_id}"]`);
@@ -383,7 +380,7 @@ select_checkboxes.forEach((el) => {
       ul.innerHTML = "";
       if ([...checkboxes].some((e) => e.checked)) {
         [...checkboxes].forEach((e) => {
-          if (e.checked) {
+          if (e.checked && !e.disabled) {
             const options_title = e.nextElementSibling.innerHTML,
               li = document.createElement("li"),
               heading = document.createElement("span"),
@@ -414,7 +411,7 @@ select_checkboxes.forEach((el) => {
               box.innerHTML = `
                     <span class="language-box-title">${e}</span>
                     <div class="input-validatation-box">
-                      <input name="${e}['${options_title}'][]" placeholder="Թարգմանություն" type="text" class="user-input">
+                      <input name="sections[${e}][${options_title}]" placeholder="Թարգմանություն" type="text" class="user-input">
                     </div>
                   `;
 
@@ -424,6 +421,10 @@ select_checkboxes.forEach((el) => {
           }
         });
       }
+
+      content.style.height = 0;
+      options.style.height = 0;
+      container.setAttribute("data-open", false);
     });
 
   window.addEventListener("click", function (wEvt) {

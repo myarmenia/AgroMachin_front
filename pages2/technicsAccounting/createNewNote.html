@@ -892,28 +892,6 @@
                         </div>
                         <div class="note-container">
                           <div class="note-container-child">
-                            <div
-                              class="select_mate line"
-                              data-mate-select="active"
-                            >
-                              <select
-                                class="select_person_status"
-                                name="group[0][status]"
-                              >
-                                <option value="">Անձի կարգավիճակ*</option>
-                                <option value="0">Ֆիզիկական անձ</option>
-                                <option value="1">Իրավաբանական անձ</option>
-                              </select>
-                              <div class="select-title">
-                                <p class="selecionado_opcion">
-                                  Անձի կարգավիճակ*
-                                </p>
-                                <span class="icon_select_mate icon"
-                                  ><img src="../../assets/select-chev.svg"
-                                /></span>
-                              </div>
-                            </div>
-
                             <div class="input-group">
                               <input
                                 name="group[0][name]"
@@ -1102,16 +1080,10 @@
                   id="the_form"
                 >
                   <div class="new_note">
-                    <div class="note-container-error">
-                      <p>Պարտադիր է</p>
-                      <p>Պարտադիր է</p>
-                      <p>Պարտադիր է</p>
-                      <p>Պարտադիր է</p>
-                    </div>
-                    <div class="note-container-box" id="physical_person">
+                    <div class="note-container-box" id="physical_person_buyer">
                       <fieldset class="new_note_container" data-box-count="0">
                         <div class="new_note_title">
-                          <div>Հայտատու</div>
+                          <div>Սեփականատերեր</div>
                           <div></div>
                         </div>
                         <div class="note-container">
@@ -1121,7 +1093,7 @@
                               data-mate-select="active"
                             >
                               <select
-                                class="select_person_status"
+                                class="select_person_status_buyer"
                                 name="group[0][status]"
                               >
                                 <option value="">Անձի կարգավիճակ*</option>
@@ -1170,7 +1142,9 @@
                                 <option value="2">Select option 2</option>
                               </select>
                               <div class="select-title">
-                                <p class="selecionado_opcion"></p>
+                                <p class="selecionado_opcion">
+                                  Քաղաքացիություն*
+                                </p>
                                 <span class="icon_select_mate icon"
                                   ><img src="../../assets/select-chev.svg"
                                 /></span>
@@ -1313,7 +1287,7 @@
                         </div>
                       </fieldset>
                     </div>
-                    <div class="note-container-box" id="juridical_person">
+                    <div class="note-container-box" id="juridical_person_buyer">
                       <fieldset class="new_note_container" data-box-count="0">
                         <div class="new_note_title">
                           <div>Սեփականատերեր</div>
@@ -1326,7 +1300,7 @@
                               data-mate-select="active"
                             >
                               <select
-                                class="select_person_status"
+                                class="select_person_status_buyer"
                                 name="group[0][status]"
                               >
                                 <option value="">Անձի կարգավիճակ*</option>
@@ -1433,7 +1407,25 @@
                         </div>
                       </fieldset>
                     </div>
-                    <div id="authorized_person">
+                    <div class="note-container_underbox">
+                      <div class="double-radio">
+                        <div class="double-radio-box">
+                          <div class="radio-group">
+                            <input type="checkbox" id="openAuthorized_buyer" />
+                            <label>Լիազորված անձ</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="double-radio" id="add-owner_buyer">
+                        <div class="double-radio-box">
+                          <div class="radio-group">
+                            <img src="../../assets/plus.svg" />
+                            <label>Այլ սեփականատերեր</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="authorized_person_buyer">
                       <fieldset class="new_note_container">
                         <div class="new_note_title">
                           <div>Լիազորված անձ</div>
@@ -1441,28 +1433,6 @@
                         </div>
                         <div class="note-container">
                           <div class="note-container-child">
-                            <div
-                              class="select_mate line"
-                              data-mate-select="active"
-                            >
-                              <select
-                                class="select_person_status"
-                                name="group[0][status]"
-                              >
-                                <option value="">Անձի կարգավիճակ*</option>
-                                <option value="0">Ֆիզիկական անձ</option>
-                                <option value="1">Իրավաբանական անձ</option>
-                              </select>
-                              <div class="select-title">
-                                <p class="selecionado_opcion">
-                                  Անձի կարգավիճակ*
-                                </p>
-                                <span class="icon_select_mate icon"
-                                  ><img src="../../assets/select-chev.svg"
-                                /></span>
-                              </div>
-                            </div>
-
                             <div class="input-group">
                               <input
                                 name="group[0][name]"
@@ -1638,24 +1608,7 @@
                         </div>
                       </fieldset>
                     </div>
-                    <div class="note-container_underbox">
-                      <div class="double-radio">
-                        <div class="double-radio-box">
-                          <div class="radio-group">
-                            <input type="checkbox" id="openAuthorized" />
-                            <label>Լիազորված անձ</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="double-radio" id="add-owner">
-                        <div class="double-radio-box">
-                          <div class="radio-group">
-                            <img src="../../assets/plus.svg" />
-                            <label>Այլ սեփականատերեր</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
                     <div class="btn-box">
                       <button class="main-btn">Պահպանել</button>
                     </div>
@@ -1766,8 +1719,94 @@
                   data-activ_tab="5"
                 >
                   <div class="new_note">
-                    <div class="create_note">
-                      <h3>Կից նյութեր</h3>
+                    <div class="attached-materials-container">
+                      <div class="attached-materials-heading">
+                        <h4>
+                          Խնդրում ենք ընտրել անհրաժեշտ փաստաթղթերը և սկանավորել
+                        </h4>
+                        <p>
+                          Լրացուցիչ փաստաթղթերի բաժին (ընտրեք սկան արված
+                          փաստաթուղթը)
+                        </p>
+                      </div>
+                      <div class="attached-materials-file_upload-container">
+                        <form
+                          id="attached-materials-form"
+                          class="attached-materials-file_upload-box"
+                        >
+                          <div
+                            class="attached-materials-file_upload"
+                            id="attached-materials-file_box"
+                          >
+                            <input
+                              name="file"
+                              type="file"
+                              class="main-file-input"
+                              multiple
+                            />
+                            <img src="../../assets/download.svg" alt="" />
+                            <span class="main-file-label">Կցել փաստաթղթեր</span>
+                          </div>
+                          <div
+                            class="select_mate line"
+                            data-mate-select="active"
+                          >
+                            <select name="type">
+                              <option value="">Տեսակ</option>
+                              <option value="0">11111</option>
+                              <option value="1">22222</option>
+                              <option value="2">33333</option>
+                            </select>
+                            <div class="select-title">
+                              <p class="selecionado_opcion"></p>
+                              <span class="icon_select_mate icon"
+                                ><img src="../../assets/select-chev.svg"
+                              /></span>
+                            </div>
+                          </div>
+                          <div class="input-group">
+                            <input
+                              class="input-wrap"
+                              disabled
+                              placeholder="Համար"
+                              name="number"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              name="date"
+                              class="input-wrap"
+                              placeholder="Ամսաթիվ (ՕՕ-ԱԱ-ՏՏՏ)"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              name="price"
+                              class="input-wrap"
+                              placeholder="Գումար"
+                            />
+                          </div>
+                          <div class="attached-materials-file-btn_box">
+                            <button type="submit" class="main-btn">Կցել</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="attached-materials-store">
+                        <div class="attached-materials-heading">
+                          <h4>Կցված փաստաթղթեր</h4>
+                        </div>
+                        <div class="attached-materials-table_container">
+                          <table class="attached-materials-table">
+                            <thead>
+                              <th>Տեսակ</th>
+                              <th>Գումար</th>
+                              <th>Համար</th>
+                              <th>Ամսաթիվ</th>
+                              <th>_</th>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
