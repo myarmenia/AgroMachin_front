@@ -34,7 +34,6 @@
 .formContainer > div {
   width: 100%;
   max-width: 400px;
-  height: 240px;
   display: flex;
   gap: 12px;
   flex-direction: column;
