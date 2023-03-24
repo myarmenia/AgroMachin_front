@@ -544,6 +544,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .main-btn:disabled {
   background-color: #9f9f9f;
+  cursor: default;
 }
 .main-btn-white {
   width: fit-content;
@@ -1126,3 +1127,48 @@ header {
   outline: none;
 }
 /* input container css */
+/* modal success */
+.success-modal {
+  display: none;
+  width: 379.17px;
+  height: 102.4px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+.success-modal.active {
+  display: block;
+}
+.success-modal-head {
+  padding: 11px 15px 14px 27px;
+  /* border-bottom: 1px solid #dadada; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.success-modal-title {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--gray);
+}
+.success-modal-message {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #5f6368;
+  padding: 25px;
+  padding-top: 0;
+}
+.success-close {
+  scale: 1.6;
+  font-size: 9px;
+  cursor: pointer;
+  color: #575757;
+}
+/* modal success */

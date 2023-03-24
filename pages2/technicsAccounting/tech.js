@@ -116,10 +116,8 @@ function addOwner() {
   box.innerHTML = addContainer;
   const cont = this.closest(".new_note").querySelector(".note-container-box");
   cont.append(box);
-
   createInputs(box);
   createSelectOptions(box);
-
   box
     .querySelector(".note-title-btnBox > button")
     .addEventListener("click", function () {
