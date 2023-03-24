@@ -1801,31 +1801,23 @@
                           <h4>Կցված փաստաթղթեր</h4>
                         </div>
                         <div class="attached-materials-table_container">
-                          <table class="attached-materials-table">
-                            <thead>
-                              <tr>
-                                <th>Տեսակ</th>
-                                <th>Գումար</th>
-                                <th>Համար</th>
-                                <th>Ամսաթիվ</th>
-                                <th></th>
-                              </tr>
-                            </thead>
-                            <tbody data-attached-materials-tbody="0"></tbody>
-                          </table>
+                          <div class="attached-materials-table">
+                            <div class="attached-materials-table-box">
+                              <span>Տեսակ</span>
+                              <span>Գումար</span>
+                              <span>Համար</span>
+                              <span>Ամսաթիվ</span>
+                            </div>
+                            <div data-attached-materials-tbody="0"></div>
+                          </div>
                         </div>
                         <form class="attached-materials-table-btn-box">
                           <input
                             data-attached-materials-input="0"
                             hidden
-                            id="inpinp"
                             name="main_arr"
                           />
-                          <button
-                            onclick="console.log(inpinp.value);"
-                            class="main-btn"
-                            type="button"
-                          >
+                          <button class="main-btn" type="button">
                             Պահպանել
                           </button>
                         </form>
