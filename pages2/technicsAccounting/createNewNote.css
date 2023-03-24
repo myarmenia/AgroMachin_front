@@ -107,6 +107,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
 }
 .btn-box {
   display: flex;
@@ -444,5 +445,13 @@
 }
 .attached-materials-table-delete {
   cursor: pointer;
+}
+
+.attached-materials-file_upload {
+  position: relative;
+}
+.input-name {
+  position: absolute;
+  left: 100%;
 }
 /* ================================================================= */
