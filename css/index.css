@@ -14,6 +14,7 @@
 /* -------------------------------- */
 :root {
   --select-delay: 500ms;
+  --success-duration: 500ms;
   --gray: #5f6368;
   --light-blue: #7098d5;
 }
@@ -1150,15 +1151,17 @@ header {
 /* ==================================================================== */
 /* modal success */
 .success-modal {
-  display: none;
+  z-index: 99999999999;
+  opacity: 0;
+  display: block;
   width: 379.17px;
-  height: 102.4px;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: fixed;
   bottom: 50px;
   right: 50px;
+  transition: var(--success-duration);
 }
 .success-modal.active {
   display: block;
