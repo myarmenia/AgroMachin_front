@@ -1,0 +1,63 @@
+.title-linkChild {
+    width: 100%;
+  }
+  .app {
+    background: #fff;
+    border-radius: 10px;
+  }
+  .new_language {
+    width: 100%;
+    min-height: 630px;
+  }
+  .new_language .create_language {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #ececec;
+    padding: 16px 0 0 25px;
+  }
+  .new_language .create_language h3 {
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5f6368;
+  }
+  .new_language .language_form {
+    width: 100%;
+    height: auto;
+    padding: 10px 50px 15px 27px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .language_block {
+    width: 65%;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 0 auto;
+  }
+  .selectLanguage {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .selectLanguage:first-child {
+    margin-top: 45px;
+  }
+  .button-container {
+    display: flex;
+    gap: 15px;
+  }
+  .main-btn-white {
+    min-width: 115px;
+  }
+  .main-btn {
+    min-width: 125px;
+  }
+  .selecionado_opcion {
+    height: 30px;
+  }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>drivingGroups</title>
     <link rel="stylesheet" href="../../css/index.css " />
-    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/modal.css" />
     <link rel="stylesheet" href="../../css/table.css" />
     <link rel="stylesheet" href="../../css/pagination.css" />
     <link
@@ -263,7 +263,7 @@
                   >
                 </div>
                 <button class="main-btn" id="new_record">
-                    Ստեղծել վարման խումբ
+                  Ստեղծել վարման խումբ
                 </button>
               </div>
             </div>
@@ -272,7 +272,7 @@
                 <form action="">
                   <div class="table-title">
                     <div class="vehicleType_table_head">
-                      <span>Վարման խմբեր</span>
+                      <span id="success-modal-btn">Վարման խմբեր</span>
                       <div>
                         <div class="main-input-search-box">
                           <input placeholder="Որոնել" class="main-input" />
@@ -309,16 +309,16 @@
                         <td>A</td>
                         <td>40</td>
                         <td>
-                            <div>
-                              <label class="toggle">
-                                <input class="toggle-checkbox" type="checkbox" />
-                                <div class="toggle-switch"></div>
-                              </label>
-                            </div>
-                          </td>
+                          <div>
+                            <label class="toggle">
+                              <input class="toggle-checkbox" type="checkbox" />
+                              <div class="toggle-switch"></div>
+                            </label>
+                          </div>
+                        </td>
                         <td>
                           <div>
-                            <img src="../../assets/table/Trash.svg" alt=""/>
+                            <img src="../../assets/table/Trash.svg" alt="" />
                           </div>
                         </td>
                         <td>
@@ -336,16 +336,16 @@
                         <td>B</td>
                         <td>40</td>
                         <td>
-                            <div>
-                              <label class="toggle">
-                                <input class="toggle-checkbox" type="checkbox" />
-                                <div class="toggle-switch"></div>
-                              </label>
-                            </div>
-                          </td>
+                          <div>
+                            <label class="toggle">
+                              <input class="toggle-checkbox" type="checkbox" />
+                              <div class="toggle-switch"></div>
+                            </label>
+                          </div>
+                        </td>
                         <td>
-                          <div >
-                            <img src="../../assets/table/Trash.svg" alt=""/>
+                          <div>
+                            <img src="../../assets/table/Trash.svg" alt="" />
                           </div>
                         </td>
                         <td>
@@ -364,9 +364,7 @@
               </div>
               <div class="new_vehicle">
                 <div class="table-title">
-                  <div class="table-title-text">
-                    Ստեղծել նոր վարման խումբ
-                  </div>
+                  <div class="table-title-text">Ստեղծել նոր վարման խումբ</div>
                 </div>
                 <form class="new_vehicle_content">
                   <div class="new_vehicle_fieldset">
@@ -388,7 +386,11 @@
                           <input
                             placeholder="Թիվ"
                             class="user-input"
-                            style="-webkit-appearance: none; -moz-appearance: textfield; appearance: none;"
+                            style="
+                              -webkit-appearance: none;
+                              -moz-appearance: textfield;
+                              appearance: none;
+                            "
                           />
                           <div class="input-error-message">this is error</div>
                         </div>
@@ -411,9 +413,7 @@
               </div>
               <div class="new_vehicle2">
                 <div class="table-title">
-                  <div class="table-title-text">
-                    Փոփոխել վարման խումբը
-                  </div>
+                  <div class="table-title-text">Փոփոխել վարման խումբը</div>
                 </div>
                 <form class="new_vehicle_content">
                   <div class="new_vehicle_fieldset">
@@ -435,7 +435,11 @@
                           <input
                             placeholder="Թիվ"
                             class="user-input"
-                            style="-webkit-appearance: none; -moz-appearance: textfield; appearance: none;"
+                            style="
+                              -webkit-appearance: none;
+                              -moz-appearance: textfield;
+                              appearance: none;
+                            "
                           />
                           <div class="input-error-message">this is error</div>
                         </div>
@@ -458,6 +462,17 @@
               </div>
             </div>
           </div>
+          <!-- sucess modal -->
+          <div class="success-modal">
+            <div class="success-modal-head">
+              <h3 class="success-modal-title">Success message</h3>
+              <div class="success-close">&#x2715;</div>
+            </div>
+            <div class="success-modal-message">
+              Օրինակ՝ ձեր գործարքը հաջողությամբ կատարվել է։
+            </div>
+          </div>
+          <!-- sucess modal -->
           <!-- ------------------------------------------------------- -->
           <!-- Pagination -->
           <!-- ------------------------------------------------------- -->
@@ -478,7 +493,7 @@
                 class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
               >
                 Next »
-              </a> 
+              </a>
             </div>
 
             <div
@@ -658,6 +673,7 @@
           </div>
         </div>
       </div>
+
       <script src="../../js/index.js"></script>
       <script src="../../js/modal.js"></script>
       <script src="./drivingGroups.js"></script>
