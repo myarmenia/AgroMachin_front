@@ -9,11 +9,9 @@ const cur_table = document.getElementById("table-route"),
   table_route_delete = cur_table && cur_table.attributes["data-delete"].value,
   table_route_route = cur_table && cur_table.attributes["data-route"].value,
   modal_form = document.querySelectorAll("[data-checkboxes-form]"),
-  select_delay = parseInt(
-    getComputedStyle(document.documentElement).getPropertyValue(
-      "--select-delay"
-    )
-  );
+  root_css = getComputedStyle(document.documentElement),
+  select_duration = parseInt(root_css.getPropertyValue("--select-delay")),
+  success_duration = parseInt(root_css.getPropertyValue("--success-duration"));
 
 // ==================================================================
 // ==================================================================
@@ -187,7 +185,7 @@ function createSelectOptions(rootElement = document) {
       placeholder = custom_selects[e].querySelector(".selecionado_opcion");
 
     optionsUl.style.transitionDuration =
-      Math.min(select_delay, select_optiones.length * 100) + "ms";
+      Math.min(select_duration, select_optiones.length * 100) + "ms";
 
     custom_selects[e].setAttribute("data-is-open", "false");
 
@@ -301,11 +299,11 @@ search_select.forEach((el) => {
       options_box.children.length * options_box.children[0].offsetHeight + 1;
     options_box.style.height = hg + "px";
     options_box.style.transitionDuration =
-      Math.min(select_delay, options_box.children.length * 100) + "ms";
+      Math.min(select_duration, options_box.children.length * 100) + "ms";
 
     setTimeout(
       () => (options_box.style.overflow = "auto"),
-      Math.min(select_delay, options_box.children.length * 100)
+      Math.min(select_duration, options_box.children.length * 100)
     );
 
     options_box.querySelectorAll(".search-select-option").forEach((option) => {
@@ -341,9 +339,9 @@ select_checkboxes.forEach((el) => {
     el_options = el_container.querySelector(".select-checkboxes-options");
   el_content.addEventListener("click", (optEvt) => optEvt.stopPropagation());
   el_content.style.transitionDuration =
-    Math.min(select_delay, el_options.children.length * 100) + "ms";
+    Math.min(select_duration, el_options.children.length * 100) + "ms";
   el_options.style.transitionDuration =
-    Math.min(select_delay, el_options.children.length * 100) + "ms";
+    Math.min(select_duration, el_options.children.length * 100) + "ms";
 
   el.addEventListener("click", function (evt) {
     evt.stopPropagation();
@@ -435,4 +433,35 @@ select_checkboxes.forEach((el) => {
     }
   });
 });
+// ====================================================================
+
+// --------------------------------------------------------------------
+// Show Success
+// --------------------------------------------------------------------
+const main_div = document.querySelector("main");
+function showSuccess(title = "Օրինակ՝ ձեր գործարքը հաջողությամբ կատարվել է։") {
+  const container = document.createElement("div");
+  container.className = "success-modal";
+  container.innerHTML = `
+    <div class="success-modal-head">
+      <h3 class="success-modal-title">Success message</h3>
+      <div class="success-close">&#x2715;</div>
+    </div>
+    <div class="success-modal-message">${title}</div>
+  `;
+  container
+    .querySelector(".success-close")
+    .addEventListener("click", deleteSuccess);
+  main_div.append(container);
+  setTimeout(() => (container.style.opacity = "1"), 1);
+
+  setTimeout(() => (container.style.opacity = "0"), 2000);
+  setTimeout(() => container.remove(), 2001 + success_duration);
+}
+function deleteSuccess() {
+  const container = document.querySelector(".success-modal");
+  container.style.opacity = "0";
+  setTimeout(() => container.remove(), success_duration);
+}
+showSuccess("adfadsfasdfasdfasdfsadfasdfasdf")
 // ====================================================================

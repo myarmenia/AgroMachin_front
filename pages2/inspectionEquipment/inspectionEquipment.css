@@ -123,7 +123,6 @@
 .inspection-result {
   width: 100%;
   padding: 30px 20px 80px 55px;
-  display: none;
 }
 .warning {
   display: flex;
