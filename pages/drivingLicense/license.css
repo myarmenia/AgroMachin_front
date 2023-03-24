@@ -1,0 +1,68 @@
+.license-box {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.license-box-child {
+  display: flex;
+  flex-direction: column;
+  margin-top: 85px;
+  padding: 0 40px;
+}
+.license-container {
+  min-height: 50px;
+  height: auto;
+}
+.input-containerChild label {
+  text-align: left;
+}
+.input-radio-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-radio-box input[type="radio"] {
+  position: absolute;
+  left: -30px;
+  top: 10px;
+}
+.add-box {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.add-box p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #343957;
+}
+.license-download-box {
+  margin-top: 50px;
+}
+
+.license-img-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.license-img-box img {
+  width: 284px;
+  height: 137px;
+  object-fit: cover;
+}
+.license-btn {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: end;
+  padding-right: 30px;
+}
