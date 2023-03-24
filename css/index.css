@@ -1129,7 +1129,7 @@ header {
 /* input container css */
 /* modal success */
 .success-modal {
-  display: none;
+  display: block;
   width: 379.17px;
   height: 102.4px;
   background: #ffffff;
@@ -1171,4 +1171,5 @@ header {
   cursor: pointer;
   color: #575757;
 }
+
 /* modal success */
