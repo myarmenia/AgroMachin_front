@@ -410,6 +410,11 @@ input[type="number"]::-webkit-inner-spin-button {
   letter-spacing: -0.019em;
   color: #575757;
 }
+.main-input-unstyled {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
 
 /* -------------------------------------------------- */
 /* -------------------- Input ----------------------- */
