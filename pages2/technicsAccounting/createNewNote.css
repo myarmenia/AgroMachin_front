@@ -446,4 +446,12 @@
 .attached-materials-table-delete {
   cursor: pointer;
 }
+
+.attached-materials-file_upload {
+  position: relative;
+}
+.input-name {
+  position: absolute;
+  left: 100%;
+}
 /* ================================================================= */
