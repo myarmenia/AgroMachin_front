@@ -1,0 +1,202 @@
+.navbar_select {
+  min-width: 256px;
+  width: 100%;
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  appearance: none;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+}
+/* .navbar a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} */
+.dropdown {
+  overflow: hidden;
+  height: 100%;
+}
+.dropdown-content {
+  width: 100% !important;
+  /* padding-left: 5px; */
+}
+.select-icon {
+  position: relative;
+  bottom: 14px;
+
+}
+.dropdown .dropbtnCheckBox {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 3px 12px;
+  color: #575757;
+  height: 100%;
+}
+.dropbtn > div {
+  width: 10px;
+  height: 12px;
+}
+/* .option::after {
+  content: attr(value);
+  background-color: red;
+  width: 30px;
+  height: 30px;
+} */
+.checkbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  line-height: 30px !important;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #e7eef9;
+  cursor: pointer;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.box_text {
+  font-size: 12px;
+}
+.checkbox:hover {
+  background-color: #d2def0;
+}
+.checkbox input {
+  min-width: auto !important;
+  width: auto !important;
+  height: 15px !important;
+  background-color: #5f6368 !important;
+}
+.dropdown-content {
+  height: 0;
+  /* opacity: 0;
+  display: none; */
+  overflow: auto;
+  top: calc(100% + 5px);
+  position: absolute;
+  width: 140.51px;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 20;
+  transition: all var(--select-delay) ease-in-out;
+  max-height: 150px;
+}
+
+.dropdown-content .myDropdownCheckBox {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  cursor: pointer;
+  color: #575757;
+  transition: all var(--select-delay) ease-in-out;
+}
+.dropdown-content .myDropdownCheckBox:hover {
+  background-color: #ddd;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* .show { */
+  /* opacity: 1;
+  height: fit-content;
+  display: block; */
+/* } */
+.closeDropDown {
+  display: none !important;
+}
+.box_container {
+  width: 100%;
+  line-height: 2;
+  display: none;
+  flex-wrap: wrap;
+  max-width: 256px;
+  gap: 8px;
+  margin-top: 10px;
+}
+.box_container .box_item {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.delete {
+  width: 12px;
+  height: 12px;
+  font: menu;
+  cursor: pointer;
+  color: #575757;
+}
+.new_user {
+  width: 100%;
+  min-height: 630px;
+}
+.vehicleType_crumbs_box1 {
+  width: 100%;
+}
+.app {
+  background: #fff;
+  border-radius: 10px;
+}
+.new_user .create_user {
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #ececec;
+  padding: 16px 0 0 15px;
+  display: flex;
+  gap: 10px;
+}
+.new_user .create_user h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f6368;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 3px;
+  appearance: none;
+}
+.user_form {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin-top: 33px;
+  flex-direction: column;
+  gap: 16px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 16px;
+}
+.toggle-box {
+  width: 256px;
+}
+.input-container {
+  height: auto;
+}
+
