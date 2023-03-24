@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>drivingGroups</title>
-    <link rel="stylesheet" href="../../css/index.css " />
+
+    <!-- bootstrap -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    /> -->
+
+    <link rel="stylesheet" href="../../css/index.css" />
     <link rel="stylesheet" href="../../css/modal.css" />
     <link rel="stylesheet" href="../../css/table.css" />
     <link rel="stylesheet" href="../../css/pagination.css" />
+    <link rel="stylesheet" href="users.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./drivingGroups.css" />
   </head>
 
   <body>
@@ -253,212 +260,53 @@
         <!-- right section start-->
         <section class="right-section">
           <div class="right-sectionChild">
-            <div class="title-link2 vehicleType_crumbs_container">
-              <div>
-                <div class="title-linkChild vehicleType_crumbs_box1">
-                  <a href="#" class="link-direction">Գլխավոր</a>
-                  <div>></div>
-                  <a href="./page.html" class="link-direction"
-                    >Վարման իրավունքի խմբեր</a
-                  >
-                </div>
-                <button class="main-btn" id="new_record">
-                  Ստեղծել վարման խումբ
-                </button>
+            <div class="title-link2">
+              <div class="title-linkChild">
+                <a href="#" class="link-direction">Գլխավոր</a>
+                <div>></div>
+                <a href="./page.html" class="link-direction">
+                  Վարման իրավունքի հարցաշար</a
+                >
               </div>
+              <a href="" class="main-btn" id="addPage">Ստեղծել հարց</a>
             </div>
-            <div class="vehicleType_main_container">
-              <div class="tableContainer">
-                <form action="">
-                  <div class="table-title">
-                    <div class="vehicleType_table_head">
-                      <span>Վարման խմբեր</span>
-                      <div>
-                        <div class="main-input-search-box">
-                          <input placeholder="Որոնել" class="main-input" />
-                          <button>
-                            <img
-                              src="../../assets/table/inp-search.svg"
-                              alt=""
-                            />
-                          </button>
-                        </div>
-                        <!-- <button class="main-btn" id="new_record">
-                        Ստեղծել գրառում
-                      </button> -->
-                      </div>
-                    </div>
-                    <!-- <button class="main-btn" id="addPage">+ Նոր օգտատեր</button> -->
-                  </div>
-                </form>
-                <div class="vehicleType_table_container">
-                  <table>
-                    <thead>
-                      <tr class="vehicleType_thead">
-                        <td class="num">№</td>
-                        <td>Խումբ</td>
-                        <td>Հզորություն</td>
-                        <td class="forWidth">Կարգավիճակ</td>
-                        <td class="forWidth">Ջնջել</td>
-                        <td class="forWidth">Փոփոխել</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td></td>
-                        <td>A</td>
-                        <td>40</td>
-                        <td>
-                          <div>
-                            <label class="toggle">
-                              <input class="toggle-checkbox" type="checkbox" />
-                              <div class="toggle-switch"></div>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <div>
-                            <img src="../../assets/table/Trash.svg" alt="" />
-                          </div>
-                        </td>
-                        <td>
-                          <div>
-                            <img
-                              src="../../assets/table/pen.svg"
-                              alt=""
-                              id="change_record"
-                            />
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>B</td>
-                        <td>40</td>
-                        <td>
-                          <div>
-                            <label class="toggle">
-                              <input class="toggle-checkbox" type="checkbox" />
-                              <div class="toggle-switch"></div>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <div>
-                            <img src="../../assets/table/Trash.svg" alt="" />
-                          </div>
-                        </td>
-                        <td>
-                          <div>
-                            <img
-                              src="../../assets/table/pen.svg"
-                              alt=""
-                              id="change_record"
-                            />
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <div class="tableContainer">
+              <div class="table-title">
+                <div class="page">Վարման իրավունքի հարցաշար</div>
               </div>
-              <div class="new_vehicle">
-                <div class="table-title">
-                  <div class="table-title-text">Ստեղծել նոր վարման խումբ</div>
-                </div>
-                <form class="new_vehicle_content">
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>Խումբ*</label>
-                        <div class="input-validatation-box">
-                          <input placeholder="Տեքստ" class="user-input" />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>Հզորություն</label>
-                        <div class="input-validatation-box">
-                          <input
-                            placeholder="Թիվ"
-                            class="user-input"
-                            style="
-                              -webkit-appearance: none;
-                              -moz-appearance: textfield;
-                              appearance: none;
-                            "
-                          />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="input-container">
-                    <div class="input-containerChild input-counting">
-                      <label>Կարգավիճակ</label>
-                      <div class="input-validatation-box">
-                        <label class="toggle">
-                          <input class="toggle-checkbox" type="checkbox" />
-                          <div class="toggle-switch"></div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="main-btn">Պահպանել</button>
-                </form>
-              </div>
-              <div class="new_vehicle2">
-                <div class="table-title">
-                  <div class="table-title-text">Փոփոխել վարման խումբը</div>
-                </div>
-                <form class="new_vehicle_content">
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>Խումբ*</label>
-                        <div class="input-validatation-box">
-                          <input placeholder="Տեքստ" class="user-input" />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="new_vehicle_fieldset">
-                    <div class="input-container">
-                      <div class="input-containerChild">
-                        <label>Հզորություն</label>
-                        <div class="input-validatation-box">
-                          <input
-                            placeholder="Թիվ"
-                            class="user-input"
-                            style="
-                              -webkit-appearance: none;
-                              -moz-appearance: textfield;
-                              appearance: none;
-                            "
-                          />
-                          <div class="input-error-message">this is error</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="input-container">
-                    <div class="input-containerChild input-counting">
-                      <label>Կարգավիճակ</label>
-                      <div class="input-validatation-box">
-                        <label class="toggle">
-                          <input class="toggle-checkbox" type="checkbox" />
-                          <div class="toggle-switch"></div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="main-btn">Պահպանել</button>
-                </form>
+              <div class="tableChild">
+                <table
+                  data-route="users-table"
+                  data-delete="delete-table"
+                  id="table-route"
+                >
+                  <tr class="firstLine">
+                    <td class="num">№</td>
+                    <td>Հարց</td>
+                    <td>Տեսակ</td>
+
+                    <td class="forWidth">Կարգավիճակ</td>
+                    <td class="forWidth">Ջնջել</td>
+                    <td class="forWidth">Փոփոխել</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Լիլիթ</td>
+                    <td>Մահտեսյան</td>
+                    <td>Մկրտիչի</td>
+                    <td>
+                      <label class="toggle">
+                        <input class="toggle-checkbox" type="checkbox" />
+                        <div class="toggle-switch"></div>
+                      </label>
+                    </td>
+                    <td>
+                      <a>
+                        <img src="../../assets/table/pen.svg" class="pen"
+                      /></a>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -466,6 +314,7 @@
           <!-- ------------------------------------------------------- -->
           <!-- Pagination -->
           <!-- ------------------------------------------------------- -->
+
           <nav
             role="navigation"
             aria-label="Pagination Navigation"
@@ -636,12 +485,14 @@
               </div>
             </div>
           </nav>
+
           <!-- ======================================================= -->
           <!-- ======================================================= -->
           <!-- ======================================================= -->
         </section>
         <!-- right section end-->
       </main>
+
       <div class="modal-container">
         <div class="modal" id="confirm-modal">
           <div class="modal-head">
@@ -651,22 +502,21 @@
           <div class="modal-content">
             <div class="modal-confirm-box">
               <p class="modal-confirm-box-title">
-                Դուք ցանկանո՞ւմ եք ակտիվացնել/ապակտիվացնել վարման խումբը
+                Դուք ցանկանո՞ւմ եք հաստատել գործողությունը
               </p>
               <div class="modal-confirm-buttons">
                 <button class="main-btn-white" id="modal-deny-btn">
                   Չեղարկել
                 </button>
-                <button class="main-btn" id="modal-accept-btn">Հաստատել</button>
+                <a href="" class="main-btn" id="modal-accept-btn">Հաստատել</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <script src="../../js/index.js"></script>
-      <script src="../../js/modal.js"></script>
-      <script src="./drivingGroups.js"></script>
     </div>
+
+    <script src="../../js/index.js"></script>
+    <script src="../../js/modal.js"></script>
   </body>
 </html>
