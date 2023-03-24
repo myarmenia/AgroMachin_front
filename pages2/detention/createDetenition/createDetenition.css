@@ -1,0 +1,31 @@
+.createDetenition-container {
+  padding: 25px 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+.createDetenition-input-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(309px, 0));
+  justify-content: space-between;
+  gap: 40px;
+}
+.createDetenition-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.createDetenition-input-container:nth-child(1) {
+  grid-area: a;
+}
+.createDetenition-input-container:nth-child(2) {
+  grid-area: c;
+}
+.createDetenition-input-container:nth-child(3) {
+  grid-area: d;
+}
+.btn-box {
+  display: flex;
+  justify-content: end;
+  gap: 32px;
+}

@@ -436,24 +436,3 @@ select_checkboxes.forEach((el) => {
   });
 });
 // ====================================================================
-
-// --------------------------------------------------------------------
-// Select checkboxes
-// --------------------------------------------------------------------
-
-const date_inputs = document.querySelectorAll(".main-date-input");
-date_inputs.forEach((el) => {
-  el.addEventListener("keypress", (event) => {
-    if (event.target.value.length == 2 || event.target.value.length == 5) {
-      event.target.value += "-";
-    }
-  });
-  el.setAttribute(
-    "onkeypress",
-    "return event.charCode >= 48 && event.charCode <= 57"
-  );
-  el.type = "tel";
-  el.setAttribute("maxlength", "10");
-  el.setAttribute("minlength", "7");
-});
-// ====================================================================
