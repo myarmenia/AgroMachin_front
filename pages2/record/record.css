@@ -1,6 +1,6 @@
 .record-box {
   border: 1px solid;
-  height: 500px;
+  min-height: 500px;
   width: 50%;
   padding-left: 20px;
 }
@@ -11,10 +11,19 @@ h2 {
   display: flex;
   gap: 5px;
 }
-.car-description span:nth-child(2) {
+.car-description span:nth-child(2),
+.payments span:nth-child(2) {
   text-transform: uppercase;
   font-weight: bold;
 }
 h4 {
-  padding: 0 auto;
+  text-align: center;
+}
+.payments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+h3 {
+  font-weight: normal;
 }
