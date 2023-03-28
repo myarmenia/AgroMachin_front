@@ -25,7 +25,9 @@
 const new_vehicle = document.getElementsByClassName("new_vehicle")[0];
 const new_vehicle2 = document.getElementsByClassName("new_vehicle2")[0];
 const new_record_btn = document.getElementById("new_record");
-const change_record_btn = document.querySelectorAll("#change_record");
+const change_record_btn = document.querySelectorAll(".change_record");
+const edit_input = document.querySelector("#edit_input");
+const edit_group = document.querySelector("#edit_group");
 
 function articleToggle() {
   new_vehicle2.classList.remove("new_vehicle_show2");
@@ -106,14 +108,39 @@ for (let i = 0; i < dropbtnCheckBox.length; i++) {
         let cur_value = [...checkboxes]
           .map((elem) => {
             if (elem.checked) {
-              return elem.value;
+              return [elem.value, elem.nextElementSibling.innerHTML];
             }
           })
-          .filter((e) => !!e)
-          .join(", ");
+          .filter((e) => !!e);
 
-        input.value = cur_value;
-        placeholder.innerHTML = cur_value;
+        input.value = cur_value.map((e) => e[0]).join(", ");
+        placeholder.innerHTML = cur_value.map((e) => e[1]).join(", ");
       });
     });
 }
+
+change_record_btn.forEach((el) => {
+  el.addEventListener("click", function () {
+    const group = this.getAttribute("data-group")
+        .split(",")
+        .map((e) => e.trim()),
+      inp_val = this.getAttribute("data-name");
+
+    const input = new_vehicle2.querySelector(".edit_input"),
+      gourp_input = new_vehicle2.querySelector(".edit_group"),
+      checkboxes = new_vehicle2.querySelectorAll(".check_input");
+
+    input.value = inp_val;
+    gourp_input.value = group.join(", ");
+
+    const gourp_input_value = [...checkboxes]
+      .map((e) => {
+        if (group.some((elem) => elem === e.value)) {
+          e.checked = true;
+          return e.nextElementSibling.innerHTML;
+        } else e.checked = false;
+      })
+      .filter((e) => !!e);
+    gourp_input.nextElementSibling.innerHTML = gourp_input_value.join(", ");
+  });
+});
