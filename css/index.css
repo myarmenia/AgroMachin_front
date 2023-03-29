@@ -18,6 +18,11 @@
   --gray: #5f6368;
   --light-blue: #7098d5;
 }
+/* ---------table box shadow----------*/
+.table-box-shadow {
+  -webkit-box-shadow: 0 4px 10px 0 #DADADA; 
+  box-shadow: 0 4px 10px 0 #DADADA;  
+}
 /* ================================ */
 .error_border {
   border: 1px solid #f00 !important;
