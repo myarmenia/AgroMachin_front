@@ -14,8 +14,8 @@ const licenseBox = document.getElementById("license-file-box");
 const licenseFile = document.getElementById("license-file");
 const licenseImgBox = document.getElementById("license-img-box");
 licenseBox.addEventListener("click", function () {
-  licenseFile.click();
-});
+    licenseFile.click();
+  });
 
 licenseFile.addEventListener("change", function () {
   const files = this.files;
