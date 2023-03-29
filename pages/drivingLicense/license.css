@@ -16,6 +16,9 @@
   min-height: 50px;
   height: auto;
 }
+.license-container:nth-child(2) {
+  margin-top: 20px;
+}
 .input-containerChild label {
   text-align: left;
 }
@@ -50,14 +53,23 @@
 
 .license-img-box {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   margin-top: 50px;
   flex-wrap: wrap;
 }
-.license-img-box img {
-  width: 284px;
+.img-box-child {
+  position: relative;
+}
+.license-img-box img:nth-child(2) {
+  max-width: 284px;
   height: 137px;
   object-fit: cover;
+}
+.iconDelete {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  cursor: pointer;
 }
 .license-btn {
   display: flex;
@@ -65,4 +77,20 @@
   margin-bottom: 50px;
   justify-content: end;
   padding-right: 30px;
+}
+textarea {
+  min-height: 70px;
+  outline: none;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  resize: none;
+  padding: 8px 13px;
+  width: 256px;
+  font-size: 12px;
+}
+.removeInpBtn {
+  position: absolute;
+  top: 8px;
+  right: -35px;
+  cursor: pointer;
 }
