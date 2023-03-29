@@ -306,8 +306,8 @@
                     <tbody>
                       <tr>
                         <td></td>
-                        <td>A</td>
-                        <td>40</td>
+                        <td>adsfasdfad</td>
+                        <td>A, C</td>
                         <td>
                           <div>
                             <label class="toggle">
@@ -326,15 +326,17 @@
                             <img
                               src="../../assets/table/pen.svg"
                               alt=""
-                              id="change_record"
+                              class="change_record"
+                              data-group="0,2"
+                              data-name="adsfasdfad"
                             />
                           </div>
                         </td>
                       </tr>
                       <tr>
                         <td></td>
-                        <td>B</td>
-                        <td>40</td>
+                        <td>1111111</td>
+                        <td>A, B</td>
                         <td>
                           <div>
                             <label class="toggle">
@@ -353,7 +355,9 @@
                             <img
                               src="../../assets/table/pen.svg"
                               alt=""
-                              id="change_record"
+                              class="change_record"
+                              data-group="0,1"
+                              data-name="1111111"
                             />
                           </div>
                         </td>
@@ -364,7 +368,9 @@
               </div>
               <div class="new_vehicle">
                 <div class="table-title">
-                  <div class="table-title-text">Ստեղծել նոր վարման խումբ</div>
+                  <div class="table-title-text">
+                    Ստեղծել վարման խմբի դասակարգում
+                  </div>
                 </div>
                 <form class="new_vehicle_content">
                   <div class="new_vehicle_fieldset">
@@ -386,7 +392,7 @@
                           <div class="navbar navbar_select">
                             <div class="dropdown">
                               <div class="dropbtnCheckBox">
-                                <input class="main-input-unstyled" hidden />
+                                <input class="" hidden />
                                 <span>Թիվ</span>
                               </div>
                               <div class="select-icon">
@@ -454,7 +460,10 @@
                       <div class="input-containerChild">
                         <label>Անուն*</label>
                         <div class="input-validatation-box">
-                          <input placeholder="Տեքստ" class="user-input" />
+                          <input
+                            placeholder="Տեքստ"
+                            class="user-input edit_input"
+                          />
                           <div class="input-error-message">this is error</div>
                         </div>
                       </div>
@@ -468,7 +477,7 @@
                           <div class="navbar navbar_select">
                             <div class="dropdown">
                               <div class="dropbtnCheckBox">
-                                <input class="main-input-unstyled" hidden />
+                                <input class="edit_group" hidden />
                                 <span>Թիվ</span>
                               </div>
                               <div class="select-icon">
@@ -483,8 +492,9 @@
                                     type="checkbox"
                                     name=""
                                     class="check_input"
-                                    value="A"
-                                  />A
+                                    value="0"
+                                  />
+                                  <span>A</span>
                                 </div>
                                 <div class="dropdownoption checkbox">
                                   <input
@@ -492,8 +502,9 @@
                                     type="checkbox"
                                     name=""
                                     class="check_input"
-                                    value="B"
-                                  />B
+                                    value="1"
+                                  />
+                                  <span>B</span>
                                 </div>
                                 <div class="dropdownoption checkbox">
                                   <input
@@ -501,8 +512,9 @@
                                     type="checkbox"
                                     name=""
                                     class="check_input"
-                                    value="C"
-                                  />C
+                                    value="2"
+                                  />
+                                  <span>C</span>
                                 </div>
                               </div>
                             </div>
