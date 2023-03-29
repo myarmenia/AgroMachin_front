@@ -258,14 +258,14 @@
                 >
               </div>
             </div>
-            <form class="license-box">
+            <form class="license-box" id="save-btn">
               <div class="license-box-child">
                 <div class="input-container license-container">
                   <div class="input-containerChild">
                     <label>Հարց*</label>
                     <div class="input-validatation-box">
-                      <input placeholder="հարց" class="user-input" />
-                      <div class="input-error-message">this is error</div>
+                      <textarea placeholder="հարց"></textarea>
+                      <!-- <textarea placeholder="հարց" class="user-input" > -->
                     </div>
                   </div>
                 </div>
@@ -301,18 +301,22 @@
                       <div class="input-validatation-box">
                         <input type="radio" name="answer" />
                         <input placeholder="հարց" class="user-input" />
+                        <img src="../../assets/redX.svg" class="removeInpBtn" />
                       </div>
                       <div class="input-validatation-box">
                         <input type="radio" name="answer" />
                         <input placeholder="հարց" class="user-input" />
+                        <img src="../../assets/redX.svg" class="removeInpBtn" />
                       </div>
                       <div class="input-validatation-box">
                         <input type="radio" name="answer" />
                         <input placeholder="հարց" class="user-input" />
+                        <img src="../../assets/redX.svg" class="removeInpBtn" />
                       </div>
                       <div class="input-validatation-box">
                         <input type="radio" name="answer" />
                         <input placeholder="հարց" class="user-input" />
+                        <img src="../../assets/redX.svg" class="removeInpBtn" />
                       </div>
                     </div>
                   </div>
@@ -322,13 +326,13 @@
                   <p>Ավելացնել պատասխան</p>
                 </div>
                 <div class="license-download-box" id="license-file-box">
-                  <input type="file" id="license-file" hidden multiple />
+                  <input type="file" id="license-file" name="license-file" hidden multiple />
                   <span class="main-anchor-blue">Բեռնել</span>
                 </div>
                 <div class="license-img-box" id="license-img-box"></div>
               </div>
               <div class="license-btn">
-                <button class="main-btn">Պահպանել</button>
+                <button class="main-btn" type="submit">Պահպանել</button>
               </div>
             </form>
           </div>
