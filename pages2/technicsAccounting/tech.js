@@ -37,6 +37,8 @@ const attached_materials_file_box = document.querySelector(
     "#attached-materials-file_name"
   );
 
+const open_subscripts = document.querySelectorAll(".open_subscript");
+
 // ======================================================================
 // ======================================================================
 // ======================================================================
@@ -359,3 +361,9 @@ attached_materials_form.addEventListener("submit", function (e) {
 });
 
 // ==================================================================
+
+open_subscripts.forEach((el) => {
+  el.addEventListener("click", function () {
+    showModal("#modal-subscript");
+  });
+});
