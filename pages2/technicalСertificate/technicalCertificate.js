@@ -355,28 +355,27 @@ attached_materials_form.addEventListener("submit", function (e) {
 });
 
 // ==================================================================
-const viewIcon = document.querySelector('.viewIcon');
-const result = document.querySelector('.inspection-result');
-const visible = document.querySelector('.visible-arrow');
-const searchNote = document.querySelector('#search_note');
-const searchTitle = document.querySelector('.note-container');
-const horizontalLine = document.querySelector('.horizontal-line');
-const searchNoteOffsetHeight = searchNote.offsetHeight
-console.log(searchNoteOffsetHeight);
-result.style.display = 'none';
-viewIcon.addEventListener('click', function () {
-    result.style.display = 'block';
-  })
-  
-  visible.addEventListener('click', function () {
-    searchNote.classList.toggle('search-note');
-    visible.classList.toggle('hidden');
-    searchTitle.style.overflow = 'hidden';
-    // horizontalLine.style.overflow = 'hidden';
-    if (searchNote.classList.contains('search-note')) {
-      searchNote.style.height = searchNoteOffsetHeight + 'px'
-    } else {
-      searchNote.style.height = 0
+const viewIcon = document.querySelector(".viewIcon");
+const result = document.querySelector(".inspection-result");
+const visible = document.querySelector(".visible-arrow");
+const searchNote = document.querySelector("#search_note");
+const searchTitle = document.querySelector(".note-container");
+const horizontalLine = document.querySelector(".horizontal-line");
+const searchNoteOffsetHeight = searchNote.offsetHeight;
+searchNote.style.height = searchNoteOffsetHeight + "px";
+result.style.display = "none";
+viewIcon.addEventListener("click", function () {
+  result.style.display = "block";
+});
 
-    }
-  })
+visible.addEventListener("click", function () {
+  searchNote.classList.toggle("search-note");
+  visible.classList.toggle("hidden");
+  searchTitle.style.overflow = "hidden";
+  // horizontalLine.style.overflow = 'hidden';
+  if (searchNote.classList.contains("search-note")) {
+    searchNote.style.height = searchNoteOffsetHeight + "px";
+  } else {
+    searchNote.style.height = 0;
+  }
+});
