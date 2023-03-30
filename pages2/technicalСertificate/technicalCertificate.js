@@ -61,165 +61,165 @@ for (let i = 0; i < tabs.length; i++) {
   });
 }
 
-let note_count = 1;
-function addOwner() {
-  const addContainer = `
-  <div class="new_note_title"><div>Այլ սեփականատեր</div><div class="note-title-btnBox"><button type="button" class="note-container-delete">&#x2715;</button></div></div>
-  <div class="note-container">
-    <div class="note-container-child">
-      <div class="input-group"><input name="group[${note_count}][name]" class="input-wrap" placeholder="Անուն*" /></div>
-      <div class="input-group"><input name="group[${note_count}][last_name]" class="input-wrap" placeholder="Ազգանուն*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Հայրանուն*" /></div>
-      <div class="select_mate line" data-mate-select="active">
-        <select onchange="" onclick="return false;"><option value="">Քաղաքացիություն*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
-        <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
-      </div>
-      <div class="select_mate line" data-mate-select="active">
-        <select onchange="" onclick="return false;"><option value="">Փաստաթղթի տեսակը*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
-        <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
-      </div>
-      <div class="input-group"><input class="input-wrap" placeholder="Անձնագրի սերիա և համար*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Ում կողմից է տրված*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Երբ է տրված*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="ՀԾՀ*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Ծննդյան ամսաթիվ*" /></div>
-      <div class="select_mate line" data-mate-select="active">
-        <select onchange="" onclick="return false;"><option value="">Սեռ*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
-        <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
-      </div>
-      <a href="" class="main-anchor-blue">Բեռնել</a>
-    </div>
-    <div class="note-container-child">
-      <div class="select_mate line" data-mate-select="active">
-        <select onchange="" onclick="return false;"><option value="">Երկիր*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
-        <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
-      </div>
-      <div class="input-group"><input class="input-wrap" placeholder="Համայնք/Վարչ․շրջան*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Բնակավայր*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Փոստային դասիչ" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Փողոց" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Տան տեսակ" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Շենք*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Բնակարան/Սենյակ" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Բաժնեմասեր (%-ով)" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Հեռախոսահամար*" /></div>
-      <div class="input-group"><input class="input-wrap" placeholder="Էլ․փոստ" /></div>
-    </div>
-  </div>
-  `;
-  const box = document.createElement("fieldset");
-  box.className = "new_note_container";
-  box.innerHTML = addContainer;
-  const cont = this.closest(".new_note").querySelector(".note-container-box");
-  cont.append(box);
-  createInputs(box);
-  createSelectOptions(box);
-  box
-    .querySelector(".note-title-btnBox > button")
-    .addEventListener("click", function () {
-      this.closest(".new_note_container").remove();
+// let note_count = 1;
+// function addOwner() {
+//   const addContainer = `
+//   <div class="new_note_title"><div>Այլ սեփականատեր</div><div class="note-title-btnBox"><button type="button" class="note-container-delete">&#x2715;</button></div></div>
+//   <div class="note-container">
+//     <div class="note-container-child">
+//       <div class="input-group"><input name="group[${note_count}][name]" class="input-wrap" placeholder="Անուն*" /></div>
+//       <div class="input-group"><input name="group[${note_count}][last_name]" class="input-wrap" placeholder="Ազգանուն*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Հայրանուն*" /></div>
+//       <div class="select_mate line" data-mate-select="active">
+//         <select onchange="" onclick="return false;"><option value="">Քաղաքացիություն*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
+//         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
+//       </div>
+//       <div class="select_mate line" data-mate-select="active">
+//         <select onchange="" onclick="return false;"><option value="">Փաստաթղթի տեսակը*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
+//         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
+//       </div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Անձնագրի սերիա և համար*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Ում կողմից է տրված*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Երբ է տրված*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="ՀԾՀ*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Ծննդյան ամսաթիվ*" /></div>
+//       <div class="select_mate line" data-mate-select="active">
+//         <select onchange="" onclick="return false;"><option value="">Սեռ*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
+//         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
+//       </div>
+//       <a href="" class="main-anchor-blue">Բեռնել</a>
+//     </div>
+//     <div class="note-container-child">
+//       <div class="select_mate line" data-mate-select="active">
+//         <select onchange="" onclick="return false;"><option value="">Երկիր*</option><option value="1">Select option 1</option><option value="2">Select option 2</option></select>
+//         <div class="select-title"><p class="selecionado_opcion"></p><span class="icon_select_mate icon"><img src="../../assets/select-chev.svg"/></span></div>
+//       </div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Համայնք/Վարչ․շրջան*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Բնակավայր*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Փոստային դասիչ" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Փողոց" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Տան տեսակ" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Շենք*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Բնակարան/Սենյակ" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Բաժնեմասեր (%-ով)" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Հեռախոսահամար*" /></div>
+//       <div class="input-group"><input class="input-wrap" placeholder="Էլ․փոստ" /></div>
+//     </div>
+//   </div>
+//   `;
+//   const box = document.createElement("fieldset");
+//   box.className = "new_note_container";
+//   box.innerHTML = addContainer;
+//   const cont = this.closest(".new_note").querySelector(".note-container-box");
+//   cont.append(box);
+//   createInputs(box);
+//   createSelectOptions(box);
+//   box
+//     .querySelector(".note-title-btnBox > button")
+//     .addEventListener("click", function () {
+//       this.closest(".new_note_container").remove();
 
-      cont.querySelectorAll(".new_note_container").forEach((el, i) => {
-        el.setAttribute("data-box-count", i);
-      });
-    });
+//       cont.querySelectorAll(".new_note_container").forEach((el, i) => {
+//         el.setAttribute("data-box-count", i);
+//       });
+//     });
 
-  // cont.querySelectorAll(".new_note_container").forEach((el, i) => {
-  //   el.setAttribute("data-box-count", i);
-  // });
-  // note_count = cont.querySelectorAll(".new_note_container").length - 1;
-}
+//   // cont.querySelectorAll(".new_note_container").forEach((el, i) => {
+//   //   el.setAttribute("data-box-count", i);
+//   // });
+//   // note_count = cont.querySelectorAll(".new_note_container").length - 1;
+// }
 
-document.querySelector("#the_form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const formData = new FormData(e.target),
-    formObj = Object.fromEntries(formData),
-    group = [];
+// document.querySelector("#the_form").addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const formData = new FormData(e.target),
+//     formObj = Object.fromEntries(formData),
+//     group = [];
 
-  Object.entries(formObj).forEach(([key, value]) => {
-    const key_props = key.split("]").join("").split("["),
-      index = +key_props[1],
-      item_name = key_props[2];
+//   Object.entries(formObj).forEach(([key, value]) => {
+//     const key_props = key.split("]").join("").split("["),
+//       index = +key_props[1],
+//       item_name = key_props[2];
 
-    if (!group[index]) group[index] = { ...group[index] };
+//     if (!group[index]) group[index] = { ...group[index] };
 
-    Object.assign(group[index], { [item_name]: value });
-  });
+//     Object.assign(group[index], { [item_name]: value });
+//   });
 
-  if (group.length) {
-    console.log(group);
-  }
-});
+//   if (group.length) {
+//     console.log(group);
+//   }
+// });
 
-[
-  {
-    name: select_person_status,
-    physical_person,
-    juridical_person,
-    addBtn,
-    checkbox: owner_auth_checkbox,
-    authorized_person,
-  },
-  {
-    name: select_person_status_buyer,
-    physical_person: physical_person_buyer,
-    juridical_person: juridical_person_buyer,
-    addBtn: addBtn_buyer,
-    checkbox: owner_auth_checkbox_buyer,
-    authorized_person: authorized_person__buyer,
-  },
-].forEach(
-  ({
-    name,
-    physical_person,
-    juridical_person,
-    addBtn,
-    checkbox,
-    authorized_person,
-  }) => {
-    name.forEach((el) => {
-      el.addEventListener("change", function () {
-        name.forEach((e) => {
-          const chosenOpt = [...e.options].find(
-              (opt) => opt.value === this.value
-            ),
-            activeOpt = e.closest(".select_mate").querySelectorAll("li");
-          chosenOpt.selected = true;
-          activeOpt.forEach((li) => {
-            if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
-              li.classList.add("active");
-              li
-                .closest(".select_mate")
-                .querySelector(".selecionado_opcion").innerHTML =
-                li.innerHTML.trim();
-            } else li.classList.remove("active");
-          });
-        });
-        if (this.value === "1") {
-          physical_person.style.display = "none";
-          juridical_person.style.display = "flex";
-          addBtn.style.visibility = "hidden";
-        } else {
-          physical_person.style.display = "flex";
-          juridical_person.style.display = "none";
-          addBtn.style.visibility = "visible";
-        }
-      });
-    });
+// [
+//   {
+//     name: select_person_status,
+//     physical_person,
+//     juridical_person,
+//     addBtn,
+//     checkbox: owner_auth_checkbox,
+//     authorized_person,
+//   },
+//   {
+//     name: select_person_status_buyer,
+//     physical_person: physical_person_buyer,
+//     juridical_person: juridical_person_buyer,
+//     addBtn: addBtn_buyer,
+//     checkbox: owner_auth_checkbox_buyer,
+//     authorized_person: authorized_person__buyer,
+//   },
+// ].forEach(
+//   ({
+//     name,
+//     physical_person,
+//     juridical_person,
+//     addBtn,
+//     checkbox,
+//     authorized_person,
+//   }) => {
+//     name.forEach((el) => {
+//       el.addEventListener("change", function () {
+//         name.forEach((e) => {
+//           const chosenOpt = [...e.options].find(
+//               (opt) => opt.value === this.value
+//             ),
+//             activeOpt = e.closest(".select_mate").querySelectorAll("li");
+//           chosenOpt.selected = true;
+//           activeOpt.forEach((li) => {
+//             if (chosenOpt.innerHTML.trim() == li.innerHTML.trim()) {
+//               li.classList.add("active");
+//               li
+//                 .closest(".select_mate")
+//                 .querySelector(".selecionado_opcion").innerHTML =
+//                 li.innerHTML.trim();
+//             } else li.classList.remove("active");
+//           });
+//         });
+//         if (this.value === "1") {
+//           physical_person.style.display = "none";
+//           juridical_person.style.display = "flex";
+//           addBtn.style.visibility = "hidden";
+//         } else {
+//           physical_person.style.display = "flex";
+//           juridical_person.style.display = "none";
+//           addBtn.style.visibility = "visible";
+//         }
+//       });
+//     });
 
-    checkbox.addEventListener("change", function () {
-      if (this.checked) {
-        authorized_person.style.display = "flex";
-        addBtn.style.visibility = "hidden";
-      } else {
-        authorized_person.style.display = "none";
-        addBtn.style.visibility = "visible";
-      }
-    });
+//     checkbox.addEventListener("change", function () {
+//       if (this.checked) {
+//         authorized_person.style.display = "flex";
+//         addBtn.style.visibility = "hidden";
+//       } else {
+//         authorized_person.style.display = "none";
+//         addBtn.style.visibility = "visible";
+//       }
+//     });
 
-    addBtn.addEventListener("click", addOwner);
-  }
-);
+//     addBtn.addEventListener("click", addOwner);
+//   }
+// );
 // =======================================================================
 
 // Nayel mi hat
@@ -357,7 +357,26 @@ attached_materials_form.addEventListener("submit", function (e) {
 // ==================================================================
 const viewIcon = document.querySelector('.viewIcon');
 const result = document.querySelector('.inspection-result');
+const visible = document.querySelector('.visible-arrow');
+const searchNote = document.querySelector('#search_note');
+const searchTitle = document.querySelector('.note-container');
+const horizontalLine = document.querySelector('.horizontal-line');
+const searchNoteOffsetHeight = searchNote.offsetHeight
+console.log(searchNoteOffsetHeight);
 result.style.display = 'none';
 viewIcon.addEventListener('click', function () {
     result.style.display = 'block';
-})
+  })
+  
+  visible.addEventListener('click', function () {
+    searchNote.classList.toggle('search-note');
+    visible.classList.toggle('hidden');
+    searchTitle.style.overflow = 'hidden';
+    // horizontalLine.style.overflow = 'hidden';
+    if (searchNote.classList.contains('search-note')) {
+      searchNote.style.height = searchNoteOffsetHeight + 'px'
+    } else {
+      searchNote.style.height = 0
+
+    }
+  })
