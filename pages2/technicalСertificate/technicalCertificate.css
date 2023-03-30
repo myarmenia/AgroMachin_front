@@ -1,7 +1,8 @@
 .app {
     background: #fff;
     border-radius: 10px;
-    padding: 0 18px 60px;
+    padding: 0 35px 60px;
+    position: relative;
   }
   
   /*Որոնում*/
@@ -26,8 +27,6 @@
     display: flex;
     flex-direction: column;
     gap: 28px;
-    border-top: 1px solid #7098D5;
-    padding-top: 50px;
   }
   .tableChild {
     border: 1px solid #dadada;
@@ -92,11 +91,17 @@
     padding: 0 20px 45px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    transition: .5s;
+    padding: 0;
   }
-  .note-container {
-    width: 90% !important;
+  #search_note .note-container {
+    width: 95% !important;
     margin: 0 auto;
+    border-bottom: 1px solid #7098D5;
+    padding-bottom: 40px;
   }
+  
   .new_note_title,
   .note-container_underbox {
     display: flex;
@@ -114,9 +119,26 @@
     color: #5F6368;
     margin-bottom: 40px;
   }
+  .visible-arrow {
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    transform: rotate(180deg);
+    transition: .5s;
+  }
+  .hidden {
+    transform: rotate(0);
+  }
   .vertical-line {
     border-right: 1px solid #DADADA;   
     height: 300px; 
+  }
+  .horizontal-line {
+    width: 95%;
+    height: 0;
+    border-bottom: 1px solid #7098D5;
+    margin: 40px auto 0;
+
   }
   .new_note_select_person {
     display: flex;
@@ -139,7 +161,6 @@
   .note-container {
     display: flex;
     justify-content: space-around;
-  
     width: 100%;
     gap: 20px;
   }
@@ -282,7 +303,7 @@
   /* accounting */
   .right-anchor {
     left: 340px;
-    top: 5px;
+    top: 13px;
     position: absolute;
   }
   /* accounting */
