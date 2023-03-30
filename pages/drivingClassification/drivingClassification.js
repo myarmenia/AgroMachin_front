@@ -26,8 +26,6 @@ const new_vehicle = document.getElementsByClassName("new_vehicle")[0];
 const new_vehicle2 = document.getElementsByClassName("new_vehicle2")[0];
 const new_record_btn = document.getElementById("new_record");
 const change_record_btn = document.querySelectorAll(".change_record");
-const edit_input = document.querySelector("#edit_input");
-const edit_group = document.querySelector("#edit_group");
 
 function articleToggle() {
   new_vehicle2.classList.remove("new_vehicle_show2");

@@ -463,5 +463,4 @@ function deleteSuccess() {
   container.style.opacity = "0";
   setTimeout(() => container.remove(), success_duration);
 }
-showSuccess("adfadsfasdfasdfasdfsadfasdfasdf")
 // ====================================================================

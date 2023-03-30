@@ -198,7 +198,7 @@
 #transaction-type-modal > .modal-group {
   border-radius: 20px;
 }
-.modal-content {
+#transaction-type-modal .modal-content {
   width: 100%;
   max-width: 100%;
   display: flex;
@@ -206,26 +206,26 @@
   gap: 25px;
   padding: 32px 0 24px 64px;
 }
-.modal-head {
+#transaction-type-modal .modal-head {
   padding: 21px 30px 14px 64px;
 }
-.modal .close {
+#transaction-type-modal .modal .close {
   scale: 1.8;
 }
-.modal-ul::-webkit-scrollbar {
+#transaction-type-modal .modal-ul::-webkit-scrollbar {
   width: 6px;
   height: 4px;
 }
-.modal-ul::-webkit-scrollbar-track {
+#transaction-type-modal .modal-ul::-webkit-scrollbar-track {
   background: #dadada;
 }
-.modal-ul::-webkit-scrollbar-thumb {
+#transaction-type-modal .modal-ul::-webkit-scrollbar-thumb {
   background: #a3a3a3;
 }
-.modal-ul::-webkit-scrollbar-thumb:hover {
+#transaction-type-modal .modal-ul::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.modal-ul {
+#transaction-type-modal .modal-ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -234,16 +234,16 @@
   max-height: 500px;
   padding-right: 44px;
 }
-.modal-ul > li {
+#transaction-type-modal .modal-ul > li {
   display: flex;
   align-items: center;
   gap: 13px;
 }
-.modal-ul + .main-btn {
+#transaction-type-modal .modal-ul + .main-btn {
   align-self: flex-end;
   margin-right: 44px;
 }
-.modal-title {
+#transaction-type-modal .modal-title {
   font-size: 18px;
 }
 /* ============================================= */
@@ -453,5 +453,25 @@
 .input-name {
   position: absolute;
   left: 100%;
+}
+/* ================================================================= */
+
+/* ----------------------------------------------------------------- */
+/* ---------------------- Subscript modal -------------------------- */
+/* ----------------------------------------------------------------- */
+.modal-subscripts {
+  min-height: 200px;
+}
+#modal-subscript {
+  min-width: 600px;
+}
+#modal-subscript .modal-content {
+  max-width: 100%;
+}
+.modal-subscript-btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 /* ================================================================= */
