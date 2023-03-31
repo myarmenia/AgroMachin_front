@@ -27,7 +27,6 @@
 .select-icon {
   position: relative;
   bottom: 14px;
-
 }
 .dropdown .dropbtnCheckBox {
   cursor: pointer;
@@ -113,7 +112,7 @@
 }
 
 /* .show { */
-  /* opacity: 1;
+/* opacity: 1;
   height: fit-content;
   display: block; */
 /* } */
@@ -199,4 +198,3 @@ select {
 .input-container {
   height: auto;
 }
-
