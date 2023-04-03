@@ -206,7 +206,9 @@
         <section class="right-section">
           <div class="tableContainer">
             <div class="table-title">
-              <div class="page">Համարանիշների և տեխ․ վկայագրերի կրկնօրինակի տրամադրում</div>
+              <div class="page">
+                Համարանիշների և տեխ․ վկայագրերի կրկնօրինակի տրամադրում
+              </div>
             </div>
 
             <div>
@@ -214,9 +216,7 @@
                 <div class="tabs_container">
                   <ul class="tabs_coulm">
                     <li class="tab_item">
-                      <p class="tabs_text tabs_activ" data-count="0">
-                        Որոնում
-                      </p>
+                      <p class="tabs_text tabs_activ" data-count="0">Որոնում</p>
                     </li>
                     <li class="tab_item">
                       <p class="tabs_text" data-count="1">Հաշվառում</p>
@@ -234,92 +234,128 @@
                 </div>
               </div>
               <div>
-                <div 
-                    class="app app_activ"
-                    style="display: block"
-                    data-activ_tab="0">
-                <form>
-                  <div class="visible-arrow hidden"><img src="../../assets/visibleArrow.svg" alt=""></div>
-                  <div class="new_note search-note" id="search_note">
-                    <div class="note-container container">
-                      <div class="note-container-child">
-                        <div class="search-title">ՏՄ տվյալներով որոնում</div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="ՏՄ-ի նույնացման համար"/>
-                        </div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Սեփականության վկայական"/>
-                        </div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Պետ․ համարանիշներ" />
-                        </div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Հենասարքի համար" />
-                        </div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Շարժիչի համար" />
-                        </div>
-                        <button class="main-btn">Որոնել</button>
-                      </div>
-                      <div class="vertical-line"></div>
-                      <div class="note-container-child">
-                        <div class="search-title">Սեփականատիրոջ տվյալներով որոնում</div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Անուն" />
-                        </div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Ազգանուն" />
-                        </div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Հայրանուն" />
-                        </div>
-                        <div class="select_mate line" data-mate-select="active">
-                          <select>
-                            <option value="">Փաստաթղթի տեսակը </option>
-                            <option value="1">Select option 1</option>
-                            <option value="2">Select option 2</option>
-                          </select>
-                          <div class="select-title">
-                            <p class="selecionado_opcion"></p>
-                            <span class="icon_select_mate icon"
-                              ><img src="../../assets/select-chev.svg"
-                            /></span>
-                          </div>
-                        </div>
-                        <div class="input-group">
-                          <input class="input-wrap" placeholder="Անձնագրի սերիա, համար" />
-                        </div>
-                        <button class="main-btn">Որոնել</button>
-                      </div>
+                <div
+                  class="app app_activ"
+                  style="display: block"
+                  data-activ_tab="0"
+                >
+                  <form>
+                    <div class="visible-arrow hidden">
+                      <img src="../../assets/visibleArrow.svg" alt="" />
                     </div>
-                  </div>
-                </form>
-                  <div class="search-result">
-                    <div class="search-result-title"><p>Որոնման արդյունք</p></div>
-                        <div class="tableContainer deskTable">
-                            <div class="tableChild table-box-shadow">
-                              <table>
-                                <tr class="firstLine">
-                                  <td>Մակնիշ</td>
-                                  <td>Պետ․ համարանիշ</td>
-                                  <td>Անուն Ազգանուն</td>
-                                  <td>Դիտել</td>
-                                </tr>
-                                <tr>
-                                  <td>123456</td>
-                                  <td>UU 1777</td>
-                                  <td>Պետրոս Պողոսյան</td>
-                                  <td><a href="" class="viewIcon"><img src="../../assets/viewIcon.svg" alt=""></a></td>
-                                </tr>
-                                <tr>
-                                  <td>123456</td>
-                                  <td>UU 1777</td>
-                                  <td>Գալուստ Սահակյան</td>
-                                  <td><a href="" class="viewIcon"><img src="../../assets/viewIcon.svg" alt="" ></a></td>
-                                </tr>
-                              </table>
+                    <div class="new_note search-note" id="search_note">
+                      <div class="note-container container">
+                        <div class="note-container-child">
+                          <div class="search-title">ՏՄ տվյալներով որոնում</div>
+                          <div class="input-group">
+                            <input
+                              class="input-wrap"
+                              placeholder="ՏՄ-ի նույնացման համար"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              class="input-wrap"
+                              placeholder="Սեփականության վկայական"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              class="input-wrap"
+                              placeholder="Պետ․ համարանիշներ"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              class="input-wrap"
+                              placeholder="Հենասարքի համար"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              class="input-wrap"
+                              placeholder="Շարժիչի համար"
+                            />
+                          </div>
+                          <button class="main-btn">Որոնել</button>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="note-container-child">
+                          <div class="search-title">
+                            Սեփականատիրոջ տվյալներով որոնում
+                          </div>
+                          <div class="input-group">
+                            <input class="input-wrap" placeholder="Անուն" />
+                          </div>
+                          <div class="input-group">
+                            <input class="input-wrap" placeholder="Ազգանուն" />
+                          </div>
+                          <div class="input-group">
+                            <input class="input-wrap" placeholder="Հայրանուն" />
+                          </div>
+                          <div
+                            class="select_mate line"
+                            data-mate-select="active"
+                          >
+                            <select>
+                              <option value="">Փաստաթղթի տեսակը</option>
+                              <option value="1">Select option 1</option>
+                              <option value="2">Select option 2</option>
+                            </select>
+                            <div class="select-title">
+                              <p class="selecionado_opcion"></p>
+                              <span class="icon_select_mate icon"
+                                ><img src="../../assets/select-chev.svg"
+                              /></span>
                             </div>
                           </div>
+                          <div class="input-group">
+                            <input
+                              class="input-wrap"
+                              placeholder="Անձնագրի սերիա, համար"
+                            />
+                          </div>
+                          <button class="main-btn">Որոնել</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="search-result">
+                    <div class="search-result-title">
+                      <p>Որոնման արդյունք</p>
+                    </div>
+                    <div class="tableContainer deskTable">
+                      <div class="tableChild table-box-shadow">
+                        <table>
+                          <tr class="firstLine">
+                            <td>Մակնիշ</td>
+                            <td>Պետ․ համարանիշ</td>
+                            <td>Անուն Ազգանուն</td>
+                            <td>Դիտել</td>
+                          </tr>
+                          <tr>
+                            <td>123456</td>
+                            <td>UU 1777</td>
+                            <td>Պետրոս Պողոսյան</td>
+                            <td>
+                              <a href="" class="viewIcon"
+                                ><img src="../../assets/viewIcon.svg" alt=""
+                              /></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>123456</td>
+                            <td>UU 1777</td>
+                            <td>Գալուստ Սահակյան</td>
+                            <td>
+                              <a href="" class="viewIcon"
+                                ><img src="../../assets/viewIcon.svg" alt=""
+                              /></a>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                   <div class="inspection-result">
                     <div class="data-title">Տրանսպորտային միջոցի տվյալները</div>
@@ -404,11 +440,11 @@
                           <p>Տրակտոր</p>
                         </div>
                         <div class="search-text">
-                          <p>ՏՄ զանգված  առանց բեռվնածության կգ</p>
+                          <p>ՏՄ զանգված առանց բեռվնածության կգ</p>
                           <p>100 կգ</p>
                         </div>
                         <div class="search-text">
-                          <p>ՏՄ  առավելագույն զանգված կգ</p>
+                          <p>ՏՄ առավելագույն զանգված կգ</p>
                           <p>3000 կգ</p>
                         </div>
                         <div class="search-text">
@@ -426,8 +462,10 @@
                       </div>
                     </div>
                     <div class="button-container">
-                        <button class="main-btn dublicate" type="button">Կրկնօրինակի տրամադրում</button>
-                      </div>
+                      <button class="main-btn dublicate" type="button">
+                        Կրկնօրինակի տրամադրում
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -491,22 +529,22 @@
                               <p>Արմեն Հովհաննեսի Մինասյան</p>
                               <span>Բաժնեմաս՝ 1</span>
                             </div>
-                            <a class="main-anchor-blue"
+                            <a class="main-anchor-blue open_subscript"
                               >Վերցնել Ստորագրությունը</a
                             >
                           </div>
-                          <div class="owners-name">
+                          <div class="owners-name open_subscript">
                             <div>
                               <p>Արմեն Հովհաննեսի Մինասյան</p>
                               <span>Բաժնեմաս՝ 1</span>
                             </div>
-                            <a class="main-anchor-blue"
+                            <a class="main-anchor-blue open_subscript"
                               >Վերցնել Ստորագրությունը</a
                             >
                           </div>
                           <div class="hand_buttons">
                             <button class="main-btn" type="button">
-                              Պահպանել
+                               Պահպանել
                             </button>
                           </div>
                         </div>
@@ -817,6 +855,21 @@
                 </li>
               </ul>
               <button class="main-btn" type="submit">Պահպանել</button>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="modal-subscript">
+          <div class="modal-group">
+            <div class="modal-head">
+              <h3 class="modal-title">Ստորագրություն</h3>
+              <div class="close">&#x2715;</div>
+            </div>
+            <form class="modal-content">
+              <div class="modal-subscripts"></div>
+              <div class="modal-subscript-btn-box">
+                <button class="main-btn" type="submit">Պահպանել</button>
+                <button class="main-btn">Ջնջել</button>
+              </div>
             </form>
           </div>
         </div>
