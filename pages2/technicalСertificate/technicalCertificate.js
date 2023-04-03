@@ -379,3 +379,10 @@ visible.addEventListener("click", function () {
     searchNote.style.height = 0;
   }
 });
+
+const open_subscripts = document.querySelectorAll(".open_subscript");
+open_subscripts.forEach((el) => {
+  el.addEventListener("click", function () {
+    showModal("#modal-subscript");
+  });
+});
