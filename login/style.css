@@ -140,7 +140,6 @@ body {
 .background .login .logo {
   width: 205px;
   height: 375px;
-  background: url(../assets/sideBarIcon/sprite.png) no-repeat center / contain;
 }
 .background .login .verticalLine {
   height: 400px;
