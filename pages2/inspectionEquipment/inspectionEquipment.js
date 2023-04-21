@@ -66,3 +66,6 @@ file_upload.addEventListener("change", function () {
 // ======================================================================
 // ======================================================================
 // ======================================================================
+document
+  .querySelector("#transaction-type-modal-btn")
+  .addEventListener("click", () => showModal("#transaction-type-modal"));
