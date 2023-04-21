@@ -191,3 +191,115 @@
 .file-delete-img {
   cursor: pointer;
 }
+/* ========================= */
+/* ========================= */
+/* ========================= */
+/* ========================= */
+
+/* ========================================================= */
+/* ========================================================= */
+/* ========================================================= */
+#transaction-type-modal {
+  min-width: 63%;
+}
+#transaction-type-modal > .modal-group {
+  border-radius: 20px;
+}
+#transaction-type-modal .modal-content {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 32px 0 24px 64px;
+}
+#transaction-type-modal .modal-head {
+  padding: 21px 30px 14px 64px;
+}
+#transaction-type-modal .modal .close {
+  scale: 1.8;
+}
+#transaction-type-modal .modal-ul::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+#transaction-type-modal .modal-ul::-webkit-scrollbar-track {
+  background: #dadada;
+}
+#transaction-type-modal .modal-ul::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+}
+#transaction-type-modal .modal-ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#transaction-type-modal .modal-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 500px;
+  padding-right: 44px;
+}
+#transaction-type-modal .modal-ul > li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+#transaction-type-modal .modal-ul + .main-btn {
+  align-self: flex-end;
+  margin-right: 44px;
+}
+#transaction-type-modal .modal-title {
+  font-size: 18px;
+}
+/* ============================================= */
+.transaction-type-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: circle inside;
+  max-height: 175px;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+.transaction-type-ul > li span {
+  font-size: 14px;
+  color: #343957;
+  line-height: 19px;
+}
+.transaction-type-ul > li {
+  display: flex;
+  gap: 7px;
+}
+.transaction-type-ul > li > div {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+}
+.transaction-type-ul > li::before {
+  height: 3px;
+  width: 3px;
+  content: "";
+  background-color: black;
+  border-radius: 100%;
+  margin-top: 8px;
+}
+.transaction-type-ul > li:first-child {
+  margin-top: 10px;
+}
+.transaction-type-ul > li:last-child {
+  margin-bottom: 10px;
+}
+.transaction-type-ul-delete {
+  color: #e63030;
+  border: 1px solid #e63030;
+  height: 16px;
+  line-height: 9px;
+  width: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  background-color: transparent;
+  flex-shrink: 0;
+}
