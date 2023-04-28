@@ -31,11 +31,12 @@ const attached_materials_file_box = document.querySelector(
     "#attached-materials-file_box"
   ),
   attached_materials_file =
-    attached_materials_file_box.querySelector(`input[type="file"]`),
+    attached_materials_file_box?.querySelector(`input[type="file"]`),
   attached_materials_form = document.querySelector("#attached-materials-form"),
   attached_materials_file_name = document.querySelector(
     "#attached-materials-file_name"
   );
+console.log(attached_materials_file);
 
 const open_subscripts = document.querySelectorAll(".open_subscript");
 
@@ -43,29 +44,29 @@ const open_subscripts = document.querySelectorAll(".open_subscript");
 // ======================================================================
 // ======================================================================
 
-const tabs = document.getElementsByClassName("tabs_text");
-for (let i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener("click", (event) => {
-    for (const elem of tabs) {
-      elem.classList.remove("tabs_activ");
-    }
-    if (+tabs[i].attributes["data-count"].value === i) {
-      tabs[i].classList.add("tabs_activ");
-    }
-    const app = document.getElementsByClassName("app_activ");
-    for (const elem of app) {
-      if (+elem.attributes["data-activ_tab"].value === i) {
-        elem.style.display = "block";
-      } else {
-        elem.style.display = "none";
-      }
-    }
-  });
-}
+// const tabs = document.getElementsByClassName("tabs_text");
+// for (let i = 0; i < tabs.length; i++) {
+//   tabs[i].addEventListener("click", (event) => {
+//     for (const elem of tabs) {
+//       elem.classList.remove("tabs_activ");
+//     }
+//     if (+tabs[i].attributes["data-count"].value === i) {
+//       tabs[i].classList.add("tabs_activ");
+//     }
+//     const app = document.getElementsByClassName("app_activ");
+//     for (const elem of app) {
+//       if (+elem.attributes["data-activ_tab"].value === i) {
+//         elem.style.display = "block";
+//       } else {
+//         elem.style.display = "none";
+//       }
+//     }
+//   });
+// }
 
 document
   .querySelector("#transaction-type-modal-btn")
-  .addEventListener("click", () => showModal("#transaction-type-modal"));
+  ?.addEventListener("click", () => showModal("#transaction-type-modal"));
 
 let note_count = 1;
 function addOwner() {
@@ -136,7 +137,7 @@ function addOwner() {
   // note_count = cont.querySelectorAll(".new_note_container").length - 1;
 }
 
-document.querySelector("#the_form").addEventListener("submit", function (e) {
+document.querySelector("#the_form")?.addEventListener("submit", function (e) {
   e.preventDefault();
   const formData = new FormData(e.target),
     formObj = Object.fromEntries(formData),
@@ -213,7 +214,7 @@ document.querySelector("#the_form").addEventListener("submit", function (e) {
       });
     });
 
-    checkbox.addEventListener("change", function () {
+    checkbox?.addEventListener("change", function () {
       if (this.checked) {
         authorized_person.style.display = "flex";
         addBtn.style.visibility = "hidden";
@@ -223,7 +224,7 @@ document.querySelector("#the_form").addEventListener("submit", function (e) {
       }
     });
 
-    addBtn.addEventListener("click", addOwner);
+    addBtn?.addEventListener("click", addOwner);
   }
 );
 // =======================================================================
@@ -234,11 +235,11 @@ const handFirst = document.getElementById("hand-first");
 const handSecond = document.getElementById("hand-second");
 const cancelBtn = document.getElementById("cancelBtn");
 const handBtn = document.getElementById("hand-btn");
-handBtnOperator.addEventListener("click", () => {
+handBtnOperator?.addEventListener("click", () => {
   handSecond.style.display = "flex";
   handFirst.style.display = "none";
 });
-cancelBtn.addEventListener("click", () => {
+cancelBtn?.addEventListener("click", () => {
   handSecond.style.display = "none";
   handFirst.style.display = "flex";
 });
@@ -268,13 +269,13 @@ checkboxes.forEach((_, i) => {
 // Attached Materials
 // ------------------------------------------------------------------
 let data = [];
-attached_materials_file_box.addEventListener("click", function () {
+attached_materials_file_box?.addEventListener("click", function () {
   this.querySelector(`input[type="file"]`).click();
 });
-attached_materials_file.addEventListener("change", function () {
+attached_materials_file?.addEventListener("change", function () {
   attached_materials_file_name.innerHTML = this.files[0].name;
 });
-attached_materials_form.addEventListener("submit", function (e) {
+attached_materials_form?.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formData = new FormData(e.target),
