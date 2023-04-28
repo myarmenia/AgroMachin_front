@@ -1,0 +1,653 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../font/font.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../css/table.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="createNewNote.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- sidebar start -->
+      <div class="sidebar close">
+        <div class="logo-details">
+          <img src="../../assets/sidebarIcon/logo.svg" />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/5img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Գրասեղան</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li>
+                <a class="link_name" href="#">Գրասեղան</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/archiv.svg"
+                class="bx bx-grid-alt archivImg"
+              />
+
+              <span class="link_name">Պահոց</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Պահոց </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/5img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li>
+                <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../assets/sidebarIcon/4img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Տեխնիկայի հաշվառում</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
+                <li><a href="#">Հաշվառման վայրեր</a></li>
+                <li><a href="#">Հաշվառման հայտ</a></li>
+                <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../assets/sidebarIcon/7img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Տրված համարանիշներ</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
+                <li>
+                  <a href="#"
+                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../assets/sidebarIcon/6img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Վարման իրավունքի Խմբեր</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li>
+                  <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
+                </li>
+                <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
+                <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
+                <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
+                <li>
+                  <a href="#"
+                    >Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
+                    կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Վարման իրավունքի փաստաթղթեր</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/10img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Հաշվետվություններ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar end -->
+      <main class="home-section">
+        <!-- header start -->
+        <div class="header-blocking-div"></div>
+        <header class="main-header">
+          <div class="home-content">
+            <img
+              src="../../assets/sideBarIcon/menuIcon.svg"
+              class="bx bx-menu"
+            />
+          </div>
+          <div class="home-content2">
+            <div class="select_mate select_language" data-mate-select="active">
+              <select name="" id="">
+                <option value="">Հայերեն</option>
+                <option value="1">Select option 1</option>
+                <option value="2">Select option 2</option>
+              </select>
+              <div class="select-title">
+                <p class="selecionado_opcion"></p>
+                <span class="icon_select_mate"
+                  ><img src="../../assets/sideBarIcon/translate.svg"
+                /></span>
+              </div>
+            </div>
+            <img
+              src="../../assets/sideBarIcon/headerUser.svg"
+              class="bx bxs-user signOutBtn"
+            />
+            <div class="userSignOut">
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/headerUser.svg"
+                  class="bx bxs-user"
+                />Անձնական էջ
+              </a>
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/signout.svg"
+                  class="bx bxs-user"
+                />Դուրս գալ
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- header end -->
+        <!-- right section start-->
+
+        <section class="right-section">
+          <div class="tableContainer">
+            <div class="table-title">
+              <div class="page">Տեխնիկայի հաշվառման հայտ</div>
+            </div>
+
+            <div>
+              <div class="right-sectionChild">
+                <div class="tabs_container">
+                  <ul class="tabs_coulm">
+                    <li class="tab_item">
+                      <p class="tabs_text tabs_activ">ՏՄ տվյալներ</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Վաճառող</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Գնորդ</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Հաշվառում</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Ստորագրություն</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Կից նյութեր</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Հանձնել</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <form class="app app_activ">
+                  <div class="new_note">
+                    <div class="note-container-error">
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                      <p>Պարտադիր է</p>
+                    </div>
+                    <div class="note-container">
+                      <div class="note-container-child">
+                        <div class="select_mate line" data-mate-select="active">
+                          <select>
+                            <option value="">Հիմք փաստաթուղթ*</option>
+                            <option value="0">Մաքսային հայտարարագիր</option>
+                            <option value="1">Առուվաճառքի պայմանագիր</option>
+                            <option value="2">
+                              Հանձնման-ընդունման արձանագրություն
+                            </option>
+                            <option value="3">Նվիրատվության պայմանագիր</option>
+                            <option value="4">Փոխանակման պայմանագիր</option>
+                            <option value="5">
+                              Համաձայնագիր պայմանագրի ուժը կորցրած ճանաչելու
+                              մասին
+                            </option>
+                            <option value="6">
+                              Ժառանգության իրավունքի վկայագիր
+                            </option>
+                            <option value="7">Դատական ակտ</option>
+                            <option value="8">Հաշիվ տեղեկանք</option>
+                            <option value="9">
+                              Շահած ՏՄ հանձնման-ընդունման ակտ
+                            </option>
+                            <option value="10">
+                              Ինքնաշեն ՏՄ փորձաքննության եզրակացություն
+                            </option>
+                            <option value="11">
+                              Խոտանման կապակցությամբ հաշվառումից հանելու
+                              տեղեկանք
+                            </option>
+                            <option value="12">
+                              Ըստ կտակի ժառանգության իրավունքի վկայագիր
+                            </option>
+                            <option value="13">Աճուրդի արձանագրություն</option>
+                            <option value="14">Բաժանիչ ակտ</option>
+                            <option value="15">
+                              Իրավ․ անձանց համար գույքի ներդրման պայմանագիր
+                              կանոնադրական կապիտալում
+                            </option>
+                            <option value="16">
+                              Հարկային մարմինների տրված տեղեկանք
+                            </option>
+                            <option value="17">
+                              Որոշում գրավադրված ՏՄ-ի արտադատական կարգով
+                              բռնագրավելու մասին
+                            </option>
+                            <option value="18">
+                              Շահումի տրամադրման պայմանագրով ձեռք բերված ՏՄ-ի
+                              գրանցում
+                            </option>
+                            <option value="19">Տարանցման հայտարարագիր</option>
+                            <option value="20">
+                              Գույքը պահանջատիրոջը հանձնելու մասին պայմանագիր
+                            </option>
+                          </select>
+                          <div class="select-title">
+                            <p class="selecionado_opcion"></p>
+                            <span class="icon_select_mate icon"
+                              ><img src="../../assets/select-chev.svg"
+                            /></span>
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Գույքի ծածկագիր/կոդ/*"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Գործարքի ծածկագիր*"
+                          />
+                        </div>
+                        <button
+                          id="transaction-type-modal-btn"
+                          class="main-btn-white"
+                          type="button"
+                        >
+                          Գործարքի տեսակ
+                        </button>
+                        <input
+                          id="input_checkboxes"
+                          hidden
+                          name="checkboxes_input"
+                          data-checkboxes-input="0"
+                        />
+                        <ul
+                          class="transaction-type-ul"
+                          data-checkboxes-ul="0"
+                        ></ul>
+                        <div class="search-select-box">
+                          <div class="input-group">
+                            <input
+                              type="search"
+                              class="input-wrap"
+                              placeholder="Հաշվառման հայտ*"
+                            />
+                          </div>
+                          <div class="search-select-options">
+                            <div class="search-select-option" data-value="0">
+                              aaaaaa
+                            </div>
+                            <div class="search-select-option" data-value="1">
+                              bbbbbb
+                            </div>
+                            <div class="search-select-option" data-value="2">
+                              cccccc
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="search-select-box">
+                          <div class="input-group">
+                            <input class="input-wrap" placeholder="Մակնիշ*" />
+                          </div>
+                          <div class="search-select-options">
+                            <div class="search-select-option" data-value="0">
+                              aaaaaa
+                            </div>
+                            <div class="search-select-option" data-value="1">
+                              bbbbbb
+                            </div>
+                            <div class="search-select-option" data-value="2">
+                              cccccc
+                            </div>
+                          </div>
+                        </div>
+                        <div class="search-select-box">
+                          <div class="input-group">
+                            <input class="input-wrap" placeholder="Մոդել*" />
+                          </div>
+                          <div class="search-select-options">
+                            <div class="search-select-option" data-value="0">
+                              aaaaaa
+                            </div>
+                            <div class="search-select-option" data-value="1">
+                              bbbbbb
+                            </div>
+                            <div class="search-select-option" data-value="2">
+                              cccccc
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <input class="input-wrap" placeholder="Գույն*" />
+                        </div>
+
+                        <div class="input-group">
+                          <input class="input-wrap" placeholder="Տարեթիվ*" />
+                        </div>
+                        <div class="download-right-box">
+                          <div class="input-group">
+                            <input
+                              class="input-wrap input-wrap-error"
+                              placeholder="Գին"
+                            />
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Նույնացման համար*"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Հենասարքի համար*"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Շարժիչի համար*"
+                          />
+                        </div>
+                        <button class="main-anchor-blue" type="button">
+                          Բեռնել
+                        </button>
+                      </div>
+                      <div class="note-container-child">
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Շարժիչի տեսակ"
+                          />
+                        </div>
+                        <div
+                          class="select_mate line error-select"
+                          data-mate-select="active"
+                        >
+                          <select name="">
+                            <option value="">Վառելիքի տեսակ*</option>
+                            <option value="1">Select option 1</option>
+                            <option value="2">Select option 2</option>
+                          </select>
+                          <div class="select-title">
+                            <p class="selecionado_opcion"></p>
+                            <span class="icon_select_mate icon"
+                              ><img src="../../assets/select-chev.svg"
+                            /></span>
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Շարժիչի հզորություն (Ձ/Ու)*"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Շարժիչի հզորություն (կՎտ)* "
+                          />
+                        </div>
+                        <div class="select_mate line" data-mate-select="active">
+                          <select>
+                            <option value="">ՏՄ տեսակ*</option>
+                            <option value="1">Select option 1</option>
+                            <option value="2">Select option 2</option>
+                          </select>
+                          <div class="select-title">
+                            <p class="selecionado_opcion"></p>
+                            <span class="icon_select_mate icon"
+                              ><img src="../../assets/select-chev.svg"
+                            /></span>
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="ՏՄ զանգված  առանց բեռվնածության կգ"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="ՏՄ  առավելագույն զանգված կգ"
+                          />
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Նստատեղերի քանակ"
+                          />
+                        </div>
+                        <div class="double-radio">
+                          <div class="double-radio-box">
+                            <div class="radio-group">
+                              <input type="radio" name="car-license-plate" />
+                              <label>Տրանզիտ / Ժմնկ հմրնշ</label>
+                            </div>
+                            <div class="radio-group">
+                              <input type="radio" name="car-license-plate" />
+                              <label>Պետ․ հմրնշ</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Գրել համարանիշ"
+                          />
+                        </div>
+                        <div class="select_mate line" data-mate-select="active">
+                          <select>
+                            <option value="">Սարքինության տեսակ</option>
+                            <option value="1">Select option 1</option>
+                            <option value="2">Select option 2</option>
+                          </select>
+                          <div class="select-title">
+                            <p class="selecionado_opcion"></p>
+                            <span class="icon_select_mate icon"
+                              ><img src="../../assets/select-chev.svg"
+                            /></span>
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <input
+                            class="input-wrap"
+                            placeholder="Այլ նշումներ"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="submit" class="main-btn">Պահպանել</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="modal-container">
+        <div class="modal" id="transaction-type-modal">
+          <div class="modal-group">
+            <div class="modal-head">
+              <h3 class="modal-title">Գործարքի տեսակ</h3>
+              <div class="close">&#x2715;</div>
+            </div>
+            <form class="modal-content" data-checkboxes-form="0">
+              <ul class="modal-ul">
+                <li>
+                  <input
+                    type="checkbox"
+                    name="modal-checkbox"
+                    value="0"
+                    class="modal_checkbox"
+                  />
+                  <span>Առուվաճառքի պայմանագրով ձեռք բերված ՏՄ-ի գրանցում</span>
+                </li>
+
+                <li>
+                  <input
+                    type="checkbox"
+                    name="modal-checkbox"
+                    value="1"
+                    class="modal_checkbox"
+                  />
+                  <span
+                    >Նվիրատվության պայմանագրով ձեռք բերված ՏՄ-ի գրանցում
+                  </span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="modal-checkbox"
+                    value="2"
+                    class="modal_checkbox"
+                  />
+                  <span
+                    >Ժառանգության իրավունքի վկայագրով ձեռք բերված ՏՄ-ի
+                    գրանցում</span
+                  >
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="modal-checkbox"
+                    value="3"
+                    class="modal_checkbox"
+                  />
+                  <span>Փոխանակման պայմանագրով ձեռք բերված ՏՄ-ի գրանցում </span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="modal-checkbox"
+                    value="4"
+                    class="modal_checkbox"
+                  />
+                  <span>Ելք գրանցումից (խոտանում)</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="modal-checkbox"
+                    value="5"
+                    class="modal_checkbox"
+                  />
+                  <span>Գրավի վկայագրի տրամադրում </span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="modal-checkbox"
+                    value="6"
+                    class="modal_checkbox"
+                  />
+                  <span>Գրավի վկայագրի մարում </span>
+                </li>
+              </ul>
+              <button class="main-btn" type="submit">Պահպանել</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="modal" id="modal-subscript">
+          <div class="modal-group">
+            <div class="modal-head">
+              <h3 class="modal-title">Ստորագրություն</h3>
+              <div class="close">&#x2715;</div>
+            </div>
+            <form class="modal-content">
+              <div class="modal-subscripts"></div>
+              <div class="modal-subscript-btn-box">
+                <button class="main-btn" type="submit">Պահպանել</button>
+                <button class="main-btn">Ջնջել</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/index.js"></script>
+    <script src="../../js/modal.js"></script>
+    <!-- <script src="../../js/modal.js"></script> -->
+    <script src="tech.js"></script>
+  </body>
+</html>

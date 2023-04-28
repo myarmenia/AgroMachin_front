@@ -1,0 +1,360 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../font/font.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="../../css/table.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="createNewNote.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- sidebar start -->
+      <div class="sidebar close">
+        <div class="logo-details">
+          <img src="../../assets/sidebarIcon/logo.svg" />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/5img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Գրասեղան</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li>
+                <a class="link_name" href="#">Գրասեղան</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/archiv.svg"
+                class="bx bx-grid-alt archivImg"
+              />
+
+              <span class="link_name">Պահոց</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Պահոց </a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/5img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Տեխնիկայի սահմանափակումներ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li>
+                <a class="link_name" href="#">Տեխնիկայի սահմանափակումներ</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../assets/sidebarIcon/4img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Տեխնիկայի հաշվառում</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տեխնիկայի հաշվառում</a></li>
+                <li><a href="#">Հաշվառման վայրեր</a></li>
+                <li><a href="#">Հաշվառման հայտ</a></li>
+                <li><a href="#">Տեխնիկայի հաշվառումից հանել</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../assets/sidebarIcon/7img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Տրված համարանիշներ</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Տրված համարանիշներ</a></li>
+                <li>
+                  <a href="#"
+                    >Տեխնիկայի վկայագրի կամ համարանիշի կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <img
+                  src="../../assets/sidebarIcon/6img.svg"
+                  class="bx bx-grid-alt"
+                />
+                <span class="link_name">Վարման իրավունքի Խմբեր</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <div class="menu-panel">
+              <ul class="sub-menu">
+                <li>
+                  <a class="link_name" href="#">Վարման իրավունքի Խմբեր</a>
+                </li>
+                <li><a href="#">Վարման իրավունքի Խմբերի դասակարգում</a></li>
+                <li><a href="#">Վարման իրավունքի վկայականի տրամադրում</a></li>
+                <li><a href="#">Վարման իրավունքի հարցաշար</a></li>
+                <li>
+                  <a href="#"
+                    >Վարման իրավունքի կարգի փոփոխություն,փոխանակում և
+                    կրկնօրինակի տրամադրում</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Վարման իրավունքի փաստաթղթեր</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="../../assets/sidebarIcon/10img.svg"
+                class="bx bx-grid-alt"
+              />
+              <span class="link_name">Հաշվետվություններ</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="#">Հաշվետվություններ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar end -->
+      <main class="home-section">
+        <!-- header start -->
+        <div class="header-blocking-div"></div>
+        <header class="main-header">
+          <div class="home-content">
+            <img
+              src="../../assets/sideBarIcon/menuIcon.svg"
+              class="bx bx-menu"
+            />
+          </div>
+          <div class="home-content2">
+            <div class="select_mate select_language" data-mate-select="active">
+              <select name="" id="">
+                <option value="">Հայերեն</option>
+                <option value="1">Select option 1</option>
+                <option value="2">Select option 2</option>
+              </select>
+              <div class="select-title">
+                <p class="selecionado_opcion"></p>
+                <span class="icon_select_mate"
+                  ><img src="../../assets/sideBarIcon/translate.svg"
+                /></span>
+              </div>
+            </div>
+            <img
+              src="../../assets/sideBarIcon/headerUser.svg"
+              class="bx bxs-user signOutBtn"
+            />
+            <div class="userSignOut">
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/headerUser.svg"
+                  class="bx bxs-user"
+                />Անձնական էջ
+              </a>
+              <a href="">
+                <img
+                  src="../../assets/sideBarIcon/signout.svg"
+                  class="bx bxs-user"
+                />Դուրս գալ
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- header end -->
+        <!-- right section start-->
+
+        <section class="right-section">
+          <div class="tableContainer">
+            <div class="table-title">
+              <div class="page">Տեխնիկայի հաշվառման հայտ</div>
+            </div>
+
+            <div>
+              <div class="right-sectionChild">
+                <div class="tabs_container">
+                  <ul class="tabs_coulm">
+                    <li class="tab_item">
+                      <p class="tabs_text">ՏՄ տվյալներ</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Վաճառող</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Գնորդ</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Հաշվառում</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Ստորագրություն</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text tabs_activ">Կից նյութեր</p>
+                    </li>
+                    <li class="tab_item">
+                      <p class="tabs_text">Հանձնել</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div class="app app_activ">
+                  <div class="new_note">
+                    <div class="attached-materials-container">
+                      <div class="attached-materials-heading">
+                        <h4>
+                          Խնդրում ենք ընտրել անհրաժեշտ փաստաթղթերը և սկանավորել
+                        </h4>
+                        <p>
+                          Լրացուցիչ փաստաթղթերի բաժին (ընտրեք սկան արված
+                          փաստաթուղթը)
+                        </p>
+                      </div>
+                      <div class="attached-materials-file_upload-container">
+                        <form
+                          id="attached-materials-form"
+                          class="attached-materials-file_upload-box"
+                          data-attached-materials-form="0"
+                        >
+                          <div
+                            class="attached-materials-file_upload"
+                            id="attached-materials-file_box"
+                          >
+                            <input
+                              name="file"
+                              type="file"
+                              class="main-file-input"
+                            />
+                            <img src="../../assets/download.svg" alt="" />
+                            <span class="main-file-label">Կցել փաստաթղթեր</span>
+                            <span
+                              class="input-name"
+                              id="attached-materials-file_name"
+                            ></span>
+                          </div>
+                          <div
+                            class="select_mate line"
+                            data-mate-select="active"
+                          >
+                            <select name="type">
+                              <option value="">Տեսակ</option>
+                              <option value="0">11111</option>
+                              <option value="1">22222</option>
+                              <option value="2">33333</option>
+                            </select>
+                            <div class="select-title">
+                              <p class="selecionado_opcion"></p>
+                              <div class="icon_select_mate icon">
+                                <img src="../../assets/select-chev.svg" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-group">
+                            <input
+                              name="number"
+                              class="input-wrap"
+                              placeholder="Համար"
+                              type="number"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              name="date"
+                              type="date"
+                              class="input-wrap input-date"
+                              placeholder="Ամսաթիվ (ՕՕ-ԱԱ-ՏՏՏ)"
+                            />
+                          </div>
+                          <div class="input-group">
+                            <input
+                              name="price"
+                              class="input-wrap"
+                              placeholder="Գումար"
+                            />
+                          </div>
+                          <div class="attached-materials-file-btn_box">
+                            <button type="submit" class="main-btn">Կցել</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="attached-materials-store">
+                        <div class="attached-materials-heading">
+                          <h4>Կցված փաստաթղթեր</h4>
+                        </div>
+                        <div class="attached-materials-table_container">
+                          <div class="attached-materials-table">
+                            <div class="attached-materials-table-box">
+                              <span>Տեսակ</span>
+                              <span>Գումար</span>
+                              <span>Համար</span>
+                              <span>Ամսաթիվ</span>
+                            </div>
+                            <div data-attached-materials-tbody="0"></div>
+                          </div>
+                        </div>
+                        <form class="attached-materials-table-btn-box">
+                          <input
+                            data-attached-materials-input="0"
+                            hidden
+                            name="main_arr"
+                          />
+                          <button class="main-btn" type="button">
+                            Պահպանել
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../../js/index.js"></script>
+    <script src="../../js/modal.js"></script>
+    <!-- <script src="../../js/modal.js"></script> -->
+    <script src="tech.js"></script>
+  </body>
+</html>

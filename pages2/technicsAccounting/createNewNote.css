@@ -297,6 +297,47 @@
   background-color: transparent;
   flex-shrink: 0;
 }
+/* Հաշվառում */
+.calculation-box {
+  width: 100%;
+  padding: 20px 15%;
+  display: flex;
+  gap: 20px;
+}
+.calculation-box-child {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.certificate-given {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.certificate-given div:nth-child(n + 1) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.certificate-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #343957;
+}
+.certificate-given label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #9f9f9f;
+}
+/* .certificate-given div {
+  display: flex;
+  gap: 20px;
+} */
+/* Հաշվառում */
 /*Ստորագրություն */
 .subscript {
   width: 100%;

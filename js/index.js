@@ -1,17 +1,14 @@
 // ------------------------------------------------------------------
 //  Variables
 // ------------------------------------------------------------------
-const cur_table = document.getElementById("table-route"),
-  remove_form = document.getElementById("modal-remove-form"),
-  remove_modal = document.getElementById("remove-modal"),
-  accept_btn = document.getElementById("modal-accept-btn"),
-  confirm_modal = document.getElementById("confirm-modal"),
-  table_route_delete = cur_table && cur_table.attributes["data-delete"].value,
-  table_route_route = cur_table && cur_table.attributes["data-route"].value,
-  modal_form = document.querySelectorAll("[data-checkboxes-form]"),
-  root_css = getComputedStyle(document.documentElement),
-  select_duration = parseInt(root_css.getPropertyValue("--select-delay")),
-  success_duration = parseInt(root_css.getPropertyValue("--success-duration"));
+// const cur_table = document.getElementById("table-route"),
+//   remove_form = document.getElementById("modal-remove-form"),
+//   remove_modal = document.getElementById("remove-modal"),
+//   accept_btn = document.getElementById("modal-accept-btn"),
+//   confirm_modal = document.getElementById("confirm-modal"),
+//   table_route_delete = cur_table && cur_table.attributes["data-delete"].value,
+//   table_route_route = cur_table && cur_table.attributes["data-route"].value;
+const custom_selects = document.querySelectorAll(".select-heading");
 
 // ==================================================================
 // ==================================================================
@@ -139,15 +136,23 @@ function openSelect(e) {
     if (icon) icon.style.transform = "rotate(0deg)";
   }
 }
-function closeSelectByElem(elem) {
-  const select = elem.closest(".select_mate"),
-    ul = select.querySelector("ul"),
-    icon = select.querySelector(".icon_select_mate.icon");
 
-  ul.style.height = "0px";
-  if (icon) icon.style.transform = "rotate(0deg)";
-  select.setAttribute("data-is-open", "false");
+function closeSelectByElem(elem) {
+  document
+    .querySelectorAll(".select_mate>.cont_list_select_mate>.cont_select_int")
+    .forEach((ul) => {
+      ul.style.height = "0px";
+    });
+  document
+    .querySelectorAll(".select_mate>.icon_select_mate.icon")
+    .forEach((icon) => {
+      if (icon) icon.style.transform = "rotate(0deg)";
+    });
+  document.querySelectorAll(".select_mate").forEach((select) => {
+    select.setAttribute("data-is-open", "false");
+  });
 }
+
 function setSelectOption() {
   const select_box = this.closest(".select_mate"),
     title = select_box.querySelector(".selecionado_opcion"),
@@ -185,7 +190,8 @@ function createSelectOptions(rootElement = document) {
       placeholder = custom_selects[e].querySelector(".selecionado_opcion");
 
     optionsUl.style.transitionDuration =
-      Math.min(select_duration, select_optiones.length * 100) + "ms";
+      Math.min(select_delay, select_optiones.length * 100) + "ms";
+    console.log(select_delay);
 
     custom_selects[e].setAttribute("data-is-open", "false");
 
@@ -197,9 +203,7 @@ function createSelectOptions(rootElement = document) {
       }
       li.setAttribute("data-index", i);
       li.addEventListener("click", setSelectOption);
-
       li.innerHTML = select_optiones[i].innerHTML;
-
       ul_cont.appendChild(li);
     }
     window.addEventListener("click", function (e) {
@@ -213,68 +217,176 @@ function createSelectOptions(rootElement = document) {
     el.addEventListener("click", openSelect);
   });
 }
+//drop owen checkBox
+let dropbtnCheckBox = document.getElementsByClassName("dropbtnCheckBox");
+let myDropdownCheckBox = document.querySelectorAll(".myDropdownCheckBox");
+let chekcBoxoption = document.querySelectorAll(".option");
+let check_input = document.getElementsByClassName("check_input");
+const activshow = document.getElementsByClassName("show");
+const boxContainer = document.getElementsByClassName("box_container");
+const box_item = document.getElementsByClassName("box_item");
+const closeSelectsdfhgbf = document.getElementsByClassName("new_user");
+
+let showValus = [];
+// closeSelectsdfhgbf[0].addEventListener("click",()=>{
+//     if(closeSelectsdfhgbf[0].getAttribute("data-open")==="1"){
+//         closeSelectsdfhgbf[0].removeAttribute("data-open")
+//         const dropDowenCheckbox = document.querySelectorAll(".myDropdownCheckBox.show")
+//         const uls = dropDowenCheckbox[0]
+//             .closest(".dropdown")
+//             .querySelector(".dropdown-content.myDropdownCheckBox");
+//         uls.style.height = 0;
+//         uls.classList.remove("show")
+//         showValus.forEach((el) => {
+//             boxContainer[0].append(el);
+//             boxContainer[0].style.display = "flex";
+//         });
+//     }
+// })
+
+for (let i = 0; i < dropbtnCheckBox.length; i++) {
+  dropbtnCheckBox[i].addEventListener("click", function (e) {
+    closeSelectsdfhgbf[0].setAttribute("data-open", 1);
+    const uls = e.target
+      .closest(".dropdown")
+      .querySelector(".dropdown-content.myDropdownCheckBox");
+    let ul_height = 0;
+    for (let m = 0; m < activshow.length; m++) {
+      if (!activshow[m].classList.value.includes("show")) {
+        activshow[m].classList.add("show");
+      } else {
+        activshow[m].classList.remove("show");
+      }
+    }
+
+    title = dropbtnCheckBox[i].children[0];
+    if (myDropdownCheckBox[i].attributes["data-open"]) {
+      e.target
+        .closest(".navbar_select")
+        .querySelector(".icon").style.transform = "rotate(0)";
+      myDropdownCheckBox[i].classList.remove("show");
+      myDropdownCheckBox[i].removeAttribute("data-open");
+      closeSelectsdfhgbf[0].removeAttribute("data-open");
+      uls.style.height = 0;
+    } else {
+      e.target
+        .closest(".navbar_select")
+        .querySelector(".icon").style.transform = "rotate(180deg)";
+      myDropdownCheckBox[i].classList.add("show");
+      myDropdownCheckBox[i].setAttribute("data-open", 1);
+
+      [...uls.children].forEach((el) => {
+        ul_height += el.offsetHeight;
+      });
+      uls.style.height = ul_height + "px";
+    }
+
+    showValus.forEach((el) => {
+      boxContainer[0].append(el);
+      boxContainer[0].style.display = "flex";
+    });
+    e.stopPropagation();
+  });
+}
+
+for (let i = 0; i < check_input.length; i++) {
+  const element = check_input[i];
+  element.addEventListener("change", (e) => {
+    if (e.target.checked) {
+      const box = document.createElement(`div`);
+      box.classList.add("box_item");
+      box.setAttribute("data-number", i);
+      box.addEventListener("click", (e) => {
+        element.checked = false;
+        box.remove();
+        showValus = showValus.filter((el) => {
+          return (
+            +el.attributes["data-number"].value !==
+            +box.attributes["data-number"].value
+          );
+        });
+        if (!showValus.length) {
+          boxContainer[0].style.display = "none";
+        }
+      });
+      const icon = document.createElement("div");
+      icon.innerHTML = "X";
+      icon.classList.add("delete");
+      const span = document.createElement("span");
+      span.innerHTML = e.target.value;
+      span.classList.add("box_text");
+      box.append(span);
+      box.append(icon);
+      if (
+        !showValus.some(
+          (el) => Number(el.attributes["data-number"].value) === i
+        )
+      ) {
+        showValus.push(box);
+      }
+    } else {
+      const box = document.getElementsByClassName("box_item");
+      showValus = showValus.filter((el) => {
+        if (box) {
+          for (let i = 0; i < box.length; i++) {
+            const element = box[i];
+            if (
+              +el.attributes["data-number"].value ===
+              +element.attributes["data-number"].value
+            ) {
+              element.remove();
+            }
+          }
+        }
+        return +el.attributes["data-number"].value !== i;
+      });
+      if (!showValus.length) {
+        boxContainer[0].style.display = "none";
+      }
+    }
+  });
+}
+const dropDowenValuse = () => {
+  const checkBox = document.querySelectorAll(".check_input");
+  checkBox.forEach((element, index) => {
+    if (element.checked) {
+      const box = document.createElement(`div`);
+      box.classList.add("box_item");
+      box.setAttribute("data-number", index);
+      box.addEventListener("click", (e) => {
+        element.checked = false;
+        box.remove();
+        showValus = showValus.filter((el) => {
+          return (
+            +el.attributes["data-number"].value !==
+            +box.attributes["data-number"].value
+          );
+        });
+        if (!showValus.length) {
+          boxContainer[0].style.display = "none";
+        }
+      });
+      const icon = document.createElement("div");
+      icon.innerHTML = "X";
+      icon.classList.add("delete");
+      const span = document.createElement("span");
+      span.innerHTML = element.value;
+      span.classList.add("box_text");
+      box.append(span);
+      box.append(icon);
+      showValus.push(box);
+      boxContainer[0].append(box);
+      boxContainer[0].style.display = "flex";
+    }
+  });
+};
 
 window.onload = function () {
   createSelectOptions();
+  dropDowenValuse();
 };
 
 // custom select Art
-
-// --------------------------------------------------------------------
-// Modal checkboxes
-// --------------------------------------------------------------------
-modal_form.forEach((el) => {
-  el.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(e.target),
-      checkboxes = formData.getAll("modal-checkbox"),
-      form_id = this.getAttribute("data-checkboxes-form"),
-      checkboxes_ul = document.querySelector(
-        `[data-checkboxes-ul='${form_id}']`
-      ),
-      checkboxes_input = document.querySelector(
-        `[data-checkboxes-input='${form_id}']`
-      ),
-      form_items = [...this.elements]
-        .filter((el) => el.tagName.toLowerCase() !== "button")
-        .map((el) => {
-          if (checkboxes.some((e) => el.value == e)) {
-            return [el, el.nextElementSibling];
-          }
-        })
-        .filter((el) => el !== undefined);
-
-    if (checkboxes.length) {
-      checkboxes_input.value = checkboxes;
-      checkboxes_ul.innerHTML = "";
-      form_items.forEach(([el, span]) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-            <div>
-              <span>${span.innerHTML}</span>
-              <button type="button" 
-                class="transaction-type-ul-delete" 
-                data-checkboxes-delete='${el.value}'
-                  >&#x2715;</button>
-            </div>`;
-        checkboxes_ul.append(li);
-        hideModal();
-
-        li.querySelector(".transaction-type-ul-delete").addEventListener(
-          "click",
-          function (e) {
-            const id = e.target.getAttribute("data-checkboxes-delete");
-            let input_value = checkboxes_input.value.split(",");
-            checkboxes_input.value = input_value.filter((i) => i !== id);
-            e.target.closest("li").remove();
-          }
-        );
-      });
-    }
-  });
-});
-// ====================================================================
 
 // --------------------------------------------------------------------
 // Search select && input
@@ -299,11 +411,11 @@ search_select.forEach((el) => {
       options_box.children.length * options_box.children[0].offsetHeight + 1;
     options_box.style.height = hg + "px";
     options_box.style.transitionDuration =
-      Math.min(select_duration, options_box.children.length * 100) + "ms";
+      Math.min(select_delay, options_box.children.length * 100) + "ms";
 
     setTimeout(
       () => (options_box.style.overflow = "auto"),
-      Math.min(select_duration, options_box.children.length * 100)
+      Math.min(select_delay, options_box.children.length * 100)
     );
 
     options_box.querySelectorAll(".search-select-option").forEach((option) => {
@@ -327,7 +439,6 @@ search_select.forEach((el) => {
     options_box.style.height = 0;
   });
 });
-// ====================================================================
 
 // --------------------------------------------------------------------
 // Select checkboxes
@@ -339,9 +450,9 @@ select_checkboxes.forEach((el) => {
     el_options = el_container.querySelector(".select-checkboxes-options");
   el_content.addEventListener("click", (optEvt) => optEvt.stopPropagation());
   el_content.style.transitionDuration =
-    Math.min(select_duration, el_options.children.length * 100) + "ms";
+    Math.min(select_delay, el_options.children.length * 100) + "ms";
   el_options.style.transitionDuration =
-    Math.min(select_duration, el_options.children.length * 100) + "ms";
+    Math.min(select_delay, el_options.children.length * 100) + "ms";
 
   el.addEventListener("click", function (evt) {
     evt.stopPropagation();
@@ -432,35 +543,37 @@ select_checkboxes.forEach((el) => {
       el_container.setAttribute("data-open", false);
     }
   });
-});
-// ====================================================================
 
-// --------------------------------------------------------------------
-// Show Success
-// --------------------------------------------------------------------
-const main_div = document.querySelector("main");
-function showSuccess(title = "Օրինակ՝ ձեր գործարքը հաջողությամբ կատարվել է։") {
-  const container = document.createElement("div");
-  container.className = "success-modal";
-  container.innerHTML = `
+  // --------------------------------------------------------------------
+  // Show Success
+  // --------------------------------------------------------------------
+  const main_div = document.querySelector("main");
+  function showSuccess(
+    title = "Օրինակ՝ ձեր գործարքը հաջողությամբ կատարվել է։"
+  ) {
+    const container = document.createElement("div");
+    container.className = "success-modal";
+    container.innerHTML = `
     <div class="success-modal-head">
       <h3 class="success-modal-title">Success message</h3>
       <div class="success-close">&#x2715;</div>
     </div>
     <div class="success-modal-message">${title}</div>
   `;
-  container
-    .querySelector(".success-close")
-    .addEventListener("click", deleteSuccess);
-  main_div.append(container);
-  setTimeout(() => (container.style.opacity = "1"), 1);
+    container
+      .querySelector(".success-close")
+      .addEventListener("click", deleteSuccess);
+    main_div.append(container);
+    setTimeout(() => (container.style.opacity = "1"), 1);
 
-  setTimeout(() => (container.style.opacity = "0"), 2000);
-  setTimeout(() => container.remove(), 2001 + success_duration);
-}
-function deleteSuccess() {
-  const container = document.querySelector(".success-modal");
-  container.style.opacity = "0";
-  setTimeout(() => container.remove(), success_duration);
-}
-// ====================================================================
+    setTimeout(() => (container.style.opacity = "0"), 2000);
+    setTimeout(() => container.remove(), 2001 + success_duration);
+  }
+  function deleteSuccess() {
+    const container = document.querySelector(".success-modal");
+    container.style.opacity = "0";
+    setTimeout(() => container.remove(), success_duration);
+  }
+  // showSuccess("adfadsfasdfasdfasdfsadfasdfasdf")
+  // ====================================================================
+});
