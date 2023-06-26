@@ -1,0 +1,131 @@
+.new-checkboxes-select {
+  position: relative;
+  float: left;
+  width: 100%;
+  max-width: 256px;
+  font-family: "Roboto";
+  color: #777;
+  font-weight: 300;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  transition: all var(--select-delay) ease-in-out;
+
+  border: none;
+  border-bottom: 1px solid #575757;
+  border-radius: 0;
+  padding: 4px 0;
+}
+.new-checkboxes-select [role="head"] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+.new-checkboxes-select [role="title"] {
+  width: 100%;
+  font-weight: 600;
+  font-size: 12px;
+  min-height: 19px;
+  color: #9f9f9f;
+  cursor: pointer;
+}
+.new-checkboxes-select [role="icon"] {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 3%;
+  height: 7px;
+  display: flex;
+  cursor: pointer;
+  transition: all var(--select-delay);
+}
+.new-checkboxes-select [role="options-box"] {
+  position: absolute;
+  left: 0px;
+  top: calc(100% + 6px);
+  z-index: 999;
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: #d4e0f2;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px 0px 3px 3px;
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+  transition: var(--select-delay) ease-in-out;
+}
+.new-checkboxes-select [role="options-box"] > ul {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0px;
+  font-weight: 600;
+  font-size: 12px;
+  min-height: 19px;
+  color: #9f9f9f;
+  cursor: pointer;
+  max-height: 150px;
+}
+
+.new-checkboxes-select [role="options-box"] > ul::-webkit-scrollbar {
+  width: 3px;
+  height: 4px;
+}
+.new-checkboxes-select [role="options-box"] li {
+  position: relative;
+  width: 100%;
+  border: 1px solid #d4e0f2;
+  background-color: #e7eef9;
+  list-style-type: none;
+  padding: 10px 8px;
+  margin: 0;
+  transition: all 275ms ease-in-out;
+  display: block;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.new-checkboxes-select [role="options-box"] li:hover {
+  background-color: #d2def0;
+}
+.new-checkboxes-select [role="options-box"] li.active {
+  background-color: #d2def0;
+}
+.new-checkboxes-select [role="button-box"] {
+  padding: 4px 5px;
+}
+.new-checkboxes-select [role="button-box"] button {
+  width: 100%;
+}
+
+/* TRASH */
+.checkbox-card {
+  display: flex;
+  padding: 4px 5px;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+}
+.checkbox-card span {
+  font-size: 12px;
+}
+.checkbox-card .delete {
+  width: 12px;
+  height: 12px;
+  font: menu;
+  cursor: pointer;
+  color: #575757;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

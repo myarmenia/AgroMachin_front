@@ -1,13 +1,6 @@
 // ------------------------------------------------------------------
 //  Variables
 // ------------------------------------------------------------------
-// const cur_table = document.getElementById("table-route"),
-//   remove_form = document.getElementById("modal-remove-form"),
-//   remove_modal = document.getElementById("remove-modal"),
-//   accept_btn = document.getElementById("modal-accept-btn"),
-//   confirm_modal = document.getElementById("confirm-modal"),
-//   table_route_delete = cur_table && cur_table.attributes["data-delete"].value,
-//   table_route_route = cur_table && cur_table.attributes["data-route"].value;
 const custom_selects = document.querySelectorAll(".select-heading");
 
 // ==================================================================
@@ -191,7 +184,6 @@ function createSelectOptions(rootElement = document) {
 
     optionsUl.style.transitionDuration =
       Math.min(select_delay, select_optiones.length * 100) + "ms";
-    console.log(select_delay);
 
     custom_selects[e].setAttribute("data-is-open", "false");
 
@@ -217,6 +209,7 @@ function createSelectOptions(rootElement = document) {
     el.addEventListener("click", openSelect);
   });
 }
+
 //drop owen checkBox
 let dropbtnCheckBox = document.getElementsByClassName("dropbtnCheckBox");
 let myDropdownCheckBox = document.querySelectorAll(".myDropdownCheckBox");
@@ -543,37 +536,4 @@ select_checkboxes.forEach((el) => {
       el_container.setAttribute("data-open", false);
     }
   });
-
-  // --------------------------------------------------------------------
-  // Show Success
-  // --------------------------------------------------------------------
-  const main_div = document.querySelector("main");
-  function showSuccess(
-    title = "Օրինակ՝ ձեր գործարքը հաջողությամբ կատարվել է։"
-  ) {
-    const container = document.createElement("div");
-    container.className = "success-modal";
-    container.innerHTML = `
-    <div class="success-modal-head">
-      <h3 class="success-modal-title">Success message</h3>
-      <div class="success-close">&#x2715;</div>
-    </div>
-    <div class="success-modal-message">${title}</div>
-  `;
-    container
-      .querySelector(".success-close")
-      .addEventListener("click", deleteSuccess);
-    main_div.append(container);
-    setTimeout(() => (container.style.opacity = "1"), 1);
-
-    setTimeout(() => (container.style.opacity = "0"), 2000);
-    setTimeout(() => container.remove(), 2001 + success_duration);
-  }
-  function deleteSuccess() {
-    const container = document.querySelector(".success-modal");
-    container.style.opacity = "0";
-    setTimeout(() => container.remove(), success_duration);
-  }
-  // showSuccess("adfadsfasdfasdfasdfsadfasdfasdf")
-  // ====================================================================
 });

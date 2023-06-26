@@ -51,7 +51,7 @@ const showModalValues = () => {
   check_boxes.forEach((el) => {
     inpVal.push(el.value);
   });
-  if (inp != null) {
+  if (inp !== null) {
     inp.value = inpVal;
   }
   let ul = document.querySelectorAll(".transaction-type-ul");
