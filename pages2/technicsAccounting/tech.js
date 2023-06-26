@@ -36,7 +36,6 @@ const attached_materials_file_box = document.querySelector(
   attached_materials_file_name = document.querySelector(
     "#attached-materials-file_name"
   );
-console.log(attached_materials_file);
 
 const open_subscripts = document.querySelectorAll(".open_subscript");
 

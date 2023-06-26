@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../../css/index.css" />
     <link rel="stylesheet" href="../../css/table.css" />
     <link rel="stylesheet" href="../../css/modal.css" />
+    <link rel="stylesheet" href="../../css/new-select.css" />
+    <link rel="stylesheet" href="../../css/new-checkboxes-select.css" />
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
@@ -289,6 +291,70 @@
                               </div>
                             </div>
                           </div>
+
+                          <!----------- New Select by Edgar1824 ----------->
+                          <div class="new-select">
+                            <div class="new-select-title-box">
+                              <input type="text" value="aa" hidden />
+                              <span role="select-title">new select</span>
+                              <img
+                                class="new-select-icon"
+                                src="../../assets/select-chev.svg"
+                              />
+                            </div>
+                            <div class="new-select-options-box">
+                              <ul>
+                                <li data-value="aa">aaaaaa</li>
+                                <li data-value="bb">bbbbbb</li>
+                                <li data-value="cc">cccccc</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- ========================================= -->
+
+                          <!----------- New Select with checkboxes by Edgar1824 ----------->
+
+                          <div
+                            class="new-checkboxes-select"
+                            data-checkboxes-select-num="0"
+                          >
+                            <div role="head">
+                              <input id="inp" type="text" value="aa" hidden />
+                              <span role="title">new-checkboxes-select</span>
+                              <img
+                                role="icon"
+                                src="../../assets/select-chev.svg"
+                              />
+                            </div>
+                            <div role="options-box">
+                              <ul>
+                                <li>
+                                  <input value="1" type="checkbox" />
+                                  <span>aaaa</span>
+                                </li>
+                                <li>
+                                  <input value="2" type="checkbox" />
+                                  <span>bbbb</span>
+                                </li>
+                                <li>
+                                  <input value="3" type="checkbox" />
+                                  <span>cccc</span>
+                                </li>
+                              </ul>
+                              <div role="button-box">
+                                <button type="button" class="main-btn">
+                                  hastatel
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            data-checkboxes-content-num="0"
+                            class="test"
+                          ></div>
+                          <!-- ========================================= -->
+
                           <div class="input-group">
                             <input
                               name="number"
@@ -313,7 +379,13 @@
                             />
                           </div>
                           <div class="attached-materials-file-btn_box">
-                            <button type="submit" class="main-btn">Կցել</button>
+                            <button
+                              onclick="console.log(inp.value);"
+                              type="submit"
+                              class="main-btn"
+                            >
+                              Կցել
+                            </button>
                           </div>
                         </form>
                       </div>
@@ -354,6 +426,9 @@
     </div>
     <script src="../../js/index.js"></script>
     <script src="../../js/modal.js"></script>
+    <script src="../../js/new-select.js"></script>
+    <script src="../../js/select-checkbox.js"></script>
+    <script src="../../js/response-message.js"></script>
     <!-- <script src="../../js/modal.js"></script> -->
     <script src="tech.js"></script>
   </body>
